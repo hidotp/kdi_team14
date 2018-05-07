@@ -2,12 +2,12 @@
 <ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
     <story>
         <identification>
-            <ifid>0CA7E723-ACA3-4055-BD50-38E2FEA4742B</ifid>
+            <ifid>DC3B78F4-F6C1-4B36-875E-90A9A7D0E634</ifid>
             <format>glulx</format>
         </identification>
         <bibliographic>
             <title>Lupus Station</title>
-            <author>Team 14</author>
+            <author>Nick</author>
             <headline>An Interactive Fiction</headline>
             <genre>Fiction</genre>
             <firstpublished>2018</firstpublished>
@@ -17,7 +17,7 @@
         <releases>
             <attached>
                 <release>
-                    <releasedate>2018-05-03</releasedate>
+                    <releasedate>2018-05-06</releasedate>
                     <version>1</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>6M62</compilerversion>
@@ -27,10 +27,10 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>6M62</generatorversion>
-            <originated>2018-05-03</originated>
+            <originated>2018-05-06</originated>
         </colophon>
         <glulx>
-            <serial>180503</serial>
+            <serial>180506</serial>
             <release>1</release>
             <compiler>Inform 7 build 6M62</compiler>
         </glulx>

@@ -1,28 +1,28 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/home/Documents/GitHub/kdi_team14/Lupus Station.inform/Build/StatusCblorb.html"
+status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\fothn\Documents\Inform\Projects\Lupus Station.inform\Build\StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/home/Documents/GitHub/kdi_team14/Lupus Station.inform"
-release to "/Users/home/Documents/GitHub/kdi_team14/Lupus Station.materials/Release"
+project folder "C:\Users\fothn\Documents\Inform\Projects\Lupus Station.inform"
+release to "C:\Users\fothn\Documents\Inform\Projects\Lupus Station.materials\Release"
 
 ! Blorb instructions
 
 storyfile leafname "Lupus Station.gblorb"
-storyfile "/Users/home/Documents/GitHub/kdi_team14/Lupus Station.inform/Build/output.ulx" include
-ifiction "/Users/home/Documents/GitHub/kdi_team14/Lupus Station.inform/Metadata.iFiction" include
-cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
-picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+storyfile "C:\Users\fothn\Documents\Inform\Projects\Lupus Station.inform\Build\output.ulx" include
+ifiction "C:\Users\fothn\Documents\Inform\Projects\Lupus Station.inform\Metadata.iFiction" include
+cover "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
+picture 1 "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
 
 ! Placeholder variables
 
-placeholder [IFID] = "0CA7E723-ACA3-4055-BD50-38E2FEA4742B"
+placeholder [IFID] = "DC3B78F4-F6C1-4B36-875E-90A9A7D0E634"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2018"
 placeholder [TITLE] = "Lupus Station"
-placeholder [AUTHOR] = "Team 14"
+placeholder [AUTHOR] = "Nick"
 placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
