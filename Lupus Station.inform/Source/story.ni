@@ -31,7 +31,7 @@ Delta_AI is up of Storage_Area. The printed name is "Delta AI".
 Main_Generator is south of Delta_AI. The printed name is "Main Generator".
 Delta_Greenhouse is a room. The printed name is "Delta Greenhouse".
 Storage_Room is south of Delta_Greenhouse. The printed name is "Storage Room".
-Alpha_AI is down of Storage_Room. The printed name is "Alpha AI".
+Alpha_AI is up of Storage_Room. The printed name is "Alpha AI".
 Transporter_Raum is south of Alpha_AI. The printed name is "Transporter Raum".
 
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
