@@ -1,4 +1,4 @@
-"Lupus Station" by Nick
+"Lupus Station" by Team14
 
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
