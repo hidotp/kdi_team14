@@ -41,32 +41,3 @@ Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Ca
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
 Bridge is down of Briefing_Room. The printed name is "Bridge".
-
-
-Antenna_Array_SM is a room. The printed name is "Antenna Array SM".
-Transporter_Module is south of Antenna_Array_SM. The printed name is "Transporter Module".
-Solar_Module is a room. The printed name is "Solar Module".
-Pulsator_Module is south of Solar_Module. The printed name is "Pulsator Module".
-
-Lab_Module is down of Antenna_Array_SM. The printed name is "Lab Module".
-Storage_SM is east of Lab_Module. The printed name is "Storage SM".
-Control_Module is down of Pulsator_Module. The printed name is "Control Module".
-Com_Module is west of Control_Module. The printed name is "Com Module".
-
-Damaged_Module is down of Storage_SM. The printed name is "Damaged Module".
-Energy_Module is south of Damaged_Module. The printed name is "Energy Module".
-Delta_Greenhouse_SM is west of Energy_Module and down of Com_Module. The printed name is "Delta Grennhouse SM".
-Rescue_Module is north of Delta_Greenhouse_SM. The printed name is "Rescue Module".
-
-
-Testing is an action applying to nothing.
-Understand "teleport" as testing.
-Check testing:
-	if the player is in Transporter_Raum:
-		Now the player is in Transporter_Module;
-	otherwise:
-		if the player is in Transporter_Module:
-			Now the player is in Transporter_Raum;
-		otherwise:
-			say "Nicht möglich!";
-			
