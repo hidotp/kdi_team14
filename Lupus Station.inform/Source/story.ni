@@ -1,5 +1,17 @@
 "Lupus Station" by Team14
 
+Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
+
+Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
+	Using is an action applying to two things.
+Check using:
+	If the Player is not carrying the Sicherheitsausweis:
+		Say "Du trägst nicht den Sicherheitsausweis!" instead;
+Carry out using:
+	Now the Zugehörige_Tür of the second Noun is unlocked;
+Report Using:
+	Say "Du hast die zugehörige Tür des Panels entriegelt."
+
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
 Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Juncton".
