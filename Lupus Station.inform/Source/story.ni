@@ -13,7 +13,7 @@ Report Using:
 	Say "Du hast die zugehörige Tür des Panels entriegelt."
 	
 
---nicht fertig--
+--noch Fehler--
 Spielabbruch is a text variable. Spielabbruch is "".
 Weiter_spielen is truth state variable. Weiter_spielen is true.
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
@@ -22,21 +22,23 @@ Richtung is a direction variable.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
+	
 Before going direction:
 	Now Richtung is the noun;
 	if the room Richtung of the location of the player is not nothing:
 		Now Aktionen_ohne_geraeusch is 0;
 		Now Aktionen_mit_geraeusch is 0;
 		if Kontaminierter is in the location of the player and Aktionen_mit_geraeusch is 2:
-			--Fehler--
-			Now Kontaminierter is the room Richtung of the location of the player. 
+			--Fehler bei if-Anweisung--
+			--Fehler:--
+			Now Kontaminierter is the room Richtung of the location of the player.
 Every turn:
-	Increase Aktionen_ohne_geraeusch by 1;
 	if Kontaminierter is in the location of the player:
+		Increase Aktionen_ohne_geraeusch by 1;
 		if Aktionen_ohne_geraeusch is greater than 2 or Aktionen_mit_geraeusch is greater than 2:
 			Now Weiter_spielen is false;
 			Now Spielabbruch is "Du wurdest kontaminiert".
-
+			
 
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".

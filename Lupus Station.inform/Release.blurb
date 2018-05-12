@@ -22,7 +22,7 @@ placeholder [IFID] = "DC3B78F4-F6C1-4B36-875E-90A9A7D0E634"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2018"
 placeholder [TITLE] = "Lupus Station"
-placeholder [AUTHOR] = "Nick"
+placeholder [AUTHOR] = "Team14"
 placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
