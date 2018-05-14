@@ -1,26 +1,26 @@
 "Lupus Station" by Team14
+Use MAX_STATIC_DATA of 100000000.
+
+Panel is a kind of thing.
+	A Panel has a Door called Given_Door.
 
 Spielabbruch is a text variable. Spielabbruch is "".
 Weiter_spielen is truth state variable. Weiter_spielen is true.
 Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 
-
-Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
-
-Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
-	Using is an action applying to two things.
-Check using:
-	If the Player is not carrying the Sicherheitsausweis:
-		Say "Du trägst nicht den Sicherheitsausweis!" instead;
-Carry out using:
-	Now the Zugehörige_Tür of the second Noun is unlocked;
-Report Using:
-	Say "Du hast die zugehörige Tür des Panels entriegelt."
-	
+Understand "clap in Hands" as Clapping.
+	Clapping is an action applying to nothing.
+Carry out clapping:
+	Increase Aktionen_mit_geraeusch by 1.
+Report Clapping:
+	Say "Du hast in die Hände geklatscht!".
 
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
+
+Panel is a kind of thing.
+	A Panel has a Door called Given_Door.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
@@ -52,13 +52,13 @@ Before going direction:
 		Now Aktionen_mit_geraeusch is 0.
 		
 Every turn:
-	say "mit [Aktionen_mit_geraeusch]";
-	say "ohne [Aktionen_ohne_geraeusch]";
 	if Kontaminierter is in the location of the player:
 		Increase Aktionen_ohne_geraeusch by 1;
 		if Aktionen_ohne_geraeusch is greater than 2 or Aktionen_mit_geraeusch is greater than 2:
 			Now Weiter_spielen is false;
-			Now Spielabbruch is "Du wurdest kontaminiert".
+			Now Spielabbruch is "Du wurdest kontaminiert";
+			Say Spielabbruch;
+			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Brigde.
