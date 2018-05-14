@@ -1,5 +1,10 @@
 "Lupus Station" by Team14
 
+Spielabbruch is a text variable. Spielabbruch is "".
+Weiter_spielen is truth state variable. Weiter_spielen is true.
+Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
+
+
 Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
 
 Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
@@ -13,12 +18,9 @@ Report Using:
 	Say "Du hast die zugehörige Tür des Panels entriegelt."
 	
 
---noch Fehler--
-Spielabbruch is a text variable. Spielabbruch is "".
-Weiter_spielen is truth state variable. Weiter_spielen is true.
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
-Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 Richtung is a direction variable.
+Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
@@ -26,18 +28,54 @@ Kontaminierter is a kind of thing.
 Before going direction:
 	Now Richtung is the noun;
 	if the room Richtung of the location of the player is not nothing:
+		if Aktionen_mit_geraeusch is 2:
+			Now Kontaminierten_while is 1;
+			while Kontaminierten_while is less than 9:
+				if Kontaminierten_while is 1 and Kontaminierter_1 is in the location of the player:
+					Now Kontaminierter_1 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 2 and Kontaminierter_2 is in the location of the player:
+					Now Kontaminierter_2 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 3 and Kontaminierter_3 is in the location of the player:
+					Now Kontaminierter_3 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 4 and Kontaminierter_4 is in the location of the player:
+					Now Kontaminierter_4 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 5 and Kontaminierter_5 is in the location of the player:
+					Now Kontaminierter_5 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 6 and Kontaminierter_6 is in the location of the player:
+					Now Kontaminierter_6 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 7 and Kontaminierter_7 is in the location of the player:
+					Now Kontaminierter_7 is in the room Richtung of the location of the player;
+				if Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
+					Now Kontaminierter_8 is in the room Richtung of the location of the player;
+				Increase Kontaminierten_while by 1;
 		Now Aktionen_ohne_geraeusch is 0;
-		Now Aktionen_mit_geraeusch is 0;
-		if Kontaminierter is in the location of the player and Aktionen_mit_geraeusch is 2:
-			--Fehler bei if-Anweisung--
-			--Fehler:--
-			Now Kontaminierter is the room Richtung of the location of the player.
+		Now Aktionen_mit_geraeusch is 0.
+		
 Every turn:
+	say "mit [Aktionen_mit_geraeusch]";
+	say "ohne [Aktionen_ohne_geraeusch]";
 	if Kontaminierter is in the location of the player:
 		Increase Aktionen_ohne_geraeusch by 1;
 		if Aktionen_ohne_geraeusch is greater than 2 or Aktionen_mit_geraeusch is greater than 2:
 			Now Weiter_spielen is false;
 			Now Spielabbruch is "Du wurdest kontaminiert".
+
+Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Brigde.
+Kontaminierter_2 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Brigde.
+Kontaminierter_3 is a Kontaminierter. The printed name is "Kontaminierter".
+	it is in Alpha_Beta_Corridor.
+Kontaminierter_4 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Alpha_Delta_Corridor.
+Kontaminierter_5 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Med_Lab.
+Kontaminierter_6 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Fitness.
+Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Fitness.
+Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
+	It is in Fitness.
 			
 
 Gamma_Junction is a room. The printed name is "Gamma Junction".
