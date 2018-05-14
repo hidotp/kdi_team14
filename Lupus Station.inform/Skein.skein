@@ -23,6 +23,7 @@ You can see Kontaminierter here.
             <child nodeId="node-2020"></child>
             <child nodeId="node-2087"></child>
             <child nodeId="node-2097"></child>
+            <child nodeId="node-2780"></child>
             <child nodeId="node-2042"></child>
             <child nodeId="node-2085"></child>
         </children>
@@ -425,6 +426,40 @@ You can see Kontaminierter here.
         <result xml:space="preserve">Transporter Raum
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2780">
+        <command xml:space="preserve">talk with Kontaminierter</command>
+        <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2781"></child>
+        </children>
+    </item>
+    <item nodeId="node-2781">
+        <command xml:space="preserve">talk with Kontaminierter</command>
+        <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2782"></child>
+        </children>
+    </item>
+    <item nodeId="node-2782">
+        <command xml:space="preserve">talk with Kontaminierter</command>
+        <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
+
+Du wurdest kontaminiert
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2097">

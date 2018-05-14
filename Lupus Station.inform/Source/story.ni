@@ -1,12 +1,17 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
-
 Spielabbruch is a text variable. Spielabbruch is "".
 Weiter_spielen is truth state variable. Weiter_spielen is true.
 Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
+
+Innerer_Ring is a region.
+Aeußerer_Ring is a region.
+
+Maschinenkern is scenery.
+
+Kontaminierter is a kind of thing. 
+	A Kontaminierter is not portable.
 
 Understand "clap in Hands" as Clapping.
 	Clapping is an action applying to nothing.
@@ -14,16 +19,17 @@ Carry out clapping:
 	Increase Aktionen_mit_geraeusch by 1.
 Report Clapping:
 	Say "Du hast in die Hände geklatscht!".
+	
+Understand "talk with [any Kontaminierter]" as Talk_With.
+	Talk_With is an action applying to one thing.
+Carry out Talk_With:
+	Increase Aktionen_mit_geraeusch by 1.
+Report Talk_With:
+	Say "Du hast den Kontaminierten angesprochen."
 
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
-
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
-
-Kontaminierter is a kind of thing. 
-	A Kontaminierter is not portable.
 	
 Before going direction:
 	Now Richtung is the noun;
@@ -89,7 +95,7 @@ Gamma_Delta_Corridor is north of Delta_Junction. The printed name is "Gamma Delt
 Gamma_Junction is north of Gamma_Delta_Corridor.
 
 Xeno_Lab is up of Gamma_Junction. The printed name is "Xeno Lab".
-Engeneering_Lab is up of Beta_Junction. The printed name is "Engeneering Lab".
+Engeneering_Lab is up of Beta_Junction. It is in Innerer_Ring. The printed name is "Engeneering Lab".
 Med_Lab is up of Alpha_Junction. The printed name is "Med Lab".
 Dekontaminationskabine is inside of Med_Lab. The printed name is "Dekontaminationskabine".
 Solar_Lab is up of Delta_Junction. The printed name is "Solar Lab".
