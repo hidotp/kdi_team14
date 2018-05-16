@@ -6,6 +6,12 @@ Use MAX_STATIC_DATA of 100000000.
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 
 =======
+Spielabbruch is a text variable. Spielabbruch is "".
+Weiter_spielen is truth state variable. Weiter_spielen is true.
+Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
+Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
+Richtung is a direction variable.
+Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 >>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 [Regionen]
@@ -55,7 +61,15 @@ Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
 =======
+Understand "talk with [any Kontaminierter]" as Talk_With.
+	Talk_With is an action applying to one thing.
+Carry out Talk_With:
+	Increase Aktionen_mit_geraeusch by 1.
+Report Talk_With:
+	Say "Du hast den Kontaminierten angesprochen."
 	
+Tür1 is a Door. It is west of Gamma_Junction.
+Panel2 is a Panel. The Zugehörige_Tür of Panel2 is Tür1.
 >>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 Before going direction:
