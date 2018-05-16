@@ -8,10 +8,16 @@ Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
 
+<<<<<<< HEAD
 Maschinenkern is scenery.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
+=======
+[]
+Panel is a kind of thing.
+	A Panel has a Door called Given_Door.
+>>>>>>> parent of 6eb1a87... .
 
 Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
 
