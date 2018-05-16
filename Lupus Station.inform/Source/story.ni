@@ -10,13 +10,8 @@ Aeußerer_Ring is a region.
 
 Maschinenkern is scenery.
 
-<<<<<<< HEAD
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
-=======
-[]
-
->>>>>>> 6eb1a87283d2dccda4753718c28472405d6004fa
 
 Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
 
