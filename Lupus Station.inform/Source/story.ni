@@ -111,7 +111,7 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
-			
+	
 
 
 [*****Räume*****]
