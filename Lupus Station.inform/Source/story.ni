@@ -9,10 +9,16 @@ Innerer_Ring is a region.
 Aeußerer_Ring is a region.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Maschinenkern is scenery.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
+=======
+[]
+Panel is a kind of thing.
+	A Panel has a Door called Given_Door.
+>>>>>>> parent of 6eb1a87... .
 =======
 []
 Panel is a kind of thing.
