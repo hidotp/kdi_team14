@@ -1,34 +1,41 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-[global genutzte Variablen:]
-Laute_Aktionen is a number variable. Laute_Aktionen is 0.
-
-
-[]
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
-
-
-[in die Hände klatschen:]
-Understand "clap in Hands" as Clapping.
-	Clapping is an action applying to nothing.
-Carry out clapping:
-	Increase Laute_Aktionen by 1.
-Report Clapping:
-	Say "Du hast in die Hände geklatscht!".
-
-
-[Kontaminierte:]
-Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
+Spielabbruch is a text variable. Spielabbruch is "".
+Weiter_spielen is truth state variable. Weiter_spielen is true.
 Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
-Richtung is a direction variable.
-Kontaminierten_while is a number variable. Kontaminierten_while is 0.
-Kontaminierten_going is truth state variable. Kontaminierten_going is false.
+
+Innerer_Ring is a region.
+Aeußerer_Ring is a region.
+
+Maschinenkern is scenery.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
+
+Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
+
+Understand "clap in Hands" as Clapping.
+	Clapping is an action applying to nothing.
+Carry out clapping:
+	Increase Aktionen_mit_geraeusch by 1.
+Report Clapping:
+	Say "Du hast in die Hände geklatscht!".
 	
+Understand "talk with [any Kontaminierter]" as Talk_With.
+	Talk_With is an action applying to one thing.
+Carry out Talk_With:
+	Increase Aktionen_mit_geraeusch by 1.
+Report Talk_With:
+	Say "Du hast den Kontaminierten angesprochen."
+
+Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
+Richtung is a direction variable.
+Kontaminierten_while is a number variable. Kontaminierten_while is 0.
+	
+Tür1 is a Door. It is west of Gamma_Junction.
+Panel2 is a Panel. The Zugehörige_Tür of Panel2 is Tür1.
+
 Before going direction:
 	Now Richtung is the noun;
 	if the room Richtung of the location of the player is not nothing:
@@ -52,19 +59,16 @@ Before going direction:
 				if Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
 					Now Kontaminierter_8 is in the room Richtung of the location of the player;
 				Increase Kontaminierten_while by 1;
-		Now Kontaminierten_going is true;
 		Now Aktionen_ohne_geraeusch is 0;
 		Now Aktionen_mit_geraeusch is 0.
 		
 Every turn:
 	if Kontaminierter is in the location of the player:
-		if Kontaminierten_going is false:
-			Increase Aktionen_ohne_geraeusch by 1;
-		if Laute_Aktionen is greater than 0:
-			Increase Aktionen_mit_geraeusch by 1;
-		Now Kontaminierten_going is false;
-		if Aktionen_ohne_geraeusch is greater than 2:
-			Say "Du wurdest kontaminiert!";
+		Increase Aktionen_ohne_geraeusch by 1;
+		If Aktionen_ohne_geraeusch is greater than 2 or Aktionen_mit_geraeusch is greater than 2:
+			Now Weiter_spielen is false;
+			Now Spielabbruch is "Du wurdest kontaminiert";
+			Say Spielabbruch;
 			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -85,7 +89,6 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 			
 
-[Räume:]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
 Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Juncton".
@@ -97,7 +100,7 @@ Gamma_Delta_Corridor is north of Delta_Junction. The printed name is "Gamma Delt
 Gamma_Junction is north of Gamma_Delta_Corridor.
 
 Xeno_Lab is up of Gamma_Junction. The printed name is "Xeno Lab".
-Engeneering_Lab is up of Beta_Junction. The printed name is "Engeneering Lab".
+Engeneering_Lab is up of Beta_Junction. It is in Innerer_Ring. The printed name is "Engeneering Lab".
 Med_Lab is up of Alpha_Junction. The printed name is "Med Lab".
 Dekontaminationskabine is inside of Med_Lab. The printed name is "Dekontaminationskabine".
 Solar_Lab is up of Delta_Junction. The printed name is "Solar Lab".
