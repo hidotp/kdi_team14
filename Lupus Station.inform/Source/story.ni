@@ -1,9 +1,12 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
+<<<<<<< HEAD
 [globale Variablen]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 
+=======
+>>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 [Regionen]
 Innerer_Ring is a region.
@@ -34,6 +37,7 @@ Maschinenkern is scenery.
 	Report Clapping:
 		Say "Du hast in die Hände geklatscht!".
 	
+<<<<<<< HEAD
 
 	[Sprechen]
 	Understand "talk with [any Kontaminierter]" as Talk_With.
@@ -50,6 +54,9 @@ Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
+=======
+	
+>>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 Before going direction:
 	Now Richtung is the noun;
