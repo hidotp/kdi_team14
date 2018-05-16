@@ -3,6 +3,7 @@ Use MAX_STATIC_DATA of 100000000.
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
+Stationsalarm is a truth state variable. Stationsalarm is true.
 
 
 
@@ -30,20 +31,27 @@ Maschinenkern is scenery.
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
-	[Klatschen]
-	Understand "clap in Hands" as Clapping.
-		Clapping is an action applying to nothing.
-	Carry out clapping:
-		Increase Laute_Aktionen by 1.
-	Report Clapping:
-		Say "Du hast in die Hände geklatscht!".
+[Klatschen]
+Understand "clap in Hands" as Clapping.
+	Clapping is an action applying to nothing.
+Carry out clapping:
+	If Stationsalarm is false:
+		Increase Laute_Aktionen by 1;
+	Else:	
+		Say "Der Stationsalarm ist zu laut!";
+Report Clapping:
+	If Stationsalarm is false:
+		Say "Der Stationsalarm ist zu laut!";
 
-	[Sprechen]
-	Understand "talk with [any Kontaminierter]" as Talk_With.
-		Talk_With is an action applying to one thing.
-	Carry out Talk_With:
-		Increase Laute_Aktionen by 1.
-	Report Talk_With:
+[Sprechen]
+Understand "talk with [any Kontaminierter]" as Talk_With.
+	Talk_With is an action applying to one thing.
+Carry out Talk_With:
+	If Stationsalarm is false:
+		Increase Laute_Aktionen by 1;
+	Else:	
+		Say "Der Stationsalarm ist zu laut!";
+Report Talk_With:
 		Say "Du hast den Kontaminierten angesprochen."
 
 

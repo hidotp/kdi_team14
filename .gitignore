@@ -22,3 +22,5 @@ Lupus Station.inform/Skein.skein
 *.inf
 Lupus Station.inform/Skein.skein
 *.dbg
+*.skein
+Lupus Station.materials/Icon
