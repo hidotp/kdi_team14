@@ -23,8 +23,10 @@ Maschinenkern is scenery.
 	[Panels]
 	Panel is a kind of thing.
 		A Panel has a Door called Given_Door.
-	Tür1 is a Door. It is west of Gamma_Junction.
-	Panel2 is a Panel. The Given_Door of Panel2 is Tür1.
+	TestTür is a Door. It is west of Gamma_Junction.
+	TestPanel is a Panel. The Given_Door of TestPanel is TestTür. TestPanel is in Gamma_Junction.
+	
+	Mobitab is a thing. It is in Gamma_Junction.
 
 
 
@@ -54,6 +56,16 @@ Carry out Talk_With:
 Report Talk_With:
 		Say "Du hast den Kontaminierten angesprochen."
 
+[Sicherheitsbarrieren]
+Understand "use [Mobitab] with [any Panel]" as Using.
+	Using is an action applying to two things.
+Check using:
+	If the Player is not carrying the Mobitab:
+		Say "Du trägst nicht das Mobitab!" instead;
+Carry out using:
+	Now the Given_Door of the second Noun is unlocked;
+Report Using:
+	Say "Du hast die zugehörige Tür des Panels entriegelt."
 
 
 [*****Kontaminierte*****]
