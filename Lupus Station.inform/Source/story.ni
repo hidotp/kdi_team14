@@ -6,8 +6,7 @@ Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 
 
 []
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
+
 
 
 [in die Hände klatschen:]
