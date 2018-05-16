@@ -1,18 +1,8 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-<<<<<<< HEAD
 [globale Variablen]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
-
-=======
-Spielabbruch is a text variable. Spielabbruch is "".
-Weiter_spielen is truth state variable. Weiter_spielen is true.
-Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
-Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
-Richtung is a direction variable.
-Kontaminierten_while is a number variable. Kontaminierten_while is 0.
->>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 [Regionen]
 Innerer_Ring is a region.
@@ -42,8 +32,6 @@ Maschinenkern is scenery.
 		Increase Laute_Aktionen by 1.
 	Report Clapping:
 		Say "Du hast in die Hände geklatscht!".
-	
-<<<<<<< HEAD
 
 	[Sprechen]
 	Understand "talk with [any Kontaminierter]" as Talk_With.
@@ -60,17 +48,6 @@ Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
-=======
-Understand "talk with [any Kontaminierter]" as Talk_With.
-	Talk_With is an action applying to one thing.
-Carry out Talk_With:
-	Increase Aktionen_mit_geraeusch by 1.
-Report Talk_With:
-	Say "Du hast den Kontaminierten angesprochen."
-	
-Tür1 is a Door. It is west of Gamma_Junction.
-Panel2 is a Panel. The Zugehörige_Tür of Panel2 is Tür1.
->>>>>>> 1f023b0fceabba15875f037ecb2facff22450199
 
 Before going direction:
 	Now Richtung is the noun;
@@ -132,7 +109,7 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 [Räume]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
-Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Juncton".
+Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Junction".
 Alpha_Beta_Corridor is north of Beta_Junction. The printed name is "Alpha Beta Corridor".
 Alpha_Junction is north of Alpha_Beta_Corridor. The printed name is "Alpha Junction".
 Alpha_Delta_Corridor is north of Alpha_Junction. The printed name is "Alpha Delta Corridor".
