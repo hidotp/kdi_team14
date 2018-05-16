@@ -1,13 +1,16 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-[globale Variablen]
+[*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 
-[Regionen]
+
+
+[*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
 Maschinenkern is scenery.
+
 
 
 [*****Definitionen*****]
@@ -23,7 +26,9 @@ Maschinenkern is scenery.
 	Panel2 is a Panel. The Given_Door of Panel2 is Tür1.
 
 
+
 [*****Aktionen*****]
+[verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
 	[Klatschen]
 	Understand "clap in Hands" as Clapping.
@@ -42,35 +47,37 @@ Maschinenkern is scenery.
 		Say "Du hast den Kontaminierten angesprochen."
 
 
+
 [*****Kontaminierte*****]
+[Diese Variablen nicht nutzen!]
 Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
-Richtung is a direction variable.
+Kontaminierten_richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
 
 Before going direction:
-	Now Richtung is the noun;
-	If the room Richtung of the location of the player is not nothing:
+	Now Kontaminierten_richtung is the noun;
+	If the room Kontaminierten_richtung of the location of the player is not nothing:
 		If Aktionen_mit_geraeusch is 2:
 			Now Kontaminierten_while is 1;
 			While Kontaminierten_while is less than 9:
 				If Kontaminierten_while is 1 and Kontaminierter_1 is in the location of the player:
-					Now Kontaminierter_1 is in the room Richtung of the location of the player;
+					Now Kontaminierter_1 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 2 and Kontaminierter_2 is in the location of the player:
-					Now Kontaminierter_2 is in the room Richtung of the location of the player;
+					Now Kontaminierter_2 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 3 and Kontaminierter_3 is in the location of the player:
-					Now Kontaminierter_3 is in the room Richtung of the location of the player;
+					Now Kontaminierter_3 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 4 and Kontaminierter_4 is in the location of the player:
-					Now Kontaminierter_4 is in the room Richtung of the location of the player;
+					Now Kontaminierter_4 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 5 and Kontaminierter_5 is in the location of the player:
-					Now Kontaminierter_5 is in the room Richtung of the location of the player;
+					Now Kontaminierter_5 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 6 and Kontaminierter_6 is in the location of the player:
-					Now Kontaminierter_6 is in the room Richtung of the location of the player;
+					Now Kontaminierter_6 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 7 and Kontaminierter_7 is in the location of the player:
-					Now Kontaminierter_7 is in the room Richtung of the location of the player;
+					Now Kontaminierter_7 is in the room Kontaminierten_richtung of the location of the player;
 				If Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
-					Now Kontaminierter_8 is in the room Richtung of the location of the player;
+					Now Kontaminierter_8 is in the room Kontaminierten_richtung of the location of the player;
 				Increase Kontaminierten_while by 1;
 		Now Laute_Aktionen is 0;
 		Now Kontaminierten_going is true;
@@ -106,7 +113,8 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 			
 
-[Räume]
+
+[*****Räume*****]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
 Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Junction".
