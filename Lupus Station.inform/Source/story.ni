@@ -7,26 +7,14 @@ Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 Maschinenkern is scenery.
 
 Kontaminierter is a kind of thing. 
 	A Kontaminierter is not portable.
-=======
-[]
+	
 Panel is a kind of thing.
 	A Panel has a Door called Given_Door.
->>>>>>> parent of 6eb1a87... .
-=======
-[]
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
->>>>>>> parent of 6eb1a87... .
-
-Panel is a kind of thing. A panel has a door called Zugehörige_Tür.
-
+ 
 Understand "clap in Hands" as Clapping.
 	Clapping is an action applying to nothing.
 Carry out clapping:
@@ -76,9 +64,12 @@ Before going direction:
 		
 Every turn:
 	if Kontaminierter is in the location of the player:
-		Increase Aktionen_ohne_geraeusch by 1;
-		If Aktionen_ohne_geraeusch is greater than 2 or Aktionen_mit_geraeusch is greater than 2:
-			Now Weiter_spielen is false;
+		if Kontaminierten_going is false:
+			Increase Aktionen_ohne_geraeusch by 1;
+		if Laute_Aktionen is greater than 0:
+			Increase Aktionen_mit_geraeusch by 1;
+		Now Kontaminierten_going is false;
+		if Aktionen_ohne_geraeusch is greater than 2:
 			Now Spielabbruch is "Du wurdest kontaminiert";
 			Say Spielabbruch;
 			End the Story finally.
