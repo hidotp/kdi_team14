@@ -1,77 +1,93 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-Spielabbruch is a text variable. Spielabbruch is "".
-Weiter_spielen is truth state variable. Weiter_spielen is true.
-Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
+[globale Variablen]
+Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 
+
+[Regionen]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
 Maschinenkern is scenery.
 
-Kontaminierter is a kind of thing. 
-	A Kontaminierter is not portable.
-	
-Panel is a kind of thing.
-	A Panel has a Door called Given_Door.
- 
-Understand "clap in Hands" as Clapping.
-	Clapping is an action applying to nothing.
-Carry out clapping:
-	Increase Aktionen_mit_geraeusch by 1.
-Report Clapping:
-	Say "Du hast in die Hände geklatscht!".
-	
-Understand "talk with [any Kontaminierter]" as Talk_With.
-	Talk_With is an action applying to one thing.
-Carry out Talk_With:
-	Increase Aktionen_mit_geraeusch by 1.
-Report Talk_With:
-	Say "Du hast den Kontaminierten angesprochen."
 
+[*****Definitionen*****]
+
+	[Kontaminierte]
+	Kontaminierter is a kind of thing. 
+		A Kontaminierter is not portable.
+	
+	[Panels]
+	Panel is a kind of thing.
+		A Panel has a Door called Given_Door.
+	Tür1 is a Door. It is west of Gamma_Junction.
+	Panel2 is a Panel. The Given_Door of Panel2 is Tür1.
+
+
+[*****Aktionen*****]
+
+	[Klatschen]
+	Understand "clap in Hands" as Clapping.
+		Clapping is an action applying to nothing.
+	Carry out clapping:
+		Increase Laute_Aktionen by 1.
+	Report Clapping:
+		Say "Du hast in die Hände geklatscht!".
+	
+
+	[Sprechen]
+	Understand "talk with [any Kontaminierter]" as Talk_With.
+		Talk_With is an action applying to one thing.
+	Carry out Talk_With:
+		Increase Laute_Aktionen by 1.
+	Report Talk_With:
+		Say "Du hast den Kontaminierten angesprochen."
+
+
+[*****Kontaminierte*****]
+Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Richtung is a direction variable.
 Kontaminierten_while is a number variable. Kontaminierten_while is 0.
-	
-Tür1 is a Door. It is west of Gamma_Junction.
-Panel2 is a Panel. The Zugehörige_Tür of Panel2 is Tür1.
+Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
 
 Before going direction:
 	Now Richtung is the noun;
-	if the room Richtung of the location of the player is not nothing:
-		if Aktionen_mit_geraeusch is 2:
+	If the room Richtung of the location of the player is not nothing:
+		If Aktionen_mit_geraeusch is 2:
 			Now Kontaminierten_while is 1;
-			while Kontaminierten_while is less than 9:
-				if Kontaminierten_while is 1 and Kontaminierter_1 is in the location of the player:
+			While Kontaminierten_while is less than 9:
+				If Kontaminierten_while is 1 and Kontaminierter_1 is in the location of the player:
 					Now Kontaminierter_1 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 2 and Kontaminierter_2 is in the location of the player:
+				If Kontaminierten_while is 2 and Kontaminierter_2 is in the location of the player:
 					Now Kontaminierter_2 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 3 and Kontaminierter_3 is in the location of the player:
+				If Kontaminierten_while is 3 and Kontaminierter_3 is in the location of the player:
 					Now Kontaminierter_3 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 4 and Kontaminierter_4 is in the location of the player:
+				If Kontaminierten_while is 4 and Kontaminierter_4 is in the location of the player:
 					Now Kontaminierter_4 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 5 and Kontaminierter_5 is in the location of the player:
+				If Kontaminierten_while is 5 and Kontaminierter_5 is in the location of the player:
 					Now Kontaminierter_5 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 6 and Kontaminierter_6 is in the location of the player:
+				If Kontaminierten_while is 6 and Kontaminierter_6 is in the location of the player:
 					Now Kontaminierter_6 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 7 and Kontaminierter_7 is in the location of the player:
+				If Kontaminierten_while is 7 and Kontaminierter_7 is in the location of the player:
 					Now Kontaminierter_7 is in the room Richtung of the location of the player;
-				if Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
+				If Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
 					Now Kontaminierter_8 is in the room Richtung of the location of the player;
 				Increase Kontaminierten_while by 1;
+		Now Laute_Aktionen is 0;
+		Now Kontaminierten_going is true;
 		Now Aktionen_ohne_geraeusch is 0;
 		Now Aktionen_mit_geraeusch is 0.
 		
 Every turn:
-	if Kontaminierter is in the location of the player:
-		if Kontaminierten_going is false:
+	If Kontaminierter is in the location of the player:
+		If Kontaminierten_going is false:
 			Increase Aktionen_ohne_geraeusch by 1;
-		if Laute_Aktionen is greater than 0:
+		If Laute_Aktionen is greater than 0:
 			Increase Aktionen_mit_geraeusch by 1;
 		Now Kontaminierten_going is false;
-		if Aktionen_ohne_geraeusch is greater than 2:
-			Now Spielabbruch is "Du wurdest kontaminiert";
-			Say Spielabbruch;
+		If Aktionen_ohne_geraeusch is greater than 2:
+			Say "Du wurdest kontaminiert!";
 			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -92,6 +108,7 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 			
 
+[Räume]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
 Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
 Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Juncton".
@@ -108,6 +125,7 @@ Med_Lab is up of Alpha_Junction. The printed name is "Med Lab".
 Dekontaminationskabine is inside of Med_Lab. The printed name is "Dekontaminationskabine".
 Solar_Lab is up of Delta_Junction. The printed name is "Solar Lab".
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
+Umkleidekabine is inside of Hangar. The printed name is "Umkleidekabine".
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
