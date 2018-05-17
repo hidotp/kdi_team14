@@ -9,10 +9,10 @@
 
 Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
-Release 1 / Serial number 180516 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 180517 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Gamma Junction
-You can see Tür1, Panel2 and Mobitab here.
+Med Lab
+You can see Deckenluke, Kontaminierter and Med-Lab Pult here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -23,13 +23,424 @@ You can see Tür1, Panel2 and Mobitab here.
             <child nodeId="node-5036"></child>
             <child nodeId="node-5027"></child>
             <child nodeId="node-5017"></child>
+            <child nodeId="node-5968"></child>
+            <child nodeId="node-5990"></child>
             <child nodeId="node-5002"></child>
             <child nodeId="node-5877"></child>
             <child nodeId="node-4974"></child>
+            <child nodeId="node-5890"></child>
             <child nodeId="node-4971"></child>
             <child nodeId="node-4928"></child>
             <child nodeId="node-4926"></child>
+            <child nodeId="node-5897"></child>
+            <child nodeId="node-5987"></child>
         </children>
+    </item>
+    <item nodeId="node-5987">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5988"></child>
+        </children>
+    </item>
+    <item nodeId="node-5988">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5989"></child>
+        </children>
+    </item>
+    <item nodeId="node-5989">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5897">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden Maschinenkern
+Xeno Lab
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5945"></child>
+            <child nodeId="node-5903"></child>
+            <child nodeId="node-5898"></child>
+            <child nodeId="node-5917"></child>
+        </children>
+    </item>
+    <item nodeId="node-5917">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5898">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5899"></child>
+        </children>
+    </item>
+    <item nodeId="node-5899">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5900"></child>
+        </children>
+    </item>
+    <item nodeId="node-5900">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Xeno Lab
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5901"></child>
+        </children>
+    </item>
+    <item nodeId="node-5901">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5903">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5935"></child>
+            <child nodeId="node-5904"></child>
+            <child nodeId="node-5911"></child>
+        </children>
+    </item>
+    <item nodeId="node-5911">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+Der Maschinenkern erleuchtet den Raum Xeno Lab grün.
+
+Xeno Lab
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5912"></child>
+            <child nodeId="node-5960"></child>
+        </children>
+    </item>
+    <item nodeId="node-5960">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5961"></child>
+        </children>
+    </item>
+    <item nodeId="node-5961">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5962"></child>
+        </children>
+    </item>
+    <item nodeId="node-5962">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5963"></child>
+        </children>
+    </item>
+    <item nodeId="node-5963">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5964"></child>
+        </children>
+    </item>
+    <item nodeId="node-5964">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5965"></child>
+        </children>
+    </item>
+    <item nodeId="node-5965">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5966"></child>
+        </children>
+    </item>
+    <item nodeId="node-5966">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5912">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5904">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5905"></child>
+        </children>
+    </item>
+    <item nodeId="node-5905">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5906"></child>
+        </children>
+    </item>
+    <item nodeId="node-5906">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5907"></child>
+        </children>
+    </item>
+    <item nodeId="node-5907">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5908"></child>
+        </children>
+    </item>
+    <item nodeId="node-5908">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Xeno Lab
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5935">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+Hangar
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5936"></child>
+        </children>
+    </item>
+    <item nodeId="node-5936">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+Docking Bay
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5937"></child>
+        </children>
+    </item>
+    <item nodeId="node-5937">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5938"></child>
+        </children>
+    </item>
+    <item nodeId="node-5938">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+Hangar
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5939"></child>
+        </children>
+    </item>
+    <item nodeId="node-5939">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+Gamma Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, TestTür, TestPanel, Mobitab and Panel Norden here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5940"></child>
+        </children>
+    </item>
+    <item nodeId="node-5940">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+Xeno Lab
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5941"></child>
+        </children>
+    </item>
+    <item nodeId="node-5941">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5945">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5946"></child>
+        </children>
+    </item>
+    <item nodeId="node-5946">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5947"></child>
+        </children>
+    </item>
+    <item nodeId="node-5947">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5948"></child>
+        </children>
+    </item>
+    <item nodeId="node-5948">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5949"></child>
+        </children>
+    </item>
+    <item nodeId="node-5949">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5950"></child>
+        </children>
+    </item>
+    <item nodeId="node-5950">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5951"></child>
+        </children>
+    </item>
+    <item nodeId="node-5951">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5952"></child>
+        </children>
+    </item>
+    <item nodeId="node-5952">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5953"></child>
+        </children>
+    </item>
+    <item nodeId="node-5953">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5954"></child>
+        </children>
+    </item>
+    <item nodeId="node-5954">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5955"></child>
+        </children>
+    </item>
+    <item nodeId="node-5955">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-4926">
         <command xml:space="preserve">transp Hangar</command>
@@ -465,6 +876,60 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5890">
+        <command xml:space="preserve">take MobiTab</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5894"></child>
+            <child nodeId="node-5891"></child>
+        </children>
+    </item>
+    <item nodeId="node-5891">
+        <command xml:space="preserve">use MobiTab with Panel_GamJun</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5892"></child>
+        </children>
+    </item>
+    <item nodeId="node-5892">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+
+Gamma Beta Corridor
+You can see Sicherheitsbarriere and Sicherheitsbarriere here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5894">
+        <command xml:space="preserve">use MobiTab with Panel Norden</command>
+        <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5895"></child>
+        </children>
+    </item>
+    <item nodeId="node-5895">
+        <command xml:space="preserve">use MobiTab with Panel_GamJun</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5896"></child>
+        </children>
+    </item>
+    <item nodeId="node-5896">
+        <command xml:space="preserve">use MobiTab with Panel Norden</command>
+        <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-4974">
         <command xml:space="preserve">take Hallo</command>
         <result xml:space="preserve">Taken.
@@ -780,12 +1245,111 @@ You can see Adam here.
     </item>
     <item nodeId="node-5002">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">Gamma Beta Corridor
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-5003"></child>
+            <child nodeId="node-5922"></child>
         </children>
+    </item>
+    <item nodeId="node-5922">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5923"></child>
+        </children>
+    </item>
+    <item nodeId="node-5923">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5924"></child>
+        </children>
+    </item>
+    <item nodeId="node-5924">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5925"></child>
+        </children>
+    </item>
+    <item nodeId="node-5925">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5926"></child>
+        </children>
+    </item>
+    <item nodeId="node-5926">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein Ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5927"></child>
+        </children>
+    </item>
+    <item nodeId="node-5927">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5928"></child>
+        </children>
+    </item>
+    <item nodeId="node-5928">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5929"></child>
+        </children>
+    </item>
+    <item nodeId="node-5929">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5930"></child>
+        </children>
+    </item>
+    <item nodeId="node-5930">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5931"></child>
+        </children>
+    </item>
+    <item nodeId="node-5931">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5932"></child>
+        </children>
+    </item>
+    <item nodeId="node-5932">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-5003">
         <command xml:space="preserve">n</command>
@@ -922,6 +1486,317 @@ Du wurdest kontaminiert!
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5990">
+        <command xml:space="preserve">interact with Med-Lab_Pult</command>
+        <result xml:space="preserve">TEMP muss noch geschrieben werden!!!
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5991"></child>
+        </children>
+    </item>
+    <item nodeId="node-5991">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5992"></child>
+        </children>
+    </item>
+    <item nodeId="node-5992">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5993"></child>
+        </children>
+    </item>
+    <item nodeId="node-5993">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Med Lab
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5994"></child>
+        </children>
+    </item>
+    <item nodeId="node-5994">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Med Lab
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5995"></child>
+        </children>
+    </item>
+    <item nodeId="node-5995">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Med Lab
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5996"></child>
+        </children>
+    </item>
+    <item nodeId="node-5996">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">You can't "undo" what hasn't been done!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5997"></child>
+        </children>
+    </item>
+    <item nodeId="node-5997">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5998"></child>
+        </children>
+    </item>
+    <item nodeId="node-5998">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5999"></child>
+        </children>
+    </item>
+    <item nodeId="node-5999">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6000"></child>
+        </children>
+    </item>
+    <item nodeId="node-6000">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Med Lab
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6001"></child>
+        </children>
+    </item>
+    <item nodeId="node-6001">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Med Lab
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5968">
+        <command xml:space="preserve">interact with Med-Lab</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5969"></child>
+        </children>
+    </item>
+    <item nodeId="node-5969">
+        <command xml:space="preserve">interact with Med-Lab Pult</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5970"></child>
+        </children>
+    </item>
+    <item nodeId="node-5970">
+        <command xml:space="preserve">interact with Med-Lab_Pult</command>
+        <result xml:space="preserve">
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5974"></child>
+        </children>
+    </item>
+    <item nodeId="node-5974">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5975"></child>
+        </children>
+    </item>
+    <item nodeId="node-5975">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5976"></child>
+        </children>
+    </item>
+    <item nodeId="node-5976">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5977"></child>
+        </children>
+    </item>
+    <item nodeId="node-5977">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5978"></child>
+        </children>
+    </item>
+    <item nodeId="node-5978">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5979"></child>
+        </children>
+    </item>
+    <item nodeId="node-5979">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5980"></child>
+        </children>
+    </item>
+    <item nodeId="node-5980">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5981"></child>
+        </children>
+    </item>
+    <item nodeId="node-5981">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5982"></child>
+        </children>
+    </item>
+    <item nodeId="node-5982">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5983"></child>
+        </children>
+    </item>
+    <item nodeId="node-5983">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.
+
+(first opening Deckenluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5984"></child>
+        </children>
+    </item>
+    <item nodeId="node-5984">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5985"></child>
+        </children>
+    </item>
+    <item nodeId="node-5985">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5986"></child>
+        </children>
+    </item>
+    <item nodeId="node-5986">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-5017">
@@ -1095,13 +1970,22 @@ That's fixed in place.
     </item>
     <item nodeId="node-5036">
         <command xml:space="preserve">go north</command>
-        <result xml:space="preserve">Gamma Beta Corridor
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-5047"></child>
             <child nodeId="node-5037"></child>
+            <child nodeId="node-5889"></child>
         </children>
+    </item>
+    <item nodeId="node-5889">
+        <command xml:space="preserve">take MobiTab</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-5037">
         <command xml:space="preserve">look</command>
@@ -2907,7 +3791,7 @@ You can see Tür1 here.
     </item>
     <item nodeId="node-5226">
         <command xml:space="preserve">clap in Hands</command>
-        <result xml:space="preserve">Du hast in die Hände geklatscht!
+        <result xml:space="preserve">Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

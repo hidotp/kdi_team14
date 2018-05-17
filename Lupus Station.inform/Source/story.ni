@@ -1,16 +1,19 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
+The player is in Med_Lab.
+
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
+HaEnAbf is a truth state variable. HaEnAbf is false.
 
-
+[when entering a room // nur für mich ein Punkt]
 
 [*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
-Maschinenkern is scenery.
+Maschinenkern is a backdrop. "Der Maschinenkern leuchtet grün."
 
 
 
@@ -22,13 +25,35 @@ Maschinenkern is scenery.
 	
 	[Panels]
 	Panel is a kind of thing.
-		A Panel has a Door called Given_Door.
-	TestTür is a Door. It is west of Gamma_Junction.
-	TestPanel is a Panel. The Given_Door of TestPanel is TestTür. TestPanel is in Gamma_Junction.
+		A Panel has a door called Given_SiBa.
 	
+	[Sicherheitsbarriere]
+	SiBa is a kind of door. A SiBa is locked.
+	
+	[Luke]
+	Luke is a kind of door. A Luke is locked.
+	
+	[Mobitab]
 	Mobitab is a thing. It is in Gamma_Junction.
 
 
+
+[*****Methoden*****]
+
+[Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
+Richtung_StAla is a direction variable.
+
+Before going direction:
+	Now Richtung_StAla is the noun;
+	If the room Richtung_StAla of the location of the player is not nothing:
+		If Stationsalarm is true:
+			Say "Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.";				
+		If the room Richtung_StAla of the location of the player is in Innerer_Ring:
+			If HaEnAbf is true:
+				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
+			Else:
+				Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
+	
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -38,22 +63,25 @@ Understand "clap in Hands" as Clapping.
 	Clapping is an action applying to nothing.
 Carry out clapping:
 	If Stationsalarm is false:
-		Increase Laute_Aktionen by 1;
-	Else:	
-		Say "Der Stationsalarm ist zu laut!";
+		Increase Laute_Aktionen by 1.
 Report Clapping:
-	If Stationsalarm is false:
-		Say "Der Stationsalarm ist zu laut!";
+	If Stationsalarm is true:
+		Say "Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!";
+	Else:
+		If Kontaminierter is in the location of the player:
+			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
+		Else: 
+			Say "Du hast in die Hände geklatscht!";
 
 [Sprechen]
-Understand "talk with [any Kontaminierter]" as Talk_With.
-	Talk_With is an action applying to one thing.
-Carry out Talk_With:
+Understand "talk with [any Kontaminierter]" as Talking.
+	Talking is an action applying to one thing.
+Carry out Talking:
 	If Stationsalarm is false:
 		Increase Laute_Aktionen by 1;
 	Else:	
 		Say "Der Stationsalarm ist zu laut!";
-Report Talk_With:
+Report Talking:
 		Say "Du hast den Kontaminierten angesprochen."
 
 [Sicherheitsbarrieren]
@@ -63,9 +91,22 @@ Check using:
 	If the Player is not carrying the Mobitab:
 		Say "Du trägst nicht das Mobitab!" instead;
 Carry out using:
-	Now the Given_Door of the second Noun is unlocked;
+	Now the Given_SiBa of the second Noun is unlocked;
 Report Using:
 	Say "Du hast die zugehörige Tür des Panels entriegelt."
+
+[Med-Lab Pult Benutzung]
+MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
+
+Understand "interact with [Med-Lab_Pult]" as Interacting.
+	Interacting is an action applying to one thing.
+Check using:
+	If the Player is not carrying the Mobitab:
+		Say "Du trägst nicht das Mobitab!" instead;
+Carry out Interacting:
+	Increase Laute_Aktionen by 1;
+Report Interacting:
+	Say MedLabText;
 
 
 [*****Kontaminierte*****]
@@ -132,24 +173,48 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 	
-
+[*****Gegenstände*****]
+Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 
 [*****Räume*****]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
-Gamma_Beta_Corridor is north of Gamma_Junction. The printed name is "Gamma Beta Corridor".
-Beta_Junction is north of Gamma_Beta_Corridor. The printed name is "Beta Junction".
-Alpha_Beta_Corridor is north of Beta_Junction. The printed name is "Alpha Beta Corridor".
-Alpha_Junction is north of Alpha_Beta_Corridor. The printed name is "Alpha Junction".
-Alpha_Delta_Corridor is north of Alpha_Junction. The printed name is "Alpha Delta Corridor".
-Delta_Junction is north of Alpha_Delta_Corridor. The printed name is "Delta Junction".
-Gamma_Delta_Corridor is north of Delta_Junction. The printed name is "Gamma Delta Junction".
-Gamma_Junction is north of Gamma_Delta_Corridor.
+SiBa_1 is a SiBa. It is north of Gamma_Junction and south of Gamma_Beta_Corridor. The printed name is "Sicherheitsbarriere".
+Panel_GamJun_N is a Panel. The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction. The printed name is "Panel Norden".
 
-Xeno_Lab is up of Gamma_Junction. The printed name is "Xeno Lab".
-Engeneering_Lab is up of Beta_Junction. It is in Innerer_Ring. The printed name is "Engeneering Lab".
-Med_Lab is up of Alpha_Junction. The printed name is "Med Lab".
-Dekontaminationskabine is inside of Med_Lab. The printed name is "Dekontaminationskabine".
-Solar_Lab is up of Delta_Junction. The printed name is "Solar Lab".
+Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor".
+SiBa_2 is a SiBa. It is north of Gamma_Beta_Corridor and south of Beta_Junction. The printed name is "Sicherheitsbarriere".
+
+Beta_Junction is a room. The printed name is "Beta Junction".
+SiBa_3 is a SiBa. It is north of Beta_Junction and south of Alpha_Beta_Corridor. The printed name is "Sicherheitsbarriere".
+
+Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
+SiBa_4 is a SiBa. It is north of Alpha_Beta_Corridor and south of Alpha_Junction. The printed name is "Sicherheitsbarriere".
+
+Alpha_Junction is a room. The printed name is "Alpha Junction".
+SiBa_5 is a SiBa. It is north of Alpha_Junction and south of Alpha_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+
+Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
+SiBa_6 is a SiBa. It is north of Alpha_Delta_Corridor and south of Delta_Junction. The printed name is "Sicherheitsbarriere".
+
+Delta_Junction is a room. The printed name is "Delta Junction".
+SiBa_7 is a SiBa. It is north of Delta_Junction and south of Gamma_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+
+Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
+SiBa_8 is a SiBa. It is north of Gamma_Delta_Corridor and south of Gamma_Junction. The printed name is "Sicherheitsbarriere".
+
+Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
+Luke_1 is a Luke. It is up of Gamma_Junction and down of Xeno_Lab. The printed name is "Deckenluke".
+
+Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
+Luke_2 is a Luke. It is up of Beta_Junction and down of Engeneering_Lab. The printed name is "Deckenluke".
+
+Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
+Luke_3 is a Luke. It is up of Alpha_Junction and down of Med_Lab. The printed name is "Deckenluke".
+Dekontaminationskabine is inside of Med_Lab. It is in Innerer_Ring. The printed name is "Dekontaminationskabine".
+
+Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
+Luke_4 is a Luke. It is up of Delta_Junction and down of Solar_Lab. The printed name is "Deckenluke".
+
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
 Umkleidekabine is inside of Hangar. The printed name is "Umkleidekabine".
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
@@ -163,12 +228,12 @@ Docking_Bay is north of Weltraum.
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
-Delta_AI is up of Storage_Area. The printed name is "Delta AI".
-Main_Generator is south of Delta_AI. The printed name is "Main Generator".
+Delta_AI is up of Storage_Area. It is in Innerer_Ring. The printed name is "Delta AI".
+Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
 Delta_Greenhouse is a room. The printed name is "Delta Greenhouse".
 Storage_Room is south of Delta_Greenhouse. The printed name is "Storage Room".
-Alpha_AI is up of Storage_Room. The printed name is "Alpha AI".
-Transporter_Raum is south of Alpha_AI. The printed name is "Transporter Raum".
+Alpha_AI is up of Storage_Room. It is in Innerer_Ring. The printed name is "Alpha AI".
+Transporter_Raum is south of Alpha_AI. It is in Innerer_Ring. The printed name is "Transporter Raum".
 
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
 Fitness is east of Crew_Quarter. The printed name is "Fitness".
