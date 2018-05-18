@@ -58,55 +58,55 @@ Before going direction:
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
-[Klatschen]
-Understand "clap in Hands" as Clapping.
-	Clapping is an action applying to nothing.
-Carry out clapping:
-	If Stationsalarm is false:
-		Increase Laute_Aktionen by 1.
-Report Clapping:
-	If Stationsalarm is true:
-		Say "Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!";
-	Else:
-		If Kontaminierter is in the location of the player:
-			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
-		Else: 
-			Say "Du hast in die Hände geklatscht!";
+	[Klatschen]
+	Understand "clap in Hands" as Clapping.
+		Clapping is an action applying to nothing.
+	Carry out clapping:
+		If Stationsalarm is false:
+			Increase Laute_Aktionen by 1.
+	Report Clapping:
+		If Stationsalarm is true:
+			Say "Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!";
+		Else:
+			If Kontaminierter is in the location of the player:
+				Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
+			Else: 
+				Say "Du hast in die Hände geklatscht!";
 
-[Sprechen]
-Understand "talk with [any Kontaminierter]" as Talking.
-	Talking is an action applying to one thing.
-Carry out Talking:
-	If Stationsalarm is false:
-		Increase Laute_Aktionen by 1;
-	Else:	
-		Say "Der Stationsalarm ist zu laut!";
-Report Talking:
+	[Sprechen]
+	Understand "talk with [any Kontaminierter]" as Talking.
+		Talking is an action applying to one thing.
+	Carry out Talking:
+		If Stationsalarm is false:
+			Increase Laute_Aktionen by 1;
+		Else:	
+			Say "Der Stationsalarm ist zu laut!";
+	Report Talking:
 		Say "Du hast den Kontaminierten angesprochen."
 
-[Sicherheitsbarrieren]
-Understand "use [Mobitab] with [any Panel]" as Using.
-	Using is an action applying to two things.
-Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
-Carry out using:
-	Now the Given_SiBa of the second Noun is unlocked;
-Report Using:
-	Say "Du hast die zugehörige Tür des Panels entriegelt."
+	[Sicherheitsbarrieren]
+	Understand "use [Mobitab] with [any Panel]" as Using.
+		Using is an action applying to two things.
+	Check using:
+		If the Player is not carrying the Mobitab:
+			Say "Du trägst nicht das Mobitab!" instead;
+	Carry out using:
+		Now the Given_SiBa of the second Noun is unlocked;
+	Report Using:
+		Say "Du hast die zugehörige Tür des Panels entriegelt."
 
-[Med-Lab Pult Benutzung]
-MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
+	[Med-Lab Pult Benutzung]
+	MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
 
-Understand "interact with [Med-Lab_Pult]" as Interacting.
-	Interacting is an action applying to one thing.
-Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
-Carry out Interacting:
-	Increase Laute_Aktionen by 1;
-Report Interacting:
-	Say MedLabText;
+	Understand "interact with [Med-Lab_Pult]" as Interacting.
+		Interacting is an action applying to one thing.
+	Check using:
+		If the Player is not carrying the Mobitab:
+			Say "Du trägst nicht das Mobitab!" instead;
+	Carry out Interacting:
+		Increase Laute_Aktionen by 1;
+	Report Interacting:
+		Say MedLabText;
 
 
 [*****Kontaminierte*****]
@@ -172,9 +172,13 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
+
+
 	
 [*****Gegenstände*****]
 Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
+
+
 
 [*****Räume*****]
 Gamma_Junction is a room. The printed name is "Gamma Junction".
