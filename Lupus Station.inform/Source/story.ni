@@ -1,7 +1,7 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-The player is in Med_Lab.
+The player is in Gamma_Junction.
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
@@ -178,10 +178,43 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 [*****Gegenstände*****]
 Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 
-Hilfsgenerator is a thing. It is in Com_Base. It is fixed in place.
-Raumanzug is a thing. It is in Umkleidekammer.
-Startknopf is a thing. It is in Com_Base. It is fixed in place.
+[von Scene 4]
+Umkleidetuer is a door. The printed name is "Umkleidetür".
+	It is inside of Hangar and outside of Umkleidekabine.
+	It is locked.
+
+Weltraumtuer is a door. The printed name is "Weltraumtür".
+	It is north of Weltraum and south of Docking_Bay.
+	It is locked.
+Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
+	It is south of Weltraum and north of Com_Base.
+	It is locked.
+
+Hilfsgenerator is a thing.
+	It is in Com_Base.
+	It is fixed in place.
+Raumanzug is a thing.
+	It is in Umkleidekabine.
+	It is wearable.
+Startknopf is a thing.
+	It is in Com_Base.
+	It is fixed in place.
 Messenger is a thing.
+
+Instead of taking off Raumanzug:
+	If the player is in Com_Base and Scene4 is happening:
+		Say "Du kannst den Raumanzug hier nicht ausziehen!";
+	Otherwise:
+		If the player is in Weltraum:
+			Say "Du kannst den Raumanzug hier nicht ausziehen!";
+		Otherwise:
+			Now Weltraumtuer is locked;
+			Now Weltraumtuer_2 is locked;
+			Continue the action.
+
+Before wearing Raumanzug:
+	Now Weltraumtuer is unlocked;
+	Now Weltraumtuer_2 is unlocked.
 
 
 
@@ -225,15 +258,14 @@ Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
 Luke_4 is a Luke. It is up of Delta_Junction and down of Solar_Lab. The printed name is "Deckenluke".
 
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
-Umkleidekabine is inside of Hangar. The printed name is "Umkleidekabine".
+Umkleidekabine is a room. The printed name is "Umkleidekabine".
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
 Wartungsschacht is down of Gamma_Delta_Corridor. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
-Weltraum is north of Com_Base. The printed name is "Weltraum".
-Docking_Bay is north of Weltraum.
+Weltraum is a room. The printed name is "Weltraum". [Änderung]
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
@@ -256,8 +288,9 @@ Bridge is down of Briefing_Room. The printed name is "Bridge".
 
 [*****Scene 4*****]
 Scene4 is a scene.
-Scene4 begins when the player is in Med_Lab.
+Scene4 begins when the player is in Gamma_Junction. [noch ändern]
 When Scene4 begins:
 	Say "Scene 4: ";
 	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen. ";
-	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.".
+	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.";
+	Now Umkleidetuer is unlocked.
