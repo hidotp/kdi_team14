@@ -1,7 +1,6 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-The player is in Gamma_Junction.
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
@@ -42,18 +41,22 @@ Maschinenkern is a backdrop. "Der Maschinenkern leuchtet grün."
 
 [Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
 Richtung_StAla is a direction variable.
+Raum_Test_1 is a room variable. 
+Raum_Test_2 is a room variable. 
 
-Before going direction:
-	Now Richtung_StAla is the noun;
-	If the room Richtung_StAla of the location of the player is not nothing:
+Every turn:
+	Now Raum_Test_1 is the location of the player;
+	If Raum_Test_1 is not Raum_Test_2:
 		If Stationsalarm is true:
-			Say "Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.";				
-		If the room Richtung_StAla of the location of the player is in Innerer_Ring:
+			Say "Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.";		
+		If the player is in a room in Innerer_Ring:
 			If HaEnAbf is true:
 				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
 			Else:
-				Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
+				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+	Now Raum_Test_2 is Raum_Test_1.
 	
+
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -107,6 +110,7 @@ Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
 	Say MedLabText;
+
 
 
 [*****Kontaminierte*****]
@@ -208,64 +212,95 @@ Instead of taking off Raumanzug:
 		If the player is in Weltraum:
 			Say "Du kannst den Raumanzug hier nicht ausziehen!";
 		Otherwise:
-			Now Weltraumtuer is locked;
-			Now Weltraumtuer_2 is locked;
 			Continue the action.
 
 Before wearing Raumanzug:
 	Now Weltraumtuer is unlocked;
 	Now Weltraumtuer_2 is unlocked.
 
+[funktioniert noch nicht]
+Before taking off Raumanzug:
+	If the player is not in Weltraum:
+		If the player is not in Com_Base or Scene4 is not happening:
+			Now Weltraumtuer is locked;
+			Now Weltraumtuer_2 is locked.
+	
 
 
 [*****Räume*****]
-Gamma_Junction is a room. The printed name is "Gamma Junction".
-SiBa_1 is a SiBa. It is north of Gamma_Junction and south of Gamma_Beta_Corridor. The printed name is "Sicherheitsbarriere".
-Panel_GamJun_N is a Panel. The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction. The printed name is "Panel Norden".
+Gamma_Junction is a room. The printed name is "Gamma Junction". 
+SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
+Panel_GamJun_N is a Panel. The printed name is "Panel Norden".
+	The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction.
 
-Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor".
-SiBa_2 is a SiBa. It is north of Gamma_Beta_Corridor and south of Beta_Junction. The printed name is "Sicherheitsbarriere".
+Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
+SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
 
 Beta_Junction is a room. The printed name is "Beta Junction".
-SiBa_3 is a SiBa. It is north of Beta_Junction and south of Alpha_Beta_Corridor. The printed name is "Sicherheitsbarriere".
-
+SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
+	
 Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
-SiBa_4 is a SiBa. It is north of Alpha_Beta_Corridor and south of Alpha_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
 
 Alpha_Junction is a room. The printed name is "Alpha Junction".
-SiBa_5 is a SiBa. It is north of Alpha_Junction and south of Alpha_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
 
 Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
-SiBa_6 is a SiBa. It is north of Alpha_Delta_Corridor and south of Delta_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
 
 Delta_Junction is a room. The printed name is "Delta Junction".
-SiBa_7 is a SiBa. It is north of Delta_Junction and south of Gamma_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
 
 Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
-SiBa_8 is a SiBa. It is north of Gamma_Delta_Corridor and south of Gamma_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
-Luke_1 is a Luke. It is up of Gamma_Junction and down of Xeno_Lab. The printed name is "Deckenluke".
+Luke_1 is a Luke. The printed name is "Deckenluke".
+	It is up of Gamma_Junction and down of Xeno_Lab.
 
 Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
-Luke_2 is a Luke. It is up of Beta_Junction and down of Engeneering_Lab. The printed name is "Deckenluke".
+Luke_2 is a Luke. The printed name is "Deckenluke".
+	It is up of Beta_Junction and down of Engeneering_Lab.
 
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
-Luke_3 is a Luke. It is up of Alpha_Junction and down of Med_Lab. The printed name is "Deckenluke".
-Dekontaminationskabine is inside of Med_Lab. It is in Innerer_Ring. The printed name is "Dekontaminationskabine".
+Luke_3 is a Luke. The printed name is "Deckenluke".
+	It is up of Alpha_Junction and down of Med_Lab.
+Dekontaminationskabine is inside of Med_Lab.  The printed name is "Dekontaminationskabine".
+	It is in Innerer_Ring.
 
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
-Luke_4 is a Luke. It is up of Delta_Junction and down of Solar_Lab. The printed name is "Deckenluke".
+Luke_4 is a Luke. The printed name is "Deckenluke".
+	It is up of Delta_Junction and down of Solar_Lab.
 
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
+
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
+Umkleidetuer is a door. The printed name is "Umkleidetür".
+	It is inside of Hangar and outside of Umkleidekabine.
+	It is locked.
+	
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
 Wartungsschacht is down of Gamma_Delta_Corridor. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
-Weltraum is a room. The printed name is "Weltraum". [Änderung]
+
+Weltraum is a room. The printed name is "Weltraum".
+Weltraumtuer is a door. The printed name is "Weltraumtür".
+	It is north of Weltraum and south of Docking_Bay.
+	It is locked.
+Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
+	It is south of Weltraum and north of Com_Base.
+	It is locked.
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
