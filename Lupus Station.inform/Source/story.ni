@@ -57,6 +57,7 @@ Every turn:
 	Now Raum_Test_2 is Raum_Test_1.
 	
 
+
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
@@ -109,6 +110,7 @@ Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
 	Say MedLabText;
+
 
 
 [*****Kontaminierte*****]
@@ -183,54 +185,79 @@ Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 
 
 [*****Räume*****]
-Gamma_Junction is a room. The printed name is "Gamma Junction".  "[if Stationsalarm is true ]Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.[end if]".
-SiBa_1 is a SiBa. It is north of Gamma_Junction and south of Gamma_Beta_Corridor. The printed name is "Sicherheitsbarriere".
-Panel_GamJun_N is a Panel. The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction. The printed name is "Panel Norden".
+Gamma_Junction is a room. The printed name is "Gamma Junction". 
+SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
+Panel_GamJun_N is a Panel. The printed name is "Panel Norden".
+	The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction.
 
 Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
-SiBa_2 is a SiBa. It is north of Gamma_Beta_Corridor and south of Beta_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
 
 Beta_Junction is a room. The printed name is "Beta Junction".
-SiBa_3 is a SiBa. It is north of Beta_Junction and south of Alpha_Beta_Corridor. The printed name is "Sicherheitsbarriere".
-
+SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
+	
 Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
-SiBa_4 is a SiBa. It is north of Alpha_Beta_Corridor and south of Alpha_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
 
 Alpha_Junction is a room. The printed name is "Alpha Junction".
-SiBa_5 is a SiBa. It is north of Alpha_Junction and south of Alpha_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
 
 Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
-SiBa_6 is a SiBa. It is north of Alpha_Delta_Corridor and south of Delta_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
+	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
 
 Delta_Junction is a room. The printed name is "Delta Junction".
-SiBa_7 is a SiBa. It is north of Delta_Junction and south of Gamma_Delta_Corridor. The printed name is "Sicherheitsbarriere".
+SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
 
 Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
-SiBa_8 is a SiBa. It is north of Gamma_Delta_Corridor and south of Gamma_Junction. The printed name is "Sicherheitsbarriere".
+SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
+	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
-Luke_1 is a Luke. It is up of Gamma_Junction and down of Xeno_Lab. The printed name is "Deckenluke".
+Luke_1 is a Luke. The printed name is "Deckenluke".
+	It is up of Gamma_Junction and down of Xeno_Lab.
 
 Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
-Luke_2 is a Luke. It is up of Beta_Junction and down of Engeneering_Lab. The printed name is "Deckenluke".
+Luke_2 is a Luke. The printed name is "Deckenluke".
+	It is up of Beta_Junction and down of Engeneering_Lab.
 
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
-Luke_3 is a Luke. It is up of Alpha_Junction and down of Med_Lab. The printed name is "Deckenluke".
-Dekontaminationskabine is inside of Med_Lab. It is in Innerer_Ring. The printed name is "Dekontaminationskabine".
+Luke_3 is a Luke. The printed name is "Deckenluke".
+	It is up of Alpha_Junction and down of Med_Lab.
+Dekontaminationskabine is inside of Med_Lab.  The printed name is "Dekontaminationskabine".
+	It is in Innerer_Ring.
 
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
-Luke_4 is a Luke. It is up of Delta_Junction and down of Solar_Lab. The printed name is "Deckenluke".
+Luke_4 is a Luke. The printed name is "Deckenluke".
+	It is up of Delta_Junction and down of Solar_Lab.
 
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
-Umkleidekabine is inside of Hangar. The printed name is "Umkleidekabine".
+
+Umkleidekabine is a room. The printed name is "Umkleidekabine".
+Umkleidetuer is a door. The printed name is "Umkleidetür".
+	It is inside of Hangar and outside of Umkleidekabine.
+	It is locked.
+	
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
 Wartungsschacht is down of Gamma_Delta_Corridor. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
-Weltraum is north of Com_Base. The printed name is "Weltraum".
-Docking_Bay is north of Weltraum.
+
+Weltraum is a room. The printed name is "Weltraum".
+Weltraumtuer is a door. The printed name is "Weltraumtür".
+	It is north of Weltraum and south of Docking_Bay.
+	It is locked.
+Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
+	It is south of Weltraum and north of Com_Base.
+	It is locked.
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
