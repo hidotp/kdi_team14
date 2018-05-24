@@ -1,7 +1,6 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-The player is in Med_Lab.
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
@@ -42,17 +41,20 @@ Maschinenkern is a backdrop. "Der Maschinenkern leuchtet grün."
 
 [Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
 Richtung_StAla is a direction variable.
+Raum_Test_1 is a room variable. 
+Raum_Test_2 is a room variable. 
 
-Before going direction:
-	Now Richtung_StAla is the noun;
-	If the room Richtung_StAla of the location of the player is not nothing:
+Every turn:
+	Now Raum_Test_1 is the location of the player;
+	If Raum_Test_1 is not Raum_Test_2:
 		If Stationsalarm is true:
-			Say "Der Alarm der Station gibt ein ohrenbetäubenden Sirenenton von sich.";				
-		If the room Richtung_StAla of the location of the player is in Innerer_Ring:
+			Say "Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.";		
+		If the player is in a room in Innerer_Ring:
 			If HaEnAbf is true:
 				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
 			Else:
-				Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
+				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+	Now Raum_Test_2 is Raum_Test_1.
 	
 
 [*****Aktionen*****]
@@ -181,11 +183,11 @@ Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 
 
 [*****Räume*****]
-Gamma_Junction is a room. The printed name is "Gamma Junction".
+Gamma_Junction is a room. The printed name is "Gamma Junction".  "[if Stationsalarm is true ]Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.[end if]".
 SiBa_1 is a SiBa. It is north of Gamma_Junction and south of Gamma_Beta_Corridor. The printed name is "Sicherheitsbarriere".
 Panel_GamJun_N is a Panel. The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction. The printed name is "Panel Norden".
 
-Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor".
+Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
 SiBa_2 is a SiBa. It is north of Gamma_Beta_Corridor and south of Beta_Junction. The printed name is "Sicherheitsbarriere".
 
 Beta_Junction is a room. The printed name is "Beta Junction".
