@@ -7,6 +7,8 @@ Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 
+Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
+
 [when entering a room // nur für mich ein Punkt]
 
 [*****Regionen*****]
@@ -75,6 +77,19 @@ Report Clapping:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
 		Else: 
 			Say "Du hast in die Hände geklatscht!";
+
+[Drucklufthammer aufladen]
+Understand "charge [Drucklufthammer] with [Panel]" as Charging.
+	Charging is an action applying to two things.
+Check Charging: 
+	If Drcklfthmr_Ladezstd is true:
+		Say "Der Hammer is schon geladen!" instead;
+Carry out clapping:
+	If Drcklfthmr_Ladezstd is false:
+		Now Drcklfthmr_Ladezstd is true;
+Report Charging:
+	Say "Du hast den Drucklufthammer aufgeladen."
+	
 
 [Sprechen]
 Understand "talk with [any Kontaminierter]" as Talking.
@@ -181,7 +196,7 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	
 [*****Gegenstände*****]
 Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
-
+Drucklufthammer is a thing. It is in Umkleidekabine. 
 
 
 [*****Räume*****]
