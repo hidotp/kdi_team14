@@ -187,12 +187,16 @@ Umkleidetuer is a door. The printed name is "Umkleidetür".
 	It is inside of Hangar and outside of Umkleidekabine.
 	It is locked.
 
+[Doors]
 Weltraumtuer is a door. The printed name is "Weltraumtür".
 	It is north of Weltraum and south of Docking_Bay.
 	It is locked.
 Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 	It is south of Weltraum and north of Com_Base.
 	It is locked.
+
+[Gegenstände]
+Raumanzug_Kaputt is truth state variable. Raumanzug_Kaputt is false.
 
 Hilfsgenerator is a thing.
 	It is in Com_Base.
@@ -205,6 +209,7 @@ Startknopf is a thing.
 	It is fixed in place.
 Messenger is a thing.
 
+[Raumanzug ausziehen]
 Instead of taking off Raumanzug:
 	If the player is in Com_Base and Scene4 is happening:
 		Say "Du kannst den Raumanzug hier nicht ausziehen!";
@@ -214,16 +219,40 @@ Instead of taking off Raumanzug:
 		Otherwise:
 			Continue the action.
 
-Before wearing Raumanzug:
-	Now Weltraumtuer is unlocked;
-	Now Weltraumtuer_2 is unlocked.
-
-[funktioniert noch nicht]
-Before taking off Raumanzug:
-	If the player is not in Weltraum:
-		If the player is not in Com_Base or Scene4 is not happening:
+[Weltraumtüren öffnen mit (heilem) raumanzug]
+Weltraum_Richtung is a direction variable. [In welche Richtung geht der Spieler?]
+Weltraum_Text is a text variable. Weltraum_Text is "Du musst einen Raumanzug tragen!". [Ausgabe wenn man keinen Raumanzug trägt]
+Raumanzug_Kaputt_Text is a text variable. Raumanzug_Kaputt_Text is "Du kannst nicht ins Weltall! Dein Raumanzug ist beschädigt!". [Ausgabe wenn Raumanzug kaputt]
+	
+Before going direction:
+	Now Weltraum_Richtung is the noun;
+	If the room Weltraum_Richtung of the location of the player is not nothing:
+		If Weltraumtuer is open or Weltraumtuer is unlocked:
+			Now Weltraumtuer is closed;
 			Now Weltraumtuer is locked;
-			Now Weltraumtuer_2 is locked.
+		If Weltraumtuer_2 is open or Weltraumtuer_2 is unlocked:
+			Now Weltraumtuer_2 is closed;
+			Now Weltraumtuer_2 is locked;
+		If the player is in Weltraum:
+			Now Weltraumtuer is unlocked;
+			Now Weltraumtuer_2 is unlocked;
+		Otherwise if the player is in Docking_Bay and Weltraum_Richtung is south:
+			If the player wears Raumanzug:
+				If Raumanzug_Kaputt is false:
+					Now Weltraumtuer is unlocked;
+				Otherwise:
+					Say Raumanzug_Kaputt_Text;
+			Otherwise:
+				Say Weltraum_Text;
+		Otherwise if the player is in Com_Base and Weltraum_Richtung is north:
+			If the player wears Raumanzug:
+				If Raumanzug_Kaputt is false:
+					Now Weltraumtuer_2 is unlocked;
+				Otherwise:
+					Say Raumanzug_Kaputt_Text;
+			Otherwise:
+				Say Weltraum_Text.
+
 	
 
 
