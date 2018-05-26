@@ -83,13 +83,27 @@ Understand "charge [Drucklufthammer] with [Panel]" as Charging.
 	Charging is an action applying to two things.
 Check Charging: 
 	If Drcklfthmr_Ladezstd is true:
-		Say "Der Hammer is schon geladen!" instead;
+		Say "Der Drucklufthammer ist schon geladen!" instead;
 Carry out clapping:
 	If Drcklfthmr_Ladezstd is false:
 		Now Drcklfthmr_Ladezstd is true;
 Report Charging:
 	Say "Du hast den Drucklufthammer aufgeladen."
 	
+[Drucklufthammer benutzen]
+Understand "use [Drucklufthammer]" as Druckluften.
+	Druckluften is an action applying to one thing.
+Check Druckluften: 
+	If Drcklfthmr_Ladezstd is false:
+		Say "Der Drucklufthammer hat keine Energie" instead;
+Carry out Druckluften:
+	If Drcklfthmr_Ladezstd is true:
+		Increase Laute_Aktionen by 1;
+Report Druckluften:
+	If Kontaminierter is in the location of the player:
+		Say "Du mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
+	Else: 
+		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.";
 
 [Sprechen]
 Understand "talk with [any Kontaminierter]" as Talking.
