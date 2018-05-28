@@ -34,6 +34,9 @@ Maschinenkern is a backdrop. "Der Maschinenkern leuchtet grün."
 	
 	[Mobitab]
 	Mobitab is a thing. It is in Gamma_Junction.
+	
+	[Sicherheitsausweis]
+	Sicherheitsausweis is a thing. It is in Spind.
 
 
 
@@ -88,11 +91,11 @@ Report Talking:
 	Say "Du hast den Kontaminierten angesprochen."
 
 [Sicherheitsbarrieren]
-Understand "use [Mobitab] with [any Panel]" as Using.
+Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
 	Using is an action applying to two things.
 Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
+	If the Player is not carrying the Sicherheitsausweis:
+		Say "Du trägst nicht den Sicherheitsausweis!" instead;
 Carry out using:
 	Now the Given_SiBa of the second Noun is unlocked;
 Report Using:
@@ -238,6 +241,7 @@ Luke_4 is a Luke. The printed name is "Deckenluke".
 	It is up of Delta_Junction and down of Solar_Lab.
 
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
+Spind is a container. It is in Hangar. 
 
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
 Umkleidetuer is a door. The printed name is "Umkleidetür".
