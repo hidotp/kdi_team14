@@ -216,7 +216,7 @@ Raumanzug is a thing.
 Startknopf is a thing.
 	It is in Com_Base.
 	It is fixed in place.
-Selbstzerstoerungsknopf is a thing. The printed name is "Selbstzerstörungsknopf".
+Selbstzerstörungsknopf is a thing.
 	It is in Bridge.
 	It is fixed in place.
 Messenger is a thing.
@@ -294,7 +294,7 @@ Every turn:
 Notruf_Aktivierbar is a truth state variable. Notruf_Aktivierbar is true.
 Notruf is a truth state variable. Notruf is false.
 
-Understand "Press [Selbstzerstoerungsknopf]" as Pressing_Knopf_2.
+Understand "Press [Selbstzerstörungsknopf]" as Pressing_Knopf_2.
 	Pressing_Knopf_2 is an action applying to one thing.
 Carry out Pressing_Knopf_2:
 	If Notruf_Aktivierbar is true:
