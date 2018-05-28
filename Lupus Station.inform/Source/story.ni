@@ -1,6 +1,11 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
+[*****Player*****]
+Percy is a man.
+Barry is a man.
+Player is Percy.
+
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
