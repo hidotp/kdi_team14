@@ -14,7 +14,6 @@ Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
 [*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
-Maschinenkern is a backdrop. "Der Maschinenkern leuchtet grün."
 
 
 
@@ -77,6 +76,17 @@ Report Clapping:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
 		Else: 
 			Say "Du hast in die Hände geklatscht!";
+			
+[Sprechen]
+Understand "talk with [any Kontaminierter]" as Talking.
+	Talking is an action applying to one thing.
+Carry out Talking:
+	If Stationsalarm is false:
+		Increase Laute_Aktionen by 1;
+	Else:	
+		Say "Der Stationsalarm ist zu laut!";
+Report Talking:
+	Say "Du hast den Kontaminierten angesprochen."
 
 [Drucklufthammer aufladen]
 Understand "charge [Drucklufthammer] with [Panel]" as Charging.
@@ -105,23 +115,12 @@ Report Druckluften:
 	Else: 
 		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.";
 
-[Sprechen]
-Understand "talk with [any Kontaminierter]" as Talking.
-	Talking is an action applying to one thing.
-Carry out Talking:
-	If Stationsalarm is false:
-		Increase Laute_Aktionen by 1;
-	Else:	
-		Say "Der Stationsalarm ist zu laut!";
-Report Talking:
-	Say "Du hast den Kontaminierten angesprochen."
-
 [Sicherheitsbarrieren]
-Understand "use [Mobitab] with [any Panel]" as Using.
+Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
 	Using is an action applying to two things.
 Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
+	If the Player is not carrying the Sicherheitsausweis:
+		Say "Du trägst nicht das Sicherheitsausweis!" instead;
 Carry out using:
 	Now the Given_SiBa of the second Noun is unlocked;
 Report Using:
@@ -256,13 +255,14 @@ Luke_2 is a Luke. The printed name is "Deckenluke".
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
 Luke_3 is a Luke. The printed name is "Deckenluke".
 	It is up of Alpha_Junction and down of Med_Lab.
-Dekontaminationskabine is inside of Med_Lab.  The printed name is "Dekontaminationskabine".
+Dekontaminationskabine is north of Med_Lab.  The printed name is "Dekontaminationskabine".
 	It is in Innerer_Ring.
 
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
 Luke_4 is a Luke. The printed name is "Deckenluke".
 	It is up of Delta_Junction and down of Solar_Lab.
 
+Luke_Hangar is a door
 Hangar is down of Gamma_Junction. The printed name is "Hangar".
 
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
