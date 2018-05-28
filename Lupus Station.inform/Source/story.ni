@@ -3,7 +3,9 @@ Use MAX_STATIC_DATA of 100000000.
 
 [*****Player*****]
 Percy is a man.
+	Percy is in Raumfähre.
 Barry is a man.
+	Barry is in Raumfähre.
 Player is Percy.
 
 
