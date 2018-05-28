@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-606"/>
+  <activeNode nodeId="node-608"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Lupus Station</command>
-    <result xml:space="preserve">Scene 4: Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als n&#x00E4;chsten Tun wollen, antwortet Percy mit "Lass uns einen Notruf absetzen". Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst m&#x00F6;glich den Selbstzerst&#x00F6;rungsknopf auf der Br&#x00FC;cke dr&#x00FC;cken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zur&#x00FC;ck zum &#x00E4;u&#x00DF;eren Ring gehen. Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.&#x000A;&#x000A;Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180528 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Gamma Junction&#x000A;You can see Deckenluke, Sicherheitsbarriere, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180528 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Raumf&#x00E4;hre&#x000A;You can see Barry here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-2"/>
       <child nodeId="node-33"/>
@@ -23,9 +23,10 @@
       <child nodeId="node-333"/>
       <child nodeId="node-352"/>
       <child nodeId="node-366"/>
-      <child nodeId="node-558"/>
-      <child nodeId="node-570"/>
+      <child nodeId="node-560"/>
+      <child nodeId="node-572"/>
       <child nodeId="node-600"/>
+      <child nodeId="node-607"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -3248,13 +3249,13 @@
     <children>
       <child nodeId="node-367"/>
       <child nodeId="node-402"/>
-      <child nodeId="node-500"/>
-      <child nodeId="node-527"/>
-      <child nodeId="node-528"/>
+      <child nodeId="node-502"/>
       <child nodeId="node-529"/>
-      <child nodeId="node-535"/>
-      <child nodeId="node-546"/>
+      <child nodeId="node-530"/>
+      <child nodeId="node-531"/>
+      <child nodeId="node-537"/>
       <child nodeId="node-548"/>
+      <child nodeId="node-550"/>
     </children>
   </item>
   <item nodeId="node-367">
@@ -3570,10 +3571,10 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-403"/>
-      <child nodeId="node-460"/>
-      <child nodeId="node-470"/>
-      <child nodeId="node-473"/>
-      <child nodeId="node-487"/>
+      <child nodeId="node-462"/>
+      <child nodeId="node-472"/>
+      <child nodeId="node-475"/>
+      <child nodeId="node-489"/>
     </children>
   </item>
   <item nodeId="node-403">
@@ -3910,7 +3911,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-441"/>
-      <child nodeId="node-449"/>
+      <child nodeId="node-451"/>
     </children>
   </item>
   <item nodeId="node-441">
@@ -3939,7 +3940,7 @@
     <children>
       <child nodeId="node-444"/>
       <child nodeId="node-446"/>
-      <child nodeId="node-598"/>
+      <child nodeId="node-449"/>
     </children>
   </item>
   <item nodeId="node-444">
@@ -3981,24 +3982,9 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-598">
+  <item nodeId="node-449">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-599"/>
-    </children>
-  </item>
-  <item nodeId="node-599">
-    <command xml:space="preserve">press</command>
-    <result xml:space="preserve">(Startknopf)&#x000A;Der Hilfsgenerator ist nun aktiviert! Du hast jetzt 5 Z&#x00FC;ge Sauerstoff!&#x000A;&#x000A;Der Sauerstoff reicht noch f&#x00FC;r 4 Z&#x00FC;ge&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-449">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4006,18 +3992,14 @@
     </children>
   </item>
   <item nodeId="node-450">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">press</command>
+    <result xml:space="preserve">(Startknopf)&#x000A;Der Hilfsgenerator ist nun aktiviert! Du hast jetzt 5 Z&#x00FC;ge Sauerstoff!&#x000A;&#x000A;Der Sauerstoff reicht noch f&#x00FC;r 4 Z&#x00FC;ge&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-451"/>
-      <child nodeId="node-455"/>
-    </children>
   </item>
   <item nodeId="node-451">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4025,17 +4007,18 @@
     </children>
   </item>
   <item nodeId="node-452">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-453"/>
+      <child nodeId="node-457"/>
     </children>
   </item>
   <item nodeId="node-453">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4043,14 +4026,17 @@
     </children>
   </item>
   <item nodeId="node-454">
-    <command xml:space="preserve">Now Raumanzug_Kaputt is true.</command>
-    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-455"/>
+    </children>
   </item>
   <item nodeId="node-455">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4058,17 +4044,14 @@
     </children>
   </item>
   <item nodeId="node-456">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Du kannst nicht ins Weltall! Dein Raumanzug ist besch&#x00E4;digt!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">Now Raumanzug_Kaputt is true.</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-457"/>
-    </children>
   </item>
   <item nodeId="node-457">
-    <command xml:space="preserve">u</command>
-    <result xml:space="preserve">Wartungsschacht&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4076,8 +4059,8 @@
     </children>
   </item>
   <item nodeId="node-458">
-    <command xml:space="preserve">u</command>
-    <result xml:space="preserve">Gamma Delta Junction&#x000A;You can see Sicherheitsbarriere and Sicherheitsbarriere here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Du kannst nicht ins Weltall! Dein Raumanzug ist besch&#x00E4;digt!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4085,14 +4068,17 @@
     </children>
   </item>
   <item nodeId="node-459">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-460"/>
+    </children>
   </item>
   <item nodeId="node-460">
-    <command xml:space="preserve">take</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Gamma Delta Junction&#x000A;You can see Sicherheitsbarriere and Sicherheitsbarriere here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4100,17 +4086,14 @@
     </children>
   </item>
   <item nodeId="node-461">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-462"/>
-    </children>
   </item>
   <item nodeId="node-462">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4118,8 +4101,8 @@
     </children>
   </item>
   <item nodeId="node-463">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4127,18 +4110,17 @@
     </children>
   </item>
   <item nodeId="node-464">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Weltraum&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-465"/>
-      <child nodeId="node-468"/>
     </children>
   </item>
   <item nodeId="node-465">
-    <command xml:space="preserve">drop raumanzug</command>
-    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4147,18 +4129,22 @@
   </item>
   <item nodeId="node-466">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Com Base&#x000A;You can see Hilfsgenerator and Startknopf here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Weltraum&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-467"/>
+      <child nodeId="node-470"/>
     </children>
   </item>
   <item nodeId="node-467">
     <command xml:space="preserve">drop raumanzug</command>
-    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-468"/>
+    </children>
   </item>
   <item nodeId="node-468">
     <command xml:space="preserve">s</command>
@@ -4171,13 +4157,13 @@
   </item>
   <item nodeId="node-469">
     <command xml:space="preserve">drop raumanzug</command>
-    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
   <item nodeId="node-470">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Com Base&#x000A;You can see Hilfsgenerator and Startknopf here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4185,23 +4171,23 @@
     </children>
   </item>
   <item nodeId="node-471">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop raumanzug</command>
+    <result xml:space="preserve">(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-472">
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-472"/>
+      <child nodeId="node-473"/>
     </children>
   </item>
-  <item nodeId="node-472">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
   <item nodeId="node-473">
-    <command xml:space="preserve">take raumanuzug</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4209,17 +4195,14 @@
     </children>
   </item>
   <item nodeId="node-474">
-    <command xml:space="preserve">take raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-475"/>
-    </children>
   </item>
   <item nodeId="node-475">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raumanuzug</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4227,8 +4210,8 @@
     </children>
   </item>
   <item nodeId="node-476">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4236,8 +4219,8 @@
     </children>
   </item>
   <item nodeId="node-477">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4245,8 +4228,8 @@
     </children>
   </item>
   <item nodeId="node-478">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4254,8 +4237,8 @@
     </children>
   </item>
   <item nodeId="node-479">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4263,8 +4246,8 @@
     </children>
   </item>
   <item nodeId="node-480">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4272,8 +4255,8 @@
     </children>
   </item>
   <item nodeId="node-481">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4281,8 +4264,8 @@
     </children>
   </item>
   <item nodeId="node-482">
-    <command xml:space="preserve">u</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4290,8 +4273,8 @@
     </children>
   </item>
   <item nodeId="node-483">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4300,7 +4283,7 @@
   </item>
   <item nodeId="node-484">
     <command xml:space="preserve">u</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4308,7 +4291,7 @@
     </children>
   </item>
   <item nodeId="node-485">
-    <command xml:space="preserve">d</command>
+    <command xml:space="preserve">n</command>
     <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
@@ -4317,14 +4300,17 @@
     </children>
   </item>
   <item nodeId="node-486">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-487"/>
+    </children>
   </item>
   <item nodeId="node-487">
-    <command xml:space="preserve">take raummanzug</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4332,17 +4318,14 @@
     </children>
   </item>
   <item nodeId="node-488">
-    <command xml:space="preserve">take raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-489"/>
-    </children>
   </item>
   <item nodeId="node-489">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raummanzug</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4350,8 +4333,8 @@
     </children>
   </item>
   <item nodeId="node-490">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4359,8 +4342,8 @@
     </children>
   </item>
   <item nodeId="node-491">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4368,8 +4351,8 @@
     </children>
   </item>
   <item nodeId="node-492">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4378,7 +4361,7 @@
   </item>
   <item nodeId="node-493">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4386,8 +4369,8 @@
     </children>
   </item>
   <item nodeId="node-494">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4395,8 +4378,8 @@
     </children>
   </item>
   <item nodeId="node-495">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4404,8 +4387,8 @@
     </children>
   </item>
   <item nodeId="node-496">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4413,8 +4396,8 @@
     </children>
   </item>
   <item nodeId="node-497">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4422,8 +4405,8 @@
     </children>
   </item>
   <item nodeId="node-498">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4431,51 +4414,51 @@
     </children>
   </item>
   <item nodeId="node-499">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-500"/>
+    </children>
+  </item>
+  <item nodeId="node-500">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-501"/>
+    </children>
+  </item>
+  <item nodeId="node-501">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-500">
+  <item nodeId="node-502">
     <command xml:space="preserve">go inside</command>
     <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
-      <child nodeId="node-501"/>
-      <child nodeId="node-526"/>
+      <child nodeId="node-503"/>
+      <child nodeId="node-528"/>
     </children>
   </item>
-  <item nodeId="node-501">
+  <item nodeId="node-503">
     <command xml:space="preserve">go outside</command>
     <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
-      <child nodeId="node-502"/>
-    </children>
-  </item>
-  <item nodeId="node-502">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-503"/>
-    </children>
-  </item>
-  <item nodeId="node-503">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
       <child nodeId="node-504"/>
     </children>
   </item>
   <item nodeId="node-504">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4483,8 +4466,8 @@
     </children>
   </item>
   <item nodeId="node-505">
-    <command xml:space="preserve">inside</command>
-    <result xml:space="preserve">Raumf&#x00E4;hre&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4492,8 +4475,8 @@
     </children>
   </item>
   <item nodeId="node-506">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4501,8 +4484,8 @@
     </children>
   </item>
   <item nodeId="node-507">
-    <command xml:space="preserve">go up</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">inside</command>
+    <result xml:space="preserve">Raumf&#x00E4;hre&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4510,8 +4493,8 @@
     </children>
   </item>
   <item nodeId="node-508">
-    <command xml:space="preserve">inside</command>
-    <result xml:space="preserve">Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4519,8 +4502,8 @@
     </children>
   </item>
   <item nodeId="node-509">
-    <command xml:space="preserve">take</command>
-    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4528,8 +4511,8 @@
     </children>
   </item>
   <item nodeId="node-510">
-    <command xml:space="preserve">take Umkleidetuer</command>
-    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">inside</command>
+    <result xml:space="preserve">Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4537,8 +4520,8 @@
     </children>
   </item>
   <item nodeId="node-511">
-    <command xml:space="preserve">take Umkleidet&#x00FC;r</command>
-    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4546,8 +4529,8 @@
     </children>
   </item>
   <item nodeId="node-512">
-    <command xml:space="preserve">take Raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take Umkleidetuer</command>
+    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4555,8 +4538,8 @@
     </children>
   </item>
   <item nodeId="node-513">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take Umkleidet&#x00FC;r</command>
+    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4564,8 +4547,8 @@
     </children>
   </item>
   <item nodeId="node-514">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take Raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4573,8 +4556,8 @@
     </children>
   </item>
   <item nodeId="node-515">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4582,8 +4565,8 @@
     </children>
   </item>
   <item nodeId="node-516">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4591,8 +4574,8 @@
     </children>
   </item>
   <item nodeId="node-517">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4600,8 +4583,8 @@
     </children>
   </item>
   <item nodeId="node-518">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4609,8 +4592,8 @@
     </children>
   </item>
   <item nodeId="node-519">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4627,8 +4610,8 @@
     </children>
   </item>
   <item nodeId="node-521">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4636,8 +4619,8 @@
     </children>
   </item>
   <item nodeId="node-522">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4645,8 +4628,8 @@
     </children>
   </item>
   <item nodeId="node-523">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4654,8 +4637,8 @@
     </children>
   </item>
   <item nodeId="node-524">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4663,49 +4646,49 @@
     </children>
   </item>
   <item nodeId="node-525">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-526"/>
+    </children>
+  </item>
+  <item nodeId="node-526">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-527"/>
+    </children>
+  </item>
+  <item nodeId="node-527">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-526">
+  <item nodeId="node-528">
     <command xml:space="preserve">go umkleidekabine</command>
     <result xml:space="preserve">That's not something you can enter.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-527">
+  <item nodeId="node-529">
     <command xml:space="preserve">u</command>
     <result xml:space="preserve">(first opening Kabinent&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-528">
+  <item nodeId="node-530">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Hangar&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-529">
-    <command xml:space="preserve">go umkleidekabine</command>
-    <result xml:space="preserve">You can't get into the closed Umkleidekabine.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-530"/>
-    </children>
-  </item>
-  <item nodeId="node-530">
-    <command xml:space="preserve">go inside</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-531"/>
-    </children>
-  </item>
   <item nodeId="node-531">
-    <command xml:space="preserve">enter umkleidekabine</command>
+    <command xml:space="preserve">go umkleidekabine</command>
     <result xml:space="preserve">You can't get into the closed Umkleidekabine.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
@@ -4714,8 +4697,8 @@
     </children>
   </item>
   <item nodeId="node-532">
-    <command xml:space="preserve">open umkleidekabine</command>
-    <result xml:space="preserve">You open Umkleidekabine, revealing Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go inside</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4724,65 +4707,65 @@
   </item>
   <item nodeId="node-533">
     <command xml:space="preserve">enter umkleidekabine</command>
-    <result xml:space="preserve">You get into Umkleidekabine.&#x000A;&#x000A;In Umkleidekabine you can see Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't get into the closed Umkleidekabine.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-534"/>
     </children>
   </item>
   <item nodeId="node-534">
-    <command xml:space="preserve">leave</command>
-    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-535">
     <command xml:space="preserve">open umkleidekabine</command>
     <result xml:space="preserve">You open Umkleidekabine, revealing Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-536"/>
-      <child nodeId="node-538"/>
-    </children>
-  </item>
-  <item nodeId="node-536">
-    <command xml:space="preserve">unlock umkleidekabine</command>
-    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-537"/>
-    </children>
-  </item>
-  <item nodeId="node-537">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Umkleidekabine)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-535"/>
+    </children>
   </item>
-  <item nodeId="node-538">
+  <item nodeId="node-535">
     <command xml:space="preserve">enter umkleidekabine</command>
     <result xml:space="preserve">You get into Umkleidekabine.&#x000A;&#x000A;In Umkleidekabine you can see Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
+      <child nodeId="node-536"/>
+    </children>
+  </item>
+  <item nodeId="node-536">
+    <command xml:space="preserve">leave</command>
+    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-537">
+    <command xml:space="preserve">open umkleidekabine</command>
+    <result xml:space="preserve">You open Umkleidekabine, revealing Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-538"/>
+      <child nodeId="node-540"/>
+    </children>
+  </item>
+  <item nodeId="node-538">
+    <command xml:space="preserve">unlock umkleidekabine</command>
+    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
       <child nodeId="node-539"/>
     </children>
   </item>
   <item nodeId="node-539">
-    <command xml:space="preserve">take</command>
-    <result xml:space="preserve">(Umkleidekabine)&#x000A;You would have to get out of Umkleidekabine first.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Umkleidekabine)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-540"/>
-    </children>
   </item>
   <item nodeId="node-540">
-    <command xml:space="preserve">take raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">enter umkleidekabine</command>
+    <result xml:space="preserve">You get into Umkleidekabine.&#x000A;&#x000A;In Umkleidekabine you can see Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4790,8 +4773,8 @@
     </children>
   </item>
   <item nodeId="node-541">
-    <command xml:space="preserve">leave</command>
-    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (empty) here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">(Umkleidekabine)&#x000A;You would have to get out of Umkleidekabine first.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4799,8 +4782,8 @@
     </children>
   </item>
   <item nodeId="node-542">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4808,8 +4791,8 @@
     </children>
   </item>
   <item nodeId="node-543">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">leave</command>
+    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (empty) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4817,8 +4800,8 @@
     </children>
   </item>
   <item nodeId="node-544">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Weltraum&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4826,14 +4809,17 @@
     </children>
   </item>
   <item nodeId="node-545">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Com Base&#x000A;You can see Hilfsgenerator and Startknopf here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-546"/>
+    </children>
   </item>
   <item nodeId="node-546">
-    <command xml:space="preserve">unlock umkleidekabine</command>
-    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Weltraum&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4841,14 +4827,14 @@
     </children>
   </item>
   <item nodeId="node-547">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Umkleidekabine)&#x000A;Umkleidekabine is already here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Com Base&#x000A;You can see Hilfsgenerator and Startknopf here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
   <item nodeId="node-548">
-    <command xml:space="preserve">enter umkleidekabine</command>
-    <result xml:space="preserve">You get into Umkleidekabine.&#x000A;&#x000A;In Umkleidekabine you can see Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock umkleidekabine</command>
+    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4856,17 +4842,14 @@
     </children>
   </item>
   <item nodeId="node-549">
-    <command xml:space="preserve">leave</command>
-    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Umkleidekabine)&#x000A;Umkleidekabine is already here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-550"/>
-    </children>
   </item>
   <item nodeId="node-550">
-    <command xml:space="preserve">take</command>
-    <result xml:space="preserve">(Umkleidekabine)&#x000A;That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">enter umkleidekabine</command>
+    <result xml:space="preserve">You get into Umkleidekabine.&#x000A;&#x000A;In Umkleidekabine you can see Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4874,8 +4857,8 @@
     </children>
   </item>
   <item nodeId="node-551">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">leave</command>
+    <result xml:space="preserve">You get out of Umkleidekabine.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4884,7 +4867,7 @@
   </item>
   <item nodeId="node-552">
     <command xml:space="preserve">take</command>
-    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(Umkleidekabine)&#x000A;That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4892,8 +4875,8 @@
     </children>
   </item>
   <item nodeId="node-553">
-    <command xml:space="preserve">u</command>
-    <result xml:space="preserve">You must name something more substantial.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Docking Bay&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4901,8 +4884,8 @@
     </children>
   </item>
   <item nodeId="node-554">
-    <command xml:space="preserve">go up</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4910,8 +4893,8 @@
     </children>
   </item>
   <item nodeId="node-555">
-    <command xml:space="preserve">close umkleidekabine</command>
-    <result xml:space="preserve">It isn't something you can close.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">You must name something more substantial.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4919,8 +4902,8 @@
     </children>
   </item>
   <item nodeId="node-556">
-    <command xml:space="preserve">open umkleidekabine</command>
-    <result xml:space="preserve">&gt;</result>
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;You can see Umkleidekabine (in which is Raumanzug) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4928,14 +4911,17 @@
     </children>
   </item>
   <item nodeId="node-557">
-    <command xml:space="preserve">lock umkleidekabine</command>
-    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">close umkleidekabine</command>
+    <result xml:space="preserve">It isn't something you can close.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-558"/>
+    </children>
   </item>
   <item nodeId="node-558">
-    <command xml:space="preserve">west</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">open umkleidekabine</command>
+    <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4943,17 +4929,14 @@
     </children>
   </item>
   <item nodeId="node-559">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">lock umkleidekabine</command>
+    <result xml:space="preserve">(with Umkleidekabine)&#x000A;(first taking Umkleidekabine)&#x000A;That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-560"/>
-    </children>
   </item>
   <item nodeId="node-560">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4961,8 +4944,8 @@
     </children>
   </item>
   <item nodeId="node-561">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4970,8 +4953,8 @@
     </children>
   </item>
   <item nodeId="node-562">
-    <command xml:space="preserve">inside</command>
-    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Tuer_Umkleide and Raumanzug here.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4979,8 +4962,8 @@
     </children>
   </item>
   <item nodeId="node-563">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">(first opening Tuer_Umkleide)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Hangar&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4988,8 +4971,8 @@
     </children>
   </item>
   <item nodeId="node-564">
-    <command xml:space="preserve">open Tuer_Umkleide</command>
-    <result xml:space="preserve">It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">inside</command>
+    <result xml:space="preserve">Der Alarm der Station gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Tuer_Umkleide and Raumanzug here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -4997,8 +4980,8 @@
     </children>
   </item>
   <item nodeId="node-565">
-    <command xml:space="preserve">unlock </command>
-    <result xml:space="preserve">What do you want to unlock?&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">(first opening Tuer_Umkleide)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5006,8 +4989,8 @@
     </children>
   </item>
   <item nodeId="node-566">
-    <command xml:space="preserve">unlock Tuer_Umkleide</command>
-    <result xml:space="preserve">What do you want to unlock Tuer_Umkleide with?&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">open Tuer_Umkleide</command>
+    <result xml:space="preserve">It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5015,8 +4998,8 @@
     </children>
   </item>
   <item nodeId="node-567">
-    <command xml:space="preserve">unlock Tuer_Umkleide with me</command>
-    <result xml:space="preserve">(first taking yourself)&#x000A;You are always self-possessed.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock </command>
+    <result xml:space="preserve">What do you want to unlock?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5024,8 +5007,8 @@
     </children>
   </item>
   <item nodeId="node-568">
-    <command xml:space="preserve">unlock Tuer_Umkleide with hallo</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock Tuer_Umkleide</command>
+    <result xml:space="preserve">What do you want to unlock Tuer_Umkleide with?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5033,14 +5016,17 @@
     </children>
   </item>
   <item nodeId="node-569">
-    <command xml:space="preserve">unlock Tuer_Umkleide with</command>
-    <result xml:space="preserve">What do you want to unlock Tuer_Umkleide with?&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock Tuer_Umkleide with me</command>
+    <result xml:space="preserve">(first taking yourself)&#x000A;You are always self-possessed.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-570"/>
+    </children>
   </item>
   <item nodeId="node-570">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock Tuer_Umkleide with hallo</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5048,17 +5034,14 @@
     </children>
   </item>
   <item nodeId="node-571">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">unlock Tuer_Umkleide with</command>
+    <result xml:space="preserve">What do you want to unlock Tuer_Umkleide with?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-572"/>
-    </children>
   </item>
   <item nodeId="node-572">
-    <command xml:space="preserve">inside</command>
-    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5066,8 +5049,8 @@
     </children>
   </item>
   <item nodeId="node-573">
-    <command xml:space="preserve">take raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5075,8 +5058,8 @@
     </children>
   </item>
   <item nodeId="node-574">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">inside</command>
+    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5084,8 +5067,8 @@
     </children>
   </item>
   <item nodeId="node-575">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5093,8 +5076,8 @@
     </children>
   </item>
   <item nodeId="node-576">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5102,8 +5085,8 @@
     </children>
   </item>
   <item nodeId="node-577">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5111,8 +5094,8 @@
     </children>
   </item>
   <item nodeId="node-578">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5120,8 +5103,8 @@
     </children>
   </item>
   <item nodeId="node-579">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5129,8 +5112,8 @@
     </children>
   </item>
   <item nodeId="node-580">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5138,8 +5121,8 @@
     </children>
   </item>
   <item nodeId="node-581">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5147,8 +5130,8 @@
     </children>
   </item>
   <item nodeId="node-582">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5156,8 +5139,8 @@
     </children>
   </item>
   <item nodeId="node-583">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5165,8 +5148,8 @@
     </children>
   </item>
   <item nodeId="node-584">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5174,8 +5157,8 @@
     </children>
   </item>
   <item nodeId="node-585">
-    <command xml:space="preserve">u</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5183,8 +5166,8 @@
     </children>
   </item>
   <item nodeId="node-586">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5192,8 +5175,8 @@
     </children>
   </item>
   <item nodeId="node-587">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5202,7 +5185,7 @@
   </item>
   <item nodeId="node-588">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5210,8 +5193,8 @@
     </children>
   </item>
   <item nodeId="node-589">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5219,7 +5202,7 @@
     </children>
   </item>
   <item nodeId="node-590">
-    <command xml:space="preserve">go north</command>
+    <command xml:space="preserve">s</command>
     <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
@@ -5228,8 +5211,8 @@
     </children>
   </item>
   <item nodeId="node-591">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5237,7 +5220,7 @@
     </children>
   </item>
   <item nodeId="node-592">
-    <command xml:space="preserve">s</command>
+    <command xml:space="preserve">go north</command>
     <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
@@ -5246,8 +5229,8 @@
     </children>
   </item>
   <item nodeId="node-593">
-    <command xml:space="preserve">take door</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5255,8 +5238,8 @@
     </children>
   </item>
   <item nodeId="node-594">
-    <command xml:space="preserve">take Weltraumtuer</command>
-    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5264,8 +5247,8 @@
     </children>
   </item>
   <item nodeId="node-595">
-    <command xml:space="preserve">weltraumtuer</command>
-    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take door</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5273,8 +5256,8 @@
     </children>
   </item>
   <item nodeId="node-596">
-    <command xml:space="preserve">look weltraumtuer</command>
-    <result xml:space="preserve">You see nothing special about Weltraumt&#x00FC;r.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take Weltraumtuer</command>
+    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5282,6 +5265,24 @@
     </children>
   </item>
   <item nodeId="node-597">
+    <command xml:space="preserve">weltraumtuer</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-598"/>
+    </children>
+  </item>
+  <item nodeId="node-598">
+    <command xml:space="preserve">look weltraumtuer</command>
+    <result xml:space="preserve">You see nothing special about Weltraumt&#x00FC;r.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-599"/>
+    </children>
+  </item>
+  <item nodeId="node-599">
     <command xml:space="preserve">show weltraumtuer</command>
     <result xml:space="preserve">(to yourself)&#x000A;(first taking Weltraumt&#x00FC;r)&#x000A;That's fixed in place.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -5344,6 +5345,21 @@
   <item nodeId="node-606">
     <command xml:space="preserve">press Selbstzerst&#x00F6;rungsknopf</command>
     <result xml:space="preserve">Der Notruf wurde schon aktiviert!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-607">
+    <command xml:space="preserve">take Barry</command>
+    <result xml:space="preserve">I don't suppose Barry would care for that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-608"/>
+    </children>
+  </item>
+  <item nodeId="node-608">
+    <command xml:space="preserve">fuck Barry</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

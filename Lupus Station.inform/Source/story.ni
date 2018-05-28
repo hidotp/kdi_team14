@@ -1,6 +1,13 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
+[*****Player*****]
+Percy is a man.
+	Percy is in Raumfähre.
+Barry is a man.
+	Barry is in Raumfähre.
+Player is Percy.
+
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
@@ -401,7 +408,8 @@ When Scene4 begins:
 	Say "Scene 4: ";
 	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen. ";
 	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.";
-	Now Umkleidetuer is unlocked.
+	Now Umkleidetuer is unlocked;
+	Now Player is Barry.
 
 [Teleport]
 Raumteleport is a room variable.
