@@ -6,6 +6,8 @@ Use MAX_STATIC_DATA of 100000000.
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
+Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
+Strom is a number variable. Strom is 5. [Stromzähler]
 
 [when entering a room // nur für mich ein Punkt]
 
@@ -207,7 +209,11 @@ Raumanzug is a thing.
 Startknopf is a thing.
 	It is in Com_Base.
 	It is fixed in place.
+Selbstzerstoerungsknopf is a thing. The printed name is "Selbstzerstörungsknopf".
+	It is in Bridge.
+	It is fixed in place.
 Messenger is a thing.
+
 
 [Raumanzug ausziehen]
 Instead of taking off Raumanzug:
@@ -218,6 +224,7 @@ Instead of taking off Raumanzug:
 			Say "Du kannst den Raumanzug hier nicht ausziehen!";
 		Otherwise:
 			Continue the action.
+
 
 [Weltraumtüren öffnen mit (heilem) raumanzug]
 Weltraum_Richtung is a direction variable. [In welche Richtung geht der Spieler?]
@@ -252,6 +259,43 @@ Before going direction:
 					Say Raumanzug_Kaputt_Text;
 			Otherwise:
 				Say Weltraum_Text.
+
+
+[mit Startknopf interagieren]
+Hilfsgenerator_Aktivierbar is truth state variable. Hilfsgenerator_Aktivierbar is true. [Ist der Hilfsgenerator aktivierbar?]
+Hilfsgenerator_Aktiviert is a truth state variable. Hilfsgenerator_Aktiviert is false. [Ist der Hilfsgenerator aktiviert? Ist noch Strom da?]
+
+Understand "Press [Startknopf]" as Pressing_Knopf.
+	Pressing_Knopf is an action applying to one thing.
+Carry out Pressing_Knopf:
+	If Hilfsgenerator_Aktivierbar is true:
+		Now Hilfsgenerator_Aktivierbar is false;
+		Now Hilfsgenerator_Aktiviert  is true;
+		Increase Strom by 1;
+		Say "Der Hilfsgenerator ist nun aktiviert!";
+	Otherwise:
+		Say "Der Hilfsgenerator wurde schon aktiviert!".
+
+Every turn:
+	If Hilfsgenerator_Aktiviert is true:
+		Decrease Strom by 1;
+	If Strom is 0:
+		Now Hilfsgenerator_Aktiviert is false.
+
+
+[mit Selbstzerstörungsknopf interagieren]
+Notruf_Aktivierbar is a truth state variable. Notruf_Aktivierbar is true.
+Notruf is a truth state variable. Notruf is false.
+
+Understand "Press [Selbstzerstoerungsknopf]" as Pressing_Knopf_2.
+	Pressing_Knopf_2 is an action applying to one thing.
+Carry out Pressing_Knopf_2:
+	If Notruf_Aktivierbar is true:
+		Now Notruf_Aktivierbar is false;
+		Now Notruf is true;
+		Say "Der Notruf wurde aktiviert!";
+	Otherwise:
+		Say "Der Notruf wurde schon aktiviert!".
 
 	
 
@@ -358,3 +402,12 @@ When Scene4 begins:
 	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen. ";
 	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.";
 	Now Umkleidetuer is unlocked.
+
+[Teleport]
+Raumteleport is a room variable.
+Understand "Teleport to [any room]" as Teleporting.
+	Teleporting is an action applying to one thing.
+Carry out Teleporting:
+	Now Raumteleport is the noun;
+	If Raumteleport is not nothing:
+		Now the player is in Raumteleport.
