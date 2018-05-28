@@ -130,11 +130,8 @@ Report Using:
 [Med-Lab Pult Benutzung]
 MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
 
-Understand "interact with [Med-Lab_Pult]" as Interacting.
+Understand "interact with [Med-Lab Pult]" as Interacting.
 	Interacting is an action applying to one thing.
-Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
 Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
@@ -209,7 +206,7 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 
 	
 [*****Gegenstände*****]
-Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
+Med-Lab Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 Drucklufthammer is a thing. It is in Umkleidekabine. 
 
 
