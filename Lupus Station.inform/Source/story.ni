@@ -15,6 +15,7 @@ Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
 Strom is a number variable. Strom is 5. [Stromzähler]
+Kontcount is a number variable. Kontaminierte is 0. [Kontaminiertenzähler]
 
 [when entering a room // nur für mich ein Punkt]
 
@@ -76,6 +77,27 @@ To change_to_Percy:
 	Now player is Percy;
 	Say "[line break][bold type]Du spielst nun Percy!";
 	Say "[location][roman type][line break]".
+
+
+[Kontaminiertencounter]
+To count_Kontaminiert:
+	Now Kontcount is 0;
+	If Kontaminierter_1 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_2 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_3 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_4 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_5 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_6 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_7 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_8 is in the location of the player:
+		Increase Kontcount by 1;
 	
 
 
@@ -270,10 +292,13 @@ Before going direction:
 		If the player is in Weltraum:
 			Now Weltraumtuer is unlocked;
 			Now Weltraumtuer_2 is unlocked;
+			Now Weltraumtuer is open;
+			Now Weltraumtuer_2 is open;
 		Otherwise if the player is in Docking_Bay and Weltraum_Richtung is south:
 			If the player wears Raumanzug:
 				If Raumanzug_Kaputt is false:
 					Now Weltraumtuer is unlocked;
+					Now Weltraumtuer is open;
 				Otherwise:
 					Say Raumanzug_Kaputt_Text;
 			Otherwise:
@@ -282,6 +307,7 @@ Before going direction:
 			If the player wears Raumanzug:
 				If Raumanzug_Kaputt is false:
 					Now Weltraumtuer_2 is unlocked;
+					Now Weltraumtuer_2 is open;
 				Otherwise:
 					Say Raumanzug_Kaputt_Text;
 			Otherwise:
@@ -456,7 +482,7 @@ Before going from Wartungsschacht to Gamma_Delta_Corridor:
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
 		Decrease Sauerstoff by 1;
-	If Sauerstoff is 0: [&& play is in äußerer Ring]
+	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
 
