@@ -205,7 +205,7 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 	It is locked.
 
 [Gegenstände]
-Raumanzug_Kaputt is truth state variable. Raumanzug_Kaputt is false.
+Raumanzug_Kaputt is truth state variable. Raumanzug_Kaputt is false. [Ist der Raumanzug kaputt?]
 
 Hilfsgenerator is a thing.
 	It is in Com_Base.
@@ -276,10 +276,11 @@ Understand "Press [Startknopf]" as Pressing_Knopf.
 	Pressing_Knopf is an action applying to one thing.
 Carry out Pressing_Knopf:
 	If Hilfsgenerator_Aktivierbar is true:
+		Now Raumanzug_Kaputt is true;
 		Now Hilfsgenerator_Aktivierbar is false;
 		Now Hilfsgenerator_Aktiviert  is true;
 		Increase Strom by 1;
-		Say "Der Hilfsgenerator ist nun aktiviert!";
+		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
 	Otherwise:
 		Say "Der Hilfsgenerator wurde schon aktiviert!".
 
