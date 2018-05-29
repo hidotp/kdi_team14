@@ -64,6 +64,39 @@ Every turn:
 			Else:
 				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 	Now Raum_Test_2 is Raum_Test_1.
+
+
+[Spieler wechseln]
+To change_to_Barry:
+	Now player is Barry;
+	Say "[line break][bold type]Du spielst nun Barry!";
+	Say "[location][roman type][line break]".
+
+To change_to_Percy:
+	Now player is Percy;
+	Say "[line break][bold type]Du spielst nun Percy!";
+	Say "[location][roman type][line break]".
+
+
+[Kontaminiertencounter]
+To count_Kontaminiert:
+	Now Kontcount is 0;
+	If Kontaminierter_1 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_2 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_3 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_4 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_5 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_6 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_7 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_8 is in the location of the player:
+		Increase Kontcount by 1;
 	
 [Dekontaminiation]
 After closing Dekon Tür:
