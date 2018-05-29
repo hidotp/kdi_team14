@@ -71,12 +71,12 @@ Every turn:
 To change_to_Barry:
 	Now player is Barry;
 	Say "[line break][bold type]Du spielst nun Barry!";
-	Say "[location][roman type][line break]".
+	Say "[roman type]Barry ist in [bold type][location][roman type][line break]".
 
 To change_to_Percy:
 	Now player is Percy;
 	Say "[line break][bold type]Du spielst nun Percy!";
-	Say "[location][roman type][line break]".
+	Say "[roman type]Percy ist in [bold type][location][roman type][line break]".
 
 
 [Kontaminiertencounter]
@@ -332,6 +332,8 @@ Carry out Pressing_Knopf:
 Every turn:
 	If Hilfsgenerator_Aktiviert is true:
 		Decrease Strom by 1;
+		If the player carries the Mobitab:
+			Say "Das Mobitab zeigt an, dass nur noch [Strom] Züge Strom da ist";
 	If Strom is 0:
 		Now Hilfsgenerator_Aktiviert is false.
 
@@ -482,9 +484,12 @@ Before going from Wartungsschacht to Gamma_Delta_Corridor:
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
 		Decrease Sauerstoff by 1;
+		If the player carries the Mobitab:
+			Say "Das Mobitab zeigt an, dass nur noch [Sauerstoff] Züge Sauerstoff vorhanden sind";
 	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
+
 
 [Teleport]
 Raumteleport is a room variable.
