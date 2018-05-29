@@ -15,7 +15,7 @@ Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
 Strom is a number variable. Strom is 5. [Stromzähler]
-Kontcount is a number variable. Kontaminierte is 0. [Kontaminiertenzähler]
+Kontcount is a number variable. Kontcount is 0. [Kontaminiertenzähler]
 
 [when entering a room // nur für mich ein Punkt]
 
@@ -463,20 +463,21 @@ Bridge is down of Briefing_Room. The printed name is "Bridge".
 
 
 [*****Scene 4*****]
+Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
+
 Scene4 is a scene.
 Scene4 begins when the player is in Gamma_Junction. [noch ändern]
 When Scene4 begins:
 	Change_to_Barry;
 	[erster Satz mit "Med-Lab" kann weg => Übergang Scene 2 zu 4]
 	Say "[italic type]Scene 4:[line break]";
-	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen.[line break]";
+	Say "Du und Percy besprecht euch! Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
 	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.[roman type]";
-	Now Umkleidetuer is unlocked;
+	Now Umkleidetuer is unlocked.
+Scene4 ends when Sauerstoff_Abfall is true.
 
 
 [Bodenfenster geht kaputt + Sauerstoffabfall]
-Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
-
 Before going from Wartungsschacht to Gamma_Delta_Corridor:
 	Say "Das Bodenfenster geht kaputt!";
 	Increase Sauerstoff by 1.
@@ -499,3 +500,16 @@ Carry out Teleporting:
 	Now Raumteleport is the noun;
 	If Raumteleport is not nothing:
 		Now the player is in Raumteleport.
+		
+
+[*****Endscene*****]
+Endscene is a scene.
+Endscene begins when Scene4 ends. [noch ändern]
+When Endscene begins:
+	Change_to_Barry;
+	Say "[italic type]Endscene:[line break]";
+	Say "Ein Rettungsteam ist angekommen. Gehe in die Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch auf dich![line break][roman type]".
+Endscene ends when the player is in Docking_Bay.
+When Endscene ends:
+	Say "Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause!";
+	End the story finally.
