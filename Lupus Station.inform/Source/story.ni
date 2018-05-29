@@ -71,12 +71,12 @@ Every turn:
 To change_to_Barry:
 	Now player is Barry;
 	Say "[line break][bold type]Du spielst nun Barry!";
-	Say "[location][roman type][line break]".
+	Say "[roman type]Barry ist in [bold type][location][roman type][line break]".
 
 To change_to_Percy:
 	Now player is Percy;
 	Say "[line break][bold type]Du spielst nun Percy!";
-	Say "[location][roman type][line break]".
+	Say "[roman type]Percy ist in [bold type][location][roman type][line break]".
 
 
 [Kontaminiertencounter]
