@@ -3,7 +3,7 @@ Use MAX_STATIC_DATA of 100000000.
 
 [*****Player*****]
 Percy is a man.
-	Percy is in Raumfähre.
+	Percy is in Raumfähre. 
 Barry is a man.
 	Barry is in Raumfähre.
 Player is Percy.
@@ -13,10 +13,8 @@ Player is Percy.
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
-
+Kontcount is a number variable. Kontcount is 0.
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
-
-[when entering a room // nur für mich ein Punkt]
 
 [*****Regionen*****]
 Innerer_Ring is a region.
@@ -77,8 +75,27 @@ To change_to_Percy:
 	Say "[line break][bold type]Du spielst nun Percy!";
 	Say "[location][roman type][line break]".
 
+[Kontaminiertencounter -- Dekontaminationskabine]
+To count_Kont_Dekon:
+	Now Kontcount is 0;
+	If Kontaminierter_1 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_2 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_3 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_4 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_5 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_6 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_7 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_8 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
 
-[Kontaminiertencounter]
+[Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
 	Now Kontcount is 0;
 	If Kontaminierter_1 is in the location of the player:
@@ -100,7 +117,10 @@ To count_Kontaminiert:
 	
 [Dekontaminiation]
 After closing Dekon Tür:
-	Say "Temp";
+	count_Kont_Dekon;
+	If Kontcount <= 1:
+		If the player is not in Dekontaminationskabine:
+			Percy is a Kontaminierter.
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 

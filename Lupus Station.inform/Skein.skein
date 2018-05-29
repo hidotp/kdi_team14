@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1001">
+<Skein rootNode="node-1148">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1001">
+    <item nodeId="node-1148">
         <command xml:space="preserve">Lupus Station</command>
         <result xml:space="preserve">
 
@@ -11,45 +11,45 @@ Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
 Release 1 / Serial number 180529 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Med Lab
-You can see Dekon Tür, Deckenluke, Kontaminierter and Med-Lab Pult here.
+Raumfähre
+You can see Barry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1143"></child>
-            <child nodeId="node-1136"></child>
-            <child nodeId="node-1124"></child>
-            <child nodeId="node-1010"></child>
-            <child nodeId="node-1005"></child>
-            <child nodeId="node-1004"></child>
+        <children><child nodeId="node-1199"></child>
+            <child nodeId="node-1195"></child>
+            <child nodeId="node-1183"></child>
+            <child nodeId="node-1155"></child>
+            <child nodeId="node-1150"></child>
+            <child nodeId="node-1149"></child>
         </children>
     </item>
-    <item nodeId="node-1004">
+    <item nodeId="node-1149">
         <command xml:space="preserve">talk with Barry</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1005">
+    <item nodeId="node-1150">
         <command xml:space="preserve">take Barry</command>
         <result xml:space="preserve">I don't suppose Barry would care for that.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1006"></child>
+        <children><child nodeId="node-1151"></child>
         </children>
     </item>
-    <item nodeId="node-1006">
+    <item nodeId="node-1151">
         <command xml:space="preserve">o</command>
         <result xml:space="preserve">Sorry, that can't be corrected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1007"></child>
+        <children><child nodeId="node-1152"></child>
         </children>
     </item>
-    <item nodeId="node-1007">
+    <item nodeId="node-1152">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -59,19 +59,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-1153"></child>
         </children>
     </item>
-    <item nodeId="node-1008">
+    <item nodeId="node-1153">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying nothing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1009"></child>
+        <children><child nodeId="node-1154"></child>
         </children>
     </item>
-    <item nodeId="node-1009">
+    <item nodeId="node-1154">
         <command xml:space="preserve">inside</command>
         <result xml:space="preserve">
 Raumfähre
@@ -82,7 +82,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1010">
+    <item nodeId="node-1155">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -92,10 +92,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
+        <children><child nodeId="node-1156"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
+    <item nodeId="node-1156">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -105,11 +105,11 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1012"></child>
-            <child nodeId="node-1123"></child>
+        <children><child nodeId="node-1158"></child>
+            <child nodeId="node-1157"></child>
         </children>
     </item>
-    <item nodeId="node-1123">
+    <item nodeId="node-1157">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -121,34 +121,34 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1012">
+    <item nodeId="node-1158">
         <command xml:space="preserve">open</command>
         <result xml:space="preserve">What do you want to open?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
+        <children><child nodeId="node-1159"></child>
         </children>
     </item>
-    <item nodeId="node-1013">
+    <item nodeId="node-1159">
         <command xml:space="preserve">open Spind</command>
         <result xml:space="preserve">It isn't something you can open.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
+        <children><child nodeId="node-1160"></child>
         </children>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1160">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
+        <children><child nodeId="node-1161"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
+    <item nodeId="node-1161">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -159,220 +159,220 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1016"></child>
+        <children><child nodeId="node-1162"></child>
         </children>
     </item>
-    <item nodeId="node-1016">
+    <item nodeId="node-1162">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1017"></child>
+        <children><child nodeId="node-1163"></child>
         </children>
     </item>
-    <item nodeId="node-1017">
+    <item nodeId="node-1163">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1018"></child>
+        <children><child nodeId="node-1164"></child>
         </children>
     </item>
-    <item nodeId="node-1018">
+    <item nodeId="node-1164">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1019"></child>
+        <children><child nodeId="node-1165"></child>
         </children>
     </item>
-    <item nodeId="node-1019">
+    <item nodeId="node-1165">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1020"></child>
+        <children><child nodeId="node-1166"></child>
         </children>
     </item>
-    <item nodeId="node-1020">
+    <item nodeId="node-1166">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1021"></child>
+        <children><child nodeId="node-1167"></child>
         </children>
     </item>
-    <item nodeId="node-1021">
+    <item nodeId="node-1167">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1022"></child>
+        <children><child nodeId="node-1168"></child>
         </children>
     </item>
-    <item nodeId="node-1022">
+    <item nodeId="node-1168">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1023"></child>
+        <children><child nodeId="node-1169"></child>
         </children>
     </item>
-    <item nodeId="node-1023">
+    <item nodeId="node-1169">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1038"></child>
+        <children><child nodeId="node-1170"></child>
         </children>
     </item>
-    <item nodeId="node-1038">
+    <item nodeId="node-1170">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1039"></child>
+        <children><child nodeId="node-1171"></child>
         </children>
     </item>
-    <item nodeId="node-1039">
+    <item nodeId="node-1171">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1040"></child>
+        <children><child nodeId="node-1172"></child>
         </children>
     </item>
-    <item nodeId="node-1040">
+    <item nodeId="node-1172">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1058"></child>
+        <children><child nodeId="node-1173"></child>
         </children>
     </item>
-    <item nodeId="node-1058">
+    <item nodeId="node-1173">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1059"></child>
+        <children><child nodeId="node-1174"></child>
         </children>
     </item>
-    <item nodeId="node-1059">
+    <item nodeId="node-1174">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1060"></child>
+        <children><child nodeId="node-1175"></child>
         </children>
     </item>
-    <item nodeId="node-1060">
+    <item nodeId="node-1175">
         <command xml:space="preserve">a</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1061"></child>
+        <children><child nodeId="node-1176"></child>
         </children>
     </item>
-    <item nodeId="node-1061">
+    <item nodeId="node-1176">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1062"></child>
+        <children><child nodeId="node-1177"></child>
         </children>
     </item>
-    <item nodeId="node-1062">
+    <item nodeId="node-1177">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1063"></child>
+        <children><child nodeId="node-1178"></child>
         </children>
     </item>
-    <item nodeId="node-1063">
+    <item nodeId="node-1178">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1064"></child>
+        <children><child nodeId="node-1179"></child>
         </children>
     </item>
-    <item nodeId="node-1064">
+    <item nodeId="node-1179">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1065"></child>
+        <children><child nodeId="node-1180"></child>
         </children>
     </item>
-    <item nodeId="node-1065">
+    <item nodeId="node-1180">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1066"></child>
+        <children><child nodeId="node-1181"></child>
         </children>
     </item>
-    <item nodeId="node-1066">
+    <item nodeId="node-1181">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1093"></child>
+        <children><child nodeId="node-1182"></child>
         </children>
     </item>
-    <item nodeId="node-1093">
+    <item nodeId="node-1182">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1124">
+    <item nodeId="node-1183">
         <command xml:space="preserve">oustide</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1125"></child>
+        <children><child nodeId="node-1184"></child>
         </children>
     </item>
-    <item nodeId="node-1125">
+    <item nodeId="node-1184">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -382,10 +382,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1126"></child>
+        <children><child nodeId="node-1185"></child>
         </children>
     </item>
-    <item nodeId="node-1126">
+    <item nodeId="node-1185">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -395,10 +395,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1127"></child>
+        <children><child nodeId="node-1186"></child>
         </children>
     </item>
-    <item nodeId="node-1127">
+    <item nodeId="node-1186">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -409,10 +409,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1128"></child>
+        <children><child nodeId="node-1187"></child>
         </children>
     </item>
-    <item nodeId="node-1128">
+    <item nodeId="node-1187">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Hangar
@@ -422,19 +422,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1129"></child>
+        <children><child nodeId="node-1188"></child>
         </children>
     </item>
-    <item nodeId="node-1129">
+    <item nodeId="node-1188">
         <command xml:space="preserve">take Sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1130"></child>
+        <children><child nodeId="node-1189"></child>
         </children>
     </item>
-    <item nodeId="node-1130">
+    <item nodeId="node-1189">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -444,64 +444,64 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1131"></child>
+        <children><child nodeId="node-1190"></child>
         </children>
     </item>
-    <item nodeId="node-1131">
+    <item nodeId="node-1190">
         <command xml:space="preserve">use Sciehrheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1132"></child>
+        <children><child nodeId="node-1191"></child>
         </children>
     </item>
-    <item nodeId="node-1132">
+    <item nodeId="node-1191">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1133"></child>
+        <children><child nodeId="node-1192"></child>
         </children>
     </item>
-    <item nodeId="node-1133">
+    <item nodeId="node-1192">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Junction
 You can see Luke_Hangar, Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden Gam Junc here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1134"></child>
+        <children><child nodeId="node-1193"></child>
         </children>
     </item>
-    <item nodeId="node-1134">
+    <item nodeId="node-1193">
         <command xml:space="preserve">inventory</command>
         <result xml:space="preserve">You are carrying:
   Sicherheitsausweis
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1135"></child>
+        <children><child nodeId="node-1194"></child>
         </children>
     </item>
-    <item nodeId="node-1135">
+    <item nodeId="node-1194">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1136">
+    <item nodeId="node-1195">
         <command xml:space="preserve">o</command>
         <result xml:space="preserve">Sorry, that can't be corrected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1137"></child>
+        <children><child nodeId="node-1196"></child>
         </children>
     </item>
-    <item nodeId="node-1137">
+    <item nodeId="node-1196">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -511,10 +511,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1138"></child>
+        <children><child nodeId="node-1197"></child>
         </children>
     </item>
-    <item nodeId="node-1138">
+    <item nodeId="node-1197">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -524,10 +524,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1139"></child>
+        <children><child nodeId="node-1198"></child>
         </children>
     </item>
-    <item nodeId="node-1139">
+    <item nodeId="node-1198">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -539,7 +539,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1143">
+    <item nodeId="node-1199">
         <command xml:space="preserve">inside</command>
         <result xml:space="preserve">(first opening Dekon Tür)
 
@@ -551,10 +551,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1144"></child>
+        <children><child nodeId="node-1200"></child>
         </children>
     </item>
-    <item nodeId="node-1144">
+    <item nodeId="node-1200">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Med Lab
@@ -565,10 +565,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1145"></child>
+        <children><child nodeId="node-1201"></child>
         </children>
     </item>
-    <item nodeId="node-1145">
+    <item nodeId="node-1201">
         <command xml:space="preserve">close Dekon Tür</command>
         <result xml:space="preserve">Tür ist zu
 &gt;</result>
