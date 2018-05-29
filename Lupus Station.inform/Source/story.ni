@@ -64,6 +64,10 @@ Every turn:
 			Else:
 				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 	Now Raum_Test_2 is Raum_Test_1.
+	
+[Dekontaminiation]
+After closing Dekon Tür:
+	Say "Temp";
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -129,10 +133,11 @@ Check using:
 		Say "Du trägst nicht den Sicherheitsausweis!" instead;
 Carry out using:
 	If the the Given_SiBa of the second Noun is closed:
+		Now the Given_SiBa of the second noun is unlocked;
 		Now the Given_SiBa of the second Noun is open;
 	If the the Given_SiBa of the second Noun is open:
-		Now the Given_SiBa of the second Noun is locked;
 		Now the Given_SiBa of the second Noun is closed;
+		Now the Given_SiBa of the second Noun is locked;
 Report Using:
 	Say "Du hast die zugehörige Tür des Panels entriegelt."
 
@@ -306,10 +311,10 @@ Luke_2 is a Luke. The printed name is "Deckenluke".
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
 Luke_3 is a Luke. The printed name is "Deckenluke".
 	It is up of Alpha_Junction and down of Med_Lab.
-Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine
+Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 	Dekontaminationskabine is in Innerer_Ring.
-
+	
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
 Luke_4 is a Luke. The printed name is "Deckenluke".
 	It is up of Delta_Junction and down of Solar_Lab.

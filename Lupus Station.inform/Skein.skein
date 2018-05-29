@@ -11,12 +11,13 @@ Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
 Release 1 / Serial number 180529 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Raumfähre
-You can see Barry here.
+Med Lab
+You can see Dekon Tür, Deckenluke, Kontaminierter and Med-Lab Pult here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1136"></child>
+        <children><child nodeId="node-1143"></child>
+            <child nodeId="node-1136"></child>
             <child nodeId="node-1124"></child>
             <child nodeId="node-1010"></child>
             <child nodeId="node-1005"></child>
@@ -113,7 +114,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
         <result xml:space="preserve">(first opening Luke_Hangar)
 
 Gamma Junction
-You can see Luke_Hangar, Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel_GamJun_N here.
+You can see Luke_Hangar, Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab, Panel N Gam Junc and Panel S Gam Junc here.
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
@@ -535,6 +536,41 @@ You can see Luke_Hangar, Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, M
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1143">
+        <command xml:space="preserve">inside</command>
+        <result xml:space="preserve">(first opening Dekon Tür)
+
+Dekontaminationskabine
+You can see Dekon Tür here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1144"></child>
+        </children>
+    </item>
+    <item nodeId="node-1144">
+        <command xml:space="preserve">outside</command>
+        <result xml:space="preserve">
+Med Lab
+You can see Dekon Tür, Deckenluke, Kontaminierter and Med-Lab Pult here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1145"></child>
+        </children>
+    </item>
+    <item nodeId="node-1145">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">Tür ist zu
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
