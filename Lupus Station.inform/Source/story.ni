@@ -65,6 +65,27 @@ Every turn:
 			Else:
 				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 	Now Raum_Test_2 is Raum_Test_1.
+
+
+[Kontaminiertencounter]
+To count_Kontaminiert:
+	Now Kontcount is 0;
+	If Kontaminierter_1 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_2 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_3 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_4 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_5 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_6 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_7 is in the location of the player:
+		Increase Kontcount by 1;
+	If Kontaminierter_8 is in the location of the player:
+		Increase Kontcount by 1;
 	
 
 
