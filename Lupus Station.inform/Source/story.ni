@@ -1,6 +1,7 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
+<<<<<<< HEAD
 [*****Player*****]
 Percy is a man.
 	Percy is in Raumfähre. 
@@ -8,17 +9,28 @@ Barry is a man.
 	Barry is in Raumfähre.
 Player is Percy.
 
+=======
+>>>>>>> master
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 Kontcount is a number variable. Kontcount is 0.
+<<<<<<< HEAD
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
+=======
+
+>>>>>>> master
 
 [*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 
 [*****Definitionen*****]
 
@@ -41,6 +53,8 @@ Aeußerer_Ring is a region.
 	
 	[Sicherheitsausweis]
 	Sicherheitsausweis is a thing. It is in Spind.
+
+
 
 
 
