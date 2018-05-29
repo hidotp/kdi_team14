@@ -120,7 +120,11 @@ Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
 	Using is an action applying to two things.
 Check using:
 	If the Player is not carrying the Sicherheitsausweis:
+<<<<<<< HEAD
 		Say "Du trägst nicht das Sicherheitsausweis!" instead;
+=======
+		Say "Du trägst nicht den Sicherheitsausweis!" instead;
+>>>>>>> master
 Carry out using:
 	Now the Given_SiBa of the second Noun is unlocked;
 Report Using:
