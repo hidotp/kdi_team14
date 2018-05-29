@@ -64,6 +64,18 @@ Every turn:
 			Else:
 				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 	Now Raum_Test_2 is Raum_Test_1.
+
+
+[Spieler wechseln]
+To change_to_Barry:
+	Now player is Barry;
+	Say "[line break][bold type]Du spielst nun Barry!";
+	Say "[location][roman type][line break]".
+
+To change_to_Percy:
+	Now player is Percy;
+	Say "[line break][bold type]Du spielst nun Percy!";
+	Say "[location][roman type][line break]".
 	
 
 
@@ -166,7 +178,7 @@ Every turn:
 			Increase Aktionen_mit_geraeusch by 1;
 		Now Kontaminierten_going is false;
 		If Aktionen_ohne_geraeusch is greater than 2:
-			Say "Du wurdest kontaminiert!";
+			Say "[bold type]Du wurdest kontaminiert![roman type]";
 			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -206,6 +218,7 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 
 [Gegenstände]
 Raumanzug_Kaputt is truth state variable. Raumanzug_Kaputt is false. [Ist der Raumanzug kaputt?]
+Hilfsgenerator_Aktiviert is a truth state variable. Hilfsgenerator_Aktiviert is false. [Ist der Hilfsgenerator aktiviert? Ist noch Strom da?]
 
 Hilfsgenerator is a thing.
 	It is in Com_Base.
@@ -220,6 +233,13 @@ Selbstzerstörungsknopf is a thing.
 	It is in Bridge.
 	It is fixed in place.
 Messenger is a thing.
+	It is not wearable.
+	Percy carries the Messenger.
+
+
+[Messenger nicht wegwerfbar]
+Instead of dropping Messenger:
+	Say "Der Messenger ist Teil deiner Ausrüstung! Diesen kannst du nicht wegwerfen!".
 
 
 [Raumanzug ausziehen]
@@ -270,7 +290,6 @@ Before going direction:
 
 [mit Startknopf interagieren]
 Hilfsgenerator_Aktivierbar is truth state variable. Hilfsgenerator_Aktivierbar is true. [Ist der Hilfsgenerator aktivierbar?]
-Hilfsgenerator_Aktiviert is a truth state variable. Hilfsgenerator_Aktiviert is false. [Ist der Hilfsgenerator aktiviert? Ist noch Strom da?]
 
 Understand "Press [Startknopf]" as Pressing_Knopf.
 	Pressing_Knopf is an action applying to one thing.
@@ -301,10 +320,23 @@ Carry out Pressing_Knopf_2:
 	If Notruf_Aktivierbar is true:
 		Now Notruf_Aktivierbar is false;
 		Now Notruf is true;
-		Say "Der Notruf wurde aktiviert!";
+		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
+		Change_to_Barry;
 	Otherwise:
-		Say "Der Notruf wurde schon aktiviert!".
+		Say "Der Notruf wurde schon abgesetzt!".
+		
 
+[mit Messenger interagieren]
+Empfaenger is a man variable.
+
+Understand "Use [Mobitab] to send a message" as Sending_Message.
+	Sending_Message is an action applying to one thing.
+Carry out Sending_Message:
+	If Scene4 is happening and Hilfsgenerator_Aktiviert is true:
+		Say "Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.";
+		Change_to_Percy;
+	Otherwise:
+		Say "Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
 	
 
 
@@ -406,11 +438,27 @@ Bridge is down of Briefing_Room. The printed name is "Bridge".
 Scene4 is a scene.
 Scene4 begins when the player is in Gamma_Junction. [noch ändern]
 When Scene4 begins:
-	Say "Scene 4: ";
-	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen. ";
-	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.";
+	Change_to_Barry;
+	[erster Satz mit "Med-Lab" kann weg => Übergang Scene 2 zu 4]
+	Say "[italic type]Scene 4:[line break]";
+	Say "Zur Besprechung des weiteren Vorgehens muss Barry nun ins Med-Lab gehen. Auf die Frage von Barry an Percy, was Sie als nächsten Tun wollen, antwortet Percy mit 'Lass uns einen Notruf absetzen'. Dazu muss Barry den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibt Barry mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss Barry zurück zum äußeren Ring gehen.[line break]";
+	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.[roman type]";
 	Now Umkleidetuer is unlocked;
-	Now Player is Barry.
+
+
+[Bodenfenster geht kaputt + Sauerstoffabfall]
+Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
+
+Before going from Wartungsschacht to Gamma_Delta_Corridor:
+	Say "Das Bodenfenster geht kaputt!";
+	Increase Sauerstoff by 1.
+
+Every turn:
+	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
+		Decrease Sauerstoff by 1;
+	If Sauerstoff is 0: [&& play is in äußerer Ring]
+		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
+		End the story finally.
 
 [Teleport]
 Raumteleport is a room variable.
