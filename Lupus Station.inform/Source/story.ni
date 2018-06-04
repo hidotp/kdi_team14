@@ -1,42 +1,25 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-<<<<<<< HEAD
-[*****Player*****]
-Percy is a man.
-	Percy is in Raumfähre. 
-Barry is a man.
-	Barry is in Raumfähre.
-Player is Percy.
-
-=======
->>>>>>> master
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 Kontcount is a number variable. Kontcount is 0.
-<<<<<<< HEAD
-Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
-=======
 
->>>>>>> master
+Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
 
 [*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
-<<<<<<< HEAD
-=======
 
-
->>>>>>> master
 
 [*****Definitionen*****]
 
 	[Kontaminierte]
-	Kontaminierter is a kind of thing. 
-		A Kontaminierter is not portable.
+	Kontaminierter is a kind of man. 
+		A Kontaminierter has a truth state called Is_Kontaminiert.
 	
 	[Sicherheitsbarriere]
 	SiBa is a kind of door. A SiBa is locked.
@@ -55,6 +38,14 @@ Aeußerer_Ring is a region.
 	Sicherheitsausweis is a thing. It is in Spind.
 
 
+
+[*****Player*****]
+Percy is a Kontaminierter.
+	Percy is in Raumfähre.
+	Is_Kontaminiert of Percy is false.
+Barry is a man.
+	Barry is in Raumfähre.
+Player is Percy.
 
 
 
@@ -82,12 +73,13 @@ Every turn:
 To change_to_Barry:
 	Now player is Barry;
 	Say "[line break][bold type]Du spielst nun Barry!";
-	Say "[location][roman type][line break]".
+	Say "[roman type]Barry ist in [bold type][location][roman type][line break]".
 
 To change_to_Percy:
-	Now player is Percy;
-	Say "[line break][bold type]Du spielst nun Percy!";
-	Say "[location][roman type][line break]".
+	If Is_Kontaminiert of Percy is false:
+		Now player is Percy;
+		Say "[line break][bold type]Du spielst nun Percy!";
+		Say "[roman type]Percy ist in [bold type][location][roman type][line break]".
 
 [Kontaminiertencounter -- Dekontaminationskabine]
 To count_Kont_Dekon:
@@ -108,6 +100,9 @@ To count_Kont_Dekon:
 		Increase Kontcount by 1;
 	If Kontaminierter_8 is in Dekontaminationskabine:
 		Increase Kontcount by 1;
+	If Is_Kontaminiert of Percy is true:
+		If Percy is in the location of the player:
+			Increase Kontcount by 1.
 
 [Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
@@ -128,13 +123,20 @@ To count_Kontaminiert:
 		Increase Kontcount by 1;
 	If Kontaminierter_8 is in the location of the player:
 		Increase Kontcount by 1;
+	If Is_Kontaminiert of Percy is true:
+		If Percy is in the location of the player:
+			Increase Kontcount by 1.
 	
 [Dekontaminiation]
+DekonText is a text variable. DekonText is "TEMP muss noch geschrieben werden!".
+
 After closing Dekon Tür:
 	count_Kont_Dekon;
 	If Kontcount <= 1:
-		If the player is not in Dekontaminationskabine:
-			Percy is a Kontaminierter.
+		If the Player is not in Dekontaminationskabine:
+			If Percy is in Dekontaminationskabine:
+				Now Is_Kontaminiert of Percy is false;
+				Say DekonText;
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -236,32 +238,31 @@ Report Interacting:
 Aktionen_mit_geraeusch is a number variable. Aktionen_mit_geraeusch is 0.
 Aktionen_ohne_geraeusch is a number variable. Aktionen_ohne_geraeusch is 0.
 Kontaminierten_richtung is a direction variable.
-Kontaminierten_while is a number variable. Kontaminierten_while is 0.
 Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
 
 Before going direction:
 	Now Kontaminierten_richtung is the noun;
 	If the room Kontaminierten_richtung of the location of the player is not nothing:
 		If Aktionen_mit_geraeusch is 2:
-			Now Kontaminierten_while is 1;
-			While Kontaminierten_while is less than 9:
-				If Kontaminierten_while is 1 and Kontaminierter_1 is in the location of the player:
-					Now Kontaminierter_1 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 2 and Kontaminierter_2 is in the location of the player:
-					Now Kontaminierter_2 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 3 and Kontaminierter_3 is in the location of the player:
-					Now Kontaminierter_3 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 4 and Kontaminierter_4 is in the location of the player:
-					Now Kontaminierter_4 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 5 and Kontaminierter_5 is in the location of the player:
-					Now Kontaminierter_5 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 6 and Kontaminierter_6 is in the location of the player:
-					Now Kontaminierter_6 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 7 and Kontaminierter_7 is in the location of the player:
-					Now Kontaminierter_7 is in the room Kontaminierten_richtung of the location of the player;
-				If Kontaminierten_while is 8 and Kontaminierter_8 is in the location of the player:
-					Now Kontaminierter_8 is in the room Kontaminierten_richtung of the location of the player;
-				Increase Kontaminierten_while by 1;
+			If Kontaminierter_1 is in the location of the player:
+				Now Kontaminierter_1 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_2 is in the location of the player:
+				Now Kontaminierter_2 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_3 is in the location of the player:
+				Now Kontaminierter_3 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_4 is in the location of the player:
+				Now Kontaminierter_4 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_5 is in the location of the player:
+				Now Kontaminierter_5 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_6 is in the location of the player:
+				Now Kontaminierter_6 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_7 is in the location of the player:
+				Now Kontaminierter_7 is in the room Kontaminierten_richtung of the location of the player;
+			If Kontaminierter_8 is in the location of the player:
+				Now Kontaminierter_8 is in the room Kontaminierten_richtung of the location of the player;
+			If Is_Kontaminiert of Percy is true:
+				If Percy is in the location of the player:
+					Now Percy is in the room Kontaminierten_richtung of the location of the player;
 		Now Laute_Aktionen is 0;
 		Now Kontaminierten_going is true;
 		Now Aktionen_ohne_geraeusch is 0;
