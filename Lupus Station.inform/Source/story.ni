@@ -333,7 +333,7 @@ Every turn:
 	If Hilfsgenerator_Aktiviert is true:
 		Decrease Strom by 1;
 		If the player carries the Mobitab:
-			Say "Das Mobitab zeigt an, dass nur noch [Strom] Züge Strom da ist";
+			Say "Das Mobitab zeigt an, dass nur noch [Strom] Züge Strom da ist!";
 	If Strom is 0:
 		Now Hilfsgenerator_Aktiviert is false.
 
@@ -352,11 +352,14 @@ Carry out Pressing_Knopf_2:
 		Change_to_Barry;
 	Otherwise:
 		Say "Der Notruf wurde schon abgesetzt!".
+
+Every turn:
+	If Notruf is false and Strom is 0:
+		Say "[bold type]Du hast den Notruf nicht rechtzeitig aktiviert![roman type]";
+		End the story finally.
 		
 
 [mit Messenger interagieren]
-Empfaenger is a man variable.
-
 Understand "Use [Mobitab] to send a message" as Sending_Message.
 	Sending_Message is an action applying to one thing.
 Carry out Sending_Message:
@@ -478,20 +481,25 @@ Scene4 ends when Sauerstoff_Abfall is true.
 
 
 [Bodenfenster geht kaputt + Sauerstoffabfall]
-Before going from Wartungsschacht to Gamma_Delta_Corridor:
-	Say "Das Bodenfenster geht kaputt!";
+Instead of going from Wartungsschacht to Gamma_Delta_Corridor:
+	[!!!]
+	[Fehlt: Verhindere gehen mit Sachen außer Mobitab]
+	[!!!]
+	Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
+	Now Sauerstoff_Abfall is true;
 	Increase Sauerstoff by 1.
 
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
 		Decrease Sauerstoff by 1;
 		If the player carries the Mobitab:
-			Say "Das Mobitab zeigt an, dass nur noch [Sauerstoff] Züge Sauerstoff vorhanden sind";
+			Say "Das Mobitab zeigt an, dass nur noch [Sauerstoff] Züge Sauerstoff im äußeren Ring vorhanden sind!";
 	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
 
 
+[muss noch weg!]
 [Teleport]
 Raumteleport is a room variable.
 Understand "Teleport to [any room]" as Teleporting.
@@ -507,9 +515,10 @@ Endscene is a scene.
 Endscene begins when Scene4 ends. [noch ändern]
 When Endscene begins:
 	Change_to_Barry;
+	Now Percy is in Docking_Bay;
 	Say "[italic type]Endscene:[line break]";
 	Say "Ein Rettungsteam ist angekommen. Gehe in die Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch auf dich![line break][roman type]".
 Endscene ends when the player is in Docking_Bay.
 When Endscene ends:
-	Say "Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause!";
+	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
 	End the story finally.

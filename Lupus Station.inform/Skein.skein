@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-654"/>
+  <activeNode nodeId="node-739"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Lupus Station</command>
-    <result xml:space="preserve">Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180529 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Raumf&#x00E4;hre&#x000A;You can see Barry here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180614 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Raumf&#x00E4;hre&#x000A;You can see Barry here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -30,6 +30,7 @@
       <child nodeId="node-609"/>
       <child nodeId="node-610"/>
       <child nodeId="node-613"/>
+      <child nodeId="node-655"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -1107,12 +1108,13 @@
   </item>
   <item nodeId="node-123">
     <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">Gamma Beta Corridor&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
       <child nodeId="node-124"/>
       <child nodeId="node-213"/>
+      <child nodeId="node-686"/>
     </children>
   </item>
   <item nodeId="node-124">
@@ -1987,6 +1989,327 @@
   <item nodeId="node-222">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Alpha Beta Corridor&#x000A;You can see Kontaminierter here.&#x000A;&#x000A;Du wurdest kontaminiert!&#x000A;0  3&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-686">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-687"/>
+    </children>
+  </item>
+  <item nodeId="node-687">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-688"/>
+    </children>
+  </item>
+  <item nodeId="node-688">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&#x000A;Du spielst nun Barry!&#x000A;Barry ist in Raumf&#x00E4;hre&#x000A;Scene 4:&#x000A;Du und Percy besprecht euch! Auf die Frage von Barry an Percy, was Sie als n&#x00E4;chsten Tun wollen, antwortet Percy mit "Lass uns einen Notruf absetzen". Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst m&#x00F6;glich den Selbstzerst&#x00F6;rungsknopf auf der Br&#x00FC;cke dr&#x00FC;cken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zur&#x00FC;ck zu Percy.&#x000A;Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-689"/>
+    </children>
+  </item>
+  <item nodeId="node-689">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-690"/>
+    </children>
+  </item>
+  <item nodeId="node-690">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-691"/>
+    </children>
+  </item>
+  <item nodeId="node-691">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-692"/>
+    </children>
+  </item>
+  <item nodeId="node-692">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Percy, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-693"/>
+    </children>
+  </item>
+  <item nodeId="node-693">
+    <command xml:space="preserve">take mobitab</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-694"/>
+    </children>
+  </item>
+  <item nodeId="node-694">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-695"/>
+    </children>
+  </item>
+  <item nodeId="node-695">
+    <command xml:space="preserve">use mobitab to send a message</command>
+    <result xml:space="preserve">Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-696"/>
+    </children>
+  </item>
+  <item nodeId="node-696">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-697"/>
+    </children>
+  </item>
+  <item nodeId="node-697">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-698"/>
+    </children>
+  </item>
+  <item nodeId="node-698">
+    <command xml:space="preserve">go inside</command>
+    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-699"/>
+    </children>
+  </item>
+  <item nodeId="node-699">
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-700"/>
+    </children>
+  </item>
+  <item nodeId="node-700">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-701"/>
+    </children>
+  </item>
+  <item nodeId="node-701">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-702"/>
+    </children>
+  </item>
+  <item nodeId="node-702">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-703"/>
+    </children>
+  </item>
+  <item nodeId="node-703">
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">What do you want to wear?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-704"/>
+    </children>
+  </item>
+  <item nodeId="node-704">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-705"/>
+    </children>
+  </item>
+  <item nodeId="node-705">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-706"/>
+    </children>
+  </item>
+  <item nodeId="node-706">
+    <command xml:space="preserve">go inside</command>
+    <result xml:space="preserve">Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-707"/>
+    </children>
+  </item>
+  <item nodeId="node-707">
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">You already have that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-708"/>
+    </children>
+  </item>
+  <item nodeId="node-708">
+    <command xml:space="preserve">wear raumanzug</command>
+    <result xml:space="preserve">You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-709"/>
+    </children>
+  </item>
+  <item nodeId="node-709">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-710"/>
+    </children>
+  </item>
+  <item nodeId="node-710">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-711"/>
+    </children>
+  </item>
+  <item nodeId="node-711">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-712"/>
+    </children>
+  </item>
+  <item nodeId="node-712">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-713"/>
+    </children>
+  </item>
+  <item nodeId="node-713">
+    <command xml:space="preserve">press startknopf</command>
+    <result xml:space="preserve">Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gel&#x00F6;st: Jetzt ist dein Raumanzug besch&#x00E4;digt!&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 5 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-714"/>
+    </children>
+  </item>
+  <item nodeId="node-714">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 4 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-715"/>
+    </children>
+  </item>
+  <item nodeId="node-715">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Das Bodenfenster geht kaputt!&#x000A;&#x000A;Gamma Delta Junction&#x000A;You can see Sicherheitsbarriere and Sicherheitsbarriere here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 3 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-716"/>
+    </children>
+  </item>
+  <item nodeId="node-716">
+    <command xml:space="preserve">go</command>
+    <result xml:space="preserve">You'll have to say which compass direction to go in.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 2 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-717"/>
+    </children>
+  </item>
+  <item nodeId="node-717">
+    <command xml:space="preserve">use mobitab to send a message</command>
+    <result xml:space="preserve">Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.&#x000A;&#x000A;Du spielst nun Percy!&#x000A;Percy ist in Gamma Junction&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-718"/>
+    </children>
+  </item>
+  <item nodeId="node-718">
+    <command xml:space="preserve">teleport to briefing_room</command>
+    <result xml:space="preserve">Briefing Room&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-719"/>
+    </children>
+  </item>
+  <item nodeId="node-719">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Bridge&#x000A;You can see Selbstzerst&#x00F6;rungsknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-720"/>
+    </children>
+  </item>
+  <item nodeId="node-720">
+    <command xml:space="preserve">start selbstzerst&#x00F6;rungsknopf</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-721"/>
+    </children>
+  </item>
+  <item nodeId="node-721">
+    <command xml:space="preserve">press selbstzerst&#x00F6;rungsknopf</command>
+    <result xml:space="preserve">Der Notruf wurde abgesetzt! Warte auf Hilfe!&#x000A;&#x000A;Du spielst nun Barry!&#x000A;Barry ist in Gamma Delta Junction&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -5422,7 +5745,7 @@
     <children>
       <child nodeId="node-616"/>
       <child nodeId="node-622"/>
-      <child nodeId="node-627"/>
+      <child nodeId="node-647"/>
       <child nodeId="node-653"/>
     </children>
   </item>
@@ -5484,8 +5807,8 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-623"/>
-      <child nodeId="node-633"/>
-      <child nodeId="node-636"/>
+      <child nodeId="node-627"/>
+      <child nodeId="node-630"/>
     </children>
   </item>
   <item nodeId="node-623">
@@ -5521,183 +5844,9 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-633">
-    <command xml:space="preserve">use messenger to send a message</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-634"/>
-    </children>
-  </item>
-  <item nodeId="node-634">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Weltraumt&#x00FC;r)&#x000A;Weltraumt&#x00FC;r is already here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-635"/>
-    </children>
-  </item>
-  <item nodeId="node-635">
-    <command xml:space="preserve">drop messenger</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-636">
-    <command xml:space="preserve">drop</command>
-    <result xml:space="preserve">(Messenger)&#x000A;Der Messenger ist Teil deiner Ausr&#x00FC;stung! Diesen kannst du nicht wegwerfen!&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-637"/>
-    </children>
-  </item>
-  <item nodeId="node-637">
-    <command xml:space="preserve">use messenger to send a message</command>
-    <result xml:space="preserve">Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-638"/>
-    </children>
-  </item>
-  <item nodeId="node-638">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-639"/>
-    </children>
-  </item>
-  <item nodeId="node-639">
-    <command xml:space="preserve">down</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-640"/>
-    </children>
-  </item>
-  <item nodeId="node-640">
-    <command xml:space="preserve">up</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-641"/>
-    </children>
-  </item>
-  <item nodeId="node-641">
-    <command xml:space="preserve">inside</command>
-    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-642"/>
-    </children>
-  </item>
-  <item nodeId="node-642">
-    <command xml:space="preserve">take raumanzug</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-643"/>
-    </children>
-  </item>
-  <item nodeId="node-643">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-644"/>
-    </children>
-  </item>
-  <item nodeId="node-644">
-    <command xml:space="preserve">wear</command>
-    <result xml:space="preserve">What do you want to wear?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-645"/>
-    </children>
-  </item>
-  <item nodeId="node-645">
-    <command xml:space="preserve">wear raumanzug</command>
-    <result xml:space="preserve">You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-646"/>
-    </children>
-  </item>
-  <item nodeId="node-646">
-    <command xml:space="preserve">down</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-647"/>
-    </children>
-  </item>
-  <item nodeId="node-647">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-648"/>
-    </children>
-  </item>
-  <item nodeId="node-648">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-649"/>
-    </children>
-  </item>
-  <item nodeId="node-649">
-    <command xml:space="preserve">press startknopf</command>
-    <result xml:space="preserve">Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gel&#x00F6;st: Jetzt ist dein Raumanzug besch&#x00E4;digt!&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-650"/>
-    </children>
-  </item>
-  <item nodeId="node-650">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Du kannst nicht ins Weltall! Dein Raumanzug ist besch&#x00E4;digt!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-651"/>
-    </children>
-  </item>
-  <item nodeId="node-651">
-    <command xml:space="preserve">use messenger to send a message</command>
-    <result xml:space="preserve">Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-652"/>
-    </children>
-  </item>
-  <item nodeId="node-652">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
   <item nodeId="node-627">
-    <command xml:space="preserve">otuside</command>
-    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">use messenger to send a message</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5705,8 +5854,8 @@
     </children>
   </item>
   <item nodeId="node-628">
-    <command xml:space="preserve">outside</command>
-    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Weltraumt&#x00FC;r)&#x000A;Weltraumt&#x00FC;r is already here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5714,17 +5863,14 @@
     </children>
   </item>
   <item nodeId="node-629">
-    <command xml:space="preserve">send a message to hallo</command>
+    <command xml:space="preserve">drop messenger</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-630"/>
-    </children>
   </item>
   <item nodeId="node-630">
-    <command xml:space="preserve">send a message to percy</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Messenger)&#x000A;Der Messenger ist Teil deiner Ausr&#x00FC;stung! Diesen kannst du nicht wegwerfen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5732,8 +5878,8 @@
     </children>
   </item>
   <item nodeId="node-631">
-    <command xml:space="preserve">up</command>
-    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">use messenger to send a message</command>
+    <result xml:space="preserve">Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -5741,6 +5887,183 @@
     </children>
   </item>
   <item nodeId="node-632">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-633"/>
+    </children>
+  </item>
+  <item nodeId="node-633">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-634"/>
+    </children>
+  </item>
+  <item nodeId="node-634">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-635"/>
+    </children>
+  </item>
+  <item nodeId="node-635">
+    <command xml:space="preserve">inside</command>
+    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-636"/>
+    </children>
+  </item>
+  <item nodeId="node-636">
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-637"/>
+    </children>
+  </item>
+  <item nodeId="node-637">
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-638"/>
+    </children>
+  </item>
+  <item nodeId="node-638">
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">What do you want to wear?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-639"/>
+    </children>
+  </item>
+  <item nodeId="node-639">
+    <command xml:space="preserve">wear raumanzug</command>
+    <result xml:space="preserve">You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-640"/>
+    </children>
+  </item>
+  <item nodeId="node-640">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-641"/>
+    </children>
+  </item>
+  <item nodeId="node-641">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-642"/>
+    </children>
+  </item>
+  <item nodeId="node-642">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Weltraumt&#x00FC;r)&#x000A;&#x000A;Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-643"/>
+    </children>
+  </item>
+  <item nodeId="node-643">
+    <command xml:space="preserve">press startknopf</command>
+    <result xml:space="preserve">Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gel&#x00F6;st: Jetzt ist dein Raumanzug besch&#x00E4;digt!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-644"/>
+    </children>
+  </item>
+  <item nodeId="node-644">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Du kannst nicht ins Weltall! Dein Raumanzug ist besch&#x00E4;digt!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-645"/>
+    </children>
+  </item>
+  <item nodeId="node-645">
+    <command xml:space="preserve">use messenger to send a message</command>
+    <result xml:space="preserve">Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-646"/>
+    </children>
+  </item>
+  <item nodeId="node-646">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-647">
+    <command xml:space="preserve">otuside</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-648"/>
+    </children>
+  </item>
+  <item nodeId="node-648">
+    <command xml:space="preserve">outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-649"/>
+    </children>
+  </item>
+  <item nodeId="node-649">
+    <command xml:space="preserve">send a message to hallo</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-650"/>
+    </children>
+  </item>
+  <item nodeId="node-650">
+    <command xml:space="preserve">send a message to percy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-651"/>
+    </children>
+  </item>
+  <item nodeId="node-651">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-652"/>
+    </children>
+  </item>
+  <item nodeId="node-652">
     <command xml:space="preserve">send a message to percy</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -5758,6 +6081,442 @@
   <item nodeId="node-654">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-655">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-656"/>
+      <child nodeId="node-722"/>
+    </children>
+  </item>
+  <item nodeId="node-656">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-657"/>
+    </children>
+  </item>
+  <item nodeId="node-657">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-658"/>
+    </children>
+  </item>
+  <item nodeId="node-658">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&#x000A;Du spielst nun Barry!&#x000A;Barry ist in Raumf&#x00E4;hre&#x000A;Scene 4:&#x000A;Du und Percy besprecht euch! Auf die Frage von Barry an Percy, was Sie als n&#x00E4;chsten Tun wollen, antwortet Percy mit "Lass uns einen Notruf absetzen". Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst m&#x00F6;glich den Selbstzerst&#x00F6;rungsknopf auf der Br&#x00FC;cke dr&#x00FC;cken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zur&#x00FC;ck zu Percy.&#x000A;Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-659"/>
+    </children>
+  </item>
+  <item nodeId="node-659">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-660"/>
+    </children>
+  </item>
+  <item nodeId="node-660">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-661"/>
+    </children>
+  </item>
+  <item nodeId="node-661">
+    <command xml:space="preserve">go inside</command>
+    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-662"/>
+    </children>
+  </item>
+  <item nodeId="node-662">
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-663"/>
+    </children>
+  </item>
+  <item nodeId="node-663">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-664"/>
+    </children>
+  </item>
+  <item nodeId="node-664">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-665"/>
+    </children>
+  </item>
+  <item nodeId="node-665">
+    <command xml:space="preserve">go noeth</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-666"/>
+    </children>
+  </item>
+  <item nodeId="node-666">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-667"/>
+    </children>
+  </item>
+  <item nodeId="node-667">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Du musst einen Raumanzug tragen!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-668"/>
+    </children>
+  </item>
+  <item nodeId="node-668">
+    <command xml:space="preserve">wear</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-669"/>
+    </children>
+  </item>
+  <item nodeId="node-669">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-670"/>
+    </children>
+  </item>
+  <item nodeId="node-670">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-671"/>
+    </children>
+  </item>
+  <item nodeId="node-671">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Du kannst den Raumanzug hier nicht ausziehen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-672"/>
+    </children>
+  </item>
+  <item nodeId="node-672">
+    <command xml:space="preserve">press startknopf</command>
+    <result xml:space="preserve">Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gel&#x00F6;st: Jetzt ist dein Raumanzug besch&#x00E4;digt!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-673"/>
+    </children>
+  </item>
+  <item nodeId="node-673">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Du kannst nicht ins Weltall! Dein Raumanzug ist besch&#x00E4;digt!&#x000A;(first opening Weltraumt&#x00FC;r)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-674"/>
+    </children>
+  </item>
+  <item nodeId="node-674">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-675"/>
+    </children>
+  </item>
+  <item nodeId="node-675">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Das Bodenfenster geht kaputt!&#x000A;&#x000A;Gamma Delta Junction&#x000A;You can see Sicherheitsbarriere and Sicherheitsbarriere here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-676"/>
+    </children>
+  </item>
+  <item nodeId="node-676">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">(first opening Sicherheitsbarriere)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-677"/>
+    </children>
+  </item>
+  <item nodeId="node-677">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(Raumanzug)&#x000A;(first taking Raumanzug off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-678"/>
+    </children>
+  </item>
+  <item nodeId="node-678">
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-679"/>
+    </children>
+  </item>
+  <item nodeId="node-679">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">What do you want to drop?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-680"/>
+    </children>
+  </item>
+  <item nodeId="node-680">
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-681"/>
+    </children>
+  </item>
+  <item nodeId="node-681">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">What do you want to drop?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-682"/>
+    </children>
+  </item>
+  <item nodeId="node-682">
+    <command xml:space="preserve">Use mobitab to send message</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-683"/>
+    </children>
+  </item>
+  <item nodeId="node-683">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-684"/>
+    </children>
+  </item>
+  <item nodeId="node-684">
+    <command xml:space="preserve">yes</command>
+    <result xml:space="preserve">Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180614 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Raumf&#x00E4;hre&#x000A;You can see Barry here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-685"/>
+    </children>
+  </item>
+  <item nodeId="node-685">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-722">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-723"/>
+    </children>
+  </item>
+  <item nodeId="node-723">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;&#x000A;Du spielst nun Barry!&#x000A;Barry ist in Raumf&#x00E4;hre&#x000A;Scene 4:&#x000A;Du und Percy besprecht euch! Auf die Frage von Barry an Percy, was Sie als n&#x00E4;chsten Tun wollen, antwortet Percy mit "Lass uns einen Notruf absetzen". Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst m&#x00F6;glich den Selbstzerst&#x00F6;rungsknopf auf der Br&#x00FC;cke dr&#x00FC;cken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zur&#x00FC;ck zu Percy.&#x000A;Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-724"/>
+    </children>
+  </item>
+  <item nodeId="node-724">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-725"/>
+    </children>
+  </item>
+  <item nodeId="node-725">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-726"/>
+    </children>
+  </item>
+  <item nodeId="node-726">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Gamma Junction&#x000A;You can see Sicherheitsbarriere, Percy, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-727"/>
+    </children>
+  </item>
+  <item nodeId="node-727">
+    <command xml:space="preserve">take mobitab</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-728"/>
+    </children>
+  </item>
+  <item nodeId="node-728">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-729"/>
+    </children>
+  </item>
+  <item nodeId="node-729">
+    <command xml:space="preserve">go inside</command>
+    <result xml:space="preserve">(first opening Umkleidet&#x00FC;r)&#x000A;&#x000A;Umkleidekabine&#x000A;You can see Umkleidet&#x00FC;r and Raumanzug here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-730"/>
+    </children>
+  </item>
+  <item nodeId="node-730">
+    <command xml:space="preserve">take raumanzug</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-731"/>
+    </children>
+  </item>
+  <item nodeId="node-731">
+    <command xml:space="preserve">wear raumanzug</command>
+    <result xml:space="preserve">You put on Raumanzug.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-732"/>
+    </children>
+  </item>
+  <item nodeId="node-732">
+    <command xml:space="preserve">go outside</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Umkleidet&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-733"/>
+    </children>
+  </item>
+  <item nodeId="node-733">
+    <command xml:space="preserve">go down</command>
+    <result xml:space="preserve">Docking Bay&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-734"/>
+    </children>
+  </item>
+  <item nodeId="node-734">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Weltraum&#x000A;You can see two doors here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-735"/>
+    </children>
+  </item>
+  <item nodeId="node-735">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r, Hilfsgenerator and Startknopf here.&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-736"/>
+    </children>
+  </item>
+  <item nodeId="node-736">
+    <command xml:space="preserve">press startknopf</command>
+    <result xml:space="preserve">Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gel&#x00F6;st: Jetzt ist dein Raumanzug besch&#x00E4;digt!&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 5 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-737"/>
+    </children>
+  </item>
+  <item nodeId="node-737">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 4 Z&#x00FC;ge Strom da ist&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-738"/>
+    </children>
+  </item>
+  <item nodeId="node-738">
+    <command xml:space="preserve">go up</command>
+    <result xml:space="preserve">Das Bodenfenster geht kaputt!&#x000A;&#x000A;Gamma Delta Junction&#x000A;You can see Sicherheitsbarriere and Sicherheitsbarriere here.&#x000A;&#x000A;&#x000A;Du spielst nun Barry!&#x000A;Barry ist in Gamma Delta Junction&#x000A;Endscene:&#x000A;Ein Rettungsteam ist angekommen. Gehe in die Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch auf dich!&#x000A;&#x000A;Der Stationsalarm gibt ein ohrenbet&#x00E4;ubenden Sirenenton von sich.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 3 Z&#x00FC;ge Strom da ist&#x000A;Das Mobitab zeigt an, dass nur noch 5 Z&#x00FC;ge Sauerstoff vorhanden sind&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-739"/>
+    </children>
+  </item>
+  <item nodeId="node-739">
+    <command xml:space="preserve">go</command>
+    <result xml:space="preserve">You'll have to say which compass direction to go in.&#x000A;&#x000A;Das Mobitab zeigt an, dass nur noch 2 Z&#x00FC;ge Strom da ist&#x000A;Das Mobitab zeigt an, dass nur noch 4 Z&#x00FC;ge Sauerstoff vorhanden sind&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
