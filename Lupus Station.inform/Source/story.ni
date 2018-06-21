@@ -82,6 +82,12 @@ To change_to_Percy:
 		Say "[roman type]Percy ist in [bold type][location][roman type][line break]".
 
 
+[Beende Spiel, wenn Percy und Kontaminierter in einem Raum]
+To Percy_und_Kontaminierter:
+	Say "[bold type]Es ist nicht mehr möglich Percy zu dekontaminieren! (Percy und ein anderer Kontaminierter befinden sich in einem Raum)[roman type]";
+	End the story finally.
+
+
 [Kontaminiertencounter]
 To count_Kontaminiert:
 	Now Kontcount is 0;
@@ -192,6 +198,23 @@ Before going direction:
 			If Is_Kontaminiert of Percy is true:
 				If Percy is in the location of the player:
 					Now Percy is in the room Kontaminierten_richtung of the location of the player;
+					[wenn Percy kontaminiert mit anderem Kontaminierten im Raum]
+					If Kontaminierter_1 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_2 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_3 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_4 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_5 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_6 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_7 is in the location of Percy:
+						Percy_und_Kontaminierter;
+					If Kontaminierter_8 is in the location of Percy:
+						Percy_und_Kontaminierter;
 		Now Laute_Aktionen is 0;
 		Now Kontaminierten_going is true;
 		Now Aktionen_ohne_geraeusch is 0;
