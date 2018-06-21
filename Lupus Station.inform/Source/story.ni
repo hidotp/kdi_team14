@@ -179,7 +179,7 @@ Kontaminierten_going is a truth state variable. Kontaminierten_going is false.
 
 Before going direction:
 	Now Kontaminierten_richtung is the noun;
-	If the room Kontaminierten_richtung of the location of the player is not nothing:
+	If the room Kontaminierten_richtung of the location of the player is not nothing and the room Kontaminierten_richtung of the location of the player is not Weltraum:
 		If Aktionen_mit_geraeusch is 2:
 			If Kontaminierter_1 is in the location of the player:
 				Now Kontaminierter_1 is in the room Kontaminierten_richtung of the location of the player;
