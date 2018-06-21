@@ -80,6 +80,14 @@ To change_to_Percy:
 		Now player is Percy;
 		Say "[line break][bold type]Du spielst nun Percy!";
 		Say "[roman type]Percy ist in [bold type][location][roman type][line break]".
+		
+
+[Percy kontaminieren / dekontaminieren]
+To kontaminiere_Percy:
+	Now Is_Kontaminiert of Percy is true.
+
+To dekontaminiere_Percy:
+	Now Is_Kontaminiert of Percy is false.
 
 
 [Beende Spiel, wenn Percy und Kontaminierter in einem Raum]
