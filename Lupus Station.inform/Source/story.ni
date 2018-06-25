@@ -90,6 +90,8 @@ Before opening BrueckenLuke:
 		say "tür ist verriegelt";
 		stop the action;
 
+Krankenbett is a transparent container. It is in Med_Lab.
+It is fixed in place.
 
 [*****Player*****]
 Percy is a Kontaminierter.
@@ -436,6 +438,7 @@ When Szene 3 begins:
 	Now Szene3Laeuft is 1;
 	Now HaEnAbf is true;
 	say "der Maschinenkern leuchtet orange";
+	Now Percy is in Krankenbett;
 	
 Szene 3 ends when Szene3Laeuft is 2.
 
