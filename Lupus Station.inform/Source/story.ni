@@ -1,5 +1,6 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
+Use DICT_WORD_SIZE of 100.
 
 
 [*****globale Variablen*****]
@@ -17,26 +18,77 @@ Aeußerer_Ring is a region.
 
 [*****Definitionen*****]
 
-	[Kontaminierte]
-	Kontaminierter is a kind of man. 
-		A Kontaminierter has a truth state called Is_Kontaminiert.
+[Kontaminierte]
+Kontaminierter is a kind of man. 
+A Kontaminierter has a truth state called Is_Kontaminiert.
 	
-	[Panels]
-	Panel is a kind of thing.
-		A Panel has a door called Given_SiBa.
+[Panels]
+Panel is a kind of thing.
+A Panel has a door called Given_SiBa.
 	
-	[Sicherheitsbarriere]
-	SiBa is a kind of door. A SiBa is locked.
+[Sicherheitsbarriere]
+SiBa is a kind of door. A SiBa is locked.
 	
-	[Luke]
-	Luke is a kind of door. A Luke is locked.
+[Luke]
+Luke is a kind of door. A Luke is locked.
 	
-	[Mobitab]
-	Mobitab is a thing. It is in Gamma_Junction.
+[Mobitab]
+Mobitab is a thing. It is in Gamma_Junction.
 	
-	[Sicherheitsausweis]
-	Sicherheitsausweis is a thing. It is in Spind.
+[Sicherheitsausweis]
+Sicherheitsausweis is a thing. It is in Spind.
+	
+[Knarrender Hebel]
+Knarrender Hebel is a thing. It is in Storage_Room.
+[Knarrender Hebel is fixed in place.]
+the description of Knarrender Hebel is "Zum Entriegeln der Schleuse muss ein Hebel gezogen werden, welcher ein knarrendes Geräusch von sich gibt, der selbst den Alarm übertönt. Wird die Schleuse nun nicht innerhalb eines Zuges geöffnet, so verriegelt sich die Schleuse erneut.".
+Understand "Hebel" as Knarrender Hebel.
 
+AlphaAISchleuse is a closed door.
+AlphaAISchleuse is below Alpha_AI.
+AlphaAISchleuse is above Storage_Room.
+
+Before opening AlphaAISchleuse:
+	if player is in Storage_Room:
+		say "ich kann die Tür nicht normal öffnen";
+		stop the action;
+	else:
+		continue the action;
+		
+AlphaAISchleuseCounter is a number that varies.
+AlphaAISchleuseCounter is 0.
+
+instead of pushing Knarrender Hebel:
+	[TODO wie lange soll die Tür offen bleiben. Im Moment bleibt sie effektiv 1 Züge offen]
+	now AlphaAISchleuseCounter is 2;
+	now AlphaAISchleuse is open;
+	say "die tür ist jetzt offen";
+	
+every turn:
+	if (AlphaAISchleuseCounter is 1):
+		now AlphaAISchleuse is closed;
+		decrease AlphaAISchleuseCounter by 1;
+		say "tür ist geschlossen";
+	else if (AlphaAISchleuseCounter > 1):
+		decrease AlphaAISchleuseCounter by 1;
+		say "die tür bleibt offen";
+		
+
+BrueckenLuke is a closed door.
+BrueckenLuke is below Briefing_Room.
+BrueckenLuke is above Bridge.
+
+Before opening BrueckenLuke:
+	if (HaEnAbf is true):
+		if player has Mobitab:
+			say "keylessentry entry mit mobitab";
+			continue the action;
+		else:
+			say "du brauchst ein mobitab";
+			stop the action;
+	else:
+		say "tür ist verriegelt";
+		stop the action;
 
 
 [*****Player*****]
@@ -46,7 +98,6 @@ Percy is a Kontaminierter.
 Barry is a man.
 	Barry is in Raumfähre.
 Player is Percy.
-
 
 
 [*****Methoden*****]
@@ -237,6 +288,8 @@ Every turn:
 		Now Kontaminierten_going is false;
 		If Aktionen_ohne_geraeusch is greater than 2:
 			Say "Du wurdest kontaminiert!";
+			[ENTFERNE MICH]
+			[auskommentieren, wenn die kontaminierten einen nicht kontaminieren sollen]
 			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -338,6 +391,8 @@ Weltraumtuer is a door. The printed name is "Weltraumtür".
 Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 	It is south of Weltraum and north of Com_Base.
 	It is locked.
+	
+
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
@@ -345,7 +400,8 @@ Delta_AI is up of Storage_Area. It is in Innerer_Ring. The printed name is "Delt
 Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
 Delta_Greenhouse is a room. The printed name is "Delta Greenhouse".
 Storage_Room is south of Delta_Greenhouse. The printed name is "Storage Room".
-Alpha_AI is up of Storage_Room. It is in Innerer_Ring. The printed name is "Alpha AI".
+[]
+Alpha_AI is a room in Innerer_Ring. The printed name is "Alpha AI".
 Transporter_Raum is south of Alpha_AI. It is in Innerer_Ring. The printed name is "Transporter Raum".
 
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
@@ -354,4 +410,52 @@ Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Ca
 
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
-Bridge is down of Briefing_Room. The printed name is "Bridge".
+Bridge is a room. The printed name is "Bridge".
+
+Chapter Szene 3
+
+[ENTFERNE MICH]
+[TODO das müssen auch die anderen machen]
+Szene 2 is a scene.
+
+
+Szene 3 is a scene.
+"########################################################################################################################[line break]Szene 3: Kommt alle zusammen[paragraph break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den
+ aktuellen Stand bringen. Allem Anschein nach ist niemand sonst auf der Station mehr dekontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest (der ehemals grün glühende Maschinenkern leuchtet nun orange). Eine weitere
+Dekontamination ist somit nicht mehr möglich.[line break]Er kommt zu der Einsicht, dass Hilfe von außen hinzukommen muss. Dazu muss ein Notruf abgesetzt werden. Das Kommunikationsmodul hat einen eigenen Hilfsgenerator, so dass das kein Problem sein sollte ‐ aber das ist der zweite Schritt. Zunächst einmal müssen die Kontaminierten gesammelt  werden. Der am besten geeignete Raum scheint das Storage‐Room zu sein. Man muss sie nur alle dorthin locken und die Türen/Luken schließen."
+
+[ENTFERNE MICH]
+[Szene 3 begins when play begins.]
+
+
+Szene3Laeuft is a number that varies.
+Szene3Laeuft is 0.
+
+Szene 3 begins when Szene 2 ends.
+When Szene 3 begins:
+	Now Szene3Laeuft is 1;
+	Now HaEnAbf is true;
+	say "der Maschinenkern leuchtet orange";
+	
+Szene 3 ends when Szene3Laeuft is 2.
+
+When Szene 3 ends:
+	[TEXT ENTFERNEN ODER ANPASSEN]
+	Say "Szene 3 vorbei";
+		
+every turn:
+	if Kontaminierter_1 is in Storage_Room:
+		if Kontaminierter_2 is in Storage_Room:
+			if Kontaminierter_3 is in Storage_Room:
+				if Kontaminierter_4 is in Storage_Room:
+					if Kontaminierter_5 is in Storage_Room:
+						if Kontaminierter_6 is in Storage_Room:
+							if Kontaminierter_7 is in Storage_Room:
+								if Kontaminierter_8 is in Storage_Room:
+									If player is not in Storage_Room:
+										If Szene3Laeuft is 1:
+											Now Szene3Laeuft is 2;
+											
+
+[ENTFERNE MICH]
+[test me with "abstract kontaminierter_1 to storage_room / abstract kontaminierter_2 to storage_room / abstract kontaminierter_3 to storage_room / abstract kontaminierter_4 to storage_room / abstract kontaminierter_5 to storage_room / abstract kontaminierter_6 to storage_room / abstract kontaminierter_7 to storage_room / abstract kontaminierter_8 to storage_room".]
