@@ -229,7 +229,9 @@ Before going direction:
 		Now Aktionen_mit_geraeusch is 0.
 		
 Every turn:
-	If Kontaminierter is in the location of the player:
+	count_Kontaminiert;
+	[If Kontaminierter is in the location of the player:]
+	If Kontcount is greater than 0:
 		If Kontaminierten_going is false:
 			Increase Aktionen_ohne_geraeusch by 1;
 		If Laute_Aktionen is greater than 0:
