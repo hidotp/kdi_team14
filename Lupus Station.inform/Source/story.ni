@@ -43,11 +43,11 @@ Aeußerer_Ring is a region.
 
 [*****Player*****]
 Percy is a Kontaminierter.
-	Percy is in Raumfähre.
-	Is_Kontaminiert of Percy is false.
+	Percy is in Dekontaminationskabine.
+	Is_Kontaminiert of Percy is true.
 Barry is a man.
-	Barry is in Raumfähre.
-Player is Percy.
+	Barry is in Dekontaminationskabine.
+Player is Barry.
 
 
 [*****Methoden*****]
@@ -101,7 +101,7 @@ To count_Kont_Dekon:
 	If Kontaminierter_8 is in Dekontaminationskabine:
 		Increase Kontcount by 1;
 	If Is_Kontaminiert of Percy is true:
-		If Percy is in the location of the player:
+		If Percy is in Dekontaminationskabine:
 			Increase Kontcount by 1.
 
 [Kontaminiertencounter -- MobiTab]
@@ -140,13 +140,22 @@ DekonText is a text variable. DekonText is "TEMP muss noch geschrieben werden!".
 
 After closing Dekon Tür:
 	count_Kont_Dekon;
-	If Kontcount <= 1:
-		If the Player is not in Dekontaminationskabine:
-			If Percy is in Dekontaminationskabine:
-				Now Is_Kontaminiert of Percy is false;
-				Now HaEnAbf is true;
-				Say DekonText;
-				Now DekonDone is true;
+	If HaEnAbf is false:
+		If Kontcount <= 1:
+			If the Player is not in Dekontaminationskabine:
+				If Percy is in Dekontaminationskabine:
+					Now Is_Kontaminiert of Percy is false;
+					Now HaEnAbf is true;
+					Say DekonText;
+					Continue the action;
+				Else:
+					Say "Du willst doch Percy als erstes dekontaminieren.";
+			Else:
+				Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein";			
+		Else:
+			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren.";
+	Else:
+		Say "Die Energie des Maschinenkerns reicht nicht mehr für eine Dekontamination.";
 	
 [Mobitab nehmen]
 Instead of taking the Mobitab:
@@ -170,6 +179,7 @@ After entering Gamma_Junction:
 	If the player is Barry:
 		Now Stationsalarm is false;
 		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein klirren zu hören.";
+	Continue the action;
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -184,7 +194,7 @@ Report Clapping:
 	If Stationsalarm is true:
 		Say "Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!";
 	Else:
-		If Kontaminierter is in the location of the player:
+		If a Kontaminierter is in the location of the player:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
 		Else: 
 			Say "Du hast in die Hände geklatscht!";
@@ -196,7 +206,7 @@ Carry out Talking_K:
 	If Stationsalarm is false:
 		Increase Laute_Aktionen by 1;
 	Else:	
-		Say "Der Stationsalarm ist zu laut!";
+		Say "Der Stationsalarm ist zu laut!" instead;
 Report Talking_K:
 	Say "Du hast den Kontaminierten angesprochen."
 
@@ -223,7 +233,7 @@ Carry out Druckluften:
 		Increase Laute_Aktionen by 1;
 Report Druckluften:
 	If Kontaminierter is in the location of the player:
-		Say "Du mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
+		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
 	Else: 
 		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.";
 
@@ -267,9 +277,7 @@ After going up from Hangar:
 		Now Luke_Hangar is closed;
 		Now Luke_geöffnet is false;
 		Say "Die Hangarluke schließt sich hinter dir.";
-		Continue the action;
-	Else:
-		Continue the action;
+	Continue the action;
 		
 After going down from Gamma_Junction:
 	If Luke_geöffnet is true:
@@ -277,9 +285,7 @@ After going down from Gamma_Junction:
 		Now Luke_Hangar is closed;
 		Now Luke_geöffnet is false;
 		Say "Die Hangarluke schließt sich hinter dir.";
-		Continue the action;
-	Else:
-		Continue the action;
+	Continue the action;
 		
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
@@ -301,7 +307,6 @@ Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
 	Say MedLabText;
-
 
 
 [*****Kontaminierte*****]
@@ -366,6 +371,7 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
+
 
 
 	

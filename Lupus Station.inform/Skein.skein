@@ -1,52 +1,53 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1002">
+<Skein rootNode="node-1700">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1002">
+    <item nodeId="node-1700">
         <command xml:space="preserve">Lupus Station</command>
         <result xml:space="preserve">
 
 
 Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
-Release 1 / Serial number 180625 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 180626 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Raumfähre
-You can see Barry here.
+Dekontaminationskabine
+You can see Dekon Tür and Percy here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1053"></child>
-            <child nodeId="node-1049"></child>
-            <child nodeId="node-1037"></child>
-            <child nodeId="node-1116"></child>
-            <child nodeId="node-1009"></child>
-            <child nodeId="node-1004"></child>
-            <child nodeId="node-1003"></child>
-            <child nodeId="node-1463"></child>
+        <children><child nodeId="node-1892"></child>
+            <child nodeId="node-1888"></child>
+            <child nodeId="node-2003"></child>
+            <child nodeId="node-1876"></child>
+            <child nodeId="node-1817"></child>
+            <child nodeId="node-1710"></child>
+            <child nodeId="node-1705"></child>
+            <child nodeId="node-1704"></child>
+            <child nodeId="node-1701"></child>
         </children>
     </item>
-    <item nodeId="node-1463">
+    <item nodeId="node-1701">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 yourself0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1464"></child>
+        <children><child nodeId="node-1702"></child>
         </children>
     </item>
-    <item nodeId="node-1464">
+    <item nodeId="node-1702">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 yourself0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1465"></child>
+        <children><child nodeId="node-1703"></child>
         </children>
     </item>
-    <item nodeId="node-1465">
+    <item nodeId="node-1703">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -63,32 +64,32 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1003">
+    <item nodeId="node-1704">
         <command xml:space="preserve">talk with Barry</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1004">
+    <item nodeId="node-1705">
         <command xml:space="preserve">take Barry</command>
         <result xml:space="preserve">I don't suppose Barry would care for that.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1706"></child>
         </children>
     </item>
-    <item nodeId="node-1005">
+    <item nodeId="node-1706">
         <command xml:space="preserve">o</command>
         <result xml:space="preserve">Sorry, that can't be corrected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1006"></child>
+        <children><child nodeId="node-1707"></child>
         </children>
     </item>
-    <item nodeId="node-1006">
+    <item nodeId="node-1707">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -98,19 +99,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1007"></child>
+        <children><child nodeId="node-1708"></child>
         </children>
     </item>
-    <item nodeId="node-1007">
+    <item nodeId="node-1708">
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying nothing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-1709"></child>
         </children>
     </item>
-    <item nodeId="node-1008">
+    <item nodeId="node-1709">
         <command xml:space="preserve">inside</command>
         <result xml:space="preserve">
 Raumfähre
@@ -121,50 +122,50 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1009">
+    <item nodeId="node-1710">
         <command xml:space="preserve">outside</command>
-        <result xml:space="preserve">
-Docking Bay
-You can see Weltraumtür here.
+        <result xml:space="preserve">You can't go that way.
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1010"></child>
-            <child nodeId="node-1059"></child>
-            <child nodeId="node-1434"></child>
-            <child nodeId="node-1442"></child>
+        <children><child nodeId="node-1899"></child>
+            <child nodeId="node-1790"></child>
+            <child nodeId="node-1728"></child>
+            <child nodeId="node-1721"></child>
+            <child nodeId="node-1711"></child>
         </children>
     </item>
-    <item nodeId="node-1442">
+    <item nodeId="node-1711">
         <command xml:space="preserve">wiat</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1443"></child>
+        <children><child nodeId="node-1712"></child>
         </children>
     </item>
-    <item nodeId="node-1443">
+    <item nodeId="node-1712">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1444"></child>
+        <children><child nodeId="node-1713"></child>
         </children>
     </item>
-    <item nodeId="node-1444">
+    <item nodeId="node-1713">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1445"></child>
+        <children><child nodeId="node-1714"></child>
         </children>
     </item>
-    <item nodeId="node-1445">
+    <item nodeId="node-1714">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -180,60 +181,60 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1446"></child>
+        <children><child nodeId="node-1715"></child>
         </children>
     </item>
-    <item nodeId="node-1446">
+    <item nodeId="node-1715">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1447"></child>
+        <children><child nodeId="node-1716"></child>
         </children>
     </item>
-    <item nodeId="node-1447">
+    <item nodeId="node-1716">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1448"></child>
+        <children><child nodeId="node-1717"></child>
         </children>
     </item>
-    <item nodeId="node-1448">
+    <item nodeId="node-1717">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1449"></child>
+        <children><child nodeId="node-1718"></child>
         </children>
     </item>
-    <item nodeId="node-1449">
+    <item nodeId="node-1718">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1450"></child>
+        <children><child nodeId="node-1719"></child>
         </children>
     </item>
-    <item nodeId="node-1450">
+    <item nodeId="node-1719">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1451"></child>
+        <children><child nodeId="node-1720"></child>
         </children>
     </item>
-    <item nodeId="node-1451">
+    <item nodeId="node-1720">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Please give one of the answers above.
 
@@ -241,25 +242,25 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1434">
+    <item nodeId="node-1721">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1435"></child>
+        <children><child nodeId="node-1722"></child>
         </children>
     </item>
-    <item nodeId="node-1435">
+    <item nodeId="node-1722">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1436"></child>
+        <children><child nodeId="node-1723"></child>
         </children>
     </item>
-    <item nodeId="node-1436">
+    <item nodeId="node-1723">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -275,10 +276,10 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1437"></child>
+        <children><child nodeId="node-1724"></child>
         </children>
     </item>
-    <item nodeId="node-1437">
+    <item nodeId="node-1724">
         <command xml:space="preserve">restart</command>
         <result xml:space="preserve">
 
@@ -292,28 +293,28 @@ You can see Barry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1438"></child>
+        <children><child nodeId="node-1725"></child>
         </children>
     </item>
-    <item nodeId="node-1438">
+    <item nodeId="node-1725">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1439"></child>
+        <children><child nodeId="node-1726"></child>
         </children>
     </item>
-    <item nodeId="node-1439">
+    <item nodeId="node-1726">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1440"></child>
+        <children><child nodeId="node-1727"></child>
         </children>
     </item>
-    <item nodeId="node-1440">
+    <item nodeId="node-1727">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -330,7 +331,7 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1059">
+    <item nodeId="node-1728">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
@@ -340,39 +341,39 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1060"></child>
-            <child nodeId="node-1474"></child>
-            <child nodeId="node-1293"></child>
+        <children><child nodeId="node-1783"></child>
+            <child nodeId="node-1750"></child>
+            <child nodeId="node-1729"></child>
         </children>
     </item>
-    <item nodeId="node-1293">
+    <item nodeId="node-1729">
         <command xml:space="preserve">take sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1294"></child>
+        <children><child nodeId="node-1730"></child>
         </children>
     </item>
-    <item nodeId="node-1294">
+    <item nodeId="node-1730">
         <command xml:space="preserve">use Sicherheitsausweis wiht Luke_Hangar</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1295"></child>
+        <children><child nodeId="node-1731"></child>
         </children>
     </item>
-    <item nodeId="node-1295">
+    <item nodeId="node-1731">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1296"></child>
+        <children><child nodeId="node-1732"></child>
         </children>
     </item>
-    <item nodeId="node-1296">
+    <item nodeId="node-1732">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -383,10 +384,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1297"></child>
+        <children><child nodeId="node-1733"></child>
         </children>
     </item>
-    <item nodeId="node-1297">
+    <item nodeId="node-1733">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_XenoLab)
 
@@ -402,10 +403,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1305"></child>
+        <children><child nodeId="node-1734"></child>
         </children>
     </item>
-    <item nodeId="node-1305">
+    <item nodeId="node-1734">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -415,10 +416,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1306"></child>
+        <children><child nodeId="node-1735"></child>
         </children>
     </item>
-    <item nodeId="node-1306">
+    <item nodeId="node-1735">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
@@ -428,47 +429,47 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1307"></child>
+        <children><child nodeId="node-1736"></child>
         </children>
     </item>
-    <item nodeId="node-1307">
+    <item nodeId="node-1736">
         <command xml:space="preserve">take Mobitab</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1308"></child>
+        <children><child nodeId="node-1737"></child>
         </children>
     </item>
-    <item nodeId="node-1308">
+    <item nodeId="node-1737">
         <command xml:space="preserve">use Mobitab with Panel_Luke_H</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1309"></child>
+        <children><child nodeId="node-1738"></child>
         </children>
     </item>
-    <item nodeId="node-1309">
+    <item nodeId="node-1738">
         <command xml:space="preserve">hit Panel_Luke_H with Mobitab</command>
         <result xml:space="preserve">Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1322"></child>
+        <children><child nodeId="node-1739"></child>
         </children>
     </item>
-    <item nodeId="node-1322">
+    <item nodeId="node-1739">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1323"></child>
+        <children><child nodeId="node-1740"></child>
         </children>
     </item>
-    <item nodeId="node-1323">
+    <item nodeId="node-1740">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Xeno Lab
@@ -479,28 +480,28 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1324"></child>
+        <children><child nodeId="node-1741"></child>
         </children>
     </item>
-    <item nodeId="node-1324">
+    <item nodeId="node-1741">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1325"></child>
+        <children><child nodeId="node-1742"></child>
         </children>
     </item>
-    <item nodeId="node-1325">
+    <item nodeId="node-1742">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1326"></child>
+        <children><child nodeId="node-1743"></child>
         </children>
     </item>
-    <item nodeId="node-1326">
+    <item nodeId="node-1743">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -516,60 +517,60 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1327"></child>
+        <children><child nodeId="node-1744"></child>
         </children>
     </item>
-    <item nodeId="node-1327">
+    <item nodeId="node-1744">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1328"></child>
+        <children><child nodeId="node-1745"></child>
         </children>
     </item>
-    <item nodeId="node-1328">
+    <item nodeId="node-1745">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1329"></child>
+        <children><child nodeId="node-1746"></child>
         </children>
     </item>
-    <item nodeId="node-1329">
+    <item nodeId="node-1746">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1330"></child>
+        <children><child nodeId="node-1747"></child>
         </children>
     </item>
-    <item nodeId="node-1330">
+    <item nodeId="node-1747">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1331"></child>
+        <children><child nodeId="node-1748"></child>
         </children>
     </item>
-    <item nodeId="node-1331">
+    <item nodeId="node-1748">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Hangar
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1332"></child>
+        <children><child nodeId="node-1749"></child>
         </children>
     </item>
-    <item nodeId="node-1332">
+    <item nodeId="node-1749">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
@@ -577,44 +578,44 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1474">
+    <item nodeId="node-1750">
         <command xml:space="preserve">take mobitab</command>
         <result xml:space="preserve">Du traust dir das nicht zu das zu nehmen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1475"></child>
+        <children><child nodeId="node-1751"></child>
         </children>
     </item>
-    <item nodeId="node-1475">
+    <item nodeId="node-1751">
         <command xml:space="preserve">take sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1476"></child>
+        <children><child nodeId="node-1752"></child>
         </children>
     </item>
-    <item nodeId="node-1476">
+    <item nodeId="node-1752">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1477"></child>
+        <children><child nodeId="node-1753"></child>
         </children>
     </item>
-    <item nodeId="node-1477">
+    <item nodeId="node-1753">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1478"></child>
+        <children><child nodeId="node-1754"></child>
         </children>
     </item>
-    <item nodeId="node-1478">
+    <item nodeId="node-1754">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -625,10 +626,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1479"></child>
+        <children><child nodeId="node-1755"></child>
         </children>
     </item>
-    <item nodeId="node-1479">
+    <item nodeId="node-1755">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_XenoLab)
 
@@ -645,19 +646,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1480"></child>
+        <children><child nodeId="node-1756"></child>
         </children>
     </item>
-    <item nodeId="node-1480">
+    <item nodeId="node-1756">
         <command xml:space="preserve">outisde</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1481"></child>
+        <children><child nodeId="node-1757"></child>
         </children>
     </item>
-    <item nodeId="node-1481">
+    <item nodeId="node-1757">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -667,10 +668,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1482"></child>
+        <children><child nodeId="node-1758"></child>
         </children>
     </item>
-    <item nodeId="node-1482">
+    <item nodeId="node-1758">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
@@ -680,38 +681,38 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1483"></child>
+        <children><child nodeId="node-1759"></child>
         </children>
     </item>
-    <item nodeId="node-1483">
+    <item nodeId="node-1759">
         <command xml:space="preserve">take mobitab</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1484"></child>
+        <children><child nodeId="node-1760"></child>
         </children>
     </item>
-    <item nodeId="node-1484">
+    <item nodeId="node-1760">
         <command xml:space="preserve">hit Panel_Luke_H with Mobitab</command>
         <result xml:space="preserve">Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1485"></child>
+        <children><child nodeId="node-1761"></child>
         </children>
     </item>
-    <item nodeId="node-1485">
+    <item nodeId="node-1761">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1514"></child>
+        <children><child nodeId="node-1762"></child>
         </children>
     </item>
-    <item nodeId="node-1514">
+    <item nodeId="node-1762">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Xeno Lab
@@ -722,28 +723,28 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1515"></child>
+        <children><child nodeId="node-1763"></child>
         </children>
     </item>
-    <item nodeId="node-1515">
+    <item nodeId="node-1763">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1516"></child>
+        <children><child nodeId="node-1764"></child>
         </children>
     </item>
-    <item nodeId="node-1516">
+    <item nodeId="node-1764">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1517"></child>
+        <children><child nodeId="node-1765"></child>
         </children>
     </item>
-    <item nodeId="node-1517">
+    <item nodeId="node-1765">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -759,50 +760,50 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1518"></child>
+        <children><child nodeId="node-1766"></child>
         </children>
     </item>
-    <item nodeId="node-1518">
+    <item nodeId="node-1766">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1519"></child>
+        <children><child nodeId="node-1767"></child>
         </children>
     </item>
-    <item nodeId="node-1519">
+    <item nodeId="node-1767">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1520"></child>
+        <children><child nodeId="node-1768"></child>
         </children>
     </item>
-    <item nodeId="node-1520">
+    <item nodeId="node-1768">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Xeno Lab
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1521"></child>
+        <children><child nodeId="node-1769"></child>
         </children>
     </item>
-    <item nodeId="node-1521">
+    <item nodeId="node-1769">
         <command xml:space="preserve">undo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1588"></child>
+        <children><child nodeId="node-1770"></child>
         </children>
     </item>
-    <item nodeId="node-1588">
+    <item nodeId="node-1770">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Xeno Lab
@@ -813,10 +814,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1589"></child>
+        <children><child nodeId="node-1771"></child>
         </children>
     </item>
-    <item nodeId="node-1589">
+    <item nodeId="node-1771">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -826,10 +827,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1590"></child>
+        <children><child nodeId="node-1772"></child>
         </children>
     </item>
-    <item nodeId="node-1590">
+    <item nodeId="node-1772">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Xeno Lab
@@ -840,10 +841,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1591"></child>
+        <children><child nodeId="node-1773"></child>
         </children>
     </item>
-    <item nodeId="node-1591">
+    <item nodeId="node-1773">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -853,19 +854,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1592"></child>
+        <children><child nodeId="node-1774"></child>
         </children>
     </item>
-    <item nodeId="node-1592">
+    <item nodeId="node-1774">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1593"></child>
+        <children><child nodeId="node-1775"></child>
         </children>
     </item>
-    <item nodeId="node-1593">
+    <item nodeId="node-1775">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Docking Bay
@@ -875,19 +876,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1594"></child>
+        <children><child nodeId="node-1776"></child>
         </children>
     </item>
-    <item nodeId="node-1594">
+    <item nodeId="node-1776">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1595"></child>
+        <children><child nodeId="node-1777"></child>
         </children>
     </item>
-    <item nodeId="node-1595">
+    <item nodeId="node-1777">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -897,19 +898,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1596"></child>
+        <children><child nodeId="node-1778"></child>
         </children>
     </item>
-    <item nodeId="node-1596">
+    <item nodeId="node-1778">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1659"></child>
+        <children><child nodeId="node-1779"></child>
         </children>
     </item>
-    <item nodeId="node-1659">
+    <item nodeId="node-1779">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Xeno Lab
@@ -920,10 +921,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1660"></child>
+        <children><child nodeId="node-1780"></child>
         </children>
     </item>
-    <item nodeId="node-1660">
+    <item nodeId="node-1780">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -933,19 +934,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1661"></child>
+        <children><child nodeId="node-1781"></child>
         </children>
     </item>
-    <item nodeId="node-1661">
+    <item nodeId="node-1781">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1662"></child>
+        <children><child nodeId="node-1782"></child>
         </children>
     </item>
-    <item nodeId="node-1662">
+    <item nodeId="node-1782">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Docking Bay
@@ -956,35 +957,35 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1060">
+    <item nodeId="node-1783">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1061"></child>
+        <children><child nodeId="node-1784"></child>
         </children>
     </item>
-    <item nodeId="node-1061">
+    <item nodeId="node-1784">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1066"></child>
+        <children><child nodeId="node-1785"></child>
         </children>
     </item>
-    <item nodeId="node-1066">
+    <item nodeId="node-1785">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1067"></child>
+        <children><child nodeId="node-1786"></child>
         </children>
     </item>
-    <item nodeId="node-1067">
+    <item nodeId="node-1786">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -994,30 +995,30 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1068"></child>
+        <children><child nodeId="node-1787"></child>
         </children>
     </item>
-    <item nodeId="node-1068">
+    <item nodeId="node-1787">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1069"></child>
+        <children><child nodeId="node-1788"></child>
         </children>
     </item>
-    <item nodeId="node-1069">
+    <item nodeId="node-1788">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_XenoLab)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1070"></child>
+        <children><child nodeId="node-1789"></child>
         </children>
     </item>
-    <item nodeId="node-1070">
+    <item nodeId="node-1789">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
@@ -1025,7 +1026,7 @@ It seems to be locked.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1010">
+    <item nodeId="node-1790">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -1035,11 +1036,11 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1012"></child>
-            <child nodeId="node-1011"></child>
+        <children><child nodeId="node-1792"></child>
+            <child nodeId="node-1791"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
+    <item nodeId="node-1791">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -1051,80 +1052,80 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1012">
+    <item nodeId="node-1792">
         <command xml:space="preserve">open</command>
         <result xml:space="preserve">What do you want to open?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
+        <children><child nodeId="node-1793"></child>
         </children>
     </item>
-    <item nodeId="node-1013">
+    <item nodeId="node-1793">
         <command xml:space="preserve">open Spind</command>
         <result xml:space="preserve">It isn't something you can open.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
+        <children><child nodeId="node-1794"></child>
         </children>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1794">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
+        <children><child nodeId="node-1795"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
+    <item nodeId="node-1795">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1016"></child>
+        <children><child nodeId="node-1796"></child>
         </children>
     </item>
-    <item nodeId="node-1016">
+    <item nodeId="node-1796">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1017"></child>
+        <children><child nodeId="node-1797"></child>
         </children>
     </item>
-    <item nodeId="node-1017">
+    <item nodeId="node-1797">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1018"></child>
+        <children><child nodeId="node-1798"></child>
         </children>
     </item>
-    <item nodeId="node-1018">
+    <item nodeId="node-1798">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1019"></child>
+        <children><child nodeId="node-1799"></child>
         </children>
     </item>
-    <item nodeId="node-1019">
+    <item nodeId="node-1799">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1020"></child>
+        <children><child nodeId="node-1800"></child>
         </children>
     </item>
-    <item nodeId="node-1020">
+    <item nodeId="node-1800">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -1140,165 +1141,314 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1021"></child>
+        <children><child nodeId="node-1801"></child>
         </children>
     </item>
-    <item nodeId="node-1021">
+    <item nodeId="node-1801">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1022"></child>
+        <children><child nodeId="node-1802"></child>
         </children>
     </item>
-    <item nodeId="node-1022">
+    <item nodeId="node-1802">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1023"></child>
+        <children><child nodeId="node-1803"></child>
         </children>
     </item>
-    <item nodeId="node-1023">
+    <item nodeId="node-1803">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1024"></child>
+        <children><child nodeId="node-1804"></child>
         </children>
     </item>
-    <item nodeId="node-1024">
+    <item nodeId="node-1804">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1025"></child>
+        <children><child nodeId="node-1805"></child>
         </children>
     </item>
-    <item nodeId="node-1025">
+    <item nodeId="node-1805">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1026"></child>
+        <children><child nodeId="node-1806"></child>
         </children>
     </item>
-    <item nodeId="node-1026">
+    <item nodeId="node-1806">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1027"></child>
+        <children><child nodeId="node-1807"></child>
         </children>
     </item>
-    <item nodeId="node-1027">
+    <item nodeId="node-1807">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1028"></child>
+        <children><child nodeId="node-1808"></child>
         </children>
     </item>
-    <item nodeId="node-1028">
+    <item nodeId="node-1808">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1029"></child>
+        <children><child nodeId="node-1809"></child>
         </children>
     </item>
-    <item nodeId="node-1029">
+    <item nodeId="node-1809">
         <command xml:space="preserve">a</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1030"></child>
+        <children><child nodeId="node-1810"></child>
         </children>
     </item>
-    <item nodeId="node-1030">
+    <item nodeId="node-1810">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1031"></child>
+        <children><child nodeId="node-1811"></child>
         </children>
     </item>
-    <item nodeId="node-1031">
+    <item nodeId="node-1811">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1032"></child>
+        <children><child nodeId="node-1812"></child>
         </children>
     </item>
-    <item nodeId="node-1032">
+    <item nodeId="node-1812">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1033"></child>
+        <children><child nodeId="node-1813"></child>
         </children>
     </item>
-    <item nodeId="node-1033">
+    <item nodeId="node-1813">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1034"></child>
+        <children><child nodeId="node-1814"></child>
         </children>
     </item>
-    <item nodeId="node-1034">
+    <item nodeId="node-1814">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1035"></child>
+        <children><child nodeId="node-1815"></child>
         </children>
     </item>
-    <item nodeId="node-1035">
+    <item nodeId="node-1815">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1036"></child>
+        <children><child nodeId="node-1816"></child>
         </children>
     </item>
-    <item nodeId="node-1036">
+    <item nodeId="node-1816">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1116">
+    <item nodeId="node-1899">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">That's already closed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1900"></child>
+        </children>
+    </item>
+    <item nodeId="node-1900">
+        <command xml:space="preserve">open</command>
+        <result xml:space="preserve">What do you want to open?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1901"></child>
+        </children>
+    </item>
+    <item nodeId="node-1901">
+        <command xml:space="preserve">open Dekon Tür</command>
+        <result xml:space="preserve">You open Dekon Tür.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1902"></child>
+        </children>
+    </item>
+    <item nodeId="node-1902">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">
+
+
+Lupus Station
+An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
+Release 1 / Serial number 180626 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Med Lab
+You can see Dekon Tür, Luke_MedLab, Kontaminierter and Med-Lab Pult here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1903"></child>
+        </children>
+    </item>
+    <item nodeId="node-1903">
+        <command xml:space="preserve">open Dekon Tür</command>
+        <result xml:space="preserve">You open Dekon Tür.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1904"></child>
+        </children>
+    </item>
+    <item nodeId="node-1904">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">percy izz da
+You close Dekon Tür.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1905"></child>
+        </children>
+    </item>
+    <item nodeId="node-1905">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening Luke_MedLab)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1906"></child>
+        </children>
+    </item>
+    <item nodeId="node-1906">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Med Lab
+You can see Dekon Tür, Luke_MedLab, Kontaminierter and Med-Lab Pult here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1970"></child>
+        </children>
+    </item>
+    <item nodeId="node-1970">
+        <command xml:space="preserve">open Dekon Tür</command>
+        <result xml:space="preserve">You open Dekon Tür.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1971"></child>
+        </children>
+    </item>
+    <item nodeId="node-1971">
+        <command xml:space="preserve">inside</command>
+        <result xml:space="preserve">
+Dekontaminationskabine
+You can see Dekon Tür and Percy here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1972"></child>
+        </children>
+    </item>
+    <item nodeId="node-1972">
+        <command xml:space="preserve">outside</command>
+        <result xml:space="preserve">
+Med Lab
+You can see Dekon Tür, Luke_MedLab, Kontaminierter and Med-Lab Pult here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1973"></child>
+        </children>
+    </item>
+    <item nodeId="node-1973">
+        <command xml:space="preserve">close</command>
+        <result xml:space="preserve">What do you want to close?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1974"></child>
+        </children>
+    </item>
+    <item nodeId="node-1974">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">Die Energie des Maschinenkerns reicht nicht mehr für eine Dekontamination.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1817">
         <command xml:space="preserve">out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -1308,10 +1458,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1117"></child>
+        <children><child nodeId="node-1818"></child>
         </children>
     </item>
-    <item nodeId="node-1117">
+    <item nodeId="node-1818">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
@@ -1321,47 +1471,47 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1118"></child>
+        <children><child nodeId="node-1819"></child>
         </children>
     </item>
-    <item nodeId="node-1118">
+    <item nodeId="node-1819">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1119"></child>
+        <children><child nodeId="node-1820"></child>
         </children>
     </item>
-    <item nodeId="node-1119">
+    <item nodeId="node-1820">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1120"></child>
+        <children><child nodeId="node-1821"></child>
         </children>
     </item>
-    <item nodeId="node-1120">
+    <item nodeId="node-1821">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_Luke_H</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1121"></child>
+        <children><child nodeId="node-1822"></child>
         </children>
     </item>
-    <item nodeId="node-1121">
+    <item nodeId="node-1822">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1122"></child>
+        <children><child nodeId="node-1823"></child>
         </children>
     </item>
-    <item nodeId="node-1122">
+    <item nodeId="node-1823">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -1372,29 +1522,29 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1123"></child>
+        <children><child nodeId="node-1824"></child>
         </children>
     </item>
-    <item nodeId="node-1123">
+    <item nodeId="node-1824">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1124"></child>
+        <children><child nodeId="node-1825"></child>
         </children>
     </item>
-    <item nodeId="node-1124">
+    <item nodeId="node-1825">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1125"></child>
+        <children><child nodeId="node-1826"></child>
         </children>
     </item>
-    <item nodeId="node-1125">
+    <item nodeId="node-1826">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -1405,29 +1555,29 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1136"></child>
+        <children><child nodeId="node-1827"></child>
         </children>
     </item>
-    <item nodeId="node-1136">
+    <item nodeId="node-1827">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1137"></child>
+        <children><child nodeId="node-1828"></child>
         </children>
     </item>
-    <item nodeId="node-1137">
+    <item nodeId="node-1828">
         <command xml:space="preserve">use Sicherheitsausweis with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1138"></child>
+        <children><child nodeId="node-1829"></child>
         </children>
     </item>
-    <item nodeId="node-1138">
+    <item nodeId="node-1829">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -1438,19 +1588,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1139"></child>
+        <children><child nodeId="node-1830"></child>
         </children>
     </item>
-    <item nodeId="node-1139">
+    <item nodeId="node-1830">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1140"></child>
+        <children><child nodeId="node-1831"></child>
         </children>
     </item>
-    <item nodeId="node-1140">
+    <item nodeId="node-1831">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Gamma Beta Corridor
@@ -1460,28 +1610,28 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1141"></child>
+        <children><child nodeId="node-1832"></child>
         </children>
     </item>
-    <item nodeId="node-1141">
+    <item nodeId="node-1832">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Bet Cor</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1158"></child>
+        <children><child nodeId="node-1833"></child>
         </children>
     </item>
-    <item nodeId="node-1158">
+    <item nodeId="node-1833">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Bet</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1159"></child>
+        <children><child nodeId="node-1834"></child>
         </children>
     </item>
-    <item nodeId="node-1159">
+    <item nodeId="node-1834">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1491,48 +1641,48 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1160"></child>
+        <children><child nodeId="node-1835"></child>
         </children>
     </item>
-    <item nodeId="node-1160">
+    <item nodeId="node-1835">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1161"></child>
+        <children><child nodeId="node-1836"></child>
         </children>
     </item>
-    <item nodeId="node-1161">
+    <item nodeId="node-1836">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1162"></child>
+        <children><child nodeId="node-1837"></child>
         </children>
     </item>
-    <item nodeId="node-1162">
+    <item nodeId="node-1837">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1163"></child>
+        <children><child nodeId="node-1838"></child>
         </children>
     </item>
-    <item nodeId="node-1163">
+    <item nodeId="node-1838">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1164"></child>
+        <children><child nodeId="node-1839"></child>
         </children>
     </item>
-    <item nodeId="node-1164">
+    <item nodeId="node-1839">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Gamma Beta Corridor
@@ -1542,74 +1692,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1165"></child>
+        <children><child nodeId="node-1840"></child>
         </children>
     </item>
-    <item nodeId="node-1165">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Gamma Junction
-You can see Sicherheitsbarriere, Luke_Hangar, Sicherheitsbarriere, Luke_XenoLab, Mobitab, Panel N Gam Junc and Panel S Gam Junc here.
-
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1166"></child>
-        </children>
-    </item>
-    <item nodeId="node-1166">
-        <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
-        <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1167"></child>
-        </children>
-    </item>
-    <item nodeId="node-1167">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">(first opening Sicherheitsbarriere)
-It seems to be locked.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1220"></child>
-        </children>
-    </item>
-    <item nodeId="node-1220">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">(first opening Sicherheitsbarriere)
-It seems to be locked.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1221"></child>
-        </children>
-    </item>
-    <item nodeId="node-1221">
-        <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
-        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1222"></child>
-        </children>
-    </item>
-    <item nodeId="node-1222">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Gamma Beta Corridor
-You can see Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Bet Cor and Panel S Gam Bet Cor here.
-
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1223"></child>
-        </children>
-    </item>
-    <item nodeId="node-1223">
+    <item nodeId="node-1840">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1619,38 +1705,48 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1224"></child>
+        <children><child nodeId="node-1841"></child>
         </children>
     </item>
-    <item nodeId="node-1224">
+    <item nodeId="node-1841">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1225"></child>
+        <children><child nodeId="node-1842"></child>
         </children>
     </item>
-    <item nodeId="node-1225">
+    <item nodeId="node-1842">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1226"></child>
+        <children><child nodeId="node-1843"></child>
         </children>
     </item>
-    <item nodeId="node-1226">
+    <item nodeId="node-1843">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1844"></child>
+        </children>
+    </item>
+    <item nodeId="node-1844">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1227"></child>
+        <children><child nodeId="node-1845"></child>
         </children>
     </item>
-    <item nodeId="node-1227">
+    <item nodeId="node-1845">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Gamma Beta Corridor
@@ -1660,28 +1756,82 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1228"></child>
+        <children><child nodeId="node-1846"></child>
         </children>
     </item>
-    <item nodeId="node-1228">
+    <item nodeId="node-1846">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Gamma Junction
+You can see Sicherheitsbarriere, Luke_Hangar, Sicherheitsbarriere, Luke_XenoLab, Mobitab, Panel N Gam Junc and Panel S Gam Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1847"></child>
+        </children>
+    </item>
+    <item nodeId="node-1847">
+        <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1848"></child>
+        </children>
+    </item>
+    <item nodeId="node-1848">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1849"></child>
+        </children>
+    </item>
+    <item nodeId="node-1849">
+        <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1850"></child>
+        </children>
+    </item>
+    <item nodeId="node-1850">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Gamma Beta Corridor
+You can see Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Bet Cor and Panel S Gam Bet Cor here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1851"></child>
+        </children>
+    </item>
+    <item nodeId="node-1851">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Bet Cor</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1229"></child>
+        <children><child nodeId="node-1852"></child>
         </children>
     </item>
-    <item nodeId="node-1229">
+    <item nodeId="node-1852">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Bet</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1230"></child>
+        <children><child nodeId="node-1853"></child>
         </children>
     </item>
-    <item nodeId="node-1230">
+    <item nodeId="node-1853">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam</command>
         <result xml:space="preserve">(Panel S Gam Bet Cor)
 Du hast die zugehörige Tür des Panels verriegelt.
@@ -1698,138 +1848,138 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1231"></child>
+        <children><child nodeId="node-1854"></child>
         </children>
     </item>
-    <item nodeId="node-1231">
+    <item nodeId="node-1854">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Bet Corr</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1270"></child>
+        <children><child nodeId="node-1855"></child>
         </children>
     </item>
-    <item nodeId="node-1270">
+    <item nodeId="node-1855">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Beta Corridor
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1271"></child>
+        <children><child nodeId="node-1856"></child>
         </children>
     </item>
-    <item nodeId="node-1271">
+    <item nodeId="node-1856">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Beta Corridor
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1272"></child>
+        <children><child nodeId="node-1857"></child>
         </children>
     </item>
-    <item nodeId="node-1272">
+    <item nodeId="node-1857">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Beta Corridor
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1273"></child>
+        <children><child nodeId="node-1858"></child>
         </children>
     </item>
-    <item nodeId="node-1273">
+    <item nodeId="node-1858">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1274"></child>
+        <children><child nodeId="node-1859"></child>
         </children>
     </item>
-    <item nodeId="node-1274">
+    <item nodeId="node-1859">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1275"></child>
+        <children><child nodeId="node-1860"></child>
         </children>
     </item>
-    <item nodeId="node-1275">
+    <item nodeId="node-1860">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1276"></child>
+        <children><child nodeId="node-1861"></child>
         </children>
     </item>
-    <item nodeId="node-1276">
+    <item nodeId="node-1861">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1277"></child>
+        <children><child nodeId="node-1862"></child>
         </children>
     </item>
-    <item nodeId="node-1277">
+    <item nodeId="node-1862">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">Gamma Beta Corridor
 [Previous turn undone.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1278"></child>
+        <children><child nodeId="node-1863"></child>
         </children>
     </item>
-    <item nodeId="node-1278">
+    <item nodeId="node-1863">
         <command xml:space="preserve">UNDo</command>
         <result xml:space="preserve">"Undo" capacity exhausted. Sorry!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1279"></child>
+        <children><child nodeId="node-1864"></child>
         </children>
     </item>
-    <item nodeId="node-1279">
+    <item nodeId="node-1864">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Beta Corridor
 You can see Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Bet Cor and Panel S Gam Bet Cor here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1280"></child>
+        <children><child nodeId="node-1865"></child>
         </children>
     </item>
-    <item nodeId="node-1280">
+    <item nodeId="node-1865">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1281"></child>
+        <children><child nodeId="node-1866"></child>
         </children>
     </item>
-    <item nodeId="node-1281">
+    <item nodeId="node-1866">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Bet Cor</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1282"></child>
+        <children><child nodeId="node-1867"></child>
         </children>
     </item>
-    <item nodeId="node-1282">
+    <item nodeId="node-1867">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Beta Junction
@@ -1839,58 +1989,58 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1283"></child>
+        <children><child nodeId="node-1868"></child>
         </children>
     </item>
-    <item nodeId="node-1283">
+    <item nodeId="node-1868">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Bet Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1284"></child>
+        <children><child nodeId="node-1869"></child>
         </children>
     </item>
-    <item nodeId="node-1284">
+    <item nodeId="node-1869">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1285"></child>
+        <children><child nodeId="node-1870"></child>
         </children>
     </item>
-    <item nodeId="node-1285">
+    <item nodeId="node-1870">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1286"></child>
+        <children><child nodeId="node-1871"></child>
         </children>
     </item>
-    <item nodeId="node-1286">
+    <item nodeId="node-1871">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1287"></child>
+        <children><child nodeId="node-1872"></child>
         </children>
     </item>
-    <item nodeId="node-1287">
+    <item nodeId="node-1872">
         <command xml:space="preserve">use Sicherheitsausweis with Panel S Bet Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1288"></child>
+        <children><child nodeId="node-1873"></child>
         </children>
     </item>
-    <item nodeId="node-1288">
+    <item nodeId="node-1873">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Gamma Beta Corridor
@@ -1900,19 +2050,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1289"></child>
+        <children><child nodeId="node-1874"></child>
         </children>
     </item>
-    <item nodeId="node-1289">
+    <item nodeId="node-1874">
         <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Bet Cor</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels verriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1290"></child>
+        <children><child nodeId="node-1875"></child>
         </children>
     </item>
-    <item nodeId="node-1290">
+    <item nodeId="node-1875">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
@@ -1920,16 +2070,16 @@ It seems to be locked.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1037">
+    <item nodeId="node-1876">
         <command xml:space="preserve">oustide</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1038"></child>
+        <children><child nodeId="node-1877"></child>
         </children>
     </item>
-    <item nodeId="node-1038">
+    <item nodeId="node-1877">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -1939,10 +2089,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1039"></child>
+        <children><child nodeId="node-1878"></child>
         </children>
     </item>
-    <item nodeId="node-1039">
+    <item nodeId="node-1878">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -1952,10 +2102,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1040"></child>
+        <children><child nodeId="node-1879"></child>
         </children>
     </item>
-    <item nodeId="node-1040">
+    <item nodeId="node-1879">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -1966,10 +2116,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1041"></child>
+        <children><child nodeId="node-1880"></child>
         </children>
     </item>
-    <item nodeId="node-1041">
+    <item nodeId="node-1880">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Hangar
@@ -1979,19 +2129,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1042"></child>
+        <children><child nodeId="node-1881"></child>
         </children>
     </item>
-    <item nodeId="node-1042">
+    <item nodeId="node-1881">
         <command xml:space="preserve">take Sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1043"></child>
+        <children><child nodeId="node-1882"></child>
         </children>
     </item>
-    <item nodeId="node-1043">
+    <item nodeId="node-1882">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -2001,64 +2151,156 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1044"></child>
+        <children><child nodeId="node-1883"></child>
         </children>
     </item>
-    <item nodeId="node-1044">
+    <item nodeId="node-1883">
         <command xml:space="preserve">use Sciehrheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1045"></child>
+        <children><child nodeId="node-1884"></child>
         </children>
     </item>
-    <item nodeId="node-1045">
+    <item nodeId="node-1884">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1046"></child>
+        <children><child nodeId="node-1885"></child>
         </children>
     </item>
-    <item nodeId="node-1046">
+    <item nodeId="node-1885">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Junction
 You can see Luke_Hangar, Sicherheitsbarriere, Deckenluke, Sicherheitsbarriere, Mobitab and Panel Norden Gam Junc here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1047"></child>
+        <children><child nodeId="node-1886"></child>
         </children>
     </item>
-    <item nodeId="node-1047">
+    <item nodeId="node-1886">
         <command xml:space="preserve">inventory</command>
         <result xml:space="preserve">You are carrying:
   Sicherheitsausweis
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1048"></child>
+        <children><child nodeId="node-1887"></child>
         </children>
     </item>
-    <item nodeId="node-1048">
+    <item nodeId="node-1887">
         <command xml:space="preserve">use Sicherheitsausweis with Panel Norden Gam Junc</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1049">
+    <item nodeId="node-2003">
+        <command xml:space="preserve">open Dekon Tür</command>
+        <result xml:space="preserve">You open Dekon Tür.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2004"></child>
+        </children>
+    </item>
+    <item nodeId="node-2004">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">Es kann nur eine Person in der Kabine während der Dekonatmination sein
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2005"></child>
+        </children>
+    </item>
+    <item nodeId="node-2005">
+        <command xml:space="preserve">outside</command>
+        <result xml:space="preserve">(first opening Dekon Tür)
+
+Med Lab
+You can see Dekon Tür, Luke_MedLab, Kontaminierter and Med-Lab Pult here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2006"></child>
+        </children>
+    </item>
+    <item nodeId="node-2006">
+        <command xml:space="preserve">close Dekon Tür</command>
+        <result xml:space="preserve">TEMP muss noch geschrieben werden!
+You close Dekon Tür.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2007"></child>
+        </children>
+    </item>
+    <item nodeId="node-2007">
+        <command xml:space="preserve">inside</command>
+        <result xml:space="preserve">(first opening Dekon Tür)
+
+Dekontaminationskabine
+You can see Dekon Tür and Percy here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2008"></child>
+        </children>
+    </item>
+    <item nodeId="node-2008">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2009"></child>
+        </children>
+    </item>
+    <item nodeId="node-2009">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2010"></child>
+        </children>
+    </item>
+    <item nodeId="node-2010">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1888">
         <command xml:space="preserve">o</command>
         <result xml:space="preserve">Sorry, that can't be corrected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1050"></child>
+        <children><child nodeId="node-1889"></child>
         </children>
     </item>
-    <item nodeId="node-1050">
+    <item nodeId="node-1889">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Docking Bay
@@ -2068,10 +2310,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1051"></child>
+        <children><child nodeId="node-1890"></child>
         </children>
     </item>
-    <item nodeId="node-1051">
+    <item nodeId="node-1890">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Hangar
@@ -2081,10 +2323,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1052"></child>
+        <children><child nodeId="node-1891"></child>
         </children>
     </item>
-    <item nodeId="node-1052">
+    <item nodeId="node-1891">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 
@@ -2096,7 +2338,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1053">
+    <item nodeId="node-1892">
         <command xml:space="preserve">inside</command>
         <result xml:space="preserve">(first opening Dekon Tür)
 
@@ -2108,10 +2350,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1054"></child>
+        <children><child nodeId="node-1893"></child>
         </children>
     </item>
-    <item nodeId="node-1054">
+    <item nodeId="node-1893">
         <command xml:space="preserve">outside</command>
         <result xml:space="preserve">
 Med Lab
@@ -2122,10 +2364,10 @@ Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1055"></child>
+        <children><child nodeId="node-1894"></child>
         </children>
     </item>
-    <item nodeId="node-1055">
+    <item nodeId="node-1894">
         <command xml:space="preserve">close Dekon Tür</command>
         <result xml:space="preserve">Tür ist zu
 &gt;</result>
