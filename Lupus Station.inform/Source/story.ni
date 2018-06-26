@@ -296,7 +296,7 @@ Instead of dropping Messenger:
 
 [Raumanzug ausziehen]
 Instead of taking off Raumanzug:
-	If the player is in Com_Base and Scene4 is happening:
+	If the player is in Com_Base and Scene4 is happening and Raumanzug_Kaputt is false:
 		Say "Du kannst den Raumanzug hier nicht ausziehen!";
 	Otherwise:
 		If the player is in Weltraum:
@@ -513,13 +513,14 @@ Scene4 ends when Sauerstoff_Abfall is true.
 
 
 [Bodenfenster geht kaputt + Sauerstoffabfall]
-Instead of going from Wartungsschacht to Gamma_Delta_Corridor:
-	[!!!]
-	[Fehlt: Verhindere gehen mit Sachen außer Mobitab]
-	[!!!]
-	Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
-	Now Sauerstoff_Abfall is true;
-	Increase Sauerstoff by 1.
+Instead of going to Wartungsschacht:
+	If the player carries 1 thing and the player carries the Mobitab:
+		Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
+		Now Sauerstoff_Abfall is true;
+		Increase Sauerstoff by 1;
+		Continue the action;
+	Otherwise:
+		Say "Du trägst zu viel! Du kannst nur das Mobitab mitnehmen!".
 
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
