@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1943">
+<Skein rootNode="node-2376">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1943">
+    <item nodeId="node-2376">
         <command xml:space="preserve">Lupus Station</command>
         <result xml:space="preserve">
 
@@ -17,446 +17,446 @@ You can see Barry, Palette and Gravitationsgreifer here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2345"></child>
-            <child nodeId="node-2314"></child>
-            <child nodeId="node-2273"></child>
-            <child nodeId="node-2223"></child>
-            <child nodeId="node-2214"></child>
-            <child nodeId="node-2114"></child>
-            <child nodeId="node-2105"></child>
-            <child nodeId="node-2069"></child>
-            <child nodeId="node-2059"></child>
-            <child nodeId="node-2049"></child>
-            <child nodeId="node-2045"></child>
-            <child nodeId="node-2030"></child>
-            <child nodeId="node-2021"></child>
-            <child nodeId="node-2348"></child>
-            <child nodeId="node-1993"></child>
-            <child nodeId="node-1992"></child>
-            <child nodeId="node-1989"></child>
-            <child nodeId="node-1946"></child>
-            <child nodeId="node-1944"></child>
+        <children><child nodeId="node-2792"></child>
+            <child nodeId="node-2761"></child>
+            <child nodeId="node-2720"></child>
+            <child nodeId="node-2670"></child>
+            <child nodeId="node-2661"></child>
+            <child nodeId="node-2561"></child>
+            <child nodeId="node-2552"></child>
+            <child nodeId="node-2516"></child>
+            <child nodeId="node-2506"></child>
+            <child nodeId="node-2496"></child>
+            <child nodeId="node-2492"></child>
+            <child nodeId="node-2477"></child>
+            <child nodeId="node-2468"></child>
+            <child nodeId="node-2454"></child>
+            <child nodeId="node-2426"></child>
+            <child nodeId="node-2425"></child>
+            <child nodeId="node-2422"></child>
+            <child nodeId="node-2379"></child>
+            <child nodeId="node-2377"></child>
         </children>
     </item>
-    <item nodeId="node-1944">
+    <item nodeId="node-2377">
         <command xml:space="preserve">transp Hangar</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1945"></child>
+        <children><child nodeId="node-2378"></child>
         </children>
     </item>
-    <item nodeId="node-1945">
+    <item nodeId="node-2378">
         <command xml:space="preserve">transp Gamma_Delta_Corridor</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1946">
+    <item nodeId="node-2379">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">Nicht möglich!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1975"></child>
-            <child nodeId="node-1947"></child>
+        <children><child nodeId="node-2408"></child>
+            <child nodeId="node-2380"></child>
         </children>
     </item>
-    <item nodeId="node-1947">
+    <item nodeId="node-2380">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Transporter Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1948"></child>
+        <children><child nodeId="node-2381"></child>
         </children>
     </item>
-    <item nodeId="node-1948">
+    <item nodeId="node-2381">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1949"></child>
+        <children><child nodeId="node-2382"></child>
         </children>
     </item>
-    <item nodeId="node-1949">
+    <item nodeId="node-2382">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Antenna Array SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1950"></child>
+        <children><child nodeId="node-2383"></child>
         </children>
     </item>
-    <item nodeId="node-1950">
+    <item nodeId="node-2383">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Lab Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1951"></child>
+        <children><child nodeId="node-2384"></child>
         </children>
     </item>
-    <item nodeId="node-1951">
+    <item nodeId="node-2384">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1952"></child>
+        <children><child nodeId="node-2385"></child>
         </children>
     </item>
-    <item nodeId="node-1952">
+    <item nodeId="node-2385">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Storage SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1953"></child>
+        <children><child nodeId="node-2386"></child>
         </children>
     </item>
-    <item nodeId="node-1953">
+    <item nodeId="node-2386">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1954"></child>
+        <children><child nodeId="node-2387"></child>
         </children>
     </item>
-    <item nodeId="node-1954">
+    <item nodeId="node-2387">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Damaged Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1955"></child>
+        <children><child nodeId="node-2388"></child>
         </children>
     </item>
-    <item nodeId="node-1955">
+    <item nodeId="node-2388">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Energy Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1956"></child>
+        <children><child nodeId="node-2389"></child>
         </children>
     </item>
-    <item nodeId="node-1956">
+    <item nodeId="node-2389">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Delta Grennhouse SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1957"></child>
+        <children><child nodeId="node-2390"></child>
         </children>
     </item>
-    <item nodeId="node-1957">
+    <item nodeId="node-2390">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Com Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1958"></child>
+        <children><child nodeId="node-2391"></child>
         </children>
     </item>
-    <item nodeId="node-1958">
+    <item nodeId="node-2391">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1959"></child>
+        <children><child nodeId="node-2392"></child>
         </children>
     </item>
-    <item nodeId="node-1959">
+    <item nodeId="node-2392">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1960"></child>
+        <children><child nodeId="node-2393"></child>
         </children>
     </item>
-    <item nodeId="node-1960">
+    <item nodeId="node-2393">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Control Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1961"></child>
+        <children><child nodeId="node-2394"></child>
         </children>
     </item>
-    <item nodeId="node-1961">
+    <item nodeId="node-2394">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Pulsator Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1962"></child>
+        <children><child nodeId="node-2395"></child>
         </children>
     </item>
-    <item nodeId="node-1962">
+    <item nodeId="node-2395">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Solar Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1963"></child>
+        <children><child nodeId="node-2396"></child>
         </children>
     </item>
-    <item nodeId="node-1963">
+    <item nodeId="node-2396">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">Transporter Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1964"></child>
+        <children><child nodeId="node-2397"></child>
         </children>
     </item>
-    <item nodeId="node-1964">
+    <item nodeId="node-2397">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Antenna Array SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1965"></child>
+        <children><child nodeId="node-2398"></child>
         </children>
     </item>
-    <item nodeId="node-1965">
+    <item nodeId="node-2398">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Lab Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1966"></child>
+        <children><child nodeId="node-2399"></child>
         </children>
     </item>
-    <item nodeId="node-1966">
+    <item nodeId="node-2399">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Storage SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1967"></child>
+        <children><child nodeId="node-2400"></child>
         </children>
     </item>
-    <item nodeId="node-1967">
+    <item nodeId="node-2400">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Damaged Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1968"></child>
+        <children><child nodeId="node-2401"></child>
         </children>
     </item>
-    <item nodeId="node-1968">
+    <item nodeId="node-2401">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Energy Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1969"></child>
+        <children><child nodeId="node-2402"></child>
         </children>
     </item>
-    <item nodeId="node-1969">
+    <item nodeId="node-2402">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Delta Grennhouse SM
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1970"></child>
+        <children><child nodeId="node-2403"></child>
         </children>
     </item>
-    <item nodeId="node-1970">
+    <item nodeId="node-2403">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1971"></child>
+        <children><child nodeId="node-2404"></child>
         </children>
     </item>
-    <item nodeId="node-1971">
+    <item nodeId="node-2404">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Com Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1972"></child>
+        <children><child nodeId="node-2405"></child>
         </children>
     </item>
-    <item nodeId="node-1972">
+    <item nodeId="node-2405">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Control Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1973"></child>
+        <children><child nodeId="node-2406"></child>
         </children>
     </item>
-    <item nodeId="node-1973">
+    <item nodeId="node-2406">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Pulsator Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1974"></child>
+        <children><child nodeId="node-2407"></child>
         </children>
     </item>
-    <item nodeId="node-1974">
+    <item nodeId="node-2407">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Solar Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1975">
+    <item nodeId="node-2408">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1976"></child>
+        <children><child nodeId="node-2409"></child>
         </children>
     </item>
-    <item nodeId="node-1976">
+    <item nodeId="node-2409">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1977"></child>
+        <children><child nodeId="node-2410"></child>
         </children>
     </item>
-    <item nodeId="node-1977">
+    <item nodeId="node-2410">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1978"></child>
+        <children><child nodeId="node-2411"></child>
         </children>
     </item>
-    <item nodeId="node-1978">
+    <item nodeId="node-2411">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1979"></child>
+        <children><child nodeId="node-2412"></child>
         </children>
     </item>
-    <item nodeId="node-1979">
+    <item nodeId="node-2412">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Delta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1980"></child>
+        <children><child nodeId="node-2413"></child>
         </children>
     </item>
-    <item nodeId="node-1980">
+    <item nodeId="node-2413">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1981"></child>
+        <children><child nodeId="node-2414"></child>
         </children>
     </item>
-    <item nodeId="node-1981">
+    <item nodeId="node-2414">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1982"></child>
+        <children><child nodeId="node-2415"></child>
         </children>
     </item>
-    <item nodeId="node-1982">
+    <item nodeId="node-2415">
         <command xml:space="preserve">go eat</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1983"></child>
+        <children><child nodeId="node-2416"></child>
         </children>
     </item>
-    <item nodeId="node-1983">
+    <item nodeId="node-2416">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Cafeteria
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1984"></child>
+        <children><child nodeId="node-2417"></child>
         </children>
     </item>
-    <item nodeId="node-1984">
+    <item nodeId="node-2417">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Storage Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1985"></child>
+        <children><child nodeId="node-2418"></child>
         </children>
     </item>
-    <item nodeId="node-1985">
+    <item nodeId="node-2418">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Alpha AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1986"></child>
+        <children><child nodeId="node-2419"></child>
         </children>
     </item>
-    <item nodeId="node-1986">
+    <item nodeId="node-2419">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Transporter Raum
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1987"></child>
+        <children><child nodeId="node-2420"></child>
         </children>
     </item>
-    <item nodeId="node-1987">
+    <item nodeId="node-2420">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">Transporter Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1988"></child>
+        <children><child nodeId="node-2421"></child>
         </children>
     </item>
-    <item nodeId="node-1988">
+    <item nodeId="node-2421">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">Transporter Raum
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1989">
+    <item nodeId="node-2422">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1990"></child>
+        <children><child nodeId="node-2423"></child>
         </children>
     </item>
-    <item nodeId="node-1990">
+    <item nodeId="node-2423">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1991"></child>
+        <children><child nodeId="node-2424"></child>
         </children>
     </item>
-    <item nodeId="node-1991">
+    <item nodeId="node-2424">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
@@ -472,266 +472,266 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1992">
+    <item nodeId="node-2425">
         <command xml:space="preserve">take your mums anus</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1993">
+    <item nodeId="node-2426">
         <command xml:space="preserve">take Hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1997"></child>
-            <child nodeId="node-1994"></child>
+        <children><child nodeId="node-2430"></child>
+            <child nodeId="node-2427"></child>
         </children>
     </item>
-    <item nodeId="node-1994">
+    <item nodeId="node-2427">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1995"></child>
+        <children><child nodeId="node-2428"></child>
         </children>
     </item>
-    <item nodeId="node-1995">
+    <item nodeId="node-2428">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1996"></child>
+        <children><child nodeId="node-2429"></child>
         </children>
     </item>
-    <item nodeId="node-1996">
+    <item nodeId="node-2429">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 ok
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1997">
+    <item nodeId="node-2430">
         <command xml:space="preserve">drop Hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1998"></child>
+        <children><child nodeId="node-2431"></child>
         </children>
     </item>
-    <item nodeId="node-1998">
+    <item nodeId="node-2431">
         <command xml:space="preserve">take Hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1999"></child>
+        <children><child nodeId="node-2432"></child>
         </children>
     </item>
-    <item nodeId="node-1999">
+    <item nodeId="node-2432">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2000"></child>
+        <children><child nodeId="node-2433"></child>
         </children>
     </item>
-    <item nodeId="node-2000">
+    <item nodeId="node-2433">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Hangar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2001"></child>
+        <children><child nodeId="node-2434"></child>
         </children>
     </item>
-    <item nodeId="node-2001">
+    <item nodeId="node-2434">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2002"></child>
+        <children><child nodeId="node-2435"></child>
         </children>
     </item>
-    <item nodeId="node-2002">
+    <item nodeId="node-2435">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Xeno Lab
 You can see Adam here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2003"></child>
+        <children><child nodeId="node-2436"></child>
         </children>
     </item>
-    <item nodeId="node-2003">
+    <item nodeId="node-2436">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2004"></child>
+        <children><child nodeId="node-2437"></child>
         </children>
     </item>
-    <item nodeId="node-2004">
+    <item nodeId="node-2437">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2005"></child>
+        <children><child nodeId="node-2438"></child>
         </children>
     </item>
-    <item nodeId="node-2005">
+    <item nodeId="node-2438">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2006"></child>
+        <children><child nodeId="node-2439"></child>
         </children>
     </item>
-    <item nodeId="node-2006">
+    <item nodeId="node-2439">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2007"></child>
+        <children><child nodeId="node-2440"></child>
         </children>
     </item>
-    <item nodeId="node-2007">
+    <item nodeId="node-2440">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2008"></child>
+        <children><child nodeId="node-2441"></child>
         </children>
     </item>
-    <item nodeId="node-2008">
+    <item nodeId="node-2441">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Xeno Lab
 You can see Adam here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2009"></child>
+        <children><child nodeId="node-2442"></child>
         </children>
     </item>
-    <item nodeId="node-2009">
+    <item nodeId="node-2442">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2010"></child>
+        <children><child nodeId="node-2443"></child>
         </children>
     </item>
-    <item nodeId="node-2010">
+    <item nodeId="node-2443">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2011"></child>
+        <children><child nodeId="node-2444"></child>
         </children>
     </item>
-    <item nodeId="node-2011">
+    <item nodeId="node-2444">
         <command xml:space="preserve">go dwon</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2012"></child>
+        <children><child nodeId="node-2445"></child>
         </children>
     </item>
-    <item nodeId="node-2012">
+    <item nodeId="node-2445">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2013"></child>
+        <children><child nodeId="node-2446"></child>
         </children>
     </item>
-    <item nodeId="node-2013">
+    <item nodeId="node-2446">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Xeno Lab
 You can see Adam here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2014"></child>
+        <children><child nodeId="node-2447"></child>
         </children>
     </item>
-    <item nodeId="node-2014">
+    <item nodeId="node-2447">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2015"></child>
+        <children><child nodeId="node-2448"></child>
         </children>
     </item>
-    <item nodeId="node-2015">
+    <item nodeId="node-2448">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2016"></child>
+        <children><child nodeId="node-2449"></child>
         </children>
     </item>
-    <item nodeId="node-2016">
+    <item nodeId="node-2449">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2017"></child>
+        <children><child nodeId="node-2450"></child>
         </children>
     </item>
-    <item nodeId="node-2017">
+    <item nodeId="node-2450">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2018"></child>
+        <children><child nodeId="node-2451"></child>
         </children>
     </item>
-    <item nodeId="node-2018">
+    <item nodeId="node-2451">
         <command xml:space="preserve">drop hallo</command>
         <result xml:space="preserve">Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2019"></child>
+        <children><child nodeId="node-2452"></child>
         </children>
     </item>
-    <item nodeId="node-2019">
+    <item nodeId="node-2452">
         <command xml:space="preserve">take hallo</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2020"></child>
+        <children><child nodeId="node-2453"></child>
         </children>
     </item>
-    <item nodeId="node-2020">
+    <item nodeId="node-2453">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2348">
+    <item nodeId="node-2454">
         <command xml:space="preserve">out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -741,11 +741,11 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2369"></child>
-            <child nodeId="node-2349"></child>
+        <children><child nodeId="node-2463"></child>
+            <child nodeId="node-2455"></child>
         </children>
     </item>
-    <item nodeId="node-2349">
+    <item nodeId="node-2455">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
@@ -755,28 +755,28 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2350"></child>
+        <children><child nodeId="node-2456"></child>
         </children>
     </item>
-    <item nodeId="node-2350">
+    <item nodeId="node-2456">
         <command xml:space="preserve">take sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2351"></child>
+        <children><child nodeId="node-2457"></child>
         </children>
     </item>
-    <item nodeId="node-2351">
+    <item nodeId="node-2457">
         <command xml:space="preserve">use sicherheits with Luke_Hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2352"></child>
+        <children><child nodeId="node-2458"></child>
         </children>
     </item>
-    <item nodeId="node-2352">
+    <item nodeId="node-2458">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -787,19 +787,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2353"></child>
+        <children><child nodeId="node-2459"></child>
         </children>
     </item>
-    <item nodeId="node-2353">
+    <item nodeId="node-2459">
         <command xml:space="preserve">use sicherheits with Panel S Gam Junc</command>
         <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2354"></child>
+        <children><child nodeId="node-2460"></child>
         </children>
     </item>
-    <item nodeId="node-2354">
+    <item nodeId="node-2460">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">
 Gamma Delta Junction
@@ -809,26 +809,26 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2355"></child>
+        <children><child nodeId="node-2461"></child>
         </children>
     </item>
-    <item nodeId="node-2355">
+    <item nodeId="node-2461">
         <command xml:space="preserve">take laborkittel</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2356"></child>
+        <children><child nodeId="node-2462"></child>
         </children>
     </item>
-    <item nodeId="node-2356">
+    <item nodeId="node-2462">
         <command xml:space="preserve">look at laborkittel</command>
         <result xml:space="preserve">Ein leicht blutiger und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2369">
+    <item nodeId="node-2463">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Hangar
@@ -838,37 +838,37 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2370"></child>
+        <children><child nodeId="node-2464"></child>
         </children>
     </item>
-    <item nodeId="node-2370">
+    <item nodeId="node-2464">
         <command xml:space="preserve">take sicher</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2371"></child>
+        <children><child nodeId="node-2465"></child>
         </children>
     </item>
-    <item nodeId="node-2371">
+    <item nodeId="node-2465">
         <command xml:space="preserve">take sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2372"></child>
+        <children><child nodeId="node-2466"></child>
         </children>
     </item>
-    <item nodeId="node-2372">
+    <item nodeId="node-2466">
         <command xml:space="preserve">use sicherheits with luke_hangar</command>
         <result xml:space="preserve">Du hast die Hangarluke für einen Zug geöffnet.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2373"></child>
+        <children><child nodeId="node-2467"></child>
         </children>
     </item>
-    <item nodeId="node-2373">
+    <item nodeId="node-2467">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Die Hangarluke schließt sich hinter dir.
 
@@ -880,79 +880,79 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2021">
+    <item nodeId="node-2468">
         <command xml:space="preserve">open Spind</command>
         <result xml:space="preserve">That's already open.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2022"></child>
+        <children><child nodeId="node-2469"></child>
         </children>
     </item>
-    <item nodeId="node-2022">
+    <item nodeId="node-2469">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2023"></child>
+        <children><child nodeId="node-2470"></child>
         </children>
     </item>
-    <item nodeId="node-2023">
+    <item nodeId="node-2470">
         <command xml:space="preserve">look at Sicherheitsausweis</command>
         <result xml:space="preserve">Ein Sicherheitsausweis, der aussieht als ob er einer wichtigen Person gehört
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2024"></child>
+        <children><child nodeId="node-2471"></child>
         </children>
     </item>
-    <item nodeId="node-2024">
+    <item nodeId="node-2471">
         <command xml:space="preserve">go wesr</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2025"></child>
+        <children><child nodeId="node-2472"></child>
         </children>
     </item>
-    <item nodeId="node-2025">
+    <item nodeId="node-2472">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2026"></child>
+        <children><child nodeId="node-2473"></child>
         </children>
     </item>
-    <item nodeId="node-2026">
+    <item nodeId="node-2473">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2027"></child>
+        <children><child nodeId="node-2474"></child>
         </children>
     </item>
-    <item nodeId="node-2027">
+    <item nodeId="node-2474">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2028"></child>
+        <children><child nodeId="node-2475"></child>
         </children>
     </item>
-    <item nodeId="node-2028">
+    <item nodeId="node-2475">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2029"></child>
+        <children><child nodeId="node-2476"></child>
         </children>
     </item>
-    <item nodeId="node-2029">
+    <item nodeId="node-2476">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">
 Docking Bay
@@ -960,54 +960,54 @@ Docking Bay
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2030">
+    <item nodeId="node-2477">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2031"></child>
+        <children><child nodeId="node-2478"></child>
         </children>
     </item>
-    <item nodeId="node-2031">
+    <item nodeId="node-2478">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Beta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2032"></child>
+        <children><child nodeId="node-2479"></child>
         </children>
     </item>
-    <item nodeId="node-2032">
+    <item nodeId="node-2479">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2036"></child>
-            <child nodeId="node-2033"></child>
+        <children><child nodeId="node-2483"></child>
+            <child nodeId="node-2480"></child>
         </children>
     </item>
-    <item nodeId="node-2033">
+    <item nodeId="node-2480">
         <command xml:space="preserve">talk with Kontaminier</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2034"></child>
+        <children><child nodeId="node-2481"></child>
         </children>
     </item>
-    <item nodeId="node-2034">
+    <item nodeId="node-2481">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2035"></child>
+        <children><child nodeId="node-2482"></child>
         </children>
     </item>
-    <item nodeId="node-2035">
+    <item nodeId="node-2482">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -1015,81 +1015,81 @@ You can see Kontaminierter here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2036">
+    <item nodeId="node-2483">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2037"></child>
+        <children><child nodeId="node-2484"></child>
         </children>
     </item>
-    <item nodeId="node-2037">
+    <item nodeId="node-2484">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2038"></child>
+        <children><child nodeId="node-2485"></child>
         </children>
     </item>
-    <item nodeId="node-2038">
+    <item nodeId="node-2485">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2039"></child>
+        <children><child nodeId="node-2486"></child>
         </children>
     </item>
-    <item nodeId="node-2039">
+    <item nodeId="node-2486">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2040"></child>
+        <children><child nodeId="node-2487"></child>
         </children>
     </item>
-    <item nodeId="node-2040">
+    <item nodeId="node-2487">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2041"></child>
+        <children><child nodeId="node-2488"></child>
         </children>
     </item>
-    <item nodeId="node-2041">
+    <item nodeId="node-2488">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Junction
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2042"></child>
+        <children><child nodeId="node-2489"></child>
         </children>
     </item>
-    <item nodeId="node-2042">
+    <item nodeId="node-2489">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2043"></child>
+        <children><child nodeId="node-2490"></child>
         </children>
     </item>
-    <item nodeId="node-2043">
+    <item nodeId="node-2490">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2044"></child>
+        <children><child nodeId="node-2491"></child>
         </children>
     </item>
-    <item nodeId="node-2044">
+    <item nodeId="node-2491">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
@@ -1106,7 +1106,7 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2045">
+    <item nodeId="node-2492">
         <command xml:space="preserve">look at Spind</command>
         <result xml:space="preserve">Der Spind eines Deckoffizieres, wahrscheinlich in Eile offengelassen
 
@@ -1114,10 +1114,10 @@ In Spind are Sicherheitsausweis and MobiTab.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2046"></child>
+        <children><child nodeId="node-2493"></child>
         </children>
     </item>
-    <item nodeId="node-2046">
+    <item nodeId="node-2493">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1125,26 +1125,26 @@ You can see Tür1 here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2047"></child>
+        <children><child nodeId="node-2494"></child>
         </children>
     </item>
-    <item nodeId="node-2047">
+    <item nodeId="node-2494">
         <command xml:space="preserve">open Tür1</command>
         <result xml:space="preserve">You open Tür1.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2048"></child>
+        <children><child nodeId="node-2495"></child>
         </children>
     </item>
-    <item nodeId="node-2048">
+    <item nodeId="node-2495">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">You can't, since Tür1 leads nowhere.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2049">
+    <item nodeId="node-2496">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Raumfähre
 You can see Barry here.
@@ -1153,10 +1153,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2050"></child>
+        <children><child nodeId="node-2497"></child>
         </children>
     </item>
-    <item nodeId="node-2050">
+    <item nodeId="node-2497">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -1166,10 +1166,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2051"></child>
+        <children><child nodeId="node-2498"></child>
         </children>
     </item>
-    <item nodeId="node-2051">
+    <item nodeId="node-2498">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Hangar
@@ -1179,28 +1179,28 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2052"></child>
+        <children><child nodeId="node-2499"></child>
         </children>
     </item>
-    <item nodeId="node-2052">
+    <item nodeId="node-2499">
         <command xml:space="preserve">open spind</command>
         <result xml:space="preserve">That's already open.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2053"></child>
+        <children><child nodeId="node-2500"></child>
         </children>
     </item>
-    <item nodeId="node-2053">
+    <item nodeId="node-2500">
         <command xml:space="preserve">take sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2054"></child>
+        <children><child nodeId="node-2501"></child>
         </children>
     </item>
-    <item nodeId="node-2054">
+    <item nodeId="node-2501">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1210,134 +1210,134 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2055"></child>
+        <children><child nodeId="node-2502"></child>
         </children>
     </item>
-    <item nodeId="node-2055">
+    <item nodeId="node-2502">
         <command xml:space="preserve">use sicherheits on panel norden</command>
         <result xml:space="preserve">I didn't understand that sentence.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2056"></child>
+        <children><child nodeId="node-2503"></child>
         </children>
     </item>
-    <item nodeId="node-2056">
+    <item nodeId="node-2503">
         <command xml:space="preserve">use sicherheits with Panel Norden</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2057"></child>
+        <children><child nodeId="node-2504"></child>
         </children>
     </item>
-    <item nodeId="node-2057">
+    <item nodeId="node-2504">
         <command xml:space="preserve">use sicherheits with Panel_GamJun_N</command>
         <result xml:space="preserve">Du trägst nicht das Mobitab!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2058"></child>
+        <children><child nodeId="node-2505"></child>
         </children>
     </item>
-    <item nodeId="node-2058">
+    <item nodeId="node-2505">
         <command xml:space="preserve">use sicherheits with SiBa_1</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2059">
+    <item nodeId="node-2506">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2060"></child>
+        <children><child nodeId="node-2507"></child>
         </children>
     </item>
-    <item nodeId="node-2060">
+    <item nodeId="node-2507">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2061"></child>
+        <children><child nodeId="node-2508"></child>
         </children>
     </item>
-    <item nodeId="node-2061">
+    <item nodeId="node-2508">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Hangar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2062"></child>
+        <children><child nodeId="node-2509"></child>
         </children>
     </item>
-    <item nodeId="node-2062">
+    <item nodeId="node-2509">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2063"></child>
+        <children><child nodeId="node-2510"></child>
         </children>
     </item>
-    <item nodeId="node-2063">
+    <item nodeId="node-2510">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Xeno Lab
 You can see Adam here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2064"></child>
+        <children><child nodeId="node-2511"></child>
         </children>
     </item>
-    <item nodeId="node-2064">
+    <item nodeId="node-2511">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2065"></child>
+        <children><child nodeId="node-2512"></child>
         </children>
     </item>
-    <item nodeId="node-2065">
+    <item nodeId="node-2512">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2066"></child>
+        <children><child nodeId="node-2513"></child>
         </children>
     </item>
-    <item nodeId="node-2066">
+    <item nodeId="node-2513">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 ok
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2067"></child>
+        <children><child nodeId="node-2514"></child>
         </children>
     </item>
-    <item nodeId="node-2067">
+    <item nodeId="node-2514">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 ok
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2068"></child>
+        <children><child nodeId="node-2515"></child>
         </children>
     </item>
-    <item nodeId="node-2068">
+    <item nodeId="node-2515">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Hangar
 ok
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2069">
+    <item nodeId="node-2516">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -1347,10 +1347,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2070"></child>
+        <children><child nodeId="node-2517"></child>
         </children>
     </item>
-    <item nodeId="node-2070">
+    <item nodeId="node-2517">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Hangar
@@ -1360,41 +1360,41 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2104"></child>
-            <child nodeId="node-2103"></child>
-            <child nodeId="node-2098"></child>
-            <child nodeId="node-2092"></child>
-            <child nodeId="node-2071"></child>
+        <children><child nodeId="node-2551"></child>
+            <child nodeId="node-2550"></child>
+            <child nodeId="node-2545"></child>
+            <child nodeId="node-2539"></child>
+            <child nodeId="node-2518"></child>
         </children>
     </item>
-    <item nodeId="node-2071">
+    <item nodeId="node-2518">
         <command xml:space="preserve">teke mobitab</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2072"></child>
+        <children><child nodeId="node-2519"></child>
         </children>
     </item>
-    <item nodeId="node-2072">
+    <item nodeId="node-2519">
         <command xml:space="preserve">take mobitab</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2073"></child>
+        <children><child nodeId="node-2520"></child>
         </children>
     </item>
-    <item nodeId="node-2073">
+    <item nodeId="node-2520">
         <command xml:space="preserve">look at mobitab</command>
         <result xml:space="preserve">Ein „MobiTab. Äußerst schmal und handlich und doch voller erstaunlicher Technologien
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2074"></child>
+        <children><child nodeId="node-2521"></child>
         </children>
     </item>
-    <item nodeId="node-2074">
+    <item nodeId="node-2521">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Hangar
 You can see Umkleidetür and Spind (in which is Sicherheitsausweis) here.
@@ -1411,10 +1411,10 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2075"></child>
+        <children><child nodeId="node-2522"></child>
         </children>
     </item>
-    <item nodeId="node-2075">
+    <item nodeId="node-2522">
         <command xml:space="preserve">RESTART</command>
         <result xml:space="preserve">
 
@@ -1428,10 +1428,10 @@ You can see Barry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2076"></child>
+        <children><child nodeId="node-2523"></child>
         </children>
     </item>
-    <item nodeId="node-2076">
+    <item nodeId="node-2523">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -1441,10 +1441,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2077"></child>
+        <children><child nodeId="node-2524"></child>
         </children>
     </item>
-    <item nodeId="node-2077">
+    <item nodeId="node-2524">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Hangar
@@ -1454,20 +1454,20 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2078"></child>
+        <children><child nodeId="node-2525"></child>
         </children>
     </item>
-    <item nodeId="node-2078">
+    <item nodeId="node-2525">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Hangar
 You can see Umkleidetür and Spind (in which are Mobitab and Sicherheitsausweis) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2079"></child>
+        <children><child nodeId="node-2526"></child>
         </children>
     </item>
-    <item nodeId="node-2079">
+    <item nodeId="node-2526">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1477,39 +1477,39 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2080"></child>
+        <children><child nodeId="node-2527"></child>
         </children>
     </item>
-    <item nodeId="node-2080">
+    <item nodeId="node-2527">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2081"></child>
+        <children><child nodeId="node-2528"></child>
         </children>
     </item>
-    <item nodeId="node-2081">
+    <item nodeId="node-2528">
         <command xml:space="preserve">go back</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2082"></child>
+        <children><child nodeId="node-2529"></child>
         </children>
     </item>
-    <item nodeId="node-2082">
+    <item nodeId="node-2529">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2083"></child>
+        <children><child nodeId="node-2530"></child>
         </children>
     </item>
-    <item nodeId="node-2083">
+    <item nodeId="node-2530">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">
 Hangar
@@ -1519,19 +1519,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2084"></child>
+        <children><child nodeId="node-2531"></child>
         </children>
     </item>
-    <item nodeId="node-2084">
+    <item nodeId="node-2531">
         <command xml:space="preserve">take sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2085"></child>
+        <children><child nodeId="node-2532"></child>
         </children>
     </item>
-    <item nodeId="node-2085">
+    <item nodeId="node-2532">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1541,80 +1541,80 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2086"></child>
+        <children><child nodeId="node-2533"></child>
         </children>
     </item>
-    <item nodeId="node-2086">
+    <item nodeId="node-2533">
         <command xml:space="preserve">use Sicherheitsausweis with Panel</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2087"></child>
+        <children><child nodeId="node-2534"></child>
         </children>
     </item>
-    <item nodeId="node-2087">
+    <item nodeId="node-2534">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2088"></child>
+        <children><child nodeId="node-2535"></child>
         </children>
     </item>
-    <item nodeId="node-2088">
+    <item nodeId="node-2535">
         <command xml:space="preserve">use Sicherheitsausweis with Panel</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2089"></child>
+        <children><child nodeId="node-2536"></child>
         </children>
     </item>
-    <item nodeId="node-2089">
+    <item nodeId="node-2536">
         <command xml:space="preserve">use sicherheitsausweis with panel</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2090"></child>
+        <children><child nodeId="node-2537"></child>
         </children>
     </item>
-    <item nodeId="node-2090">
+    <item nodeId="node-2537">
         <command xml:space="preserve">Use Sicherheitsausweis with Sicherheitsbarriere</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2091"></child>
+        <children><child nodeId="node-2538"></child>
         </children>
     </item>
-    <item nodeId="node-2091">
+    <item nodeId="node-2538">
         <command xml:space="preserve">Use Sicherheitsausweis with icherheitsbarriere</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2092">
+    <item nodeId="node-2539">
         <command xml:space="preserve">take sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2094"></child>
-            <child nodeId="node-2093"></child>
+        <children><child nodeId="node-2541"></child>
+            <child nodeId="node-2540"></child>
         </children>
     </item>
-    <item nodeId="node-2093">
+    <item nodeId="node-2540">
         <command xml:space="preserve">look at sicherheitsausweis</command>
         <result xml:space="preserve">Ein Sicherheitsausweis, der aussieht als ob er einer wichtigen Person gehört
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2094">
+    <item nodeId="node-2541">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1624,45 +1624,45 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2095"></child>
+        <children><child nodeId="node-2542"></child>
         </children>
     </item>
-    <item nodeId="node-2095">
+    <item nodeId="node-2542">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2096"></child>
+        <children><child nodeId="node-2543"></child>
         </children>
     </item>
-    <item nodeId="node-2096">
+    <item nodeId="node-2543">
         <command xml:space="preserve">Use sicherheitsausweis with panel</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2097"></child>
+        <children><child nodeId="node-2544"></child>
         </children>
     </item>
-    <item nodeId="node-2097">
+    <item nodeId="node-2544">
         <command xml:space="preserve">use sicherheitsausweis with sicherheitsbarriere</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2098">
+    <item nodeId="node-2545">
         <command xml:space="preserve">take sicherheits</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2099"></child>
+        <children><child nodeId="node-2546"></child>
         </children>
     </item>
-    <item nodeId="node-2099">
+    <item nodeId="node-2546">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">
 Gamma Junction
@@ -1672,128 +1672,128 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2100"></child>
+        <children><child nodeId="node-2547"></child>
         </children>
     </item>
-    <item nodeId="node-2100">
+    <item nodeId="node-2547">
         <command xml:space="preserve">use sicherheits with Panel Norden</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2101"></child>
+        <children><child nodeId="node-2548"></child>
         </children>
     </item>
-    <item nodeId="node-2101">
+    <item nodeId="node-2548">
         <command xml:space="preserve">use sicherheits with Panel_GamJun_N</command>
         <result xml:space="preserve">Du trägst nicht das Mobitab!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2102"></child>
+        <children><child nodeId="node-2549"></child>
         </children>
     </item>
-    <item nodeId="node-2102">
+    <item nodeId="node-2549">
         <command xml:space="preserve">use Sicherheitsausweis with Panel_GamJun_N</command>
         <result xml:space="preserve">Du trägst nicht das Mobitab!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2103">
+    <item nodeId="node-2550">
         <command xml:space="preserve">take Sicherheitsausweis</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2104">
+    <item nodeId="node-2551">
         <command xml:space="preserve">take Sicher</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2105">
+    <item nodeId="node-2552">
         <command xml:space="preserve">go northh</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2106"></child>
+        <children><child nodeId="node-2553"></child>
         </children>
     </item>
-    <item nodeId="node-2106">
+    <item nodeId="node-2553">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2107"></child>
+        <children><child nodeId="node-2554"></child>
         </children>
     </item>
-    <item nodeId="node-2107">
+    <item nodeId="node-2554">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2108"></child>
+        <children><child nodeId="node-2555"></child>
         </children>
     </item>
-    <item nodeId="node-2108">
+    <item nodeId="node-2555">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2109"></child>
+        <children><child nodeId="node-2556"></child>
         </children>
     </item>
-    <item nodeId="node-2109">
+    <item nodeId="node-2556">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2110"></child>
+        <children><child nodeId="node-2557"></child>
         </children>
     </item>
-    <item nodeId="node-2110">
+    <item nodeId="node-2557">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2111"></child>
+        <children><child nodeId="node-2558"></child>
         </children>
     </item>
-    <item nodeId="node-2111">
+    <item nodeId="node-2558">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2112"></child>
+        <children><child nodeId="node-2559"></child>
         </children>
     </item>
-    <item nodeId="node-2112">
+    <item nodeId="node-2559">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2113"></child>
+        <children><child nodeId="node-2560"></child>
         </children>
     </item>
-    <item nodeId="node-2113">
+    <item nodeId="node-2560">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2114">
+    <item nodeId="node-2561">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -1801,38 +1801,38 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2125"></child>
-            <child nodeId="node-2115"></child>
+        <children><child nodeId="node-2572"></child>
+            <child nodeId="node-2562"></child>
         </children>
     </item>
-    <item nodeId="node-2115">
+    <item nodeId="node-2562">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2116"></child>
+        <children><child nodeId="node-2563"></child>
         </children>
     </item>
-    <item nodeId="node-2116">
+    <item nodeId="node-2563">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2117"></child>
+        <children><child nodeId="node-2564"></child>
         </children>
     </item>
-    <item nodeId="node-2117">
+    <item nodeId="node-2564">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Beta Juncton
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2118"></child>
+        <children><child nodeId="node-2565"></child>
         </children>
     </item>
-    <item nodeId="node-2118">
+    <item nodeId="node-2565">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -1840,46 +1840,46 @@ You can see Kontaminierter here.
 0  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2119"></child>
+        <children><child nodeId="node-2566"></child>
         </children>
     </item>
-    <item nodeId="node-2119">
+    <item nodeId="node-2566">
         <command xml:space="preserve">k</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2120"></child>
+        <children><child nodeId="node-2567"></child>
         </children>
     </item>
-    <item nodeId="node-2120">
+    <item nodeId="node-2567">
         <command xml:space="preserve">k</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2121"></child>
+        <children><child nodeId="node-2568"></child>
         </children>
     </item>
-    <item nodeId="node-2121">
+    <item nodeId="node-2568">
         <command xml:space="preserve">k</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2122"></child>
+        <children><child nodeId="node-2569"></child>
         </children>
     </item>
-    <item nodeId="node-2122">
+    <item nodeId="node-2569">
         <command xml:space="preserve">k</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2123"></child>
+        <children><child nodeId="node-2570"></child>
         </children>
     </item>
-    <item nodeId="node-2123">
+    <item nodeId="node-2570">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -1887,10 +1887,10 @@ You can see Kontaminierter here.
 0  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2124"></child>
+        <children><child nodeId="node-2571"></child>
         </children>
     </item>
-    <item nodeId="node-2124">
+    <item nodeId="node-2571">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -1908,84 +1908,84 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2125">
+    <item nodeId="node-2572">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2126"></child>
+        <children><child nodeId="node-2573"></child>
         </children>
     </item>
-    <item nodeId="node-2126">
+    <item nodeId="node-2573">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2178"></child>
-            <child nodeId="node-2169"></child>
-            <child nodeId="node-2143"></child>
-            <child nodeId="node-2127"></child>
+        <children><child nodeId="node-2625"></child>
+            <child nodeId="node-2616"></child>
+            <child nodeId="node-2590"></child>
+            <child nodeId="node-2574"></child>
         </children>
     </item>
-    <item nodeId="node-2127">
+    <item nodeId="node-2574">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2128"></child>
+        <children><child nodeId="node-2575"></child>
         </children>
     </item>
-    <item nodeId="node-2128">
+    <item nodeId="node-2575">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2129"></child>
+        <children><child nodeId="node-2576"></child>
         </children>
     </item>
-    <item nodeId="node-2129">
+    <item nodeId="node-2576">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2130"></child>
+        <children><child nodeId="node-2577"></child>
         </children>
     </item>
-    <item nodeId="node-2130">
+    <item nodeId="node-2577">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2131"></child>
+        <children><child nodeId="node-2578"></child>
         </children>
     </item>
-    <item nodeId="node-2131">
+    <item nodeId="node-2578">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2132"></child>
+        <children><child nodeId="node-2579"></child>
         </children>
     </item>
-    <item nodeId="node-2132">
+    <item nodeId="node-2579">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2133"></child>
+        <children><child nodeId="node-2580"></child>
         </children>
     </item>
-    <item nodeId="node-2133">
+    <item nodeId="node-2580">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
@@ -2001,30 +2001,30 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2134"></child>
+        <children><child nodeId="node-2581"></child>
         </children>
     </item>
-    <item nodeId="node-2134">
+    <item nodeId="node-2581">
         <command xml:space="preserve">retsart</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2135"></child>
+        <children><child nodeId="node-2582"></child>
         </children>
     </item>
-    <item nodeId="node-2135">
+    <item nodeId="node-2582">
         <command xml:space="preserve">retstart</command>
         <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2136"></child>
+        <children><child nodeId="node-2583"></child>
         </children>
     </item>
-    <item nodeId="node-2136">
+    <item nodeId="node-2583">
         <command xml:space="preserve">restart</command>
         <result xml:space="preserve">Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
@@ -2035,56 +2035,56 @@ You can see Tür1 here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2137"></child>
+        <children><child nodeId="node-2584"></child>
         </children>
     </item>
-    <item nodeId="node-2137">
+    <item nodeId="node-2584">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2138"></child>
+        <children><child nodeId="node-2585"></child>
         </children>
     </item>
-    <item nodeId="node-2138">
+    <item nodeId="node-2585">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Beta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2139"></child>
+        <children><child nodeId="node-2586"></child>
         </children>
     </item>
-    <item nodeId="node-2139">
+    <item nodeId="node-2586">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2140"></child>
+        <children><child nodeId="node-2587"></child>
         </children>
     </item>
-    <item nodeId="node-2140">
+    <item nodeId="node-2587">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2141"></child>
+        <children><child nodeId="node-2588"></child>
         </children>
     </item>
-    <item nodeId="node-2141">
+    <item nodeId="node-2588">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2142"></child>
+        <children><child nodeId="node-2589"></child>
         </children>
     </item>
-    <item nodeId="node-2142">
+    <item nodeId="node-2589">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Junction
 You can see Kontaminierter here.
@@ -2092,27 +2092,27 @@ You can see Kontaminierter here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2143">
+    <item nodeId="node-2590">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 1  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2144"></child>
+        <children><child nodeId="node-2591"></child>
         </children>
     </item>
-    <item nodeId="node-2144">
+    <item nodeId="node-2591">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 2  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2145"></child>
+        <children><child nodeId="node-2592"></child>
         </children>
     </item>
-    <item nodeId="node-2145">
+    <item nodeId="node-2592">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -2120,19 +2120,19 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2146"></child>
+        <children><child nodeId="node-2593"></child>
         </children>
     </item>
-    <item nodeId="node-2146">
+    <item nodeId="node-2593">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2147"></child>
+        <children><child nodeId="node-2594"></child>
         </children>
     </item>
-    <item nodeId="node-2147">
+    <item nodeId="node-2594">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -2140,47 +2140,47 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2148"></child>
+        <children><child nodeId="node-2595"></child>
         </children>
     </item>
-    <item nodeId="node-2148">
+    <item nodeId="node-2595">
         <command xml:space="preserve">talk with Kont</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2149"></child>
+        <children><child nodeId="node-2596"></child>
         </children>
     </item>
-    <item nodeId="node-2149">
+    <item nodeId="node-2596">
         <command xml:space="preserve">talk with Table</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2150"></child>
+        <children><child nodeId="node-2597"></child>
         </children>
     </item>
-    <item nodeId="node-2150">
+    <item nodeId="node-2597">
         <command xml:space="preserve">talk with Kontaminierter</command>
         <result xml:space="preserve">Du hast den Kontaminierten angesprochen.
 
 1  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2151"></child>
+        <children><child nodeId="node-2598"></child>
         </children>
     </item>
-    <item nodeId="node-2151">
+    <item nodeId="node-2598">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Gamma Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2152"></child>
+        <children><child nodeId="node-2599"></child>
         </children>
     </item>
-    <item nodeId="node-2152">
+    <item nodeId="node-2599">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Gamma Junction
 You can see Tür1 here.
@@ -2188,28 +2188,28 @@ You can see Tür1 here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2153"></child>
+        <children><child nodeId="node-2600"></child>
         </children>
     </item>
-    <item nodeId="node-2153">
+    <item nodeId="node-2600">
         <command xml:space="preserve">talk with Tür1</command>
         <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2154"></child>
+        <children><child nodeId="node-2601"></child>
         </children>
     </item>
-    <item nodeId="node-2154">
+    <item nodeId="node-2601">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Gamma Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2155"></child>
+        <children><child nodeId="node-2602"></child>
         </children>
     </item>
-    <item nodeId="node-2155">
+    <item nodeId="node-2602">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -2217,19 +2217,19 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2156"></child>
+        <children><child nodeId="node-2603"></child>
         </children>
     </item>
-    <item nodeId="node-2156">
+    <item nodeId="node-2603">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2157"></child>
+        <children><child nodeId="node-2604"></child>
         </children>
     </item>
-    <item nodeId="node-2157">
+    <item nodeId="node-2604">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -2237,20 +2237,20 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2158"></child>
+        <children><child nodeId="node-2605"></child>
         </children>
     </item>
-    <item nodeId="node-2158">
+    <item nodeId="node-2605">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 1  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2159"></child>
+        <children><child nodeId="node-2606"></child>
         </children>
     </item>
-    <item nodeId="node-2159">
+    <item nodeId="node-2606">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2258,10 +2258,10 @@ That's fixed in place.
 2  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2160"></child>
+        <children><child nodeId="node-2607"></child>
         </children>
     </item>
-    <item nodeId="node-2160">
+    <item nodeId="node-2607">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2278,10 +2278,10 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2161"></child>
+        <children><child nodeId="node-2608"></child>
         </children>
     </item>
-    <item nodeId="node-2161">
+    <item nodeId="node-2608">
         <command xml:space="preserve">restart</command>
         <result xml:space="preserve">Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
@@ -2292,28 +2292,28 @@ You can see Tür1 here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2162"></child>
+        <children><child nodeId="node-2609"></child>
         </children>
     </item>
-    <item nodeId="node-2162">
+    <item nodeId="node-2609">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Gamma Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2163"></child>
+        <children><child nodeId="node-2610"></child>
         </children>
     </item>
-    <item nodeId="node-2163">
+    <item nodeId="node-2610">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Beta Juncton
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2164"></child>
+        <children><child nodeId="node-2611"></child>
         </children>
     </item>
-    <item nodeId="node-2164">
+    <item nodeId="node-2611">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -2321,39 +2321,39 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2165"></child>
+        <children><child nodeId="node-2612"></child>
         </children>
     </item>
-    <item nodeId="node-2165">
+    <item nodeId="node-2612">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 1  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2166"></child>
+        <children><child nodeId="node-2613"></child>
         </children>
     </item>
-    <item nodeId="node-2166">
+    <item nodeId="node-2613">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 2  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2167"></child>
+        <children><child nodeId="node-2614"></child>
         </children>
     </item>
-    <item nodeId="node-2167">
+    <item nodeId="node-2614">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2168"></child>
+        <children><child nodeId="node-2615"></child>
         </children>
     </item>
-    <item nodeId="node-2168">
+    <item nodeId="node-2615">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Beta Juncton
 You can see Kontaminierter here.
@@ -2362,7 +2362,7 @@ You can see Kontaminierter here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2169">
+    <item nodeId="node-2616">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2370,10 +2370,10 @@ That's fixed in place.
 0  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2170"></child>
+        <children><child nodeId="node-2617"></child>
         </children>
     </item>
-    <item nodeId="node-2170">
+    <item nodeId="node-2617">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2381,28 +2381,28 @@ That's fixed in place.
 0  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2171"></child>
+        <children><child nodeId="node-2618"></child>
         </children>
     </item>
-    <item nodeId="node-2171">
+    <item nodeId="node-2618">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2172"></child>
+        <children><child nodeId="node-2619"></child>
         </children>
     </item>
-    <item nodeId="node-2172">
+    <item nodeId="node-2619">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Junction
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2173"></child>
+        <children><child nodeId="node-2620"></child>
         </children>
     </item>
-    <item nodeId="node-2173">
+    <item nodeId="node-2620">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -2410,20 +2410,20 @@ You can see Kontaminierter here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2174"></child>
+        <children><child nodeId="node-2621"></child>
         </children>
     </item>
-    <item nodeId="node-2174">
+    <item nodeId="node-2621">
         <command xml:space="preserve">clap in hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 1  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2175"></child>
+        <children><child nodeId="node-2622"></child>
         </children>
     </item>
-    <item nodeId="node-2175">
+    <item nodeId="node-2622">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2431,10 +2431,10 @@ That's fixed in place.
 2  2
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2176"></child>
+        <children><child nodeId="node-2623"></child>
         </children>
     </item>
-    <item nodeId="node-2176">
+    <item nodeId="node-2623">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">Alpha Junction
 You can see Kontaminierter here.
@@ -2442,10 +2442,10 @@ You can see Kontaminierter here.
 1  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2177"></child>
+        <children><child nodeId="node-2624"></child>
         </children>
     </item>
-    <item nodeId="node-2177">
+    <item nodeId="node-2624">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2454,163 +2454,163 @@ That's fixed in place.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2178">
+    <item nodeId="node-2625">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2189"></child>
-            <child nodeId="node-2179"></child>
+        <children><child nodeId="node-2636"></child>
+            <child nodeId="node-2626"></child>
         </children>
     </item>
-    <item nodeId="node-2179">
+    <item nodeId="node-2626">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">nicht möglich!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2180"></child>
+        <children><child nodeId="node-2627"></child>
         </children>
     </item>
-    <item nodeId="node-2180">
+    <item nodeId="node-2627">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">nicht möglich!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2181"></child>
+        <children><child nodeId="node-2628"></child>
         </children>
     </item>
-    <item nodeId="node-2181">
+    <item nodeId="node-2628">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Delta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2182"></child>
+        <children><child nodeId="node-2629"></child>
         </children>
     </item>
-    <item nodeId="node-2182">
+    <item nodeId="node-2629">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2183"></child>
+        <children><child nodeId="node-2630"></child>
         </children>
     </item>
-    <item nodeId="node-2183">
+    <item nodeId="node-2630">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2184"></child>
+        <children><child nodeId="node-2631"></child>
         </children>
     </item>
-    <item nodeId="node-2184">
+    <item nodeId="node-2631">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Cafeteria
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2185"></child>
+        <children><child nodeId="node-2632"></child>
         </children>
     </item>
-    <item nodeId="node-2185">
+    <item nodeId="node-2632">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Storage Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2186"></child>
+        <children><child nodeId="node-2633"></child>
         </children>
     </item>
-    <item nodeId="node-2186">
+    <item nodeId="node-2633">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Alpha AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2187"></child>
+        <children><child nodeId="node-2634"></child>
         </children>
     </item>
-    <item nodeId="node-2187">
+    <item nodeId="node-2634">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Transporter Raum
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2188"></child>
+        <children><child nodeId="node-2635"></child>
         </children>
     </item>
-    <item nodeId="node-2188">
+    <item nodeId="node-2635">
         <command xml:space="preserve">transp</command>
         <result xml:space="preserve">Transporter Module
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2189">
+    <item nodeId="node-2636">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2190"></child>
+        <children><child nodeId="node-2637"></child>
         </children>
     </item>
-    <item nodeId="node-2190">
+    <item nodeId="node-2637">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2208"></child>
-            <child nodeId="node-2191"></child>
+        <children><child nodeId="node-2655"></child>
+            <child nodeId="node-2638"></child>
         </children>
     </item>
-    <item nodeId="node-2191">
+    <item nodeId="node-2638">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Delta Junction
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2192"></child>
+        <children><child nodeId="node-2639"></child>
         </children>
     </item>
-    <item nodeId="node-2192">
+    <item nodeId="node-2639">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Delta Junction
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2193"></child>
+        <children><child nodeId="node-2640"></child>
         </children>
     </item>
-    <item nodeId="node-2193">
+    <item nodeId="node-2640">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2194"></child>
+        <children><child nodeId="node-2641"></child>
         </children>
     </item>
-    <item nodeId="node-2194">
+    <item nodeId="node-2641">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2195"></child>
+        <children><child nodeId="node-2642"></child>
         </children>
     </item>
-    <item nodeId="node-2195">
+    <item nodeId="node-2642">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2196"></child>
+        <children><child nodeId="node-2643"></child>
         </children>
     </item>
-    <item nodeId="node-2196">
+    <item nodeId="node-2643">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -2618,10 +2618,10 @@ You can see Kontaminierter here.
 0  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2197"></child>
+        <children><child nodeId="node-2644"></child>
         </children>
     </item>
-    <item nodeId="node-2197">
+    <item nodeId="node-2644">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -2639,10 +2639,10 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2198"></child>
+        <children><child nodeId="node-2645"></child>
         </children>
     </item>
-    <item nodeId="node-2198">
+    <item nodeId="node-2645">
         <command xml:space="preserve">restart</command>
         <result xml:space="preserve">Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
@@ -2654,10 +2654,10 @@ You can see Tür1 here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2199"></child>
+        <children><child nodeId="node-2646"></child>
         </children>
     </item>
-    <item nodeId="node-2199">
+    <item nodeId="node-2646">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Junction
 You can see Tür1 here.
@@ -2665,61 +2665,61 @@ You can see Tür1 here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2200"></child>
+        <children><child nodeId="node-2647"></child>
         </children>
     </item>
-    <item nodeId="node-2200">
+    <item nodeId="node-2647">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2201"></child>
+        <children><child nodeId="node-2648"></child>
         </children>
     </item>
-    <item nodeId="node-2201">
+    <item nodeId="node-2648">
         <command xml:space="preserve">llok</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2202"></child>
+        <children><child nodeId="node-2649"></child>
         </children>
     </item>
-    <item nodeId="node-2202">
+    <item nodeId="node-2649">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Gamma Beta Corridor
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2203"></child>
+        <children><child nodeId="node-2650"></child>
         </children>
     </item>
-    <item nodeId="node-2203">
+    <item nodeId="node-2650">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2204"></child>
+        <children><child nodeId="node-2651"></child>
         </children>
     </item>
-    <item nodeId="node-2204">
+    <item nodeId="node-2651">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Beta Juncton
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2205"></child>
+        <children><child nodeId="node-2652"></child>
         </children>
     </item>
-    <item nodeId="node-2205">
+    <item nodeId="node-2652">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2206"></child>
+        <children><child nodeId="node-2653"></child>
         </children>
     </item>
-    <item nodeId="node-2206">
+    <item nodeId="node-2653">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Alpha Beta Corridor
 You can see Kontaminierter here.
@@ -2727,10 +2727,10 @@ You can see Kontaminierter here.
 0  1
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2207"></child>
+        <children><child nodeId="node-2654"></child>
         </children>
     </item>
-    <item nodeId="node-2207">
+    <item nodeId="node-2654">
         <command xml:space="preserve">take</command>
         <result xml:space="preserve">(Kontaminierter)
 That's fixed in place.
@@ -2748,148 +2748,148 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2208">
+    <item nodeId="node-2655">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Delta Junction.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2209"></child>
+        <children><child nodeId="node-2656"></child>
         </children>
     </item>
-    <item nodeId="node-2209">
+    <item nodeId="node-2656">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2210"></child>
+        <children><child nodeId="node-2657"></child>
         </children>
     </item>
-    <item nodeId="node-2210">
+    <item nodeId="node-2657">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2211"></child>
+        <children><child nodeId="node-2658"></child>
         </children>
     </item>
-    <item nodeId="node-2211">
+    <item nodeId="node-2658">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2212"></child>
+        <children><child nodeId="node-2659"></child>
         </children>
     </item>
-    <item nodeId="node-2212">
+    <item nodeId="node-2659">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2213"></child>
+        <children><child nodeId="node-2660"></child>
         </children>
     </item>
-    <item nodeId="node-2213">
+    <item nodeId="node-2660">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2214">
+    <item nodeId="node-2661">
         <command xml:space="preserve">go noerth</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2215"></child>
+        <children><child nodeId="node-2662"></child>
         </children>
     </item>
-    <item nodeId="node-2215">
+    <item nodeId="node-2662">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2216"></child>
+        <children><child nodeId="node-2663"></child>
         </children>
     </item>
-    <item nodeId="node-2216">
+    <item nodeId="node-2663">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2217"></child>
+        <children><child nodeId="node-2664"></child>
         </children>
     </item>
-    <item nodeId="node-2217">
+    <item nodeId="node-2664">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2218"></child>
+        <children><child nodeId="node-2665"></child>
         </children>
     </item>
-    <item nodeId="node-2218">
+    <item nodeId="node-2665">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2219"></child>
+        <children><child nodeId="node-2666"></child>
         </children>
     </item>
-    <item nodeId="node-2219">
+    <item nodeId="node-2666">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2220"></child>
+        <children><child nodeId="node-2667"></child>
         </children>
     </item>
-    <item nodeId="node-2220">
+    <item nodeId="node-2667">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2221"></child>
+        <children><child nodeId="node-2668"></child>
         </children>
     </item>
-    <item nodeId="node-2221">
+    <item nodeId="node-2668">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2222"></child>
+        <children><child nodeId="node-2669"></child>
         </children>
     </item>
-    <item nodeId="node-2222">
+    <item nodeId="node-2669">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2223">
+    <item nodeId="node-2670">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Storage Area
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2229"></child>
-            <child nodeId="node-2224"></child>
+        <children><child nodeId="node-2676"></child>
+            <child nodeId="node-2671"></child>
         </children>
     </item>
-    <item nodeId="node-2224">
+    <item nodeId="node-2671">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Gamma Junction
 You can see Tür1 here.
@@ -2897,19 +2897,19 @@ You can see Tür1 here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2225"></child>
+        <children><child nodeId="node-2672"></child>
         </children>
     </item>
-    <item nodeId="node-2225">
+    <item nodeId="node-2672">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Xeno Lab
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2226"></child>
+        <children><child nodeId="node-2673"></child>
         </children>
     </item>
-    <item nodeId="node-2226">
+    <item nodeId="node-2673">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Junction
 You can see Tür1 here.
@@ -2917,420 +2917,420 @@ You can see Tür1 here.
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2227"></child>
+        <children><child nodeId="node-2674"></child>
         </children>
     </item>
-    <item nodeId="node-2227">
+    <item nodeId="node-2674">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Hangar
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2228"></child>
+        <children><child nodeId="node-2675"></child>
         </children>
     </item>
-    <item nodeId="node-2228">
+    <item nodeId="node-2675">
         <command xml:space="preserve">go inside</command>
         <result xml:space="preserve">Umkliedekabine
 0  0
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2229">
+    <item nodeId="node-2676">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Greenhouse
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2230"></child>
+        <children><child nodeId="node-2677"></child>
         </children>
     </item>
-    <item nodeId="node-2230">
+    <item nodeId="node-2677">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Storage Area
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2231"></child>
+        <children><child nodeId="node-2678"></child>
         </children>
     </item>
-    <item nodeId="node-2231">
+    <item nodeId="node-2678">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Delta AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2232"></child>
+        <children><child nodeId="node-2679"></child>
         </children>
     </item>
-    <item nodeId="node-2232">
+    <item nodeId="node-2679">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Main Generator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2233"></child>
+        <children><child nodeId="node-2680"></child>
         </children>
     </item>
-    <item nodeId="node-2233">
+    <item nodeId="node-2680">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Delta AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2234"></child>
+        <children><child nodeId="node-2681"></child>
         </children>
     </item>
-    <item nodeId="node-2234">
+    <item nodeId="node-2681">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Storage Area
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2235"></child>
+        <children><child nodeId="node-2682"></child>
         </children>
     </item>
-    <item nodeId="node-2235">
+    <item nodeId="node-2682">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2236"></child>
+        <children><child nodeId="node-2683"></child>
         </children>
     </item>
-    <item nodeId="node-2236">
+    <item nodeId="node-2683">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2237"></child>
+        <children><child nodeId="node-2684"></child>
         </children>
     </item>
-    <item nodeId="node-2237">
+    <item nodeId="node-2684">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2238"></child>
+        <children><child nodeId="node-2685"></child>
         </children>
     </item>
-    <item nodeId="node-2238">
+    <item nodeId="node-2685">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2239"></child>
+        <children><child nodeId="node-2686"></child>
         </children>
     </item>
-    <item nodeId="node-2239">
+    <item nodeId="node-2686">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2240"></child>
+        <children><child nodeId="node-2687"></child>
         </children>
     </item>
-    <item nodeId="node-2240">
+    <item nodeId="node-2687">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2241"></child>
+        <children><child nodeId="node-2688"></child>
         </children>
     </item>
-    <item nodeId="node-2241">
+    <item nodeId="node-2688">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Cafeteria
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2242"></child>
+        <children><child nodeId="node-2689"></child>
         </children>
     </item>
-    <item nodeId="node-2242">
+    <item nodeId="node-2689">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2243"></child>
+        <children><child nodeId="node-2690"></child>
         </children>
     </item>
-    <item nodeId="node-2243">
+    <item nodeId="node-2690">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Storage Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2244"></child>
+        <children><child nodeId="node-2691"></child>
         </children>
     </item>
-    <item nodeId="node-2244">
+    <item nodeId="node-2691">
         <command xml:space="preserve">go suth</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2245"></child>
+        <children><child nodeId="node-2692"></child>
         </children>
     </item>
-    <item nodeId="node-2245">
+    <item nodeId="node-2692">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2246"></child>
+        <children><child nodeId="node-2693"></child>
         </children>
     </item>
-    <item nodeId="node-2246">
+    <item nodeId="node-2693">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Delta Greenhouse
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2247"></child>
+        <children><child nodeId="node-2694"></child>
         </children>
     </item>
-    <item nodeId="node-2247">
+    <item nodeId="node-2694">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Storage Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2248"></child>
+        <children><child nodeId="node-2695"></child>
         </children>
     </item>
-    <item nodeId="node-2248">
+    <item nodeId="node-2695">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Alpha AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2249"></child>
+        <children><child nodeId="node-2696"></child>
         </children>
     </item>
-    <item nodeId="node-2249">
+    <item nodeId="node-2696">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Transporter Raum
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2250"></child>
+        <children><child nodeId="node-2697"></child>
         </children>
     </item>
-    <item nodeId="node-2250">
+    <item nodeId="node-2697">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha AI
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2251"></child>
+        <children><child nodeId="node-2698"></child>
         </children>
     </item>
-    <item nodeId="node-2251">
+    <item nodeId="node-2698">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Storage Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2252"></child>
+        <children><child nodeId="node-2699"></child>
         </children>
     </item>
-    <item nodeId="node-2252">
+    <item nodeId="node-2699">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Cafeteria
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2253"></child>
+        <children><child nodeId="node-2700"></child>
         </children>
     </item>
-    <item nodeId="node-2253">
+    <item nodeId="node-2700">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2254"></child>
+        <children><child nodeId="node-2701"></child>
         </children>
     </item>
-    <item nodeId="node-2254">
+    <item nodeId="node-2701">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Crew Quarter
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2255"></child>
+        <children><child nodeId="node-2702"></child>
         </children>
     </item>
-    <item nodeId="node-2255">
+    <item nodeId="node-2702">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Fitness
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2256"></child>
+        <children><child nodeId="node-2703"></child>
         </children>
     </item>
-    <item nodeId="node-2256">
+    <item nodeId="node-2703">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Crew Quarter
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2257"></child>
+        <children><child nodeId="node-2704"></child>
         </children>
     </item>
-    <item nodeId="node-2257">
+    <item nodeId="node-2704">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2258"></child>
+        <children><child nodeId="node-2705"></child>
         </children>
     </item>
-    <item nodeId="node-2258">
+    <item nodeId="node-2705">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Briefing Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2259"></child>
+        <children><child nodeId="node-2706"></child>
         </children>
     </item>
-    <item nodeId="node-2259">
+    <item nodeId="node-2706">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Bridge
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2260"></child>
+        <children><child nodeId="node-2707"></child>
         </children>
     </item>
-    <item nodeId="node-2260">
+    <item nodeId="node-2707">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Briefing Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2261"></child>
+        <children><child nodeId="node-2708"></child>
         </children>
     </item>
-    <item nodeId="node-2261">
+    <item nodeId="node-2708">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2262"></child>
+        <children><child nodeId="node-2709"></child>
         </children>
     </item>
-    <item nodeId="node-2262">
+    <item nodeId="node-2709">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2263"></child>
+        <children><child nodeId="node-2710"></child>
         </children>
     </item>
-    <item nodeId="node-2263">
+    <item nodeId="node-2710">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Delta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2264"></child>
+        <children><child nodeId="node-2711"></child>
         </children>
     </item>
-    <item nodeId="node-2264">
+    <item nodeId="node-2711">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2265"></child>
+        <children><child nodeId="node-2712"></child>
         </children>
     </item>
-    <item nodeId="node-2265">
+    <item nodeId="node-2712">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Delta Junction.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2266"></child>
+        <children><child nodeId="node-2713"></child>
         </children>
     </item>
-    <item nodeId="node-2266">
+    <item nodeId="node-2713">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2267"></child>
+        <children><child nodeId="node-2714"></child>
         </children>
     </item>
-    <item nodeId="node-2267">
+    <item nodeId="node-2714">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Gamma Delta Junction.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2268"></child>
+        <children><child nodeId="node-2715"></child>
         </children>
     </item>
-    <item nodeId="node-2268">
+    <item nodeId="node-2715">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Wartungsschacht
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2269"></child>
+        <children><child nodeId="node-2716"></child>
         </children>
     </item>
-    <item nodeId="node-2269">
+    <item nodeId="node-2716">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Com Base
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2270"></child>
+        <children><child nodeId="node-2717"></child>
         </children>
     </item>
-    <item nodeId="node-2270">
+    <item nodeId="node-2717">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">Second Generator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2271"></child>
+        <children><child nodeId="node-2718"></child>
         </children>
     </item>
-    <item nodeId="node-2271">
+    <item nodeId="node-2718">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Com Base
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2272"></child>
+        <children><child nodeId="node-2719"></child>
         </children>
     </item>
-    <item nodeId="node-2272">
+    <item nodeId="node-2719">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">Antenna Array
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2273">
+    <item nodeId="node-2720">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -3338,279 +3338,279 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2274"></child>
+        <children><child nodeId="node-2721"></child>
         </children>
     </item>
-    <item nodeId="node-2274">
+    <item nodeId="node-2721">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2304"></child>
-            <child nodeId="node-2275"></child>
+        <children><child nodeId="node-2751"></child>
+            <child nodeId="node-2722"></child>
         </children>
     </item>
-    <item nodeId="node-2275">
+    <item nodeId="node-2722">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Hangar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2276"></child>
+        <children><child nodeId="node-2723"></child>
         </children>
     </item>
-    <item nodeId="node-2276">
+    <item nodeId="node-2723">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Docking Bay
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2277"></child>
+        <children><child nodeId="node-2724"></child>
         </children>
     </item>
-    <item nodeId="node-2277">
+    <item nodeId="node-2724">
         <command xml:space="preserve">go inside</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2278"></child>
+        <children><child nodeId="node-2725"></child>
         </children>
     </item>
-    <item nodeId="node-2278">
+    <item nodeId="node-2725">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Hangar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2279"></child>
+        <children><child nodeId="node-2726"></child>
         </children>
     </item>
-    <item nodeId="node-2279">
+    <item nodeId="node-2726">
         <command xml:space="preserve">go inside</command>
         <result xml:space="preserve">Raumfähre
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2280"></child>
+        <children><child nodeId="node-2727"></child>
         </children>
     </item>
-    <item nodeId="node-2280">
+    <item nodeId="node-2727">
         <command xml:space="preserve">go outside</command>
         <result xml:space="preserve">Hangar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2281"></child>
+        <children><child nodeId="node-2728"></child>
         </children>
     </item>
-    <item nodeId="node-2281">
+    <item nodeId="node-2728">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Docking Bay
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2282"></child>
+        <children><child nodeId="node-2729"></child>
         </children>
     </item>
-    <item nodeId="node-2282">
+    <item nodeId="node-2729">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Weltraum
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2283"></child>
+        <children><child nodeId="node-2730"></child>
         </children>
     </item>
-    <item nodeId="node-2283">
+    <item nodeId="node-2730">
         <command xml:space="preserve">go south</command>
         <result xml:space="preserve">Com Base
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2284"></child>
+        <children><child nodeId="node-2731"></child>
         </children>
     </item>
-    <item nodeId="node-2284">
+    <item nodeId="node-2731">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Wartungsschacht
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2285"></child>
+        <children><child nodeId="node-2732"></child>
         </children>
     </item>
-    <item nodeId="node-2285">
+    <item nodeId="node-2732">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Gamma Delta Junction.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2286"></child>
+        <children><child nodeId="node-2733"></child>
         </children>
     </item>
-    <item nodeId="node-2286">
+    <item nodeId="node-2733">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2287"></child>
+        <children><child nodeId="node-2734"></child>
         </children>
     </item>
-    <item nodeId="node-2287">
+    <item nodeId="node-2734">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2288"></child>
+        <children><child nodeId="node-2735"></child>
         </children>
     </item>
-    <item nodeId="node-2288">
+    <item nodeId="node-2735">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2289"></child>
+        <children><child nodeId="node-2736"></child>
         </children>
     </item>
-    <item nodeId="node-2289">
+    <item nodeId="node-2736">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Engeneering Lab
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2290"></child>
+        <children><child nodeId="node-2737"></child>
         </children>
     </item>
-    <item nodeId="node-2290">
+    <item nodeId="node-2737">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2291"></child>
+        <children><child nodeId="node-2738"></child>
         </children>
     </item>
-    <item nodeId="node-2291">
+    <item nodeId="node-2738">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2292"></child>
+        <children><child nodeId="node-2739"></child>
         </children>
     </item>
-    <item nodeId="node-2292">
+    <item nodeId="node-2739">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2293"></child>
+        <children><child nodeId="node-2740"></child>
         </children>
     </item>
-    <item nodeId="node-2293">
+    <item nodeId="node-2740">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Med Lab
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2294"></child>
+        <children><child nodeId="node-2741"></child>
         </children>
     </item>
-    <item nodeId="node-2294">
+    <item nodeId="node-2741">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2295"></child>
+        <children><child nodeId="node-2742"></child>
         </children>
     </item>
-    <item nodeId="node-2295">
+    <item nodeId="node-2742">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2296"></child>
+        <children><child nodeId="node-2743"></child>
         </children>
     </item>
-    <item nodeId="node-2296">
+    <item nodeId="node-2743">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Crew Quarter
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2297"></child>
+        <children><child nodeId="node-2744"></child>
         </children>
     </item>
-    <item nodeId="node-2297">
+    <item nodeId="node-2744">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Duty Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2298"></child>
+        <children><child nodeId="node-2745"></child>
         </children>
     </item>
-    <item nodeId="node-2298">
+    <item nodeId="node-2745">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Alpha Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2299"></child>
+        <children><child nodeId="node-2746"></child>
         </children>
     </item>
-    <item nodeId="node-2299">
+    <item nodeId="node-2746">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Alpha Delta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2300"></child>
+        <children><child nodeId="node-2747"></child>
         </children>
     </item>
-    <item nodeId="node-2300">
+    <item nodeId="node-2747">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2301"></child>
+        <children><child nodeId="node-2748"></child>
         </children>
     </item>
-    <item nodeId="node-2301">
+    <item nodeId="node-2748">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">Solar Lab
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2302"></child>
+        <children><child nodeId="node-2749"></child>
         </children>
     </item>
-    <item nodeId="node-2302">
+    <item nodeId="node-2749">
         <command xml:space="preserve">go up</command>
         <result xml:space="preserve">Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2303"></child>
+        <children><child nodeId="node-2750"></child>
         </children>
     </item>
-    <item nodeId="node-2303">
+    <item nodeId="node-2750">
         <command xml:space="preserve">go north</command>
         <result xml:space="preserve">Gamma Delta Junction.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2304">
+    <item nodeId="node-2751">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -3620,37 +3620,37 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2305"></child>
+        <children><child nodeId="node-2752"></child>
         </children>
     </item>
-    <item nodeId="node-2305">
+    <item nodeId="node-2752">
         <command xml:space="preserve">go west</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2306"></child>
+        <children><child nodeId="node-2753"></child>
         </children>
     </item>
-    <item nodeId="node-2306">
+    <item nodeId="node-2753">
         <command xml:space="preserve">go east</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2307"></child>
+        <children><child nodeId="node-2754"></child>
         </children>
     </item>
-    <item nodeId="node-2307">
+    <item nodeId="node-2754">
         <command xml:space="preserve">go down+</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2308"></child>
+        <children><child nodeId="node-2755"></child>
         </children>
     </item>
-    <item nodeId="node-2308">
+    <item nodeId="node-2755">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -3666,10 +3666,10 @@ Du wurdest kontaminiert!
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2309"></child>
+        <children><child nodeId="node-2756"></child>
         </children>
     </item>
-    <item nodeId="node-2309">
+    <item nodeId="node-2756">
         <command xml:space="preserve">RESTART</command>
         <result xml:space="preserve">
 
@@ -3683,10 +3683,10 @@ You can see Barry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2310"></child>
+        <children><child nodeId="node-2757"></child>
         </children>
     </item>
-    <item nodeId="node-2310">
+    <item nodeId="node-2757">
         <command xml:space="preserve">go down</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -3694,10 +3694,10 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2311"></child>
+        <children><child nodeId="node-2758"></child>
         </children>
     </item>
-    <item nodeId="node-2311">
+    <item nodeId="node-2758">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">
 Docking Bay
@@ -3707,19 +3707,19 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2312"></child>
+        <children><child nodeId="node-2759"></child>
         </children>
     </item>
-    <item nodeId="node-2312">
+    <item nodeId="node-2759">
         <command xml:space="preserve">go out</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2313"></child>
+        <children><child nodeId="node-2760"></child>
         </children>
     </item>
-    <item nodeId="node-2313">
+    <item nodeId="node-2760">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Docking Bay
 You can see Weltraumtür here.
@@ -3727,26 +3727,26 @@ You can see Weltraumtür here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2314">
+    <item nodeId="node-2761">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2317"></child>
-            <child nodeId="node-2315"></child>
+        <children><child nodeId="node-2764"></child>
+            <child nodeId="node-2762"></child>
         </children>
     </item>
-    <item nodeId="node-2315">
+    <item nodeId="node-2762">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2316"></child>
+        <children><child nodeId="node-2763"></child>
         </children>
     </item>
-    <item nodeId="node-2316">
+    <item nodeId="node-2763">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
@@ -3762,55 +3762,55 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2317">
+    <item nodeId="node-2764">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2318"></child>
+        <children><child nodeId="node-2765"></child>
         </children>
     </item>
-    <item nodeId="node-2318">
+    <item nodeId="node-2765">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2319"></child>
+        <children><child nodeId="node-2766"></child>
         </children>
     </item>
-    <item nodeId="node-2319">
+    <item nodeId="node-2766">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2320"></child>
+        <children><child nodeId="node-2767"></child>
         </children>
     </item>
-    <item nodeId="node-2320">
+    <item nodeId="node-2767">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Gamma Beta Corridor
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2321"></child>
+        <children><child nodeId="node-2768"></child>
         </children>
     </item>
-    <item nodeId="node-2321">
+    <item nodeId="node-2768">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Beta Juncton
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2322"></child>
+        <children><child nodeId="node-2769"></child>
         </children>
     </item>
-    <item nodeId="node-2322">
+    <item nodeId="node-2769">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Alpha Beta Corridor
@@ -3818,64 +3818,64 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2323"></child>
+        <children><child nodeId="node-2770"></child>
         </children>
     </item>
-    <item nodeId="node-2323">
+    <item nodeId="node-2770">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2324"></child>
+        <children><child nodeId="node-2771"></child>
         </children>
     </item>
-    <item nodeId="node-2324">
+    <item nodeId="node-2771">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2325"></child>
+        <children><child nodeId="node-2772"></child>
         </children>
     </item>
-    <item nodeId="node-2325">
+    <item nodeId="node-2772">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2326"></child>
+        <children><child nodeId="node-2773"></child>
         </children>
     </item>
-    <item nodeId="node-2326">
+    <item nodeId="node-2773">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2327"></child>
+        <children><child nodeId="node-2774"></child>
         </children>
     </item>
-    <item nodeId="node-2327">
+    <item nodeId="node-2774">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2328"></child>
+        <children><child nodeId="node-2775"></child>
         </children>
     </item>
-    <item nodeId="node-2328">
+    <item nodeId="node-2775">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2329"></child>
+        <children><child nodeId="node-2776"></child>
         </children>
     </item>
-    <item nodeId="node-2329">
+    <item nodeId="node-2776">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Alpha Junction
@@ -3883,10 +3883,10 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2330"></child>
+        <children><child nodeId="node-2777"></child>
         </children>
     </item>
-    <item nodeId="node-2330">
+    <item nodeId="node-2777">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Alpha Delta Corridor
@@ -3894,20 +3894,20 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2331"></child>
+        <children><child nodeId="node-2778"></child>
         </children>
     </item>
-    <item nodeId="node-2331">
+    <item nodeId="node-2778">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2332"></child>
+        <children><child nodeId="node-2779"></child>
         </children>
     </item>
-    <item nodeId="node-2332">
+    <item nodeId="node-2779">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Alpha Delta Corridor
@@ -3915,76 +3915,76 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2333"></child>
+        <children><child nodeId="node-2780"></child>
         </children>
     </item>
-    <item nodeId="node-2333">
+    <item nodeId="node-2780">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2334"></child>
+        <children><child nodeId="node-2781"></child>
         </children>
     </item>
-    <item nodeId="node-2334">
+    <item nodeId="node-2781">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2335"></child>
+        <children><child nodeId="node-2782"></child>
         </children>
     </item>
-    <item nodeId="node-2335">
+    <item nodeId="node-2782">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2336"></child>
+        <children><child nodeId="node-2783"></child>
         </children>
     </item>
-    <item nodeId="node-2336">
+    <item nodeId="node-2783">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2337"></child>
+        <children><child nodeId="node-2784"></child>
         </children>
     </item>
-    <item nodeId="node-2337">
+    <item nodeId="node-2784">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2338"></child>
+        <children><child nodeId="node-2785"></child>
         </children>
     </item>
-    <item nodeId="node-2338">
+    <item nodeId="node-2785">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Gamma Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2339"></child>
+        <children><child nodeId="node-2786"></child>
         </children>
     </item>
-    <item nodeId="node-2339">
+    <item nodeId="node-2786">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Delta Junction
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2340"></child>
+        <children><child nodeId="node-2787"></child>
         </children>
     </item>
-    <item nodeId="node-2340">
+    <item nodeId="node-2787">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Alpha Delta Corridor
@@ -3992,28 +3992,28 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2341"></child>
+        <children><child nodeId="node-2788"></child>
         </children>
     </item>
-    <item nodeId="node-2341">
+    <item nodeId="node-2788">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2342"></child>
+        <children><child nodeId="node-2789"></child>
         </children>
     </item>
-    <item nodeId="node-2342">
+    <item nodeId="node-2789">
         <command xml:space="preserve">clap in Hands</command>
         <result xml:space="preserve">Du hast in die Hände geklatscht!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2343"></child>
+        <children><child nodeId="node-2790"></child>
         </children>
     </item>
-    <item nodeId="node-2343">
+    <item nodeId="node-2790">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Delta Junction
@@ -4021,10 +4021,10 @@ You can see Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2344"></child>
+        <children><child nodeId="node-2791"></child>
         </children>
     </item>
-    <item nodeId="node-2344">
+    <item nodeId="node-2791">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Gamma Delta Junction
@@ -4032,7 +4032,7 @@ Gamma Delta Junction
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2345">
+    <item nodeId="node-2792">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
