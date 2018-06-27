@@ -7,6 +7,8 @@ Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 HaEnAbf is a truth state variable. HaEnAbf is false.
 Kontcount is a number variable. Kontcount is 0.
+DekonDone is a truth state variable.
+Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
 
 
 [*****Regionen*****]
@@ -96,7 +98,30 @@ To Percy_und_Kontaminierter:
 	End the story finally.
 
 
-[Kontaminiertencounter]
+[Kontaminiertencounter -- Dekontaminationskabine]
+To count_Kont_Dekon:
+	Now Kontcount is 0;
+	If Kontaminierter_1 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_2 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_3 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_4 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_5 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_6 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_7 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Kontaminierter_8 is in Dekontaminationskabine:
+		Increase Kontcount by 1;
+	If Is_Kontaminiert of Percy is true:
+		If Percy is in Dekontaminationskabine:
+			Increase Kontcount by 1.
+
+[Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
 	Now Kontcount is 0;
 	If Kontaminierter_1 is in the location of the player:
@@ -119,6 +144,43 @@ To count_Kontaminiert:
 		If Percy is in the location of the player:
 			Increase Kontcount by 1.
 	
+[MobiTab - Konaminiertenzähler]
+Before going somewhere:
+	If the player has MobiTab:	
+		count_Kontaminiert;
+		If Kontcount > 0:
+			Say "[bold type]Mobi Tab [roman type] Anzahl der Kontaminierten: [Kontcount]";
+			Continue the action;
+			
+[Dekontaminiation]
+DekonText is a text variable. DekonText is "TEMP muss noch geschrieben werden!".
+
+After closing Dekon Tür:
+	count_Kont_Dekon;
+	If HaEnAbf is false:
+		If Kontcount <= 1:
+			If the Player is not in Dekontaminationskabine:
+				If Percy is in Dekontaminationskabine:
+					Now Is_Kontaminiert of Percy is false;
+					Now HaEnAbf is true;
+					Say DekonText;
+					Continue the action;
+				Else:
+					Say "Du willst doch Percy als erstes dekontaminieren.";
+			Else:
+				Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein";			
+		Else:
+			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren.";
+	Else:
+		Say "Die Energie des Maschinenkerns reicht nicht mehr für eine Dekontamination.";
+	
+[Mobitab nehmen]
+Instead of taking the Mobitab:
+	If the player is Barry:
+		Continue the action;
+	Else:
+		Say "Du traust dir das nicht zu das zu nehmen."	
+
 
 
 [*****Aktionen*****]
@@ -150,6 +212,33 @@ Carry out Talking:
 Report Talking:
 	Say "Du hast den Kontaminierten angesprochen."
 
+[Drucklufthammer aufladen]
+Understand "charge [Drucklufthammer] with [Panel]" as Charging.
+	Charging is an action applying to two things.
+Check Charging: 
+	If Drcklfthmr_Ladezstd is true:
+		Say "Der Drucklufthammer ist schon geladen!" instead;
+Carry out clapping:
+	If Drcklfthmr_Ladezstd is false:
+		Now Drcklfthmr_Ladezstd is true;
+Report Charging:
+	Say "Du hast den Drucklufthammer aufgeladen."
+	
+[Drucklufthammer benutzen]
+Understand "use [Drucklufthammer]" as Druckluften.
+	Druckluften is an action applying to one thing.
+Check Druckluften: 
+	If Drcklfthmr_Ladezstd is false:
+		Say "Der Drucklufthammer hat keine Energie" instead;
+Carry out Druckluften:
+	If Drcklfthmr_Ladezstd is true:
+		Increase Laute_Aktionen by 1;
+Report Druckluften:
+	If Kontaminierter is in the location of the player:
+		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
+	Else: 
+		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.";
+
 [Sicherheitsbarrieren]
 Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
 	Using is an action applying to two things.
@@ -157,18 +246,65 @@ Check using:
 	If the Player is not carrying the Sicherheitsausweis:
 		Say "Du trägst nicht den Sicherheitsausweis!" instead;
 Carry out using:
-	Now the Given_SiBa of the second Noun is unlocked;
+	If the the Given_SiBa of the second Noun is closed:
+		Now the Given_SiBa of the second noun is unlocked;
+		Now the Given_SiBa of the second Noun is open;
+	Else:
+		Now the Given_SiBa of the second Noun is closed;
+		Now the Given_SiBa of the second Noun is locked;
 Report Using:
-	Say "Du hast die zugehörige Tür des Panels entriegelt."
+	If the the Given_SiBa of the second Noun is closed:
+		Say "Du hast die zugehörige Tür des Panels verriegelt.";
+	Else:
+		Say "Du hast die zugehörige Tür des Panels entriegelt.";
 
+[Luke - Sicherheitsausweis]
+Luke_geöffnet is a truth state variable.
+
+Understand "use [Sicherheitsausweis] with [Luke_Hangar]" as entriegeln.
+	Entriegeln is an action applying to two things.
+Check entriegeln:
+	If the Player is not carrying the Sicherheitsausweis:
+		Say "Du trägst nicht den Sicherheitsausweis!" instead;
+Carry out entriegeln:
+	Now Luke_Hangar is unlocked;
+	Now Luke_Hangar is open;
+	Now Luke_geöffnet is true;
+Report entriegeln:
+	Say "Du hast die Hangarluke für einen Zug geöffnet."
+
+After going up from Hangar:
+	If Luke_geöffnet is true:
+		Now Luke_Hangar is locked;
+		Now Luke_Hangar is closed;
+		Now Luke_geöffnet is false;
+		Say "Die Hangarluke schließt sich hinter dir.";
+	Continue the action;
+		
+After going down from Gamma_Junction:
+	If Luke_geöffnet is true:
+		Now Luke_Hangar is locked;
+		Now Luke_Hangar is closed;
+		Now Luke_geöffnet is false;
+		Say "Die Hangarluke schließt sich hinter dir.";
+	Continue the action;
+
+[LuPanel kaputtmachen]
+Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
+	Kaputtmachen is an action applying to two things.
+Check Kaputtmachen:
+	If the Player is not carrying the MobiTab:
+		Say "Du trägst nicht das Mobitab!" instead;
+Carry out Kaputtmachen:
+	Now the Given_Luke of the noun is unlocked;
+Report Kaputtmachen:
+	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen."
+	
 [Med-Lab Pult Benutzung]
 MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
 
-Understand "interact with [Med-Lab_Pult]" as Interacting.
+Understand "interact with [Med-Lab Pult]" as Interacting.
 	Interacting is an action applying to one thing.
-Check using:
-	If the Player is not carrying the Mobitab:
-		Say "Du trägst nicht das Mobitab!" instead;
 Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
@@ -261,7 +397,8 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 
 	
 [*****Gegenstände*****]
-Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
+Med-Lab Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
+Drucklufthammer is a thing. It is in Umkleidekabine. 
 
 
 
@@ -269,56 +406,89 @@ Med-Lab_Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 Gamma_Junction is a room. The printed name is "Gamma Junction". 
 SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
-Panel_GamJun_N is a Panel. The printed name is "Panel Norden".
-	The Given_SiBa is SiBa_1. Panel_GamJun_N is in Gamma_Junction.
+Panel N Gam Junc is a Panel. 
+	The Given_SiBa is SiBa_1. Panel N Gam Junc is in Gamma_Junction.
+Panel S Gam Junc is a Panel. 
+	The Given_SiBa is SiBa_8. Panel S Gam Junc is in Gamma_Junction.
 
 Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
 SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
+Panel N Gam Bet Cor is a Panel.
+	The Given_SiBa is SiBa_2. Panel N Gam Bet Cor is in Gamma_Beta_Corridor.
+Panel S Gam Bet Cor is a Panel.
+	The Given_SiBa is SiBa_1. Panel S Gam Bet Cor is in Gamma_Beta_Corridor.
 
 Beta_Junction is a room. The printed name is "Beta Junction".
 SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
+Panel N Bet Junc is a Panel.
+	The Given_SiBa is SiBa_3. Panel N Bet Junc is in Beta_Junction.
+Panel S Bet Junc is a Panel.
+	The Given_SiBa is SiBa_2. Panel S Bet Junc is in Beta_Junction.
 	
 Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
 SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
+Panel N Alp Bet Cor is a Panel. 
+	The Given_SiBa is SiBa_4. Panel N Alp Bet Cor is in Alpha_Beta_Corridor.
+Panel S Alp Bet Cor is a Panel.
+	The Given_SiBa is SiBa_3. Panel S Alp Bet Cor is in Alpha_Beta_Corridor.
 
 Alpha_Junction is a room. The printed name is "Alpha Junction".
 SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
+Panel N Alp Junc is a Panel. 
+	The Given_SiBa is SiBa_5. Panel N Alp Junc is in Alpha_Junction.
+Panel S Alp Junc is a Panel.
+	The Given_SiBa is SiBa_4. Panel S Alp Junc is in Alpha_Junction.
 
 Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
 SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
+Panel N Alp Del Cor is a Panel. 
+	The Given_SiBa is SiBa_6. Panel N Alp Del Cor is in Alpha_Delta_Corridor.
+Panel S Alp Del Cor is a Panel. 
+	The Given_SiBa is SiBa_5. Panel S Alp Del Cor is in Alpha_Delta_Corridor.
 
 Delta_Junction is a room. The printed name is "Delta Junction".
 SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
+Panel N Del Junc is a Panel.
+	The Given_SiBa is SiBa_7. Panel N Del Junc is in Delta_Junction.
+Panel S Del Junc is a Panel. 
+	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction.
 
 Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
 SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
+Panel N Gam Del Cor is a Panel. 
+	The Given_SiBa is SiBa_8. Panel N Gam Del Cor is in Gamma_Delta_Corridor.
+Panel S Gam Del Cor is a Panel. 
+	The Given_SiBa is SiBa_7. Panel S Gam Del Cor is in Gamma_Delta_Corridor.
 
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
-Luke_1 is a Luke. The printed name is "Deckenluke".
+Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is unlocked.
 	It is up of Gamma_Junction and down of Xeno_Lab.
 
 Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
-Luke_2 is a Luke. The printed name is "Deckenluke".
+Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 	It is up of Beta_Junction and down of Engeneering_Lab.
 
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
-Luke_3 is a Luke. The printed name is "Deckenluke".
+Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
-Dekontaminationskabine is inside of Med_Lab.  The printed name is "Dekontaminationskabine".
-	It is in Innerer_Ring.
-
+Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine.
+Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
+	Dekontaminationskabine is in Innerer_Ring.
+	
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
-Luke_4 is a Luke. The printed name is "Deckenluke".
+Luke_SolarLab is a Luke. The printed name is "Luke_SolarLab".
 	It is up of Delta_Junction and down of Solar_Lab.
 
-Hangar is down of Gamma_Junction. The printed name is "Hangar".
+Luke_Hangar is a Luke. It is down of Gamma_Junction and above Hangar.
+Panel_Luke_H is a LuPanel. The Given_Luke is Luke_Hangar. Panel_Luke_H is in Hangar.
+Hangar is a room. The printed name is "Hangar".
 Spind is a container. It is in Hangar. 
 
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
