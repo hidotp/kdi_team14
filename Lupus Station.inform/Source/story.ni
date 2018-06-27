@@ -1,7 +1,19 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-[n]
+
+[*****Testmethode*****]
+[Teleport]
+Raumteleport is a room variable.
+Understand "Teleport to [any room]" as Teleporting.
+	Teleporting is an action applying to one thing.
+Carry out Teleporting:
+	Now Raumteleport is the noun;
+	If Raumteleport is not nothing:
+		Now the player is in Raumteleport.
+
+
+
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
@@ -9,6 +21,9 @@ HaEnAbf is a truth state variable. HaEnAbf is false.
 Kontcount is a number variable. Kontcount is 0.
 DekonDone is a truth state variable.
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
+Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
+Strom is a number variable. Strom is 5. [Stromzähler]
+
 
 
 [*****Regionen*****]
@@ -403,6 +418,135 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 Med-Lab Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
 Drucklufthammer is a thing. It is in Umkleidekabine. 
 
+[Scene 4]
+Hilfsgenerator is a thing.
+	It is in Com_Base.
+	It is fixed in place.
+Raumanzug is a thing.
+	It is in Umkleidekabine.
+	It is wearable.
+Startknopf is a thing.
+	It is in Com_Base.
+	It is fixed in place.
+Selbstzerstörungsknopf is a thing.
+	It is in Bridge.
+	It is fixed in place.
+Messenger is a thing.
+	It is not wearable.
+	Percy carries the Messenger.
+
+
+
+[*****Scene 4 - Gegenstände - Ausführung*****]
+Raumanzug_Kaputt is truth state variable. Raumanzug_Kaputt is false. [Ist der Raumanzug kaputt?]
+Hilfsgenerator_Aktiviert is a truth state variable. Hilfsgenerator_Aktiviert is false. [Ist der Hilfsgenerator aktiviert? Ist noch Strom da?]
+
+[Messenger nicht wegwerfbar]
+Instead of dropping Messenger:
+	Say "Der Messenger ist Teil deiner Ausrüstung! Diesen kannst du nicht wegwerfen!".
+
+[Raumanzug ausziehen]
+Instead of taking off Raumanzug:
+	If the player is in Com_Base and Scene4 is happening and Raumanzug_Kaputt is false:
+		Say "Du kannst den Raumanzug hier nicht ausziehen!";
+	Otherwise:
+		If the player is in Weltraum:
+			Say "Du kannst den Raumanzug hier nicht ausziehen!";
+		Otherwise:
+			Continue the action.
+
+[Weltraumtüren öffnen mit (heilem) raumanzug]
+Weltraum_Richtung is a direction variable. [In welche Richtung geht der Spieler?]
+Weltraum_Text is a text variable. Weltraum_Text is "Du musst einen Raumanzug tragen!". [Ausgabe wenn man keinen Raumanzug trägt]
+Raumanzug_Kaputt_Text is a text variable. Raumanzug_Kaputt_Text is "Du kannst nicht ins Weltall! Dein Raumanzug ist beschädigt!". [Ausgabe wenn Raumanzug kaputt]
+	
+Before going direction:
+	Now Weltraum_Richtung is the noun;
+	If the room Weltraum_Richtung of the location of the player is not nothing:
+		If Weltraumtuer is open or Weltraumtuer is unlocked:
+			Now Weltraumtuer is closed;
+			Now Weltraumtuer is locked;
+		If Weltraumtuer_2 is open or Weltraumtuer_2 is unlocked:
+			Now Weltraumtuer_2 is closed;
+			Now Weltraumtuer_2 is locked;
+		If the player is in Weltraum:
+			Now Weltraumtuer is unlocked;
+			Now Weltraumtuer_2 is unlocked;
+			Now Weltraumtuer is open;
+			Now Weltraumtuer_2 is open;
+		Otherwise if the player is in Docking_Bay and Weltraum_Richtung is south:
+			If the player wears Raumanzug:
+				If Raumanzug_Kaputt is false:
+					Now Weltraumtuer is unlocked;
+					Now Weltraumtuer is open;
+				Otherwise:
+					Say Raumanzug_Kaputt_Text;
+			Otherwise:
+				Say Weltraum_Text;
+		Otherwise if the player is in Com_Base and Weltraum_Richtung is north:
+			If the player wears Raumanzug:
+				If Raumanzug_Kaputt is false:
+					Now Weltraumtuer_2 is unlocked;
+					Now Weltraumtuer_2 is open;
+				Otherwise:
+					Say Raumanzug_Kaputt_Text;
+			Otherwise:
+				Say Weltraum_Text.
+
+[mit Startknopf interagieren]
+Hilfsgenerator_Aktivierbar is truth state variable. Hilfsgenerator_Aktivierbar is true. [Ist der Hilfsgenerator aktivierbar?]
+
+Understand "Press [Startknopf]" as Pressing_Knopf.
+	Pressing_Knopf is an action applying to one thing.
+Carry out Pressing_Knopf:
+	If Hilfsgenerator_Aktivierbar is true:
+		Now Raumanzug_Kaputt is true;
+		Now Hilfsgenerator_Aktivierbar is false;
+		Now Hilfsgenerator_Aktiviert  is true;
+		Increase Strom by 1;
+		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
+	Otherwise:
+		Say "Der Hilfsgenerator wurde schon aktiviert!".
+
+Every turn:
+	If Hilfsgenerator_Aktiviert is true:
+		Decrease Strom by 1;
+		If the player carries the Mobitab:
+			Say "Das Mobitab zeigt an, dass nur noch [Strom] Züge Strom da ist!";
+	If Strom is 0:
+		Now Hilfsgenerator_Aktiviert is false.
+
+[mit Selbstzerstörungsknopf interagieren]
+Notruf_Aktivierbar is a truth state variable. Notruf_Aktivierbar is true.
+Notruf is a truth state variable. Notruf is false.
+
+Understand "Press [Selbstzerstörungsknopf]" as Pressing_Knopf_2.
+	Pressing_Knopf_2 is an action applying to one thing.
+Carry out Pressing_Knopf_2:
+	If Notruf_Aktivierbar is true:
+		Now Notruf_Aktivierbar is false;
+		Now Notruf is true;
+		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
+		Change_to_Barry;
+	Otherwise:
+		Say "Der Notruf wurde schon abgesetzt!".
+
+Every turn:
+	If Notruf is false and Strom is 0:
+		Say "[bold type]Du hast den Notruf nicht rechtzeitig aktiviert![roman type]";
+		End the story finally.
+		
+[mit Messenger interagieren]
+Understand "Use [Mobitab] to send a message" as Sending_Message.
+	Sending_Message is an action applying to one thing.
+Carry out Sending_Message:
+	If Scene4 is happening and Hilfsgenerator_Aktiviert is true:
+		Say "Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.";
+		Change_to_Percy;
+	Otherwise:
+		Say "Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
+	
+
 
 
 [*****Räume*****]
@@ -534,13 +678,12 @@ Bridge is down of Briefing_Room. The printed name is "Bridge".
 
 
 [*****Szene 2*****]
-
 Szene2 is a scene.
 Szene2 begins when the player is in Xeno_Lab. [noch ändern]
 When Szene2 begins:
 	change_to_Barry;
 	Now Mobitab is in Spind;
-	Say "[bold type]Szene 2[line break]";
+	Say "[bold type]Szene 2:[line break]";
 	Say "Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
 Szene2 ends when DekonDone is true.
 
@@ -549,3 +692,53 @@ After entering Gamma_Junction:
 		Now Stationsalarm is false;
 		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein klirren zu hören.";
 	Continue the action;
+	
+
+
+[*****Scene 4*****]
+Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
+
+Scene4 is a scene.
+Scene4 begins when Szene2 ends. [noch ändern]
+When Scene4 begins:
+	[erster Satz mit "Med-Lab" kann weg => Übergang Scene 2 zu 4]
+	Say "[italic type]Scene 4:[line break]";
+	Say "Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
+	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.[roman type]";
+	Now Umkleidetuer is unlocked.
+Scene4 ends when Sauerstoff_Abfall is true.
+
+
+[Bodenfenster geht kaputt + Sauerstoffabfall]
+Instead of going to Wartungsschacht:
+	If the player carries 1 thing and the player carries the Mobitab:
+		Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
+		Now Sauerstoff_Abfall is true;
+		Increase Sauerstoff by 1;
+		Continue the action;
+	Otherwise:
+		Say "Du trägst zu viel! Du kannst nur das Mobitab mitnehmen!".
+
+Every turn:
+	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
+		Decrease Sauerstoff by 1;
+		If the player carries the Mobitab:
+			Say "Das Mobitab zeigt an, dass nur noch [Sauerstoff] Züge Sauerstoff im äußeren Ring vorhanden sind!";
+	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
+		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
+		End the story finally.
+		
+
+
+[*****Endscene*****]
+Endscene is a scene.
+Endscene begins when Scene4 ends. [noch ändern]
+When Endscene begins:
+	Change_to_Barry;
+	Now Percy is in Docking_Bay;
+	Say "[italic type]Endscene:[line break]";
+	Say "Ein Rettungsteam ist angekommen. Gehe in die Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch auf dich![line break][roman type]".
+Endscene ends when the player is in Docking_Bay.
+When Endscene ends:
+	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
+	End the story finally.
