@@ -1,7 +1,7 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-
+[n]
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
