@@ -34,6 +34,10 @@ Aeußerer_Ring is a region.
 
 [*****Definitionen*****]
 
+	[Neue Raumliste]
+	Raumliste is a list of Rooms that varies.
+
+
 	[Kontaminierte]
 	Kontaminierter is a kind of man. 
 		A Kontaminierter has a truth state called Is_Kontaminiert.
@@ -56,6 +60,17 @@ Aeußerer_Ring is a region.
 	
 	[Sicherheitsausweis]
 	Sicherheitsausweis is a thing. It is in Spind.
+
+	[Leiche]
+	Leiche is a Supporter.
+	It is fixed in place. Instead of taking Leiche: say "du wagst es nicht die Leiche zu bewegen“.
+	It is not enterable.
+	Leiche is in Gamma_Delta_Corridor. 
+	
+	[Laborkittel] 
+	Laborkittel is a thing. It is wearable. It is portable. The description of Laborkittel is "Ein leicht blutiger 
+	und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab“.
+	Laborkittel is on Leiche.
 
 
 
@@ -114,6 +129,28 @@ To dekontaminiere_Percy:
 To Percy_und_Kontaminierter:
 	Say "[bold type]Es ist nicht mehr möglich Percy zu dekontaminieren! (Percy und ein anderer Kontaminierter befinden sich in einem Raum)[roman type]";
 	End the story finally.
+
+[RäumeListe erstellen]
+To createRaumliste:
+	Remove the list of Rooms from Raumliste;
+	if the Room up of the location of the player is not nothing:
+		if the door up of the location of the player is not locked:
+			add Room up of the location of the player to Raumliste;
+	if the Room down of the location of the player is not nothing:
+		if the door down of the location of the player is not locked:
+			add Room down of the location of the player to Raumliste;
+	if the Room north of the location of the player is not nothing:
+		if the door north of the location of the player is not locked:
+			add Room north of the location of the player to Raumliste;
+	if the Room south of the location of the player is not nothing:
+		if the door south of the location of the player is not locked:
+			add Room south of the location of the player to Raumliste;
+	if the Room east of the location of the player is not nothing:
+		if the door east of the location of the player is not locked:
+			add Room east of the location of the player to Raumliste;
+	if the Room west of the location of the player is not nothing:
+		if the door west of the location of the player is not locked:
+			add Room west of the location of the player to Raumlist
 
 
 [Kontaminiertencounter -- Dekontaminationskabine]
@@ -327,6 +364,34 @@ Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
 	Say MedLabText;
+	
+[Palette verschieben]
+
+PaletteVerschieben is a truth state variable. PaletteVerschieben is false.
+
+Understand "use [Gravitationsgreifer] with [Palette]" as usePalette.
+usePalette is an action applying to two things.
+Check usePalette:
+	If the Player is not carrying the Gravitationsgreifer:
+		say "Du trägst nicht den Gravitationsgreifer!" instead;
+Carry out usePalette:
+	Now paletteVerschieben is true.
+Report usePalette:
+	say "Du hast die Palette mit dem Greifer genommen."
+		 
+Understand "push [Palette] " as MovePalette.
+	MovePalette is an action applying to one thing.
+	
+Rand is a number variable. Rand is 0. 	
+Understand "tust" as tusting.
+	tusting is an action applying to nothing.
+Carry out tusting:
+	createRaumliste; 
+	If the number of entries of Raumliste is not 0:
+		Now Rand is a random number between 1 and the number of entries of Raumliste;
+		Now the Palette is in entry Rand of Raumliste;
+		Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
+
 
 
 
@@ -675,6 +740,23 @@ Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
 Bridge is down of Briefing_Room. The printed name is "Bridge".
 
+
+[Szene 1]
+Chapter Szene 1
+
+Szene 1 is a scene.
+Szene1Laeuft is a number that varies.
+Szene1Laeuft is 0.
+
+Szene 1 ends when Szene1Laeuft is 2.
+Szene 1 begins when play begins.
+When Szene 1 begins: Say "Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet".
+
+Report entering Gamma_Delta_Corridor: say "Percy findet eine Leiche und an den Wänden Spuren von Handlaserwaffen. Außerdem stellt er fest, dass der Öffnungshebel für die Wartungsluke zum Kommunikationsmodul durch Laserfeuer abgetrennt worden ist. Der Öffnungshebel liegt nun auf dem Boden, so dass ein Öffnen der Luke von hier aus nicht möglich ist. Was ist hier passiert? In dem Laborkittel der Leiche, die offenbar ein Wissenschaftler gewesen war, ist ein Transponder eingenäht. Wenn Percy den Kittel der Leiche auszieht und ihn selbst anzieht, könnte er hiermit die entsprechende Luke öffnen."
+
+Report entering Xeno_Lab: Say "Aus dem Xeno‐Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein ‐ vielleicht verstummt das Pfeifen dann ja. Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei. Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+After entering Xeno_Lab: kontaminiere_Percy.
+After entering Xeno_Lab:   Now Szene1Laeuft is 2.
 
 
 [*****Szene 2*****]
