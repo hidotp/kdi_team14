@@ -150,8 +150,7 @@ To createRaumliste:
 			add Room east of the location of the player to Raumliste;
 	if the Room west of the location of the player is not nothing:
 		if the door west of the location of the player is not locked:
-			add Room west of the location of the player to Raumlist
-
+			add Room west of the location of the player to Raumliste.
 
 [Kontaminiertencounter -- Dekontaminationskabine]
 To count_Kont_Dekon:
@@ -344,6 +343,38 @@ After going down from Gamma_Junction:
 		Say "Die Hangarluke schließt sich hinter dir.";
 	Continue the action;
 
+[Luke - Laborkittel]
+LukeLabor_geöffnet is a truth state variable.
+
+Understand "use [Laborkittel] with [Luke_XenoLab]" as xenoEntriegeln.
+	xenoEntriegeln is an action applying to two things.
+Check xenoEntriegeln:
+	If the Player is not carrying the Laborkittel:
+		Say "Du trägst nicht den Laborkittel!" instead;
+Carry out xenoEntriegeln:
+	Now Luke_XenoLab is unlocked;
+	Now Luke_XenoLab is open;
+	Now LukeLabor_geöffnet is true;
+Report entriegeln:
+	Say "Du hast die XenoLabluke für einen Zug geöffnet."
+
+After going up from Gamma_Delta_Corridor:
+	If LukeLabor_geöffnet is true:
+		Now Luke_XenoLab is locked;
+		Now Luke_XenoLab is closed;
+		Now LukeLabor_geöffnet is false;
+		Say "Die XenoLabluke schließt sich hinter dir.";
+	Continue the action;
+		
+After going down from Xeno_Lab:
+	If Luke_geöffnet is true:
+		Now Luke_XenoLab is locked;
+		Now Luke_XenoLab is closed;
+		Now LukeLabor_geöffnet is false;
+		Say "Die XenoLabluke schließt sich hinter dir.";
+	Continue the action;
+
+
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
 	Kaputtmachen is an action applying to two things.
@@ -379,13 +410,18 @@ Carry out usePalette:
 Report usePalette:
 	say "Du hast die Palette mit dem Greifer genommen."
 		 
-Understand "push [Palette] " as MovePalette.
-	MovePalette is an action applying to one thing.
+
 	
 Rand is a number variable. Rand is 0. 	
-Understand "tust" as tusting.
-	tusting is an action applying to nothing.
-Carry out tusting:
+Understand "push [Palette] " as MovePalette.
+	MovePalette is an action applying to one thing.
+Check MovePalette:
+	if Palette is in Xeno_Lab:
+		Now paletteVerschieben is false;
+Check MovePalette:
+	If paletteVerschieben is false;
+		Say "Die Palette blockiert jetzt die Luke!" instead;
+Carry out MovePalette:
 	createRaumliste; 
 	If the number of entries of Raumliste is not 0:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
@@ -499,6 +535,11 @@ Selbstzerstörungsknopf is a thing.
 Messenger is a thing.
 	It is not wearable.
 	Percy carries the Messenger.
+	
+Palette is a thing. It is in Raumfähre. 
+
+Gravitationsgreifer is a thing. It is portable. It is in Raumfähre. 
+
 
 
 
