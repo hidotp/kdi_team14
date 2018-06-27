@@ -32,7 +32,10 @@ Aeußerer_Ring is a region.
 	
 	[Luke]
 	Luke is a kind of door. A Luke is locked.
-	
+
+	LuPanel is a kind of thing.
+		A LuPanel has a Luke called Given_Luke.
+
 	[Mobitab]
 	Mobitab is a thing. It is in Gamma_Junction.
 	
@@ -527,3 +530,22 @@ Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Ca
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
 Bridge is down of Briefing_Room. The printed name is "Bridge".
+
+
+
+[*****Szene 2*****]
+
+Szene2 is a scene.
+Szene2 begins when the player is in Xeno_Lab. [noch ändern]
+When Szene2 begins:
+	change_to_Barry;
+	Now Mobitab is in Spind;
+	Say "[bold type]Szene 2[line break]";
+	Say "Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
+Szene2 ends when DekonDone is true.
+
+After entering Gamma_Junction:
+	If the player is Barry:
+		Now Stationsalarm is false;
+		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein klirren zu hören.";
+	Continue the action;
