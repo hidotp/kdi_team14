@@ -52,11 +52,16 @@ Aeußerer_Ring is a region.
 		A LuPanel has a Luke called Given_Luke.
 
 	[Mobitab]
-	Mobitab is a thing. It is in Gamma_Junction.
+	Mobitab is a thing. It is in Spind.
 	
 	[Sicherheitsausweis]
 	Sicherheitsausweis is a thing. It is in Spind.
 
+	[Med-Lab Pult]
+	Med-Lab Pult is a thing. It is in Med_Lab.
+	
+	[Drucklufthammer]
+	Drucklufthammer is a thing. It is in Hangar. 
 
 
 [*****Player*****]
@@ -70,6 +75,14 @@ Player is Percy.
 
 
 [*****Methoden*****]
+
+[MobiTab - Konaminiertenzähler]
+Every turn:
+	If the player has MobiTab:	
+		count_Kontaminiert;
+		If Kontcount > 0:
+			Say "[bold type]Mobi Tab: [roman type] Anzahl der Kontaminierten: [Kontcount]";
+			Continue the action;
 
 [Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
 Richtung_StAla is a direction variable.
@@ -161,17 +174,9 @@ To count_Kontaminiert:
 	If Is_Kontaminiert of Percy is true:
 		If Percy is in the location of the player:
 			Increase Kontcount by 1.
-	
-[MobiTab - Konaminiertenzähler]
-Before going somewhere:
-	If the player has MobiTab:	
-		count_Kontaminiert;
-		If Kontcount > 0:
-			Say "[bold type]Mobi Tab [roman type] Anzahl der Kontaminierten: [Kontcount]";
-			Continue the action;
 			
 [Dekontaminiation]
-DekonText is a text variable. DekonText is "TEMP muss noch geschrieben werden!".
+DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatminiert!".
 
 After closing Dekon Tür:
 	count_Kont_Dekon;
@@ -184,20 +189,30 @@ After closing Dekon Tür:
 					Say DekonText;
 					Continue the action;
 				Else:
-					Say "Du willst doch Percy als erstes dekontaminieren.";
+					If Kontcount <= 1:
+						Say "Du willst doch Percy als erstes dekontaminieren.";
+					Else:
+						Say "Niemand ist in der Kabine.";
 			Else:
 				Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein";			
 		Else:
 			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren.";
 	Else:
-		Say "Die Energie des Maschinenkerns reicht nicht mehr für eine Dekontamination.";
+		Say "Die Energie des Maschinenkerns hat nur für eine Dekontamination gereicht.";
 	
 [Mobitab nehmen]
 Instead of taking the Mobitab:
 	If the player is Barry:
 		Continue the action;
 	Else:
-		Say "Du traust dir das nicht zu das zu nehmen."	
+		Say "Du traust dir das nicht zu, das zu nehmen."	
+
+[Drucklufthammer nehmen]
+Instead of taking the Drucklufthammer:
+	If the player is Barry:
+		Continue the action;
+	Else:
+		Say "Du brauchst das noch nicht."	
 
 
 
@@ -251,6 +266,7 @@ Check Druckluften:
 Carry out Druckluften:
 	If Drcklfthmr_Ladezstd is true:
 		Increase Laute_Aktionen by 1;
+		Now Drcklfthmr_Ladezstd is false;
 Report Druckluften:
 	If Kontaminierter is in the location of the player:
 		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
@@ -312,13 +328,18 @@ Report Kaputtmachen:
 	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen."
 	
 [Med-Lab Pult Benutzung]
-MedLabText is a text variable. MedLabText is "TEMP muss noch geschrieben werden!!!".
+MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich ein Videoblog an zu spielen: [line break] [bold type] Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzr Zeit alle Mitarbeiter der Station befallen. Ich noch einen speziellen Filter in die Luftzirkulation einbauen und eine spezielle Dekontaminationskabine für eine Person konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt.".
+MedLabUsable is a truth state variable. MedLabUsable is false.
 
-Understand "interact with [Med-Lab Pult]" as Interacting.
-	Interacting is an action applying to one thing.
-Carry out Interacting:
+Understand "interact with [Med-Lab Pult]" as medInteracting.
+	medInteracting is an action applying to one thing.
+Check medInteracting:
+	If MedLabUsable is false:
+		Say "Das interressiert dich nicht. Da müsste erst ein Freund kontaminiert sein." instead;
+Carry out medInteracting:
 	Increase Laute_Aktionen by 1;
-Report Interacting:
+	Now Stationsalarm is true;
+Report medInteracting:
 	Say MedLabText;
 
 
@@ -405,11 +426,6 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 
-
-	
-[*****Gegenstände*****]
-Med-Lab Pult is a thing. It is in Med_Lab. The printed name is "Med-Lab Pult".
-Drucklufthammer is a thing. It is in Umkleidekabine. 
 
 [Scene 4]
 Hilfsgenerator is a thing.
@@ -674,8 +690,8 @@ Bridge is down of Briefing_Room. The printed name is "Bridge".
 Szene2 is a scene.
 Szene2 begins when the player is in Xeno_Lab. [noch ändern]
 When Szene2 begins:
+	Now MedLabUsable is true;
 	change_to_Barry;
-	Now Mobitab is in Spind;
 	Say "[bold type]Szene 2:[line break]";
 	Say "Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
 Szene2 ends when DekonDone is true.
