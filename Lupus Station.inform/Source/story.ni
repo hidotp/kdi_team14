@@ -179,7 +179,7 @@ After closing Dekon Tür:
 		If Kontcount <= 1:
 			If the Player is not in Dekontaminationskabine:
 				If Percy is in Dekontaminationskabine:
-					Now Is_Kontaminiert of Percy is false;
+					dekontaminiere_Percy;
 					Now HaEnAbf is true;
 					Say DekonText;
 					Continue the action;
@@ -277,7 +277,7 @@ Report Using:
 		Say "Du hast die zugehörige Tür des Panels entriegelt.";
 
 [Luke - Sicherheitsausweis]
-Luke_geöffnet is a truth state variable.
+hLukeTurn is a number variable. hLukeTurn is 0.
 
 Understand "use [Sicherheitsausweis] with [Luke_Hangar]" as entriegeln.
 	Entriegeln is an action applying to two things.
@@ -287,25 +287,18 @@ Check entriegeln:
 Carry out entriegeln:
 	Now Luke_Hangar is unlocked;
 	Now Luke_Hangar is open;
-	Now Luke_geöffnet is true;
+	Now hLukeTurn is 2.
 Report entriegeln:
 	Say "Du hast die Hangarluke für einen Zug geöffnet."
 
-After going up from Hangar:
-	If Luke_geöffnet is true:
-		Now Luke_Hangar is locked;
-		Now Luke_Hangar is closed;
-		Now Luke_geöffnet is false;
-		Say "Die Hangarluke schließt sich hinter dir.";
-	Continue the action;
+Every turn:
+	If hLukeTurn is not 0:
+		Decrease hLukeTurn by 1;
+		If hLukeTurn is 0:
+			Now Luke_Hangar is locked;
+			Now Luke_Hangar is closed;
+			Say "Die Hangarluke hat sich geschlossen".
 		
-After going down from Gamma_Junction:
-	If Luke_geöffnet is true:
-		Now Luke_Hangar is locked;
-		Now Luke_Hangar is closed;
-		Now Luke_geöffnet is false;
-		Say "Die Hangarluke schließt sich hinter dir.";
-	Continue the action;
 
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
@@ -455,7 +448,7 @@ Instead of taking off Raumanzug:
 		Otherwise:
 			Continue the action.
 
-[Weltraumtüren öffnen mit (heilem) raumanzug]
+[Weltraumtüren öffnen mit (heilem) Raumanzug]
 Weltraum_Richtung is a direction variable. [In welche Richtung geht der Spieler?]
 Weltraum_Text is a text variable. Weltraum_Text is "Du musst einen Raumanzug tragen!". [Ausgabe wenn man keinen Raumanzug trägt]
 Raumanzug_Kaputt_Text is a text variable. Raumanzug_Kaputt_Text is "Du kannst nicht ins Weltall! Dein Raumanzug ist beschädigt!". [Ausgabe wenn Raumanzug kaputt]
@@ -625,7 +618,7 @@ Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
 Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
-Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine.
+Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine. It is open.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 	Dekontaminationskabine is in Innerer_Ring.
 	
