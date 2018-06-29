@@ -35,6 +35,9 @@ You can see Percy here.
             <child nodeId="node-1110"></child>
             <child nodeId="node-1104"></child>
             <child nodeId="node-1101"></child>
+            <child nodeId="node-2340"></child>
+            <child nodeId="node-2238"></child>
+            <child nodeId="node-2344"></child>
             <child nodeId="node-1586"></child>
             <child nodeId="node-1580"></child>
             <child nodeId="node-1058"></child>
@@ -1020,11 +1023,12 @@ Xeno Lab
     <item nodeId="node-1580">
         <command xml:space="preserve">teleport to Med_Lab</command>
         <result xml:space="preserve">Med Lab
-You can see Luke_MedLab, Dekon Tür, Med-Lab Pult and Kontaminierter here.
+You can see Luke_MedLab, Dekon Tür, Med-Lab Pult, Krankenbett and Kontaminierter here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1585"></child>
+            <child nodeId="node-2382"></child>
             <child nodeId="node-1581"></child>
         </children>
     </item>
@@ -1061,6 +1065,44 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
     <item nodeId="node-1583">
         <command xml:space="preserve">quit</command>
         <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2382">
+        <command xml:space="preserve">enter Krankenbett</command>
+        <result xml:space="preserve">You get onto Krankenbett.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2383"></child>
+        </children>
+    </item>
+    <item nodeId="node-2383">
+        <command xml:space="preserve">leave Krankenbett</command>
+        <result xml:space="preserve">I only understood you as far as wanting to leave.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2384"></child>
+        </children>
+    </item>
+    <item nodeId="node-2384">
+        <command xml:space="preserve">leave</command>
+        <result xml:space="preserve">You get off Krankenbett.
+
+Med Lab
+You can see Luke_MedLab, Dekon Tür, Med-Lab Pult, Krankenbett and Kontaminierter here.
+
+Du wurdest kontaminiert!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1585">
@@ -1380,6 +1422,255 @@ Du wurdest kontaminiert!
 
 Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2344">
+        <command xml:space="preserve">teleport to Gamma_Jucntion</command>
+        <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2345"></child>
+        </children>
+    </item>
+    <item nodeId="node-2345">
+        <command xml:space="preserve">teleport to Gamma_Junction</command>
+        <result xml:space="preserve">Gamma Junction
+You can see Sicherheitsbarriere, Luke_Hangar, Luke_XenoLab, Sicherheitsbarriere, Panel N Gam Junc, Panel S Gam Junc, Panel U Gam Junc and Panel D Gam Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2346"></child>
+        </children>
+    </item>
+    <item nodeId="node-2346">
+        <command xml:space="preserve">look at Panel N Gam Junc</command>
+        <result xml:space="preserve">Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2238">
+        <command xml:space="preserve">teleport to Briefing_Room</command>
+        <result xml:space="preserve">Briefing Room
+You can see Bridge_Luke here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2239"></child>
+        </children>
+    </item>
+    <item nodeId="node-2239">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">Die Kommandosperre hat die Luke blockiert... nur ein Stromausfall könnte diese Sperre aufheben.
+
+(first opening Bridge_Luke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2246"></child>
+        </children>
+    </item>
+    <item nodeId="node-2246">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2247"></child>
+        </children>
+    </item>
+    <item nodeId="node-2247">
+        <command xml:space="preserve">west</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2248"></child>
+        </children>
+    </item>
+    <item nodeId="node-2248">
+        <command xml:space="preserve">east</command>
+        <result xml:space="preserve">
+Duty Room
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2249"></child>
+        </children>
+    </item>
+    <item nodeId="node-2249">
+        <command xml:space="preserve">west</command>
+        <result xml:space="preserve">
+Briefing Room
+You can see Bridge_Luke here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2250"></child>
+        </children>
+    </item>
+    <item nodeId="node-2250">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Die Kommandosperre hat die Luke blockiert... nur ein Stromausfall könnte diese Sperre aufheben.
+
+(first opening Bridge_Luke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2251"></child>
+        </children>
+    </item>
+    <item nodeId="node-2251">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Duty Room
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2252"></child>
+        </children>
+    </item>
+    <item nodeId="node-2252">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Briefing Room
+You can see Bridge_Luke here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2253"></child>
+        </children>
+    </item>
+    <item nodeId="node-2253">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2254"></child>
+        </children>
+    </item>
+    <item nodeId="node-2254">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Duty Room
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2255"></child>
+        </children>
+    </item>
+    <item nodeId="node-2255">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Cafeteria
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2256"></child>
+        </children>
+    </item>
+    <item nodeId="node-2256">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2257"></child>
+        </children>
+    </item>
+    <item nodeId="node-2257">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Duty Room
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2258"></child>
+        </children>
+    </item>
+    <item nodeId="node-2258">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Alpha Junction
+You can see Sicherheitsbarriere, Luke_MedLab, Sicherheitsbarriere, Panel N Alp Junc and Panel S Alp Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2259"></child>
+        </children>
+    </item>
+    <item nodeId="node-2259">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2260"></child>
+        </children>
+    </item>
+    <item nodeId="node-2260">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2340">
+        <command xml:space="preserve">teleport Gamma_Jucntion</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2341"></child>
+        </children>
+    </item>
+    <item nodeId="node-2341">
+        <command xml:space="preserve">teleport Gamma_Junction</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2342"></child>
+        </children>
+    </item>
+    <item nodeId="node-2342">
+        <command xml:space="preserve">teleport to Gamma_Junction</command>
+        <result xml:space="preserve">Gamma Junction
+You can see Sicherheitsbarriere, Luke_Hangar, Luke_XenoLab, Sicherheitsbarriere, Panel N Gam Junc, Panel S Gam Junc, Panel U Gam Junc and Panel D Gam Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2343"></child>
+        </children>
+    </item>
+    <item nodeId="node-2343">
+        <command xml:space="preserve">look at Panel U Gam Junc</command>
+        <result xml:space="preserve">Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1101">
@@ -2203,13 +2494,17 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Hangar
-You can see Luke_Hangar, Umkleidetür, Spind (in which is Sicherheitsausweis) and Panel_Luke_H here.
+You can see Luke_Hangar, Umkleidetür, Spind (in which are Mobitab and Sicherheitsausweis), Drucklufthammer and Panel U Hangar here.
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1150"></child>
+        <children><child nodeId="node-2263"></child>
+            <child nodeId="node-1619"></child>
+            <child nodeId="node-2288"></child>
+            <child nodeId="node-2328"></child>
+            <child nodeId="node-1150"></child>
             <child nodeId="node-1147"></child>
         </children>
     </item>
@@ -2303,6 +2598,449 @@ It seems to be locked.
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening Luke_Hangar)
 It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2328">
+        <command xml:space="preserve">take Sicherheitsausweis</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2329"></child>
+        </children>
+    </item>
+    <item nodeId="node-2329">
+        <command xml:space="preserve">tust</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2330"></child>
+        </children>
+    </item>
+    <item nodeId="node-2330">
+        <command xml:space="preserve">inv</command>
+        <result xml:space="preserve">You are carrying:
+  Sicherheitsausweis
+  Messenger
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2331"></child>
+        </children>
+    </item>
+    <item nodeId="node-2331">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Hangar
+You can see Luke_Hangar, Umkleidetür, Spind (in which is Mobitab), Drucklufthammer and Panel_Luke_H here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2332"></child>
+        </children>
+    </item>
+    <item nodeId="node-2332">
+        <command xml:space="preserve">take Panel_Luke_H</command>
+        <result xml:space="preserve">That's fixed in place.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2288">
+        <command xml:space="preserve">take Mobitab</command>
+        <result xml:space="preserve">Du traust dir das nicht zu, das zu nehmen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2289"></child>
+        </children>
+    </item>
+    <item nodeId="node-2289">
+        <command xml:space="preserve">take Sicherheitsausweis</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2290"></child>
+        </children>
+    </item>
+    <item nodeId="node-2290">
+        <command xml:space="preserve">tust</command>
+        <result xml:space="preserve">
+Du spielst nun Barry!
+Barry ist in Raumfähre
+
+Du spielst nun Percy!
+Percy ist in Hangar
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2291"></child>
+        </children>
+    </item>
+    <item nodeId="node-2291">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2292"></child>
+        </children>
+    </item>
+    <item nodeId="node-2292">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">(first opening Luke_Hangar)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2293"></child>
+        </children>
+    </item>
+    <item nodeId="node-2293">
+        <command xml:space="preserve">take Percy</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2294"></child>
+        </children>
+    </item>
+    <item nodeId="node-2294">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Docking Bay
+You can see Weltraumtür here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2295"></child>
+        </children>
+    </item>
+    <item nodeId="node-2295">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Hangar
+You can see Sicherheitsausweis, Luke_Hangar, Umkleidetür, Spind (in which is Mobitab), Drucklufthammer and Panel_Luke_H here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2296"></child>
+        </children>
+    </item>
+    <item nodeId="node-2296">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2297"></child>
+        </children>
+    </item>
+    <item nodeId="node-2297">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2298"></child>
+        </children>
+    </item>
+    <item nodeId="node-2298">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2299"></child>
+        </children>
+    </item>
+    <item nodeId="node-2299">
+        <command xml:space="preserve">udno</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2300"></child>
+        </children>
+    </item>
+    <item nodeId="node-2300">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Hangar
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2301"></child>
+        </children>
+    </item>
+    <item nodeId="node-2301">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Hangar
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2302"></child>
+        </children>
+    </item>
+    <item nodeId="node-2302">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Hangar
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2303"></child>
+        </children>
+    </item>
+    <item nodeId="node-2303">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Hangar
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2304"></child>
+        </children>
+    </item>
+    <item nodeId="node-2304">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Docking Bay
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2305"></child>
+        </children>
+    </item>
+    <item nodeId="node-2305">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Docking Bay
+You can see Weltraumtür here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1619">
+        <command xml:space="preserve">take Drucklufthammer</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2353"></child>
+        </children>
+    </item>
+    <item nodeId="node-2353">
+        <command xml:space="preserve">teleport to Gamma_Junction</command>
+        <result xml:space="preserve">Gamma Junction
+You can see Luke_Hangar, Sicherheitsbarriere, Luke_XenoLab, Sicherheitsbarriere, Panel N Gam Junc, Panel S Gam Junc, Panel U Gam Junc and Panel D Gam Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2354"></child>
+        </children>
+    </item>
+    <item nodeId="node-2354">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2355"></child>
+        </children>
+    </item>
+    <item nodeId="node-2355">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2362"></child>
+        </children>
+    </item>
+    <item nodeId="node-2362">
+        <command xml:space="preserve">charge Drucklufthammer with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer aufgeladen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2363"></child>
+        </children>
+    </item>
+    <item nodeId="node-2363">
+        <command xml:space="preserve">charge Drucklufthammer with Panel N Gam Junc</command>
+        <result xml:space="preserve">Der Drucklufthammer ist schon geladen!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2364"></child>
+        </children>
+    </item>
+    <item nodeId="node-2364">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2365"></child>
+        </children>
+    </item>
+    <item nodeId="node-2365">
+        <command xml:space="preserve">charge Drucklufthammer with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer aufgeladen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2366"></child>
+        </children>
+    </item>
+    <item nodeId="node-2366">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2378"></child>
+        </children>
+    </item>
+    <item nodeId="node-2378">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2379"></child>
+        </children>
+    </item>
+    <item nodeId="node-2379">
+        <command xml:space="preserve">charge Drucklufthammer with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer aufgeladen.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2380"></child>
+        </children>
+    </item>
+    <item nodeId="node-2380">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2263">
+        <command xml:space="preserve">look at spind</command>
+        <result xml:space="preserve">Der Spind eines Deckoffiziers, wahrscheinlich in Eile offengelassen.
+
+In Spind are Mobitab and Sicherheitsausweis.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2267"></child>
+        </children>
+    </item>
+    <item nodeId="node-2267">
+        <command xml:space="preserve">enter spind</command>
+        <result xml:space="preserve">That's not something you can enter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2268"></child>
+        </children>
+    </item>
+    <item nodeId="node-2268">
+        <command xml:space="preserve">take spind</command>
+        <result xml:space="preserve">That's fixed in place.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2269"></child>
+        </children>
+    </item>
+    <item nodeId="node-2269">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Docking Bay
+You can see Weltraumtür here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2270"></child>
+        </children>
+    </item>
+    <item nodeId="node-2270">
+        <command xml:space="preserve">place spind</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2271"></child>
+        </children>
+    </item>
+    <item nodeId="node-2271">
+        <command xml:space="preserve">drop spind</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2272"></child>
+        </children>
+    </item>
+    <item nodeId="node-2272">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Docking Bay
+You can see Weltraumtür here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2282"></child>
+        </children>
+    </item>
+    <item nodeId="node-2282">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Hangar
+You can see Luke_Hangar, Umkleidetür, Spind (in which are Mobitab and Sicherheitsausweis), Drucklufthammer and Panel_Luke_H here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2283"></child>
+        </children>
+    </item>
+    <item nodeId="node-2283">
+        <command xml:space="preserve">close spind</command>
+        <result xml:space="preserve">It isn't something you can close.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2284"></child>
+        </children>
+    </item>
+    <item nodeId="node-2284">
+        <command xml:space="preserve">lock spind</command>
+        <result xml:space="preserve">(with Messenger)
+That doesn't seem to be something you can lock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2285"></child>
+        </children>
+    </item>
+    <item nodeId="node-2285">
+        <command xml:space="preserve">inv</command>
+        <result xml:space="preserve">You are carrying:
+  Messenger
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

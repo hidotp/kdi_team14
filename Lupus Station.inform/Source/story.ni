@@ -41,6 +41,7 @@ Aeußerer_Ring is a region.
 	[Panels]
 	Panel is a kind of thing.
 		A Panel has a door called Given_SiBa.
+		A Panel is fixed in place.
 	
 	[Sicherheitsbarriere]
 	SiBa is a kind of door. A SiBa is locked.
@@ -48,20 +49,29 @@ Aeußerer_Ring is a region.
 	[Luke]
 	Luke is a kind of door. A Luke is locked.
 
+	[Luken Panels]
 	LuPanel is a kind of thing.
 		A LuPanel has a Luke called Given_Luke.
+		A LuPanel is fixed in place.
 
 	[Mobitab]
 	Mobitab is a thing. It is in Spind.
 	
 	[Sicherheitsausweis]
-	Sicherheitsausweis is a thing. It is in Spind.
+	Sicherheitsausweis is a thing. It is in Spind. The Description is "Ein Sicherheitsausweis, der aussieht als ob er einer wichtigen Person gehört."
 
 	[Med-Lab Pult]
 	Med-Lab Pult is a thing. It is in Med_Lab.
+		Med-Lab Pult is fixed in place. The Description is "Ein Pult mit einem riesigen Bildschirm. Gerade ist ein Videoblog aufgerufen, man muss nur noch auf Play drücken…"
 	
 	[Drucklufthammer]
 	Drucklufthammer is a thing. It is in Hangar. 
+	
+	[Öffnungshebel]
+	Öffnungshebel is a thing. It is in Gamma_Delta_Corridor. The Description is "Der Öffnungshebel der Wartungsluke. Dort wo er durch das Laserfeuer abgetrennt wurde sieht man noch Schmauchspuren."
+	
+	[Krankenbett]
+	Krankenbett is a supporter. It is in Med_Lab. It is enterable. It is fixed in place.
 
 
 [*****Player*****]
@@ -76,7 +86,7 @@ Player is Percy.
 
 [*****Methoden*****]
 
-[MobiTab - Konaminiertenzähler]
+[MobiTab - Kontaminiertenzähler]
 Every turn:
 	If the player has MobiTab:	
 		count_Kontaminiert;
@@ -98,7 +108,10 @@ Every turn:
 			If HaEnAbf is true:
 				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
 			Else:
-				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+				If Hilfsgenerator_Aktivierbar is false:
+					Say "Durch das Deckenfenster sieht man den rot glühenden Maschinenkern.";
+				Else:
+					Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 	Now Raum_Test_2 is Raum_Test_1.
 
 
@@ -117,11 +130,24 @@ To change_to_Percy:
 
 [Percy kontaminieren / dekontaminieren]
 To kontaminiere_Percy:
-	Now Is_Kontaminiert of Percy is true.
+	Now Is_Kontaminiert of Percy is true;
+	If Percy has the Sicherheitsausweis:
+		Now the Sicherheitsausweis is in the location of Percy.
 
 To dekontaminiere_Percy:
 	Now Is_Kontaminiert of Percy is false.
 
+[Kommandosperre Brücke]
+Instead of going down from the Briefing_Room:
+	If Bridge_Luke is locked:
+		If HaEnAbf is true:
+			Now Bridge_Luke is unlocked;
+			Continue the action;			
+		Otherwise:
+			Say "Die Kommandosperre hat die Luke blockiert... nur ein Stromausfall könnte diese Sperre aufheben.";
+			Continue the action;	
+	Otherwise:
+		Continue the action;
 
 [Beende Spiel, wenn Percy und Kontaminierter in einem Raum]
 To Percy_und_Kontaminierter:
@@ -246,12 +272,12 @@ Report Talking:
 	Say "Du hast den Kontaminierten angesprochen."
 
 [Drucklufthammer aufladen]
-Understand "charge [Drucklufthammer] with [Panel]" as Charging.
+Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
 	Charging is an action applying to two things.
 Check Charging: 
 	If Drcklfthmr_Ladezstd is true:
 		Say "Der Drucklufthammer ist schon geladen!" instead;
-Carry out clapping:
+Carry out Charging:
 	If Drcklfthmr_Ladezstd is false:
 		Now Drcklfthmr_Ladezstd is true;
 Report Charging:
@@ -262,7 +288,7 @@ Understand "use [Drucklufthammer]" as Druckluften.
 	Druckluften is an action applying to one thing.
 Check Druckluften: 
 	If Drcklfthmr_Ladezstd is false:
-		Say "Der Drucklufthammer hat keine Energie" instead;
+		Say "Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen" instead;
 Carry out Druckluften:
 	If Drcklfthmr_Ladezstd is true:
 		Increase Laute_Aktionen by 1;
@@ -295,18 +321,30 @@ Report Using:
 [Luke - Sicherheitsausweis]
 hLukeTurn is a number variable. hLukeTurn is 0.
 
-Understand "use [Sicherheitsausweis] with [Luke_Hangar]" as entriegeln.
-	Entriegeln is an action applying to two things.
-Check entriegeln:
+Understand "use [Sicherheitsausweis] with [Panel U Hangar]" as u_entriegeln.
+	u_entriegeln is an action applying to two things.
+Check u_entriegeln:
 	If the Player is not carrying the Sicherheitsausweis:
 		Say "Du trägst nicht den Sicherheitsausweis!" instead;
-Carry out entriegeln:
+Carry out u_entriegeln:
 	Now Luke_Hangar is unlocked;
 	Now Luke_Hangar is open;
 	Now hLukeTurn is 2.
-Report entriegeln:
+Report u_entriegeln:
 	Say "Du hast die Hangarluke für einen Zug geöffnet."
 
+Understand "use [Sicherheitsausweis] with [Panel D Gam Junc]" as d_entriegeln.
+	d_entriegeln is an action applying to two things.
+Check d_entriegeln:
+	If the Player is not carrying the Sicherheitsausweis:
+		Say "Du trägst nicht den Sicherheitsausweis!" instead;
+Carry out d_entriegeln:
+	Now Luke_Hangar is unlocked;
+	Now Luke_Hangar is open;
+	Now hLukeTurn is 2.
+Report d_entriegeln:
+	Say "Du hast die Hangarluke für einen Zug geöffnet."
+	
 Every turn:
 	If hLukeTurn is not 0:
 		Decrease hLukeTurn by 1;
@@ -335,7 +373,7 @@ Understand "interact with [Med-Lab Pult]" as medInteracting.
 	medInteracting is an action applying to one thing.
 Check medInteracting:
 	If MedLabUsable is false:
-		Say "Das interressiert dich nicht. Da müsste erst ein Freund kontaminiert sein." instead;
+		Say "Das interressiert dich noch nicht. Da müsste erst ein Freund kontaminiert sein." instead;
 Carry out medInteracting:
 	Increase Laute_Aktionen by 1;
 	Now Stationsalarm is true;
@@ -429,17 +467,20 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 
 [Scene 4]
 Hilfsgenerator is a thing.
-	It is in Com_Base.
+	It is in Second_Generator.
 	It is fixed in place.
 Raumanzug is a thing.
 	It is in Umkleidekabine.
 	It is wearable.
+	The description is "Ein Raumanzug, der nicht gegen spitze Sachen gesichert ist."
 Startknopf is a thing.
-	It is in Com_Base.
+	It is in Second_Generator.
 	It is fixed in place.
+	The description is "Der Knopf mit dem man den Hilfsgenerator starten kann, ist relativ alt und schon ein bisschen gesplittert."
 Selbstzerstörungsknopf is a thing.
 	It is in Bridge.
 	It is fixed in place.
+	The description is "Der Notrufknopf, er ist gerade ohne Funktion, braucht wahrscheinlich Strom…"
 Messenger is a thing.
 	It is not wearable.
 	Percy carries the Messenger.
@@ -513,7 +554,7 @@ Carry out Pressing_Knopf:
 		Now Hilfsgenerator_Aktivierbar is false;
 		Now Hilfsgenerator_Aktiviert  is true;
 		Increase Strom by 1;
-		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
+		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein Splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
 	Otherwise:
 		Say "Der Hilfsgenerator wurde schon aktiviert!".
 
@@ -562,78 +603,81 @@ Carry out Sending_Message:
 Gamma_Junction is a room. The printed name is "Gamma Junction". 
 SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
-Panel N Gam Junc is a Panel. 
-	The Given_SiBa is SiBa_1. Panel N Gam Junc is in Gamma_Junction.
+Panel N Gam Junc is a Panel. The Given_SiBa is SiBa_1. Panel N Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Gam Junc is a Panel. 
-	The Given_SiBa is SiBa_8. Panel S Gam Junc is in Gamma_Junction.
+	The Given_SiBa is SiBa_8. Panel S Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
+
 
 Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
 SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
 Panel N Gam Bet Cor is a Panel.
-	The Given_SiBa is SiBa_2. Panel N Gam Bet Cor is in Gamma_Beta_Corridor.
+	The Given_SiBa is SiBa_2. Panel N Gam Bet Cor is in Gamma_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Gam Bet Cor is a Panel.
-	The Given_SiBa is SiBa_1. Panel S Gam Bet Cor is in Gamma_Beta_Corridor.
+	The Given_SiBa is SiBa_1. Panel S Gam Bet Cor is in Gamma_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Beta_Junction is a room. The printed name is "Beta Junction".
 SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
 Panel N Bet Junc is a Panel.
-	The Given_SiBa is SiBa_3. Panel N Bet Junc is in Beta_Junction.
+	The Given_SiBa is SiBa_3. Panel N Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Bet Junc is a Panel.
-	The Given_SiBa is SiBa_2. Panel S Bet Junc is in Beta_Junction.
+	The Given_SiBa is SiBa_2. Panel S Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 	
 Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
 SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
 Panel N Alp Bet Cor is a Panel. 
-	The Given_SiBa is SiBa_4. Panel N Alp Bet Cor is in Alpha_Beta_Corridor.
+	The Given_SiBa is SiBa_4. Panel N Alp Bet Cor is in Alpha_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Alp Bet Cor is a Panel.
-	The Given_SiBa is SiBa_3. Panel S Alp Bet Cor is in Alpha_Beta_Corridor.
+	The Given_SiBa is SiBa_3. Panel S Alp Bet Cor is in Alpha_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Alpha_Junction is a room. The printed name is "Alpha Junction".
 SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
 Panel N Alp Junc is a Panel. 
-	The Given_SiBa is SiBa_5. Panel N Alp Junc is in Alpha_Junction.
+	The Given_SiBa is SiBa_5. Panel N Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Alp Junc is a Panel.
-	The Given_SiBa is SiBa_4. Panel S Alp Junc is in Alpha_Junction.
+	The Given_SiBa is SiBa_4. Panel S Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
 SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
 Panel N Alp Del Cor is a Panel. 
-	The Given_SiBa is SiBa_6. Panel N Alp Del Cor is in Alpha_Delta_Corridor.
+	The Given_SiBa is SiBa_6. Panel N Alp Del Cor is in Alpha_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Alp Del Cor is a Panel. 
-	The Given_SiBa is SiBa_5. Panel S Alp Del Cor is in Alpha_Delta_Corridor.
+	The Given_SiBa is SiBa_5. Panel S Alp Del Cor is in Alpha_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Delta_Junction is a room. The printed name is "Delta Junction".
 SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
 Panel N Del Junc is a Panel.
-	The Given_SiBa is SiBa_7. Panel N Del Junc is in Delta_Junction.
+	The Given_SiBa is SiBa_7. Panel N Del Junc is in Delta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Del Junc is a Panel. 
-	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction.
+	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
 SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 Panel N Gam Del Cor is a Panel. 
-	The Given_SiBa is SiBa_8. Panel N Gam Del Cor is in Gamma_Delta_Corridor.
+	The Given_SiBa is SiBa_8. Panel N Gam Del Cor is in Gamma_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 Panel S Gam Del Cor is a Panel. 
-	The Given_SiBa is SiBa_7. Panel S Gam Del Cor is in Gamma_Delta_Corridor.
+	The Given_SiBa is SiBa_7. Panel S Gam Del Cor is in Gamma_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
 Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is unlocked.
 	It is up of Gamma_Junction and down of Xeno_Lab.
+Panel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. Panel U Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
 Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 	It is up of Beta_Junction and down of Engeneering_Lab.
+Panel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. Panel U Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
 Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
+Panel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. Panel U Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine. It is open.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 	Dekontaminationskabine is in Innerer_Ring.
@@ -641,11 +685,13 @@ Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
 Luke_SolarLab is a Luke. The printed name is "Luke_SolarLab".
 	It is up of Delta_Junction and down of Solar_Lab.
+Panel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. Panel U Del Junc is in Delta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Luke_Hangar is a Luke. It is down of Gamma_Junction and above Hangar.
-Panel_Luke_H is a LuPanel. The Given_Luke is Luke_Hangar. Panel_Luke_H is in Hangar.
+Panel U Hangar is a LuPanel. The Given_Luke is Luke_Hangar. Panel U Hangar is in Hangar. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
+Panel D Gam Junc is a LuPanel. The Given_Luke is Luke_Hangar. Panel D Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
 Hangar is a room. The printed name is "Hangar".
-Spind is a container. It is in Hangar. 
+Spind is a container. It is in Hangar. Spind is fixed in place. The description is "Der Spind eines Deckoffiziers, wahrscheinlich in Eile offengelassen."
 
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
 Umkleidetuer is a door. The printed name is "Umkleidetür".
@@ -669,7 +715,10 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 
 Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
-Delta_AI is up of Storage_Area. It is in Innerer_Ring. The printed name is "Delta AI".
+Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
+Panel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. Panel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+
+Delta_AI is a room. It is in Innerer_Ring. The printed name is "Delta AI".
 Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
 Delta_Greenhouse is a room. The printed name is "Delta Greenhouse".
 Storage_Room is south of Delta_Greenhouse. The printed name is "Storage Room".
@@ -682,7 +731,8 @@ Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Ca
 
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
-Bridge is down of Briefing_Room. The printed name is "Bridge".
+Bridge Luke is a door. It is down of Briefing_Room. Bridge Luke is above Bridge. Bridge Luke is locked.
+Bridge is down of Bridge_Luke. The printed name is "Bridge".
 
 
 
@@ -746,7 +796,7 @@ When Endscene begins:
 	Change_to_Barry;
 	Now Percy is in Docking_Bay;
 	Say "[italic type]Endscene:[line break]";
-	Say "Ein Rettungsteam ist angekommen. Gehe in die Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch auf dich![line break][roman type]".
+	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch schon auf dich![line break][roman type]".
 Endscene ends when the player is in Docking_Bay.
 When Endscene ends:
 	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
