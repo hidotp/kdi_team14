@@ -139,7 +139,7 @@ To dekontaminiere_Percy:
 
 [Kommandosperre Brücke]
 Instead of going down from the Briefing_Room:
-	If Bridge_Luke is locked:
+	If Bridge Luke is locked:
 		If HaEnAbf is true:
 			Now Bridge_Luke is unlocked;
 			Continue the action;			
@@ -480,7 +480,7 @@ Startknopf is a thing.
 Selbstzerstörungsknopf is a thing.
 	It is in Bridge.
 	It is fixed in place.
-	The description is "Der Notrufknopf, er ist gerade ohne Funktion, braucht wahrscheinlich Strom…"
+	The description is "Der Notrufknopf, er ist gerade ohne Funktion, braucht wahrscheinlich Strom…".
 Messenger is a thing.
 	It is not wearable.
 	Percy carries the Messenger.
