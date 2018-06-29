@@ -773,7 +773,7 @@ Scene4 ends when Sauerstoff_Abfall is true.
 
 [Bodenfenster geht kaputt + Sauerstoffabfall]
 Instead of going to Wartungsschacht:
-	If the player carries 1 thing and the player carries the Mobitab:
+	If the player carries 1 thing and the player carries the Mobitab or the player carries 0 things:
 		Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
 		Now Sauerstoff_Abfall is true;
 		Increase Sauerstoff by 1;
