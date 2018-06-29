@@ -731,7 +731,10 @@ Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Ca
 
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
-Bridge Luke is a door. It is down of Briefing_Room. Bridge Luke is above Bridge. Bridge Luke is locked.
+Bridge Luke is a door.
+	It is down of Briefing_Room.
+	Bridge Luke is above Bridge. 
+	Bridge Luke is locked.
 Bridge is down of Bridge_Luke. The printed name is "Bridge".
 
 
