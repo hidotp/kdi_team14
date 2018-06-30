@@ -63,7 +63,7 @@ Aeußerer_Ring is a region.
 
 	[Leiche]
 	Leiche is a Supporter.
-	It is fixed in place. Instead of taking Leiche: say "du wagst es nicht die Leiche zu bewegen“.
+	It is fixed in place. Instead of taking Leiche: say "Du wagst es nicht die Leiche zu bewegen“.
 	It is not enterable.
 	Leiche is in Gamma_Delta_Corridor. 
 	
@@ -133,25 +133,31 @@ To Percy_und_Kontaminierter:
 [RäumeListe erstellen]
 To createRaumliste:
 	Remove the list of Rooms from Raumliste;
-	if the Room up of the location of the player is not nothing:
-		if the door up of the location of the player is not locked:
-			add Room up of the location of the player to Raumliste;
-	if the Room down of the location of the player is not nothing:
-		if the door down of the location of the player is not locked:
-			add Room down of the location of the player to Raumliste;
-	if the Room north of the location of the player is not nothing:
-		if the door north of the location of the player is not locked:
-			add Room north of the location of the player to Raumliste;
-	if the Room south of the location of the player is not nothing:
-		if the door south of the location of the player is not locked:
-			add Room south of the location of the player to Raumliste;
-	if the Room east of the location of the player is not nothing:
-		if the door east of the location of the player is not locked:
-			add Room east of the location of the player to Raumliste;
-	if the Room west of the location of the player is not nothing:
-		if the door west of the location of the player is not locked:
-			add Room west of the location of the player to Raumliste.
-
+	If the Room up of the location of the player is not nothing:
+		If the door up of the location of the player is not locked:
+			Add Room up of the location of the player to Raumliste;
+	If the Room down of the location of the player is not nothing:
+		If the door down of the location of the player is not locked:
+			Add Room down of the location of the player to Raumliste;
+	If the Room north of the location of the player is not nothing:
+		If the door north of the location of the player is not locked:
+			Add Room north of the location of the player to Raumliste;
+	If the Room south of the location of the player is not nothing:
+		If the door south of the location of the player is not locked:
+			Add Room south of the location of the player to Raumliste;
+	If the Room east of the location of the player is not nothing:
+		If the door east of the location of the player is not locked:
+			Add Room east of the location of the player to Raumliste;
+	If the Room west of the location of the player is not nothing:
+		If the door west of the location of the player is not locked:
+			Add Room west of the location of the player to Raumliste;
+	If the Room inside of the location of the player is not nothing:
+		If the door inside of the location of the player is not locked:
+			Add Room inside of the location of the player to Raumliste;			
+	If the Room outside of the location of the player is not nothing:
+		If the door outside of the location of the player is not locked:
+			Add Room outside of the location of the player to Raumliste;
+			
 [Kontaminiertencounter -- Dekontaminationskabine]
 To count_Kont_Dekon:
 	Now Kontcount is 0;
@@ -198,7 +204,7 @@ To count_Kontaminiert:
 		If Percy is in the location of the player:
 			Increase Kontcount by 1.
 	
-[MobiTab - Konaminiertenzähler]
+[MobiTab - Kontaminiertenzähler]
 Before going somewhere:
 	If the player has MobiTab:	
 		count_Kontaminiert;
@@ -355,7 +361,7 @@ Carry out xenoEntriegeln:
 	Now Luke_XenoLab is unlocked;
 	Now Luke_XenoLab is open;
 	Now LukeLabor_geöffnet is true;
-Report entriegeln:
+Report xenoEntriegeln:
 	Say "Du hast die XenoLabluke für einen Zug geöffnet."
 
 After going up from Gamma_Delta_Corridor:
@@ -367,7 +373,7 @@ After going up from Gamma_Delta_Corridor:
 	Continue the action;
 		
 After going down from Xeno_Lab:
-	If Luke_geöffnet is true:
+	If LukeLabor_geöffnet is true:
 		Now Luke_XenoLab is locked;
 		Now Luke_XenoLab is closed;
 		Now LukeLabor_geöffnet is false;
@@ -400,7 +406,7 @@ Report Interacting:
 
 PaletteVerschieben is a truth state variable. PaletteVerschieben is false.
 
-Understand "use [Gravitationsgreifer] with [Palette]" as usePalette.
+Understand "connect [Gravitationsgreifer] with [Palette]" as usePalette.
 usePalette is an action applying to two things.
 Check usePalette:
 	If the Player is not carrying the Gravitationsgreifer:
@@ -408,7 +414,7 @@ Check usePalette:
 Carry out usePalette:
 	Now paletteVerschieben is true.
 Report usePalette:
-	say "Du hast die Palette mit dem Greifer genommen."
+	say "Du hast den Greifer an die Palette angebracht."
 		 
 
 	
@@ -423,12 +429,20 @@ Check MovePalette:
 	If paletteVerschieben is false;
 =======
 	If paletteVerschieben is false:
+<<<<<<< HEAD
 >>>>>>> parent of 3e04a4f... Palette pushen mit inside outside + fixed
 		Say "Die Palette blockiert jetzt die Luke!" instead;
+=======
+		If the Palette is in Xeno_Lab:
+			Say "Die Palette blockiert die Tür und ist nicht bewegbar." instead;
+		Else:
+			Say "Du kannst die Palette noch nicht bewegen! Versuche den Gravitationsgreifer anzubringen." instead;
+>>>>>>> parent of 0f75f8f... k
 Carry out MovePalette:
 	createRaumliste; 
 	If the number of entries of Raumliste is not 0:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
+<<<<<<< HEAD
 		Now the Palette is in entry Rand of Raumliste;
 		Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
 <<<<<<< HEAD
@@ -437,6 +451,15 @@ Carry out MovePalette:
       If paletteVerschieben is false:
 		Now the Luke_XenoLab is open.
 >>>>>>> parent of 3e04a4f... Palette pushen mit inside outside + fixed
+=======
+		If entry Rand of Raumliste is Xeno_Lab:
+			Say "Die Palette blockiert die Xeno-Luke und du kannst nun in das Xeno Lab eintreten";
+			Now paletteVerschieben is false;
+			Now the Palette is in entry Rand of Raumliste;
+		Else:
+			Now the Palette is in entry Rand of Raumliste;
+			Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
+>>>>>>> parent of 0f75f8f... k
 
 
 
