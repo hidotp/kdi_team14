@@ -17,7 +17,7 @@ Carry out Teleporting:
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
-HaEnAbf is a truth state variable. HaEnAbf is false.
+Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
 DekonDone is a truth state variable.
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
@@ -29,8 +29,6 @@ Strom is a number variable. Strom is 5. [Stromzähler]
 [*****Regionen*****]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
-
-
 
 [*****Definitionen*****]
 
@@ -68,11 +66,13 @@ Aeußerer_Ring is a region.
 	Drucklufthammer is a thing. It is in Hangar. 
 	
 	[Öffnungshebel]
-	Öffnungshebel is a thing. It is in Gamma_Delta_Corridor. The Description is "Der Öffnungshebel der Wartungsluke. Dort wo er durch das Laserfeuer abgetrennt wurde sieht man noch Schmauchspuren."
+	Oeffnungshebel is a thing. It is in Gamma_Delta_Corridor. The Description is "Der Öffnungshebel der Wartungsluke. Dort wo er durch das Laserfeuer abgetrennt wurde sieht man noch Schmauchspuren."
 	
 	[Krankenbett]
 	Krankenbett is a supporter. It is in Med_Lab. It is enterable. It is fixed in place.
 
+	[Palette]
+	Palette is a thing. It is in Raumfähre. The description is "Palette die alleine zu schwer zum Tragen oder schieben ist".
 
 [*****Player*****]
 Percy is a Kontaminierter.
@@ -105,7 +105,7 @@ Every turn:
 		If Stationsalarm is true:
 			Say "Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.";		
 		If the player is in a room in Innerer_Ring:
-			If HaEnAbf is true:
+			If Hauptenergieabfall is true:
 				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
 			Else:
 				If Hilfsgenerator_Aktivierbar is false:
@@ -140,7 +140,7 @@ To dekontaminiere_Percy:
 [Kommandosperre Brücke]
 Instead of going down from the Briefing_Room:
 	If Bridge Luke is locked:
-		If HaEnAbf is true:
+		If Hauptenergieabfall is true:
 			Now Bridge_Luke is unlocked;
 			Continue the action;			
 		Otherwise:
@@ -206,12 +206,12 @@ DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatmin
 
 After closing Dekon Tür:
 	count_Kont_Dekon;
-	If HaEnAbf is false:
+	If Hauptenergieabfall is false:
 		If Kontcount <= 1:
 			If the Player is not in Dekontaminationskabine:
 				If Percy is in Dekontaminationskabine:
 					dekontaminiere_Percy;
-					Now HaEnAbf is true;
+					Now Hauptenergieabfall is true;
 					Say DekonText;
 					Continue the action;
 				Else:
@@ -240,7 +240,9 @@ Instead of taking the Drucklufthammer:
 	Else:
 		Say "Du brauchst das noch nicht."	
 
-
+[Palette nehmen]
+Instead of taking the Palette:
+	Say "Wo willst du den die Palette hinpacken? Die ist doch viel zu groß."
 
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
@@ -274,7 +276,9 @@ Report Talking:
 [Drucklufthammer aufladen]
 Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
 	Charging is an action applying to two things.
-Check Charging: 
+Check Charging:
+	If the player is not carrying the Drucklufthammer:
+		Say "Du hast den Drucklufthammer nicht bei dir." instead;
 	If Drcklfthmr_Ladezstd is true:
 		Say "Der Drucklufthammer ist schon geladen!" instead;
 Carry out Charging:
@@ -287,6 +291,8 @@ Report Charging:
 Understand "use [Drucklufthammer]" as Druckluften.
 	Druckluften is an action applying to one thing.
 Check Druckluften: 
+	If the player is not carrying the Drucklufthammer:
+		Say "Du hast den Drucklufthammer nicht bei dir." instead;
 	If Drcklfthmr_Ladezstd is false:
 		Say "Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen" instead;
 Carry out Druckluften:
@@ -483,6 +489,7 @@ Selbstzerstörungsknopf is a thing.
 	The description is "Der Notrufknopf, er ist gerade ohne Funktion, braucht wahrscheinlich Strom…".
 Messenger is a thing.
 	It is not wearable.
+	The description is "Ein kleiner und handlicher Messenger der durch ein Mobitab angeschrieben werden kann - aber nur wenn es wichtig ist.".
 	Percy carries the Messenger.
 
 
@@ -497,7 +504,7 @@ Instead of dropping Messenger:
 
 [Raumanzug ausziehen]
 Instead of taking off Raumanzug:
-	If the player is in Com_Base and Scene4 is happening and Raumanzug_Kaputt is false:
+	If the player is in Second_Generator and Scene4 is happening and Raumanzug_Kaputt is false:
 		Say "Du kannst den Raumanzug hier nicht ausziehen!";
 	Otherwise:
 		If the player is in Weltraum:
@@ -553,6 +560,7 @@ Carry out Pressing_Knopf:
 		Now Raumanzug_Kaputt is true;
 		Now Hilfsgenerator_Aktivierbar is false;
 		Now Hilfsgenerator_Aktiviert  is true;
+		Now Notruf_Aktivierbar is true;
 		Increase Strom by 1;
 		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein Splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
 	Otherwise:
@@ -567,7 +575,7 @@ Every turn:
 		Now Hilfsgenerator_Aktiviert is false.
 
 [mit Selbstzerstörungsknopf interagieren]
-Notruf_Aktivierbar is a truth state variable. Notruf_Aktivierbar is true.
+Notruf_Aktivierbar is a truth state variable. Notruf_Aktivierbar is false.
 Notruf is a truth state variable. Notruf is false.
 
 Understand "Press [Selbstzerstörungsknopf]" as Pressing_Knopf_2.
@@ -576,10 +584,14 @@ Carry out Pressing_Knopf_2:
 	If Notruf_Aktivierbar is true:
 		Now Notruf_Aktivierbar is false;
 		Now Notruf is true;
+		Now Wartungsluke is unlocked;
 		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
 		Change_to_Barry;
 	Otherwise:
-		Say "Der Notruf wurde schon abgesetzt!".
+		If Hilfsgenerator_Aktivierbar is true:
+			Say "Du musst den Strom erst anstellen damit du den Notruf absetzen kannst!";
+		Else:
+			Say "Der Notruf wurde schon abgesetzt!".
 
 Every turn:
 	If Notruf is false and Strom is 0:
@@ -594,13 +606,13 @@ Carry out Sending_Message:
 		Say "Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.";
 		Change_to_Percy;
 	Otherwise:
-		Say "Du sendest eine Nachricht! an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
+		Say "Du sendest eine Nachricht an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
 	
 
 
 
 [*****Räume*****]
-Gamma_Junction is a room. The printed name is "Gamma Junction". 
+Gamma_Junction is a room. It is in Aeußerer_Ring. The printed name is "Gamma Junction". The description is "Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus."
 SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
 Panel N Gam Junc is a Panel. The Given_SiBa is SiBa_1. Panel N Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
@@ -608,7 +620,7 @@ Panel S Gam Junc is a Panel.
 	The Given_SiBa is SiBa_8. Panel S Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 
-Gamma_Beta_Corridor is a room. The printed name is "Gamma Beta Corridor". 
+Gamma_Beta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Beta Corridor". 
 SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
 Panel N Gam Bet Cor is a Panel.
@@ -616,7 +628,7 @@ Panel N Gam Bet Cor is a Panel.
 Panel S Gam Bet Cor is a Panel.
 	The Given_SiBa is SiBa_1. Panel S Gam Bet Cor is in Gamma_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Beta_Junction is a room. The printed name is "Beta Junction".
+Beta_Junction is a room. It is in Aeußerer_Ring. The printed name is "Beta Junction".
 SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
 Panel N Bet Junc is a Panel.
@@ -624,7 +636,7 @@ Panel N Bet Junc is a Panel.
 Panel S Bet Junc is a Panel.
 	The Given_SiBa is SiBa_2. Panel S Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 	
-Alpha_Beta_Corridor is a room. The printed name is "Alpha Beta Corridor".
+Alpha_Beta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Alpha Beta Corridor".
 SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
 Panel N Alp Bet Cor is a Panel. 
@@ -632,7 +644,7 @@ Panel N Alp Bet Cor is a Panel.
 Panel S Alp Bet Cor is a Panel.
 	The Given_SiBa is SiBa_3. Panel S Alp Bet Cor is in Alpha_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Alpha_Junction is a room. The printed name is "Alpha Junction".
+Alpha_Junction is a room. It is in Aeußerer_Ring. The printed name is "Alpha Junction".
 SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
 Panel N Alp Junc is a Panel. 
@@ -640,7 +652,7 @@ Panel N Alp Junc is a Panel.
 Panel S Alp Junc is a Panel.
 	The Given_SiBa is SiBa_4. Panel S Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Alpha_Delta_Corridor is a room. The printed name is "Alpha Delta Corridor".
+Alpha_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Alpha Delta Corridor".
 SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
 Panel N Alp Del Cor is a Panel. 
@@ -648,7 +660,7 @@ Panel N Alp Del Cor is a Panel.
 Panel S Alp Del Cor is a Panel. 
 	The Given_SiBa is SiBa_5. Panel S Alp Del Cor is in Alpha_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Delta_Junction is a room. The printed name is "Delta Junction".
+Delta_Junction is a room. It is in Aeußerer_Ring. The printed name is "Delta Junction".
 SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
 Panel N Del Junc is a Panel.
@@ -656,7 +668,7 @@ Panel N Del Junc is a Panel.
 Panel S Del Junc is a Panel. 
 	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Gamma_Delta_Corridor is a room. The printed name is "Gamma Delta Junction".
+Gamma_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Delta Junction".
 SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 Panel N Gam Del Cor is a Panel. 
@@ -665,7 +677,7 @@ Panel S Gam Del Cor is a Panel.
 	The Given_SiBa is SiBa_7. Panel S Gam Del Cor is in Gamma_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
-Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is unlocked.
+Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is locked.
 	It is up of Gamma_Junction and down of Xeno_Lab.
 Panel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. Panel U Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
@@ -702,7 +714,8 @@ Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
-Wartungsschacht is down of Gamma_Delta_Corridor. The printed name is "Wartungsschacht".
+Wartungsluke is a door. It is down of Gamma_Delta_Corridor. It is unlocked.
+Wartungsschacht is down of Wartungsluke. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
 
 Weltraum is a room. The printed name is "Weltraum".
@@ -713,15 +726,15 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 	It is south of Weltraum and north of Com_Base.
 	It is locked.
 
-Storage_Area is east of Gamma_Junction. The printed name is "Storage Area".
-Beta_Greenhouse is north of Storage_Area. The printed name is "Beta Greenhouse".
+Storage_Area is east of Gamma_Junction. It is in Aeußerer_Ring. The printed name is "Storage Area".
+Beta_Greenhouse is north of Storage_Area. It is in Aeußerer_Ring. The printed name is "Beta Greenhouse".
 Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
 Panel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. Panel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Delta_AI is a room. It is in Innerer_Ring. The printed name is "Delta AI".
 Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
-Delta_Greenhouse is a room. The printed name is "Delta Greenhouse".
-Storage_Room is south of Delta_Greenhouse. The printed name is "Storage Room".
+Delta_Greenhouse is a room. It is in Aeußerer_Ring. The printed name is "Delta Greenhouse".
+Storage_Room is south of Delta_Greenhouse. It is in Aeußerer_Ring. The printed name is "Storage Room".
 Alpha_AI is up of Storage_Room. It is in Innerer_Ring. The printed name is "Alpha AI".
 Transporter_Raum is south of Alpha_AI. It is in Innerer_Ring. The printed name is "Transporter Raum".
 
@@ -774,12 +787,20 @@ Scene4 ends when Sauerstoff_Abfall is true.
 [Bodenfenster geht kaputt + Sauerstoffabfall]
 Instead of going to Wartungsschacht:
 	If the player carries 1 thing and the player carries the Mobitab or the player carries 0 things:
-		Say "Das Bodenfenster geht kaputt! Der Sauerstoff wird nun weniger im äußeren Ring!";
-		Now Sauerstoff_Abfall is true;
-		Increase Sauerstoff by 1;
 		Continue the action;
 	Otherwise:
 		Say "Du trägst zu viel! Du kannst nur das Mobitab mitnehmen!".
+		
+After going up from Wartungsschacht:
+	If Sauerstoff_Abfall is false:
+		Say "Die eingeklemmte Palette löst sich. Sie hat sich durch die zugehende Luke so sehr beschleunigt dass das Bodenfenster kaputt geht! Der Sauerstoff wird nun weniger im äußeren Ring!";
+		Now Sauerstoff_Abfall is true;
+		Now Luke_XenoLab is closed;
+		Now Luke_XenoLab is locked;  
+		Now the Palette is in Gamma_Junction; 
+		Now the description of Gamma_Junction is "Das Bodenfenster wurde durch die Palette schwer beschädigt und es entweicht Luft.";
+		Increase Sauerstoff by 1;
+	Continue the action;
 
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
