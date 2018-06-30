@@ -416,10 +416,14 @@ Rand is a number variable. Rand is 0.
 Understand "push [Palette] " as MovePalette.
 	MovePalette is an action applying to one thing.
 Check MovePalette:
+<<<<<<< HEAD
 	if Palette is in Xeno_Lab:
 		Now paletteVerschieben is false;
 Check MovePalette:
 	If paletteVerschieben is false;
+=======
+	If paletteVerschieben is false:
+>>>>>>> parent of 3e04a4f... Palette pushen mit inside outside + fixed
 		Say "Die Palette blockiert jetzt die Luke!" instead;
 Carry out MovePalette:
 	createRaumliste; 
@@ -427,7 +431,12 @@ Carry out MovePalette:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
 		Now the Palette is in entry Rand of Raumliste;
 		Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
+<<<<<<< HEAD
 
+=======
+      If paletteVerschieben is false:
+		Now the Luke_XenoLab is open.
+>>>>>>> parent of 3e04a4f... Palette pushen mit inside outside + fixed
 
 
 
