@@ -72,7 +72,14 @@ Aeußerer_Ring is a region.
 	und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab“.
 	Laborkittel is on Leiche.
 
-
+	[XenoKnopf]
+	XenoKnopf is a thing. It is fixed in place. It is in Xeno_Lab.
+	
+	[Klappe]
+	Klappe is a container. It is fixed in place. Klappe is locked. Klappe is closed. The carrying capacity of Klappe is 1. Klappe is in Xeno_Lab. 
+	
+	
+		
 
 [*****Player*****]
 Percy is a Kontaminierter.
@@ -401,6 +408,24 @@ Carry out Interacting:
 	Increase Laute_Aktionen by 1;
 Report Interacting:
 	Say MedLabText;
+
+[XenoKnopf druecken]
+gedrueckt is a truth state variable. gedrueckt is false.
+
+Understand "press [XenoKnopf]" as druecken.
+druecken is an action applying to one thing.
+Check druecken:
+	If gedrueckt is true:
+		Say "Dieser Knopf tut nichts." instead;
+Carry out druecken:
+	Now gedrueckt is true;
+	Now Klappe is open;
+	Now Klappe is unlocked;
+Report druecken:
+	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
+
+[Phiole]
+Phiole is a Thing. Phiole is in Klappe. Instead of taking Phiole: Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
 	
 [Palette verschieben]
 
