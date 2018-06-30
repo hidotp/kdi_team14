@@ -425,7 +425,19 @@ Report druecken:
 	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
 
 [Phiole]
-Phiole is a Thing. Phiole is in Klappe. Instead of taking Phiole: Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+Phiole is a Thing. Phiole is in Klappe. 
+
+Understand "take [Phiole]" as nehmen.
+nehmen is an action applying to one thing.
+Check nehmen:
+	If Klappe is locked:
+		say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
+Carry out nehmen:
+	kontaminiere_Percy;
+ Now Szene1Laeuft is 2;
+Report nehmen:
+	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+
 	
 [Palette verschieben]
 
@@ -830,9 +842,8 @@ When Szene 1 begins: Say "Percy fliegt die Fähre, Barry übernimmt die Kommun
 
 Report entering Gamma_Delta_Corridor: say "Percy findet eine Leiche und an den Wänden Spuren von Handlaserwaffen. Außerdem stellt er fest, dass der Öffnungshebel für die Wartungsluke zum Kommunikationsmodul durch Laserfeuer abgetrennt worden ist. Der Öffnungshebel liegt nun auf dem Boden, so dass ein Öffnen der Luke von hier aus nicht möglich ist. Was ist hier passiert? In dem Laborkittel der Leiche, die offenbar ein Wissenschaftler gewesen war, ist ein Transponder eingenäht. Wenn Percy den Kittel der Leiche auszieht und ihn selbst anzieht, könnte er hiermit die entsprechende Luke öffnen."
 
-Report entering Xeno_Lab: Say "Aus dem Xeno‐Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein ‐ vielleicht verstummt das Pfeifen dann ja. Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei. Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
-After entering Xeno_Lab: kontaminiere_Percy.
-After entering Xeno_Lab:   Now Szene1Laeuft is 2.
+Report entering Xeno_Lab: Say "Aus dem Xeno‐Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein."
+
 
 
 [*****Szene 2*****]
