@@ -117,7 +117,7 @@ Every turn:
 	If the player has MobiTab:	
 		count_Kontaminiert;
 		If Kontcount > 0:
-			Say "[bold type]Mobi Tab: [roman type] Anzahl der Kontaminierten: [Kontcount]";
+			Say "[bold type]Mobitab: [roman type] Anzahl der Kontaminierten: [Kontcount][line break]";
 			Continue the action;
 
 [Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
@@ -542,7 +542,8 @@ Report usePalette:
 	
 Rand is a number variable. Rand is 0. 
 	
-Understand "push [Palette] " as MovePalette.
+[Palette bewegen]
+Understand "push [Palette]" as MovePalette.
 	MovePalette is an action applying to one thing.
 Check MovePalette:
 	If paletteVerschieben is false:
@@ -561,8 +562,7 @@ Carry out MovePalette:
 			Now the Palette is in entry Rand of Raumliste;
 		Else:
 			Now the Palette is in entry Rand of Raumliste;
-			Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
-		Say  "[line break]";
+			Say "Jetzt ist die Palette in [entry Rand of Raumliste]."; 
 
 
 
@@ -1014,7 +1014,7 @@ Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
 		Decrease Sauerstoff by 1;
 		If the player carries the Mobitab:
-			Say "Das Mobitab zeigt an, dass nur noch [Sauerstoff] Züge Sauerstoff im äußeren Ring vorhanden sind!";
+			Say "[bold type]Mobitab: [roman type]Züge an Sauerstoff: [Sauerstoff][line break]";
 	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
