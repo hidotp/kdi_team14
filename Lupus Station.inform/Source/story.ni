@@ -33,6 +33,9 @@ Aeußerer_Ring is a region.
 
 [*****Definitionen*****]
 
+	[Neue Raumliste]
+	Raumliste is a list of Rooms that varies.
+
 	[Kontaminierte]
 	Kontaminierter is a kind of man. 
 		A Kontaminierter has a truth state called Is_Kontaminiert.
@@ -74,6 +77,25 @@ Aeußerer_Ring is a region.
 
 	[Palette]
 	Palette is a thing. It is in Raumfähre. The description is "Palette die alleine zu schwer zum Tragen oder schieben ist".
+
+	[Leiche]
+	Leiche is a Supporter.
+	It is fixed in place. Instead of taking Leiche: say "Du wagst es nicht die Leiche zu bewegen“.
+	It is not enterable.
+	Leiche is in Gamma_Delta_Corridor. 
+	
+	[Laborkittel] 
+	Laborkittel is a thing. It is wearable. It is portable. The description of Laborkittel is "Ein leicht blutiger 
+	und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab“.
+	Laborkittel is on Leiche.
+
+	[XenoKnopf]
+	XenoKnopf is a thing. It is fixed in place. It is in Xeno_Lab.
+	
+	[Klappe]
+	Klappe is a container. It is fixed in place. Klappe is locked. Klappe is closed. The carrying capacity of Klappe is 1. Klappe is in Xeno_Lab. 
+	
+
 
 [*****Player*****]
 Percy is a Kontaminierter.
@@ -245,6 +267,45 @@ Instead of taking the Drucklufthammer:
 Instead of taking the Palette:
 	Say "Wo willst du den die Palette hinpacken? Die ist doch viel zu groß."
 
+
+[RäumeListe erstellen]
+To createRaumliste:
+	Remove the list of Rooms from Raumliste;
+	If the Room up of the location of the player is not nothing:
+		If the door up of the location of the player is not locked:
+			Add Room up of the location of the player to Raumliste;
+	If the Room down of the location of the player is not nothing:
+		If the door down of the location of the player is not locked:
+			Add Room down of the location of the player to Raumliste;
+	If the Room north of the location of the player is not nothing:
+		If the door north of the location of the player is not locked:
+			Add Room north of the location of the player to Raumliste;
+	If the Room south of the location of the player is not nothing:
+		If the door south of the location of the player is not locked:
+			Add Room south of the location of the player to Raumliste;
+	If the Room east of the location of the player is not nothing:
+		If the door east of the location of the player is not locked:
+			Add Room east of the location of the player to Raumliste;
+	If the Room west of the location of the player is not nothing:
+		If the door west of the location of the player is not locked:
+			Add Room west of the location of the player to Raumliste;
+	If the Room inside of the location of the player is not nothing:
+		If the door inside of the location of the player is not locked:
+			Add Room inside of the location of the player to Raumliste;			
+	If the Room outside of the location of the player is not nothing:
+		If the door outside of the location of the player is not locked:
+			Add Room outside of the location of the player to Raumliste;
+
+[MobiTab - Kontaminiertenzähler]
+Before going somewhere:
+	If the player has MobiTab:	
+		count_Kontaminiert;
+		If Kontcount > 0:
+			Say "[bold type]Mobi Tab [roman type] Anzahl der Kontaminierten: [Kontcount]";
+			Continue the action;
+
+
+
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
@@ -361,6 +422,37 @@ Every turn:
 			Now Luke_Hangar is closed;
 			Say "Die Hangarluke hat sich geschlossen".
 		
+[Luke - Laborkittel]
+LukeLabor_geöffnet is a truth state variable.
+
+Understand "use [Laborkittel] with [Luke_XenoLab]" as xenoEntriegeln.
+	xenoEntriegeln is an action applying to two things.
+Check xenoEntriegeln:
+	If the Player is not carrying the Laborkittel:
+		Say "Du trägst nicht den Laborkittel!" instead;
+Carry out xenoEntriegeln:
+	Now Luke_XenoLab is unlocked;
+	Now Luke_XenoLab is open;
+	Now LukeLabor_geöffnet is true;
+Report xenoEntriegeln:
+	Say "Du hast die XenoLabluke für einen Zug geöffnet."
+
+After going up from Gamma_Delta_Corridor:
+	If LukeLabor_geöffnet is true:
+		Now Luke_XenoLab is locked;
+		Now Luke_XenoLab is closed;
+		Now LukeLabor_geöffnet is false;
+		Say "Die XenoLabluke schließt sich hinter dir.";
+	Continue the action;
+		
+After going down from Xeno_Lab:
+	If LukeLabor_geöffnet is true:
+		Now Luke_XenoLab is locked;
+		Now Luke_XenoLab is closed;
+		Now LukeLabor_geöffnet is false;
+		Say "Die XenoLabluke schließt sich hinter dir.";
+	Continue the action;
+
 
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
@@ -387,6 +479,71 @@ Carry out medInteracting:
 	Now Stationsalarm is true;
 Report medInteracting:
 	Say MedLabText;
+	
+
+[XenoKnopf druecken]
+gedrueckt is a truth state variable. gedrueckt is false.
+
+Understand "press [XenoKnopf]" as druecken.
+druecken is an action applying to one thing.
+Check druecken:
+	If gedrueckt is true:
+		Say "Dieser Knopf tut nichts." instead;
+Carry out druecken:
+	Now gedrueckt is true;
+	Now Klappe is open;
+	Now Klappe is unlocked;
+Report druecken:
+	Say "Tatsa¨chlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand o¨ffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
+
+[Phiole]
+Phiole is a Thing. Phiole is in Klappe. 
+
+Understand "take [Phiole]" as nehmen.
+nehmen is an action applying to one thing.
+Check nehmen:
+	If Klappe is locked:
+		say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
+Carry out nehmen:
+	kontaminiere_Percy;
+ Now Szene1Laeuft is 2;
+Report nehmen:
+	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fa¨llt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnu¨ren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+
+	
+[Palette verschieben]
+PaletteVerschieben is a truth state variable. PaletteVerschieben is false.
+
+Understand "connect [Gravitationsgreifer] with [Palette]" as usePalette.
+usePalette is an action applying to two things.
+Check usePalette:
+	If the Player is not carrying the Gravitationsgreifer:
+		say "Du trägst nicht den Gravitationsgreifer!" instead;
+Carry out usePalette:
+	Now paletteVerschieben is true.
+Report usePalette:
+	say "Du hast den Greifer an die Palette angebracht."
+	
+Rand is a number variable. Rand is 0. 	
+Understand "push [Palette] " as MovePalette.
+	MovePalette is an action applying to one thing.
+Check MovePalette:
+	If paletteVerschieben is false:
+		If the Palette is in Xeno_Lab:
+			Say "Die Palette blockiert die Tür und ist nicht bewegbar." instead;
+		Else:
+			Say "Du kannst die Palette noch nicht bewegen! Versuche den Gravitationsgreifer anzubringen." instead;
+Carry out MovePalette:
+	createRaumliste; 
+	If the number of entries of Raumliste is not 0:
+		Now Rand is a random number between 1 and the number of entries of Raumliste;
+		If entry Rand of Raumliste is Xeno_Lab:
+			Say "Die Palette blockiert die Xeno-Luke und du kannst nun in das Xeno Lab eintreten";
+			Now paletteVerschieben is false;
+			Now the Palette is in entry Rand of Raumliste;
+		Else:
+			Now the Palette is in entry Rand of Raumliste;
+			Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
 
 
 
@@ -471,6 +628,11 @@ Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Dekontaminationskabine.
+
+
+[Scene 1]
+Palette is a thing. It is in Raumfähre. 
+Gravitationsgreifer is a thing. It is portable. It is in Raumfähre. 
 
 
 [Scene 4]
@@ -754,14 +916,31 @@ Bridge is down of Bridge_Luke. The printed name is "Bridge".
 
 
 
+[*****Szene 1*****]
+Szene 1 is a scene.
+Szene1Laeuft is a number that varies.
+Szene1Laeuft is 0.
+
+Szene 1 ends when Szene1Laeuft is 2.
+Szene 1 begins when play begins.
+When Szene 1 begins:
+	Say "[bold type]Szene 1:[line break]";
+	Say "[italic type]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Gera¨usch beim Einflug in die DockingBay la¨sst aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.[roman type][line break]".
+
+Report entering Gamma_Delta_Corridor: Say "Percy findet eine Leiche und an den Wa¨nden Spuren von Handlaserwaffen. Außerdem stellt er fest, dass der Öffnungshebel für die Wartungsluke zum Kommunikationsmodul durch Laserfeuer abgetrennt worden ist. Der Öffnungshebel liegt nun auf dem Boden, so dass ein Öffnen der Luke von hier aus nicht möglich ist. Was ist hier passiert? In dem Laborkittel der Leiche, die offenbar ein Wissenschaftler gewesen war, ist ein Transponder eingenäht. Wenn Percy den Kittel der Leiche auszieht und ihn selbst anzieht, könnte er hiermit die entsprechende Luke öffnen."
+
+Report entering Xeno_Lab: Say "Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein."
+
+
+
 [*****Szene 2*****]
 Szene2 is a scene.
-Szene2 begins when the player is in Xeno_Lab. [noch ändern]
+Szene2 begins when Szene 1 ends. 
 When Szene2 begins:
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
-	Say "Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
+	Say "[italic type]Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
 Szene2 ends when DekonDone is true.
 
 After entering Gamma_Junction:
@@ -776,11 +955,10 @@ After entering Gamma_Junction:
 Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
 
 Scene4 is a scene.
-Scene4 begins when Szene2 ends. [noch ändern]
+Scene4 begins when Szene2 ends.
 When Scene4 begins:
-	[erster Satz mit "Med-Lab" kann weg => Übergang Scene 2 zu 4]
-	Say "[italic type]Scene 4:[line break]";
-	Say "Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
+	Say "[bold type]Scene 4:[line break]";
+	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
 	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.[roman type]";
 	Now Umkleidetuer is unlocked.
 Scene4 ends when Sauerstoff_Abfall is true.
@@ -817,7 +995,7 @@ Every turn:
 
 [*****Endscene*****]
 Endscene is a scene.
-Endscene begins when Scene4 ends. [noch ändern]
+Endscene begins when Scene4 ends.
 When Endscene begins:
 	Change_to_Barry;
 	Now Percy is in Docking_Bay;
