@@ -296,16 +296,6 @@ To createRaumliste:
 		If the door outside of the location of the player is not locked:
 			Add Room outside of the location of the player to Raumliste;
 
-[MobiTab - Kontaminiertenzähler]
-Before going somewhere:
-	If the player has MobiTab:	
-		count_Kontaminiert;
-		If Kontcount > 0:
-			Say "[bold type]Mobi Tab [roman type] Anzahl der Kontaminierten: [Kontcount]";
-			Continue the action;
-
-
-
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
@@ -420,39 +410,43 @@ Every turn:
 		If hLukeTurn is 0:
 			Now Luke_Hangar is locked;
 			Now Luke_Hangar is closed;
-			Say "Die Hangarluke hat sich geschlossen".
+			Say "Die Hangarluke hat sich geschlossen";
+	If xLukeTurn is not 0:
+		Decrease xLukeTurn by 1;
+		If xLukeTurn is 0:
+			Now Luke_XenoLab is locked;
+			Now Luke_XenoLab is closed;
+			Say "Die XenoLab Luke hat sich geschlossen".
 		
 [Luke - Laborkittel]
 LukeLabor_geöffnet is a truth state variable.
+LukeXeno_Blockiert is a truth state variable.
+xLukeTurn is a number variable. xLukeTurn is 0.
 
 Understand "use [Laborkittel] with [Luke_XenoLab]" as xenoEntriegeln.
 	xenoEntriegeln is an action applying to two things.
 Check xenoEntriegeln:
-	If the Player is not carrying the Laborkittel:
-		Say "Du trägst nicht den Laborkittel!" instead;
+	If LukeXeno_Blockiert is true:
+		Say "Die Luke ist schon blockiert, du musst sie nicht wieder aufmachen." instead;
+	If the Player is not wearing the Laborkittel:
+		Say "Du hast den Laborkittel nicht an, du musst in anziehen damit du die Luke öffnen kannst!" instead;
 Carry out xenoEntriegeln:
 	Now Luke_XenoLab is unlocked;
 	Now Luke_XenoLab is open;
-	Now LukeLabor_geöffnet is true;
 Report xenoEntriegeln:
-	Say "Du hast die XenoLabluke für einen Zug geöffnet."
+	Say "Du hast die XenoLab Luke für einen Zug geöffnet."
 
-After going up from Gamma_Delta_Corridor:
-	If LukeLabor_geöffnet is true:
-		Now Luke_XenoLab is locked;
-		Now Luke_XenoLab is closed;
-		Now LukeLabor_geöffnet is false;
-		Say "Die XenoLabluke schließt sich hinter dir.";
-	Continue the action;
-		
-After going down from Xeno_Lab:
-	If LukeLabor_geöffnet is true:
-		Now Luke_XenoLab is locked;
-		Now Luke_XenoLab is closed;
-		Now LukeLabor_geöffnet is false;
-		Say "Die XenoLabluke schließt sich hinter dir.";
-	Continue the action;
-
+Instead of going up from Gamma_Junction:
+	If LukeXeno_Blockiert is true:
+		Continue the action;
+	Else:
+		If Luke_XenoLab is open:
+			Say "Du traust dich nicht durch die Luke zu gehen, es würde Sinn machen sie mit etwas zu blockieren... wie zum Beispiel mit der Palette.";
+		Else:
+			Continue the action;
+Instead of closing the Luke_XenoLab: 
+	If LukeXeno_Blockiert is true:
+		Say "Du kannst die Luke nicht schließen, die Palette blockiert sie.";
 
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
@@ -494,7 +488,7 @@ Carry out druecken:
 	Now Klappe is open;
 	Now Klappe is unlocked;
 Report druecken:
-	Say "Tatsa¨chlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand o¨ffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
+	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
 
 [Phiole]
 Phiole is a Thing. Phiole is in Klappe. 
@@ -506,7 +500,7 @@ Check nehmen:
 		say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
 Carry out nehmen:
 	kontaminiere_Percy;
- Now Szene1Laeuft is 2;
+ 	Now Szene1Laeuft is 2;
 Report nehmen:
 	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fa¨llt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnu¨ren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
 
@@ -940,7 +934,7 @@ When Szene2 begins:
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
-	Say "[italic type]Du bist Barry, nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
+	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
 Szene2 ends when DekonDone is true.
 
 After entering Gamma_Junction:
