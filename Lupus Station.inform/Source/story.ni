@@ -19,6 +19,7 @@ Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
 Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
+De_Kontcount is a number variable. De_Kontcount is 0.
 DekonDone is a truth state variable.
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
 Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
@@ -157,26 +158,26 @@ To Percy_und_Kontaminierter:
 
 [Kontaminiertencounter -- Dekontaminationskabine]
 To count_Kont_Dekon:
-	Now Kontcount is 0;
+	Now De_Kontcount is 0;
 	If Kontaminierter_1 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_2 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_3 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_4 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_5 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_6 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_7 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Kontaminierter_8 is in Dekontaminationskabine:
-		Increase Kontcount by 1;
+		Increase De_Kontcount by 1;
 	If Is_Kontaminiert of Percy is true:
 		If Percy is in Dekontaminationskabine:
-			Increase Kontcount by 1.
+			Increase De_Kontcount by 1.
 
 [Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
@@ -204,10 +205,10 @@ To count_Kontaminiert:
 [Dekontaminiation]
 DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatminiert!".
 
-After closing Dekon Tür:
-	count_Kont_Dekon;
+Instead of closing Dekon Tür:
 	If Hauptenergieabfall is false:
-		If Kontcount <= 1:
+		count_Kont_Dekon;
+		If De_Kontcount <= 1:
 			If the Player is not in Dekontaminationskabine:
 				If Percy is in Dekontaminationskabine:
 					dekontaminiere_Percy;
@@ -215,14 +216,14 @@ After closing Dekon Tür:
 					Say DekonText;
 					Continue the action;
 				Else:
-					If Kontcount <= 1:
-						Say "Du willst doch Percy als erstes dekontaminieren.";
+					If De_Kontcount is 1:
+						Say "Du willst doch Percy als Erstes dekontaminieren.";
 					Else:
 						Say "Niemand ist in der Kabine.";
 			Else:
 				Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein";			
 		Else:
-			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren.";
+			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren. Maximal eine kann aufeinmal dekontaminiert werden.";
 	Else:
 		Say "Die Energie des Maschinenkerns hat nur für eine Dekontamination gereicht.";
 	
@@ -268,10 +269,11 @@ Understand "talk with [any Kontaminierter]" as Talking.
 Carry out Talking:
 	If Stationsalarm is false:
 		Increase Laute_Aktionen by 1;
-	Else:	
-		Say "Der Stationsalarm ist zu laut!";
 Report Talking:
-	Say "Du hast den Kontaminierten angesprochen."
+	If Stationsalarm is true:
+		Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und man konnte dich nicht verstehen.";
+	Else:
+		Say "Du hast den Kontaminierten angesprochen."
 
 [Drucklufthammer aufladen]
 Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
@@ -327,7 +329,7 @@ Report Using:
 [Luke - Sicherheitsausweis]
 hLukeTurn is a number variable. hLukeTurn is 0.
 
-Understand "use [Sicherheitsausweis] with [Panel U Hangar]" as u_entriegeln.
+Understand "use [Sicherheitsausweis] with [LuPanel U Hangar]" as u_entriegeln.
 	u_entriegeln is an action applying to two things.
 Check u_entriegeln:
 	If the Player is not carrying the Sicherheitsausweis:
@@ -339,7 +341,7 @@ Carry out u_entriegeln:
 Report u_entriegeln:
 	Say "Du hast die Hangarluke für einen Zug geöffnet."
 
-Understand "use [Sicherheitsausweis] with [Panel D Gam Junc]" as d_entriegeln.
+Understand "use [Sicherheitsausweis] with [LuPanel D Gam Junc]" as d_entriegeln.
 	d_entriegeln is an action applying to two things.
 Check d_entriegeln:
 	If the Player is not carrying the Sicherheitsausweis:
@@ -468,7 +470,7 @@ Kontaminierter_6 is a Kontaminierter. The printed name is "Kontaminierter".
 Kontaminierter_7 is a Kontaminierter. The printed name is "Kontaminierter".
 	It is in Fitness.
 Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
-	It is in Fitness.
+	It is in Dekontaminationskabine.
 
 
 [Scene 4]
@@ -679,17 +681,17 @@ Panel S Gam Del Cor is a Panel.
 Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
 Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is locked.
 	It is up of Gamma_Junction and down of Xeno_Lab.
-Panel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. Panel U Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. LuPanel U Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
 Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 	It is up of Beta_Junction and down of Engeneering_Lab.
-Panel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. Panel U Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. LuPanel U Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
 Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
-Panel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. Panel U Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. LuPanel U Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine. It is open.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 	Dekontaminationskabine is in Innerer_Ring.
@@ -697,11 +699,11 @@ Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
 Luke_SolarLab is a Luke. The printed name is "Luke_SolarLab".
 	It is up of Delta_Junction and down of Solar_Lab.
-Panel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. Panel U Del Junc is in Delta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. LuPanel U Del Junc is in Delta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Luke_Hangar is a Luke. It is down of Gamma_Junction and above Hangar.
-Panel U Hangar is a LuPanel. The Given_Luke is Luke_Hangar. Panel U Hangar is in Hangar. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
-Panel D Gam Junc is a LuPanel. The Given_Luke is Luke_Hangar. Panel D Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
+LuPanel U Hangar is a LuPanel. The Given_Luke is Luke_Hangar. LuPanel U Hangar is in Hangar. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
+LuPanel D Gam Junc is a LuPanel. The Given_Luke is Luke_Hangar. LuPanel D Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
 Hangar is a room. The printed name is "Hangar".
 Spind is a container. It is in Hangar. Spind is fixed in place. The description is "Der Spind eines Deckoffiziers, wahrscheinlich in Eile offengelassen."
 
@@ -729,7 +731,7 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 Storage_Area is east of Gamma_Junction. It is in Aeußerer_Ring. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. It is in Aeußerer_Ring. The printed name is "Beta Greenhouse".
 Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
-Panel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. Panel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. LuPanel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
 Delta_AI is a room. It is in Innerer_Ring. The printed name is "Delta AI".
 Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
