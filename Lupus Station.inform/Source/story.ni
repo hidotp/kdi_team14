@@ -17,6 +17,7 @@ Carry out Teleporting:
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
 Stationsalarm is a truth state variable. Stationsalarm is true.
+Pfeifen is a truth state variable. Pfeifen is true.
 Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
 De_Kontcount is a number variable. De_Kontcount is 0.
@@ -135,6 +136,12 @@ Every turn:
 					Say "Durch das Deckenfenster sieht man den rot glühenden Maschinenkern.";
 				Else:
 					Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+		If the player is in Xeno_Lab:
+			If Pfeifen is true:
+				Say "Ein ohrenbetäubendes Pfeifen ist zu hören.";
+		If the player is in Gamma_Junction:
+			If Luke_XenoLab is open and LukeXeno_Blockiert is true:
+				Say "Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.";
 	Now Raum_Test_2 is Raum_Test_1.
 
 
@@ -413,13 +420,12 @@ Every turn:
 			Say "Die Hangarluke hat sich geschlossen";
 	If xLukeTurn is not 0:
 		Decrease xLukeTurn by 1;
-		If xLukeTurn is 0:
+		If xLukeTurn is 0 and LukeXeno_Blockiert is false:
 			Now Luke_XenoLab is locked;
 			Now Luke_XenoLab is closed;
 			Say "Die XenoLab Luke hat sich geschlossen".
 		
 [Luke - Laborkittel]
-LukeLabor_geöffnet is a truth state variable.
 LukeXeno_Blockiert is a truth state variable.
 xLukeTurn is a number variable. xLukeTurn is 0.
 
@@ -443,10 +449,13 @@ Instead of going up from Gamma_Junction:
 		If Luke_XenoLab is open:
 			Say "Du traust dich nicht durch die Luke zu gehen, es würde Sinn machen sie mit etwas zu blockieren... wie zum Beispiel mit der Palette.";
 		Else:
-			Continue the action;
+			Continue the action.
+			
 Instead of closing the Luke_XenoLab: 
 	If LukeXeno_Blockiert is true:
 		Say "Du kannst die Luke nicht schließen, die Palette blockiert sie.";
+	Else:
+		Continue the action;
 
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
@@ -460,7 +469,7 @@ Report Kaputtmachen:
 	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen."
 	
 [Med-Lab Pult Benutzung]
-MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich ein Videoblog an zu spielen: [line break] [bold type] Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzr Zeit alle Mitarbeiter der Station befallen. Ich noch einen speziellen Filter in die Luftzirkulation einbauen und eine spezielle Dekontaminationskabine für eine Person konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt.".
+MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich der Videoblog an zu spielen: [line break] [bold type] Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzer Zeit alle Mitarbeiter der Station befallen. Ich habe es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt. [line break] Der Stationsalarm geht nach dem Anschauen des Videoblogs wieder los.".
 MedLabUsable is a truth state variable. MedLabUsable is false.
 
 Understand "interact with [Med-Lab Pult]" as medInteracting.
@@ -484,6 +493,8 @@ Check druecken:
 	If gedrueckt is true:
 		Say "Dieser Knopf tut nichts." instead;
 Carry out druecken:
+	Now Stationsalarm is false;
+	Now Pfeifen is false;
 	Now gedrueckt is true;
 	Now Klappe is open;
 	Now Klappe is unlocked;
@@ -497,15 +508,15 @@ Understand "take [Phiole]" as nehmen.
 nehmen is an action applying to one thing.
 Check nehmen:
 	If Klappe is locked:
-		say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
+		Say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
 Carry out nehmen:
 	kontaminiere_Percy;
  	Now Szene1Laeuft is 2;
 Report nehmen:
-	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und fa¨llt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnu¨ren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
 
 	
-[Palette verschieben]
+[Greifer anbringen]
 PaletteVerschieben is a truth state variable. PaletteVerschieben is false.
 
 Understand "connect [Gravitationsgreifer] with [Palette]" as usePalette.
@@ -514,11 +525,14 @@ Check usePalette:
 	If the Player is not carrying the Gravitationsgreifer:
 		say "Du trägst nicht den Gravitationsgreifer!" instead;
 Carry out usePalette:
-	Now paletteVerschieben is true.
+	Now paletteVerschieben is true;
+	Now the Gravitationsgreifer is nowhere;
+	Now the description of Palette is "Eine durch den Antigravitationsgreifer schwebende Palette.";
 Report usePalette:
 	say "Du hast den Greifer an die Palette angebracht."
 	
-Rand is a number variable. Rand is 0. 	
+Rand is a number variable. Rand is 0. 
+	
 Understand "push [Palette] " as MovePalette.
 	MovePalette is an action applying to one thing.
 Check MovePalette:
@@ -532,8 +546,9 @@ Carry out MovePalette:
 	If the number of entries of Raumliste is not 0:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
 		If entry Rand of Raumliste is Xeno_Lab:
-			Say "Die Palette blockiert die Xeno-Luke und du kannst nun in das Xeno Lab eintreten";
+			Say "Der Antigravitationsgreifer wird durch den Maschinenkern der Station überlastet. Die Palette blockiert nun die Xeno-Luke und du kannst in das Xeno Lab eintreten";
 			Now paletteVerschieben is false;
+			Now LukeXeno_Blockiert is true;
 			Now the Palette is in entry Rand of Raumliste;
 		Else:
 			Now the Palette is in entry Rand of Raumliste;
@@ -928,19 +943,22 @@ Report entering Xeno_Lab: Say "Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeife
 
 
 [*****Szene 2*****]
-Szene2 is a scene.
-Szene2 begins when Szene 1 ends. 
-When Szene2 begins:
+GammaListened is a truth state variable. GammaListened is false.
+Scene2 is a scene.
+Scene2 begins when Szene 1 ends. 
+When Scene2 begins:
+	Now Stationsalarm is true;
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
 	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
-Szene2 ends when DekonDone is true.
+Scene2 ends when DekonDone is true.
 
 After entering Gamma_Junction:
-	If the player is Barry:
+	If Scene2 is happening and GammaListened is false:
 		Now Stationsalarm is false;
-		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein klirren zu hören.";
+		Now GammaListened is true;
+		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein Klirren aus dem Xeno Lab zu hören.";
 	Continue the action;
 	
 
@@ -949,7 +967,7 @@ After entering Gamma_Junction:
 Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
 
 Scene4 is a scene.
-Scene4 begins when Szene2 ends.
+Scene4 begins when Scene2 ends.
 When Scene4 begins:
 	Say "[bold type]Scene 4:[line break]";
 	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
@@ -971,7 +989,9 @@ After going up from Wartungsschacht:
 		Now Sauerstoff_Abfall is true;
 		Now Luke_XenoLab is closed;
 		Now Luke_XenoLab is locked;  
+		Now LukeXeno_Blockiert is false;
 		Now the Palette is in Gamma_Junction; 
+		Now the description of Palette is "Die Palette wurde leicht durch die Xeno Luke beschädigt. Sie hat das Bodenfenster schwer beschädigt.";
 		Now the description of Gamma_Junction is "Das Bodenfenster wurde durch die Palette schwer beschädigt und es entweicht Luft.";
 		Increase Sauerstoff by 1;
 	Continue the action;

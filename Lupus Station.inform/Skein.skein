@@ -7,18 +7,22 @@
         <result xml:space="preserve">
 
 
+Szene 1:
+Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Gera¨usch beim Einflug in die DockingBay la¨sst aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.
+
 Lupus Station
 An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
-Release 1 / Serial number 180701 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 180702 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Raumfähre
-You can see Palette and Barry here.
+You can see Palette, Barry and Gravitationsgreifer here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2535"></child>
             <child nodeId="node-2504"></child>
             <child nodeId="node-2494"></child>
+            <child nodeId="node-2552"></child>
             <child nodeId="node-2462"></child>
             <child nodeId="node-2419"></child>
             <child nodeId="node-2388"></child>
@@ -7058,6 +7062,43 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     <item nodeId="node-2493">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2552">
+        <command xml:space="preserve">connect Gravitationsgreifer with Palette</command>
+        <result xml:space="preserve">Du trägst nicht den Gravitationsgreifer!
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2553"></child>
+        </children>
+    </item>
+    <item nodeId="node-2553">
+        <command xml:space="preserve">take Gravitationsgreifer</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2554"></child>
+        </children>
+    </item>
+    <item nodeId="node-2554">
+        <command xml:space="preserve">connect Gravitationsgreifer with Palette</command>
+        <result xml:space="preserve">Du hast den Greifer an die Palette angebracht.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2555"></child>
+        </children>
+    </item>
+    <item nodeId="node-2555">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Raumfähre
+You can see Palette and Barry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
