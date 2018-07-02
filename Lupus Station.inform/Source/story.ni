@@ -21,7 +21,7 @@ Pfeifen is a truth state variable. Pfeifen is true.
 Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
 De_Kontcount is a number variable. De_Kontcount is 0.
-DekonDone is a truth state variable.
+DekonDone is a truth state variable. DekonDone is false.
 Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
 Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
 Strom is a number variable. Strom is 5. [Stromzähler]
@@ -745,7 +745,8 @@ Carry out Pressing_Knopf:
 		Now Hilfsgenerator_Aktiviert  is true;
 		Now Notruf_Aktivierbar is true;
 		Increase Strom by 1;
-		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein Splitter gelöst: Jetzt ist dein Raumanzug beschädigt!";
+		Say "Der Hilfsgenerator ist nun aktiviert! Es hat sich ein Splitter gelöst: Jetzt ist dein Raumanzug beschädigt![line break]";
+		Say "Sende Percy eine Nachricht, dass er den Notruf absetzen kann!";
 	Otherwise:
 		Say "Der Hilfsgenerator wurde schon aktiviert!".
 
@@ -770,6 +771,7 @@ Carry out Pressing_Knopf_2:
 		Now Wartungsluke is unlocked;
 		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
 		Change_to_Barry;
+		Say "Gehe jetzt wieder zu Percy!";
 	Otherwise:
 		If Hilfsgenerator_Aktivierbar is true:
 			Say "Du musst den Strom erst anstellen damit du den Notruf absetzen kannst!";
@@ -851,7 +853,7 @@ Panel N Del Junc is a Panel.
 Panel S Del Junc is a Panel. 
 	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Gamma_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Delta Junction".
+Gamma_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Delta Corridor".
 SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 Panel N Gam Del Cor is a Panel. 
@@ -940,6 +942,9 @@ Bridge is down of Bridge_Luke. The printed name is "Bridge".
 
 
 [*****Szene 1*****]
+First_say_gdc is a truth state variable. First_say_gdc is false.
+First_say_xl is a truth state variable. First_say_xl is false.
+
 Szene 1 is a scene.
 Szene1Laeuft is a number that varies.
 Szene1Laeuft is 0.
@@ -948,15 +953,26 @@ Szene 1 ends when Szene1Laeuft is 2.
 Szene 1 begins when play begins.
 When Szene 1 begins:
 	Say "[bold type]Szene 1:[line break]";
-	Say "[italic type]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Gera¨usch beim Einflug in die DockingBay la¨sst aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.[roman type][line break]".
+	Say "[italic type]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Geräusch beim Einflug in die DockingBay la¨sst aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Du spielst Percy und machst dich auf, um nach dem Stationspersonal suchen und um dich auf der Brücke beim wachhabenden Offizier meldet. Besuche zunächst einmal das Xeno-Lab.[line break]";
+	Say "Ein Tipp: Finde den Laborkittel![roman type]".
 
-Report entering Gamma_Delta_Corridor: Say "Percy findet eine Leiche und an den Wa¨nden Spuren von Handlaserwaffen. Außerdem stellt er fest, dass der Öffnungshebel für die Wartungsluke zum Kommunikationsmodul durch Laserfeuer abgetrennt worden ist. Der Öffnungshebel liegt nun auf dem Boden, so dass ein Öffnen der Luke von hier aus nicht möglich ist. Was ist hier passiert? In dem Laborkittel der Leiche, die offenbar ein Wissenschaftler gewesen war, ist ein Transponder eingenäht. Wenn Percy den Kittel der Leiche auszieht und ihn selbst anzieht, könnte er hiermit die entsprechende Luke öffnen."
+After going to Gamma_Delta_Corridor: 
+	If First_say_gdc is false:
+		Now First_say_gdc is true;
+		Say "Percy findet eine Leiche und an den Wänden Spuren von Handlaserwaffen. Außerdem stellt er fest, dass der Öffnungshebel für die Wartungsluke zum Kommunikationsmodul durch Laserfeuer abgetrennt worden ist. Der Öffnungshebel liegt nun auf dem Boden, so dass ein Öffnen der Luke von hier aus nicht möglich ist. Was ist hier passiert? In dem Laborkittel der Leiche, die offenbar ein Wissenschaftler gewesen war, ist ein Transponder eingenäht. Wenn Percy den Kittel der Leiche auszieht und ihn selbst anzieht, könnte er hiermit die entsprechende Luke öffnen.";
+	Continue the action.
 
-Report entering Xeno_Lab: Say "Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein."
+After going to Xeno_Lab: 
+	If First_say_xl is false:
+		Now First_say_xl is true;
+		Say "Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein.";
+	Continue the action.
 
 
 
 [*****Szene 2*****]
+First_say_xl2 is a truth state variable. First_say_xl2 is false.
+
 GammaListened is a truth state variable. GammaListened is false.
 Scene2 is a scene.
 Scene2 begins when Szene 1 ends. 
@@ -965,8 +981,14 @@ When Scene2 begins:
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
-	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen[roman type]."
+	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen.[roman type]".
 Scene2 ends when DekonDone is true.
+
+After going to Xeno_Lab: 
+	If First_say_xl2 is false:
+		Now First_say_xl2 is true;
+		Say "Du findest Percy ... er steht mit in die Gegend starrenden Blick da. Er ist kontaminiert. Dekontaminiere ihn im Med-Lab!";
+	Continue the action.
 
 After entering Gamma_Junction:
 	If Scene2 is happening and GammaListened is false:
@@ -984,8 +1006,8 @@ Scene4 is a scene.
 Scene4 begins when Scene2 ends.
 When Scene4 begins:
 	Say "[bold type]Scene 4:[line break]";
-	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Nach dem Start des Hilfsgenerators gibst du mit dem Mobitab eine Nachricht an Percy. Percy muss dann schnellst möglich den Selbstzerstörungsknopf auf der Brücke drücken, um den Notruf abzusetzen (der Hilfsgenerator hat nicht lange Energie). Danach muss du zurück zu Percy.[line break]";
-	Say "Ein Tipp: In dem Umkleideraum im Hangar befindet sich ein Raumanzug.[roman type]";
+	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Gehe dazu in die Com Base.[line break]";
+	Say "Ein Tipp: Finde den Raumanzug und gehe durch den Weltraum![roman type]";
 	Now Umkleidetuer is unlocked.
 Scene4 ends when Sauerstoff_Abfall is true.
 
