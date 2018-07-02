@@ -32,6 +32,8 @@ Strom is a number variable. Strom is 5. [Stromzähler]
 Innerer_Ring is a region.
 Aeußerer_Ring is a region.
 
+
+
 [*****Definitionen*****]
 
 	[Neue Raumliste]
@@ -303,6 +305,13 @@ To createRaumliste:
 		If the door outside of the location of the player is not locked:
 			Add Room outside of the location of the player to Raumliste;
 
+[Info zum Hebel]
+Before going from Gamma_Delta_Corridor to Wartungsschacht:
+	If Wartungsluke is locked:
+		Say "Du kannst die Luke nicht öffnen. Der Hebel ist abbgebrochen.";
+
+
+
 [*****Aktionen*****]
 [verwende Variable "Increase Laute_Aktionen by 1." für laute Aktion] 
 
@@ -417,7 +426,7 @@ Every turn:
 		If hLukeTurn is 0:
 			Now Luke_Hangar is locked;
 			Now Luke_Hangar is closed;
-			Say "Die Hangarluke hat sich geschlossen";
+			Say "Die Hangarluke hat sich geschlossen![line break]";
 	If xLukeTurn is not 0:
 		Decrease xLukeTurn by 1;
 		If xLukeTurn is 0 and LukeXeno_Blockiert is false:
@@ -546,7 +555,7 @@ Carry out MovePalette:
 	If the number of entries of Raumliste is not 0:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
 		If entry Rand of Raumliste is Xeno_Lab:
-			Say "Der Antigravitationsgreifer wird durch den Maschinenkern der Station überlastet. Die Palette blockiert nun die Xeno-Luke und du kannst in das Xeno Lab eintreten";
+			Say "Der Antigravitationsgreifer wird durch den Maschinenkern der Station überlastet. Die Palette blockiert nun die Xeno-Luke und du kannst in das Xeno Lab eintreten.";
 			Now paletteVerschieben is false;
 			Now LukeXeno_Blockiert is true;
 			Now the Palette is in entry Rand of Raumliste;
@@ -888,7 +897,11 @@ Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
 Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
-Wartungsluke is a door. It is down of Gamma_Delta_Corridor. It is unlocked.
+
+Wartungsluke is a door. 
+	It is down of Gamma_Delta_Corridor.
+	It is locked.
+	
 Wartungsschacht is down of Wartungsluke. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
 
