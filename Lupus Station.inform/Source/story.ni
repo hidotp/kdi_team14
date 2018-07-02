@@ -397,7 +397,7 @@ Carry out u_entriegeln:
 	Now Luke_Hangar is open;
 	Now hLukeTurn is 2.
 Report u_entriegeln:
-	Say "Du hast die Hangarluke für einen Zug geöffnet."
+	Say "Du hast die Hangarluke für einen Zug geöffnet.[line break]".
 
 Understand "use [Sicherheitsausweis] with [LuPanel D Gam Junc]" as d_entriegeln.
 	d_entriegeln is an action applying to two things.
@@ -553,6 +553,7 @@ Carry out MovePalette:
 		Else:
 			Now the Palette is in entry Rand of Raumliste;
 			Say "Jetzt ist die Palette in [entry Rand of Raumliste]"; 
+		Say  "[line break]";
 
 
 
