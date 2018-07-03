@@ -234,7 +234,7 @@ To count_Kontaminiert:
 			Increase Kontcount by 1.
 			
 [Dekontaminiation]
-DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatminiert!".
+DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatminiert! Durch die Dekontamination wurde der Maschinenkern so überlastet das Barry nun einen Hauptenenergieabfall feststellt. [line break] Die Kommandosperre der Brücke ist dadurch aufgehoben.".
 
 Instead of closing Dekon Tür:
 	If Hauptenergieabfall is false:
@@ -245,6 +245,7 @@ Instead of closing Dekon Tür:
 					dekontaminiere_Percy;
 					Now Hauptenergieabfall is true;
 					Say DekonText;
+					Now Bridge Luke is unlocked;
 					Continue the action;
 				Else:
 					If De_Kontcount is 1:

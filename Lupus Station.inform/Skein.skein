@@ -6521,7 +6521,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     </item>
     <item nodeId="node-4526">
         <command xml:space="preserve">push Palette</command>
-        <result xml:space="preserve">Jetzt ist die Palette in Gamma Junction.
+        <result xml:space="preserve">Jetzt ist die Palette in Docking Bay.
 
 Die Hangarluke hat sich geschlossen!
 
@@ -6545,7 +6545,7 @@ Die Hangarluke hat sich geschlossen!
 Gamma Junction
 Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus.
 
-You can see Luke_Hangar, Palette, Sicherheitsbarriere, Sicherheitsbarriere, Luke_XenoLab, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
+You can see Luke_Hangar, Sicherheitsbarriere, Sicherheitsbarriere, Luke_XenoLab, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
 
@@ -6585,7 +6585,7 @@ Die Hangarluke hat sich geschlossen!
     </item>
     <item nodeId="node-4532">
         <command xml:space="preserve">push Palette</command>
-        <result xml:space="preserve">Der Antigravitationsgreifer wird durch den Maschinenkern der Station überlastet. Die Palette blockiert nun die Xeno-Luke und du kannst in das Xeno Lab eintreten.
+        <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6594,17 +6594,9 @@ Die Hangarluke hat sich geschlossen!
     </item>
     <item nodeId="node-4533">
         <command xml:space="preserve">up</command>
-        <result xml:space="preserve">Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein.
+        <result xml:space="preserve">Du traust dich nicht durch die Luke zu gehen, es würde Sinn machen sie mit etwas zu blockieren... wie zum Beispiel mit der Palette.
 
-Du findest Percy ... er steht mit in die Gegend starrenden Blick da. Er ist kontaminiert. Dekontaminiere ihn im Med-Lab!
-
-Xeno Lab
-You can see Luke_XenoLab, Palette, XenoKnopf and Klappe (closed) here.
-
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
-Ein ohrenbetäubendes Pfeifen ist zu hören.
-
+Die XenoLab Luke hat sich geschlossen
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-4534"></child>
@@ -6612,7 +6604,7 @@ Ein ohrenbetäubendes Pfeifen ist zu hören.
     </item>
     <item nodeId="node-4534">
         <command xml:space="preserve">press XenoKnopf</command>
-        <result xml:space="preserve">Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei.
+        <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6621,8 +6613,10 @@ Ein ohrenbetäubendes Pfeifen ist zu hören.
     </item>
     <item nodeId="node-4535">
         <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Xeno Lab
-You can see Luke_XenoLab, Palette, XenoKnopf and Klappe (in which is Phiole) here.
+        <result xml:space="preserve">Gamma Junction
+Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus.
+
+You can see Luke_Hangar, Sicherheitsbarriere, Sicherheitsbarriere, Luke_XenoLab, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6631,14 +6625,7 @@ You can see Luke_XenoLab, Palette, XenoKnopf and Klappe (in which is Phiole) her
     </item>
     <item nodeId="node-4536">
         <command xml:space="preserve">take Phiole</command>
-        <result xml:space="preserve">Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion.
-
-
-Du spielst nun Barry!
-Barry ist in Raumfähre
-Szene 2:
-Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen.
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+        <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6647,7 +6634,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     </item>
     <item nodeId="node-4537">
         <command xml:space="preserve">undo</command>
-        <result xml:space="preserve">Xeno Lab
+        <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
@@ -6657,7 +6644,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     </item>
     <item nodeId="node-4538">
         <command xml:space="preserve">undo</command>
-        <result xml:space="preserve">Xeno Lab
+        <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
@@ -6667,7 +6654,7 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     </item>
     <item nodeId="node-4539">
         <command xml:space="preserve">undo</command>
-        <result xml:space="preserve">Xeno Lab
+        <result xml:space="preserve">Gamma Junction
 [Previous turn undone.]
 
 &gt;</result>
@@ -6687,17 +6674,9 @@ Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
     </item>
     <item nodeId="node-4541">
         <command xml:space="preserve">up</command>
-        <result xml:space="preserve">Aus dem Xeno-Lab ist ein ohrenbetäubendes Pfeifen zu hören, welches den ohnehin schon lauten Alarm überdeckt. Ein blinkender Knopf lädt zum Drücken ein.
+        <result xml:space="preserve">Du traust dich nicht durch die Luke zu gehen, es würde Sinn machen sie mit etwas zu blockieren... wie zum Beispiel mit der Palette.
 
-Du findest Percy ... er steht mit in die Gegend starrenden Blick da. Er ist kontaminiert. Dekontaminiere ihn im Med-Lab!
-
-Xeno Lab
-You can see Luke_XenoLab, Palette, XenoKnopf and Klappe (closed) here.
-
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
-Ein ohrenbetäubendes Pfeifen ist zu hören.
-
+Die XenoLab Luke hat sich geschlossen
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-4542"></child>
@@ -6705,7 +6684,7 @@ Ein ohrenbetäubendes Pfeifen ist zu hören.
     </item>
     <item nodeId="node-4542">
         <command xml:space="preserve">close Luke_XenoLab</command>
-        <result xml:space="preserve">Du kannst die Luke nicht schließen, die Palette blockiert sie.
+        <result xml:space="preserve">That's already closed.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6714,14 +6693,8 @@ Ein ohrenbetäubendes Pfeifen ist zu hören.
     </item>
     <item nodeId="node-4543">
         <command xml:space="preserve">down</command>
-        <result xml:space="preserve">
-Gamma Junction
-Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus.
-
-You can see Luke_XenoLab, Luke_Hangar, Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
-
-Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.
+        <result xml:space="preserve">(first opening Luke_Hangar)
+It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6730,13 +6703,151 @@ Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.
     </item>
     <item nodeId="node-4544">
         <command xml:space="preserve">up</command>
+        <result xml:space="preserve">(first opening Luke_XenoLab)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4620"></child>
+        </children>
+    </item>
+    <item nodeId="node-4620">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening Sicherheitsbarriere)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4621"></child>
+        </children>
+    </item>
+    <item nodeId="node-4621">
+        <command xml:space="preserve">use Sicherheitsausweis with Panel S Gam Junc</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4622"></child>
+        </children>
+    </item>
+    <item nodeId="node-4622">
+        <command xml:space="preserve">use Sicherheitsausweis with Panel N Gam Junc</command>
+        <result xml:space="preserve">Du hast die zugehörige Tür des Panels entriegelt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4623"></child>
+        </children>
+    </item>
+    <item nodeId="node-4623">
+        <command xml:space="preserve">n</command>
         <result xml:space="preserve">
-Xeno Lab
-You can see Luke_XenoLab, Palette, XenoKnopf and Klappe (closed) here.
+Gamma Beta Corridor
+You can see Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Bet Cor and Panel S Gam Bet Cor here.
 
 Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
-Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
-Ein ohrenbetäubendes Pfeifen ist zu hören.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4624"></child>
+        </children>
+    </item>
+    <item nodeId="node-4624">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Beta Junction
+You can see Sicherheitsbarriere, Sicherheitsbarriere, Luke_Engineering, Panel N Bet Junc, Panel S Bet Junc and LuPanel U Bet Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4625"></child>
+        </children>
+    </item>
+    <item nodeId="node-4625">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Gamma Beta Corridor
+You can see Sicherheitsbarriere, Sicherheitsbarriere, Panel N Gam Bet Cor and Panel S Gam Bet Cor here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4626"></child>
+        </children>
+    </item>
+    <item nodeId="node-4626">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Gamma Junction
+Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus.
+
+You can see Sicherheitsbarriere, Luke_Hangar, Sicherheitsbarriere, Luke_XenoLab, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4627"></child>
+        </children>
+    </item>
+    <item nodeId="node-4627">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Gamma Delta Corridor
+You can see Sicherheitsbarriere, Sicherheitsbarriere, Wartungsluke, Oeffnungshebel, Leiche, Panel N Gam Del Cor and Panel S Gam Del Cor here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4628"></child>
+        </children>
+    </item>
+    <item nodeId="node-4628">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">Du kannst die Luke nicht öffnen. Der Hebel ist abbgebrochen.
+
+(first opening Wartungsluke)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4629"></child>
+        </children>
+    </item>
+    <item nodeId="node-4629">
+        <command xml:space="preserve">look at Wartungsluke</command>
+        <result xml:space="preserve">You see nothing special about Wartungsluke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4630"></child>
+        </children>
+    </item>
+    <item nodeId="node-4630">
+        <command xml:space="preserve">look at Oeffungshebel</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4631"></child>
+        </children>
+    </item>
+    <item nodeId="node-4631">
+        <command xml:space="preserve">look at Oeffnungshebel</command>
+        <result xml:space="preserve">Der Öffnungshebel der Wartungsluke. Dort wo er durch das Laserfeuer abgetrennt wurde sieht man noch Schmauchspuren.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4632"></child>
+        </children>
+    </item>
+    <item nodeId="node-4632">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
