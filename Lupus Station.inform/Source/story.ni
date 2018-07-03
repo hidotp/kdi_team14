@@ -20,17 +20,17 @@ Stationsalarm is a truth state variable. Stationsalarm is true.
 Pfeifen is a truth state variable. Pfeifen is true.
 Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
-De_Kontcount is a number variable. De_Kontcount is 0.
+dekonKontcount is a number variable. dekonKontcount is 0.
 DekonDone is a truth state variable. DekonDone is false.
-Drcklfthmr_Ladezstd is a truth state variable. Drcklfthmr_Ladezstd is true.
+druckluftLadezustand is a truth state variable. druckluftLadezustand is false.
 Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
 Strom is a number variable. Strom is 5. [Stromzähler]
 
 
 
 [*****Regionen*****]
-Innerer_Ring is a region.
-Aeußerer_Ring is a region.
+innererRing is a region.
+aeußererRing is a region.
 
 
 
@@ -76,27 +76,26 @@ Aeußerer_Ring is a region.
 	Oeffnungshebel is a thing. It is in Gamma_Delta_Corridor. The Description is "Der Öffnungshebel der Wartungsluke. Dort wo er durch das Laserfeuer abgetrennt wurde sieht man noch Schmauchspuren."
 	
 	[Krankenbett]
-	Krankenbett is a supporter. It is in Med_Lab. It is enterable. It is fixed in place.
+	Krankenbett is a supporter. It is in Med_Lab. It is enterable. It is fixed in place. The description is "Ein Krankenbett für eine Person, sieht sogar relativ gemütlich aus."
 
 	[Palette]
-	Palette is a thing. It is in Raumfähre. The description is "Palette die alleine zu schwer zum Tragen oder schieben ist".
+	Palette is a thing. It is in Raumfähre. The description is "Palette die alleine zu schwer zum Tragen oder schieben ist.".
 
 	[Leiche]
 	Leiche is a Supporter.
-	It is fixed in place. Instead of taking Leiche: say "Du wagst es nicht die Leiche zu bewegen“.
+	It is fixed in place. Instead of taking Leiche: say "Du wagst es nicht die Leiche zu bewegen.“.
 	It is not enterable.
 	Leiche is in Gamma_Delta_Corridor. 
 	
 	[Laborkittel] 
-	Laborkittel is a thing. It is wearable. It is portable. The description of Laborkittel is "Ein leicht blutiger 
-	und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab“.
+	Laborkittel is a thing. It is wearable. It is portable. The description of Laborkittel is "Ein leicht blutiger und zerschossener Laborkittel mit einem eingenähten Transponder für das Xeno-Lab.“.
 	Laborkittel is on Leiche.
 
 	[XenoKnopf]
-	XenoKnopf is a thing. It is fixed in place. It is in Xeno_Lab.
+	XenoKnopf is a thing. It is fixed in place. It is in Xeno_Lab. The description is "Ein schnell blinkender Knopf der praktisch schreit: DRÜCK MICH!".
 	
 	[Klappe]
-	Klappe is a container. It is fixed in place. Klappe is locked. Klappe is closed. The carrying capacity of Klappe is 1. Klappe is in Xeno_Lab. 
+	Klappe is a container. It is fixed in place. Klappe is locked. Klappe is closed. The carrying capacity of Klappe is 1. Klappe is in Xeno_Lab. The description of Klappe is "Eine Klappe in der Wand die geschlossen ist. Du siehst keine Möglichkeit sie aufzubrechen."
 	
 
 
@@ -129,20 +128,21 @@ Every turn:
 	Now Raum_Test_1 is the location of the player;
 	If Raum_Test_1 is not Raum_Test_2:
 		If Stationsalarm is true:
-			Say "Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.";		
-		If the player is in a room in Innerer_Ring:
+			If the player is in a room in innererRing or the player is in a room in aeußererRing:
+				Say "Der Stationsalarm gibt einen ohrenbetäubenden Sirenenton von sich.";	
+		If the player is in a room in innererRing:
 			If Hauptenergieabfall is true:
-				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
-			Else:
 				If Hilfsgenerator_Aktivierbar is false:
 					Say "Durch das Deckenfenster sieht man den rot glühenden Maschinenkern.";
 				Else:
-					Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+					Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
+			Else:
+				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
 		If the player is in Xeno_Lab:
 			If Pfeifen is true:
 				Say "Ein ohrenbetäubendes Pfeifen ist zu hören.";
 		If the player is in Gamma_Junction:
-			If Luke_XenoLab is open and LukeXeno_Blockiert is true:
+			If Pfeifen is true and Luke_XenoLab is open and XenoLuke_Blockiert is true:
 				Say "Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.";
 	Now Raum_Test_2 is Raum_Test_1.
 
@@ -188,27 +188,27 @@ To Percy_und_Kontaminierter:
 
 
 [Kontaminiertencounter -- Dekontaminationskabine]
-To count_Kont_Dekon:
-	Now De_Kontcount is 0;
+To count_KontDekon:
+	Now dekonKontcount is 0;
 	If Kontaminierter_1 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_2 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_3 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_4 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_5 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_6 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_7 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Kontaminierter_8 is in Dekontaminationskabine:
-		Increase De_Kontcount by 1;
+		Increase dekonKontcount by 1;
 	If Is_Kontaminiert of Percy is true:
 		If Percy is in Dekontaminationskabine:
-			Increase De_Kontcount by 1.
+			Increase dekonKontcount by 1.
 
 [Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
@@ -238,8 +238,8 @@ DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatmin
 
 Instead of closing Dekon Tür:
 	If Hauptenergieabfall is false:
-		count_Kont_Dekon;
-		If De_Kontcount <= 1:
+		count_KontDekon;
+		If dekonKontcount <= 1:
 			If the Player is not in Dekontaminationskabine:
 				If Percy is in Dekontaminationskabine:
 					dekontaminiere_Percy;
@@ -248,7 +248,7 @@ Instead of closing Dekon Tür:
 					Now Bridge Luke is unlocked;
 					Continue the action;
 				Else:
-					If De_Kontcount is 1:
+					If dekonKontcount is 1:
 						Say "Du willst doch Percy als Erstes dekontaminieren.";
 					Else:
 						Say "Niemand ist in der Kabine.";
@@ -324,7 +324,7 @@ Carry out clapping:
 		Increase Laute_Aktionen by 1.
 Report Clapping:
 	If Stationsalarm is true:
-		Say "Du hast in die Hände geklatscht doch der Stationsalarm ist zu laut!";
+		Say "Du hast in die Hände geklatscht, doch der Stationsalarm ist zu laut!";
 	Else:
 		If Kontaminierter is in the location of the player:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
@@ -339,9 +339,9 @@ Carry out Talking:
 		Increase Laute_Aktionen by 1;
 Report Talking:
 	If Stationsalarm is true:
-		Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und man konnte dich nicht verstehen.";
+		Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und er konnte dich nicht hören.";
 	Else:
-		Say "Du hast den Kontaminierten angesprochen."
+		Say "Du hast den Kontaminierten angesprochen und seine Aufmerksamkeit erlangt."
 
 [Drucklufthammer aufladen]
 Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
@@ -349,11 +349,11 @@ Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
 Check Charging:
 	If the player is not carrying the Drucklufthammer:
 		Say "Du hast den Drucklufthammer nicht bei dir." instead;
-	If Drcklfthmr_Ladezstd is true:
+	If druckluftLadezustand is true:
 		Say "Der Drucklufthammer ist schon geladen!" instead;
 Carry out Charging:
-	If Drcklfthmr_Ladezstd is false:
-		Now Drcklfthmr_Ladezstd is true;
+	If druckluftLadezustand is false:
+		Now druckluftLadezustand is true;
 Report Charging:
 	Say "Du hast den Drucklufthammer aufgeladen."
 	
@@ -363,17 +363,17 @@ Understand "use [Drucklufthammer]" as Druckluften.
 Check Druckluften: 
 	If the player is not carrying the Drucklufthammer:
 		Say "Du hast den Drucklufthammer nicht bei dir." instead;
-	If Drcklfthmr_Ladezstd is false:
+	If druckluftLadezustand is false:
 		Say "Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen" instead;
 Carry out Druckluften:
-	If Drcklfthmr_Ladezstd is true:
+	If druckluftLadezustand is true:
 		Increase Laute_Aktionen by 1;
-		Now Drcklfthmr_Ladezstd is false;
+		Now druckluftLadezustand is false;
 Report Druckluften:
 	If Kontaminierter is in the location of the player:
-		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt!";
+		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt! Dein Akku ist nun leer.";
 	Else: 
-		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht.";
+		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht. Dein Akku ist nun leer.";
 
 [Sicherheitsbarrieren]
 Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
@@ -430,20 +430,20 @@ Every turn:
 			Say "Die Hangarluke hat sich geschlossen![line break]";
 	If xLukeTurn is not 0:
 		Decrease xLukeTurn by 1;
-		If xLukeTurn is 0 and LukeXeno_Blockiert is false:
+		If xLukeTurn is 0 and XenoLuke_Blockiert is false:
 			Now Luke_XenoLab is locked;
 			Now Luke_XenoLab is closed;
 			Say "Die XenoLab Luke hat sich geschlossen".
 		
 [Luke - Laborkittel]
-LukeXeno_Blockiert is a truth state variable.
+XenoLuke_Blockiert is a truth state variable.
 xLukeTurn is a number variable. xLukeTurn is 0.
 
 Understand "use [Laborkittel] with [Luke_XenoLab]" as xenoEntriegeln.
 	xenoEntriegeln is an action applying to two things.
 Check xenoEntriegeln:
-	If LukeXeno_Blockiert is true:
-		Say "Die Luke ist schon blockiert, du musst sie nicht wieder aufmachen." instead;
+	If XenoLuke_Blockiert is true:
+		Say "Die Luke ist schon blockiert, du musst sie nicht nochmal aufmachen." instead;
 	If the Player is not wearing the Laborkittel:
 		Say "Du hast den Laborkittel nicht an, du musst in anziehen damit du die Luke öffnen kannst!" instead;
 Carry out xenoEntriegeln:
@@ -454,7 +454,7 @@ Report xenoEntriegeln:
 	Say "Du hast die XenoLab Luke für einen Zug geöffnet."
 
 Instead of going up from Gamma_Junction:
-	If LukeXeno_Blockiert is true:
+	If XenoLuke_Blockiert is true:
 		Continue the action;
 	Else:
 		If Luke_XenoLab is open:
@@ -463,7 +463,7 @@ Instead of going up from Gamma_Junction:
 			Continue the action.
 			
 Instead of closing the Luke_XenoLab: 
-	If LukeXeno_Blockiert is true:
+	If XenoLuke_Blockiert is true:
 		Say "Du kannst die Luke nicht schließen, die Palette blockiert sie.";
 	Else:
 		Continue the action;
@@ -509,8 +509,9 @@ Carry out druecken:
 	Now gedrueckt is true;
 	Now Klappe is open;
 	Now Klappe is unlocked;
+	Now the description of XenoKnopf is "Der Knopf blinkt nicht mehr und er bleibt in seiner gedrückten Position."
 Report druecken:
-	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei." 
+	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei. Das Blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion." 
 
 [Phiole]
 Phiole is a Thing. Phiole is in Klappe. 
@@ -524,20 +525,20 @@ Carry out nehmen:
 	kontaminiere_Percy;
  	Now Szene1Laeuft is 2;
 Report nehmen:
-	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend. Das blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion."
+	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend."
 
 	
 [Greifer anbringen]
 PaletteVerschieben is a truth state variable. PaletteVerschieben is false.
 
-Understand "connect [Gravitationsgreifer] with [Palette]" as usePalette.
+Understand "connect [Antigravitationsgreifer] with [Palette]" as usePalette.
 usePalette is an action applying to two things.
 Check usePalette:
-	If the Player is not carrying the Gravitationsgreifer:
-		say "Du trägst nicht den Gravitationsgreifer!" instead;
+	If the Player is not carrying the Antigravitationsgreifer:
+		say "Du trägst nicht den Antigravitationsgreifer!" instead;
 Carry out usePalette:
 	Now paletteVerschieben is true;
-	Now the Gravitationsgreifer is nowhere;
+	Now the Antigravitationsgreifer is nowhere;
 	Now the description of Palette is "Eine durch den Antigravitationsgreifer schwebende Palette.";
 Report usePalette:
 	say "Du hast den Greifer an die Palette angebracht."
@@ -550,17 +551,18 @@ Understand "push [Palette]" as MovePalette.
 Check MovePalette:
 	If paletteVerschieben is false:
 		If the Palette is in Xeno_Lab:
-			Say "Die Palette blockiert die Tür und ist nicht bewegbar." instead;
+			Say "Die Palette blockiert die Luke und ist nicht bewegbar." instead;
 		Else:
-			Say "Du kannst die Palette noch nicht bewegen! Versuche den Gravitationsgreifer anzubringen." instead;
+			Say "Du kannst die Palette noch nicht bewegen! Versuche den Antigravitationsgreifer anzubringen." instead;
 Carry out MovePalette:
 	createRaumliste; 
 	If the number of entries of Raumliste is not 0:
 		Now Rand is a random number between 1 and the number of entries of Raumliste;
 		If entry Rand of Raumliste is Xeno_Lab:
 			Say "Der Antigravitationsgreifer wird durch den Maschinenkern der Station überlastet. Die Palette blockiert nun die Xeno-Luke und du kannst in das Xeno Lab eintreten.";
+			Now Antigravitationsgreifer is nowhere;
 			Now paletteVerschieben is false;
-			Now LukeXeno_Blockiert is true;
+			Now XenoLuke_Blockiert is true;
 			Now the Palette is in entry Rand of Raumliste;
 		Else:
 			Now the Palette is in entry Rand of Raumliste;
@@ -653,7 +655,7 @@ Kontaminierter_8 is a Kontaminierter. The printed name is "Kontaminierter".
 
 [Scene 1]
 Palette is a thing. It is in Raumfähre. 
-Gravitationsgreifer is a thing. It is portable. It is in Raumfähre. 
+Antigravitationsgreifer is a thing. It is portable. It is in Raumfähre. 
 
 
 [Scene 4]
@@ -799,7 +801,7 @@ Carry out Sending_Message:
 
 
 [*****Räume*****]
-Gamma_Junction is a room. It is in Aeußerer_Ring. The printed name is "Gamma Junction". The description is "Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus."
+Gamma_Junction is a room. It is in aeußererRing. The printed name is "Gamma Junction". The description is "Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus."
 SiBa_1 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Junction and south of Gamma_Beta_Corridor.
 Panel N Gam Junc is a Panel. The Given_SiBa is SiBa_1. Panel N Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
@@ -807,7 +809,7 @@ Panel S Gam Junc is a Panel.
 	The Given_SiBa is SiBa_8. Panel S Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
 
-Gamma_Beta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Beta Corridor". 
+Gamma_Beta_Corridor is a room. It is in aeußererRing. The printed name is "Gamma Beta Corridor". 
 SiBa_2 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Beta_Corridor and south of Beta_Junction.
 Panel N Gam Bet Cor is a Panel.
@@ -815,7 +817,7 @@ Panel N Gam Bet Cor is a Panel.
 Panel S Gam Bet Cor is a Panel.
 	The Given_SiBa is SiBa_1. Panel S Gam Bet Cor is in Gamma_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Beta_Junction is a room. It is in Aeußerer_Ring. The printed name is "Beta Junction".
+Beta_Junction is a room. It is in aeußererRing. The printed name is "Beta Junction".
 SiBa_3 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Beta_Junction and south of Alpha_Beta_Corridor.
 Panel N Bet Junc is a Panel.
@@ -823,7 +825,7 @@ Panel N Bet Junc is a Panel.
 Panel S Bet Junc is a Panel.
 	The Given_SiBa is SiBa_2. Panel S Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 	
-Alpha_Beta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Alpha Beta Corridor".
+Alpha_Beta_Corridor is a room. It is in aeußererRing. The printed name is "Alpha Beta Corridor".
 SiBa_4 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Beta_Corridor and south of Alpha_Junction.
 Panel N Alp Bet Cor is a Panel. 
@@ -831,7 +833,7 @@ Panel N Alp Bet Cor is a Panel.
 Panel S Alp Bet Cor is a Panel.
 	The Given_SiBa is SiBa_3. Panel S Alp Bet Cor is in Alpha_Beta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Alpha_Junction is a room. It is in Aeußerer_Ring. The printed name is "Alpha Junction".
+Alpha_Junction is a room. It is in aeußererRing. The printed name is "Alpha Junction".
 SiBa_5 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Junction and south of Alpha_Delta_Corridor.
 Panel N Alp Junc is a Panel. 
@@ -839,7 +841,7 @@ Panel N Alp Junc is a Panel.
 Panel S Alp Junc is a Panel.
 	The Given_SiBa is SiBa_4. Panel S Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Alpha_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Alpha Delta Corridor".
+Alpha_Delta_Corridor is a room. It is in aeußererRing. The printed name is "Alpha Delta Corridor".
 SiBa_6 is a SiBa.  The printed name is "Sicherheitsbarriere".
 	It is north of Alpha_Delta_Corridor and south of Delta_Junction.
 Panel N Alp Del Cor is a Panel. 
@@ -847,7 +849,7 @@ Panel N Alp Del Cor is a Panel.
 Panel S Alp Del Cor is a Panel. 
 	The Given_SiBa is SiBa_5. Panel S Alp Del Cor is in Alpha_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Delta_Junction is a room. It is in Aeußerer_Ring. The printed name is "Delta Junction".
+Delta_Junction is a room. It is in aeußererRing. The printed name is "Delta Junction".
 SiBa_7 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Delta_Junction and south of Gamma_Delta_Corridor.
 Panel N Del Junc is a Panel.
@@ -855,7 +857,7 @@ Panel N Del Junc is a Panel.
 Panel S Del Junc is a Panel. 
 	The Given_SiBa is SiBa_6. Panel S Del Junc is in Delta_Junction. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Gamma_Delta_Corridor is a room. It is in Aeußerer_Ring. The printed name is "Gamma Delta Corridor".
+Gamma_Delta_Corridor is a room. It is in aeußererRing. The printed name is "Gamma Delta Corridor".
 SiBa_8 is a SiBa. The printed name is "Sicherheitsbarriere".
 	It is north of Gamma_Delta_Corridor and south of Gamma_Junction.
 Panel N Gam Del Cor is a Panel. 
@@ -863,25 +865,25 @@ Panel N Gam Del Cor is a Panel.
 Panel S Gam Del Cor is a Panel. 
 	The Given_SiBa is SiBa_7. Panel S Gam Del Cor is in Gamma_Delta_Corridor. The description is "Türpanel, welches mit einem Sicherheitsausweis aktiviert werden kann. Es sieht sehr stabil aus."
 
-Xeno_Lab is a room. It is in Innerer_Ring. The printed name is "Xeno Lab".
+Xeno_Lab is a room. It is in innererRing. The printed name is "Xeno Lab".
 Luke_XenoLab is a Luke. The printed name is "Luke_XenoLab". Luke_XenoLab is locked.
 	It is up of Gamma_Junction and down of Xeno_Lab.
 LuPanel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. LuPanel U Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
-Engeneering_Lab is a room. It is in Innerer_Ring. The printed name is "Engeneering Lab".
+Engeneering_Lab is a room. It is in innererRing. The printed name is "Engeneering Lab".
 Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 	It is up of Beta_Junction and down of Engeneering_Lab.
 LuPanel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. LuPanel U Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
-Med_Lab is a room. It is in Innerer_Ring. The printed name is "Med Lab".
+Med_Lab is a room. It is in innererRing. The printed name is "Med Lab".
 Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
 LuPanel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. LuPanel U Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine. It is open.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
-	Dekontaminationskabine is in Innerer_Ring.
+	Dekontaminationskabine is in innererRing.
 	
-Solar_Lab is a room. It is in Innerer_Ring. The printed name is "Solar Lab".
+Solar_Lab is a room. It is in innererRing. The printed name is "Solar Lab".
 Luke_SolarLab is a Luke. The printed name is "Luke_SolarLab".
 	It is up of Delta_Junction and down of Solar_Lab.
 LuPanel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. LuPanel U Del Junc is in Delta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
@@ -917,17 +919,17 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 	It is south of Weltraum and north of Com_Base.
 	It is locked.
 
-Storage_Area is east of Gamma_Junction. It is in Aeußerer_Ring. The printed name is "Storage Area".
-Beta_Greenhouse is north of Storage_Area. It is in Aeußerer_Ring. The printed name is "Beta Greenhouse".
+Storage_Area is east of Gamma_Junction. It is in aeußererRing. The printed name is "Storage Area".
+Beta_Greenhouse is north of Storage_Area. It is in aeußererRing. The printed name is "Beta Greenhouse".
 Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
 LuPanel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. LuPanel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
 
-Delta_AI is a room. It is in Innerer_Ring. The printed name is "Delta AI".
-Main_Generator is south of Delta_AI. It is in Innerer_Ring. The printed name is "Main Generator".
-Delta_Greenhouse is a room. It is in Aeußerer_Ring. The printed name is "Delta Greenhouse".
-Storage_Room is south of Delta_Greenhouse. It is in Aeußerer_Ring. The printed name is "Storage Room".
-Alpha_AI is up of Storage_Room. It is in Innerer_Ring. The printed name is "Alpha AI".
-Transporter_Raum is south of Alpha_AI. It is in Innerer_Ring. The printed name is "Transporter Raum".
+Delta_AI is a room. It is in innererRing. The printed name is "Delta AI".
+Main_Generator is south of Delta_AI. It is in innererRing. The printed name is "Main Generator".
+Delta_Greenhouse is a room. It is in aeußererRing. The printed name is "Delta Greenhouse".
+Storage_Room is south of Delta_Greenhouse. It is in aeußererRing. The printed name is "Storage Room".
+Alpha_AI is up of Storage_Room. It is in innererRing. The printed name is "Alpha AI".
+Transporter_Raum is south of Alpha_AI. It is in innererRing. The printed name is "Transporter Raum".
 
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
 Fitness is east of Crew_Quarter. The printed name is "Fitness".
@@ -1027,7 +1029,7 @@ After going up from Wartungsschacht:
 		Now Sauerstoff_Abfall is true;
 		Now Luke_XenoLab is closed;
 		Now Luke_XenoLab is locked;  
-		Now LukeXeno_Blockiert is false;
+		Now XenoLuke_Blockiert is false;
 		Now the Palette is in Gamma_Junction; 
 		Now the description of Palette is "Die Palette wurde leicht durch die Xeno Luke beschädigt. Sie hat das Bodenfenster schwer beschädigt.";
 		Now the description of Gamma_Junction is "Das Bodenfenster wurde durch die Palette schwer beschädigt und es entweicht Luft.";
@@ -1039,7 +1041,7 @@ Every turn:
 		Decrease Sauerstoff by 1;
 		If the player carries the Mobitab:
 			Say "[bold type]Mobitab: [roman type]Züge an Sauerstoff: [Sauerstoff][line break]";
-	If Sauerstoff is 0 and the player is in a room in aeußerer_Ring: 
+	If Sauerstoff is 0 and the player is in a room in aeußererRing: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
 		

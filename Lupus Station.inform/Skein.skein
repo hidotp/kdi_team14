@@ -15,7 +15,7 @@ An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000
 Release 1 / Serial number 180703 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Raumfähre
-You can see Palette, Barry and Gravitationsgreifer here.
+You can see Palette, Barry and Antigravitationsgreifer here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -46,7 +46,9 @@ You can see Palette, Barry and Gravitationsgreifer here.
             <child nodeId="node-4340"></child>
             <child nodeId="node-3953"></child>
             <child nodeId="node-3956"></child>
+            <child nodeId="node-4646"></child>
             <child nodeId="node-3960"></child>
+            <child nodeId="node-4645"></child>
             <child nodeId="node-3977"></child>
             <child nodeId="node-3986"></child>
             <child nodeId="node-3989"></child>
@@ -2160,6 +2162,17 @@ It seems to be locked.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-4645">
+        <command xml:space="preserve">teleport to Delta_AI</command>
+        <result xml:space="preserve">Delta AI
+You can see Luke_Delta_AI here.
+
+Der Stationsalarm gibt ein ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-3960">
         <command xml:space="preserve">teleport to Briefing_Room</command>
         <result xml:space="preserve">Briefing Room
@@ -2340,6 +2353,51 @@ It seems to be locked.
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">(first opening Sicherheitsbarriere)
 It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4646">
+        <command xml:space="preserve">teleport to Bridge</command>
+        <result xml:space="preserve">Bridge
+You can see Bridge Luke and Selbstzerstörungsknopf here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4647"></child>
+        </children>
+    </item>
+    <item nodeId="node-4647">
+        <command xml:space="preserve">teleport to Gamma_Junction</command>
+        <result xml:space="preserve">Gamma Junction
+Im Boden ist ein riesiges Bodenfenster eingelassen. Es sieht gar nicht mal so stabil aus.
+
+You can see Sicherheitsbarriere, Luke_Hangar, Luke_XenoLab, Sicherheitsbarriere, Panel N Gam Junc, Panel S Gam Junc, LuPanel U Gam Junc and LuPanel D Gam Junc here.
+
+Der Stationsalarm gibt einen ohrenbetäubenden Sirenenton von sich.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4648"></child>
+        </children>
+    </item>
+    <item nodeId="node-4648">
+        <command xml:space="preserve">teleport to Xeno_Lab</command>
+        <result xml:space="preserve">Xeno Lab
+You can see Luke_XenoLab, XenoKnopf and Klappe (closed) here.
+
+Der Stationsalarm gibt einen ohrenbetäubenden Sirenenton von sich.
+Durch das Deckenfenster sieht man den grün glühenden  Maschinenkern.
+Ein ohrenbetäubendes Pfeifen ist zu hören.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4649"></child>
+        </children>
+    </item>
+    <item nodeId="node-4649">
+        <command xml:space="preserve">clap in Hands</command>
+        <result xml:space="preserve">Du hast in die Hände geklatscht, doch der Stationsalarm ist zu laut!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7071,12 +7129,38 @@ You can see Weltraumtür here.
     </item>
     <item nodeId="node-3820">
         <command xml:space="preserve">take Drucklufthammer</command>
-        <result xml:space="preserve">Taken.
+        <result xml:space="preserve">Du brauchst das noch nicht.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3821"></child>
+            <child nodeId="node-4636"></child>
         </children>
+    </item>
+    <item nodeId="node-4636">
+        <command xml:space="preserve">use Drucklufthammer</command>
+        <result xml:space="preserve">Du hast den Drucklufthammer nicht bei dir.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4637"></child>
+        </children>
+    </item>
+    <item nodeId="node-4637">
+        <command xml:space="preserve">charge Drucklufthammer with LuPanel U Hangar</command>
+        <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4638"></child>
+        </children>
+    </item>
+    <item nodeId="node-4638">
+        <command xml:space="preserve">take Sicherheitsausweis</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3821">
         <command xml:space="preserve">teleport to Gamma_Junction</command>
