@@ -448,6 +448,7 @@ Check xenoEntriegeln:
 Carry out xenoEntriegeln:
 	Now Luke_XenoLab is unlocked;
 	Now Luke_XenoLab is open;
+	Now xLukeTurn is 2;
 Report xenoEntriegeln:
 	Say "Du hast die XenoLab Luke für einen Zug geöffnet."
 
@@ -985,7 +986,7 @@ When Scene2 begins:
 Scene2 ends when DekonDone is true.
 
 After going to Xeno_Lab: 
-	If First_say_xl2 is false:
+	If Scene2 is happening and First_say_xl2 is false:
 		Now First_say_xl2 is true;
 		Say "Du findest Percy ... er steht mit in die Gegend starrenden Blick da. Er ist kontaminiert. Dekontaminiere ihn im Med-Lab!";
 	Continue the action.
