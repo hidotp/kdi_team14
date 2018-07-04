@@ -1082,9 +1082,10 @@ Endscene is a scene.
 Endscene begins when Scene4 ends.
 When Endscene begins:
 	Change_to_Barry;
+	oeffne_Barrieren;
 	Say "[italic type]Endscene:[line break]";
 	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet.[line break]";
-	Say "Aus Sicherheitsgründen (wegen des Sauerstoffabfalls haben sich alle Barrieren und die Hangarluke geöffnet![roman type]".
+	Say "Aus Sicherheitsgründen (wegen des Sauerstoffabfalls) haben sich alle Barrieren und die Hangarluke geöffnet![roman type]".
 Endscene ends when Barry is in Docking_Bay and Percy is in Docking_Bay.
 When Endscene ends:
 	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
