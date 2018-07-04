@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-1593"/>
+  <activeNode nodeId="node-1626"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Lupus Station</command>
     <result xml:space="preserve">Szene 1:&#x000A;Percy fliegt die F&#x00E4;hre, Barry &#x00FC;bernimmt die Kommunikation. Als sie sich der Station n&#x00E4;hern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie f&#x00FC;hrt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das f&#x00FC;r ein eventuelles Willkommensritual des Au&#x00DF;enpostens. Ein knarrendes Ger&#x00E4;usch beim Einflug in die DockingBay la&#x00A8;sst aber nichts Gutes ahnen. Als sie aus der F&#x00E4;hre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die F&#x00E4;hre &#x00E4;u&#x00DF;erlich bzgl. des entstandenen Schadens untersucht. Du spielst Percy und machst dich auf, um nach dem Stationspersonal suchen und um dich auf der Br&#x00FC;cke beim wachhabenden Offizier meldet. Besuche zun&#x00E4;chst einmal das Xeno-Lab.&#x000A;Ein Tipp: Finde den Laborkittel!&#x000A;&#x000A;Lupus Station&#x000A;An Interactive Fiction by Team14 Use MAX_STATIC_DATA of 100000000&#x000A;Release 1 / Serial number 180704 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Raumf&#x00E4;hre&#x000A;You can see hallo, hello, hollo, Palette, Barry and Antigravitationsgreifer here.&#x000A;&#x000A;&gt;</result>
@@ -53,6 +53,7 @@
       <child nodeId="node-1444"/>
       <child nodeId="node-1587"/>
       <child nodeId="node-1592"/>
+      <child nodeId="node-1596"/>
     </children>
   </item>
   <item nodeId="node-1114">
@@ -14121,11 +14122,12 @@
   </item>
   <item nodeId="node-1589">
     <command xml:space="preserve">up</command>
-    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Du tr&#x00E4;gst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-1590"/>
+      <child nodeId="node-1594"/>
     </children>
   </item>
   <item nodeId="node-1590">
@@ -14139,7 +14141,22 @@
   </item>
   <item nodeId="node-1591">
     <command xml:space="preserve">up</command>
-    <result xml:space="preserve">(first opening Wartungsluke)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Du tr&#x00E4;gst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-1595"/>
+    </children>
+  </item>
+  <item nodeId="node-1595">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see hallo, hello, hollo, Antigravitationsgreifer and Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1594">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -14153,6 +14170,282 @@
     </children>
   </item>
   <item nodeId="node-1593">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1596">
+    <command xml:space="preserve">chan barry</command>
+    <result xml:space="preserve">Du spielst nun Barry!&#x000A;Barry ist in Raumf&#x00E4;hre&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1597"/>
+    </children>
+  </item>
+  <item nodeId="node-1597">
+    <command xml:space="preserve">teleport to com_base</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1598"/>
+    </children>
+  </item>
+  <item nodeId="node-1598">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-1599"/>
+    </children>
+  </item>
+  <item nodeId="node-1599">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">What do you want to drop?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-1600"/>
+    </children>
+  </item>
+  <item nodeId="node-1600">
+    <command xml:space="preserve">teleport to raumf&#x00E4;hre</command>
+    <result xml:space="preserve">Raumf&#x00E4;hre&#x000A;You can see hallo, hello, hollo, Palette, Percy and Antigravitationsgreifer here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1601"/>
+    </children>
+  </item>
+  <item nodeId="node-1601">
+    <command xml:space="preserve">drop all</command>
+    <result xml:space="preserve">What do you want to drop those things in?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1602"/>
+    </children>
+  </item>
+  <item nodeId="node-1602">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">What do you want to drop?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1603"/>
+    </children>
+  </item>
+  <item nodeId="node-1603">
+    <command xml:space="preserve">drop weltraumt&#x00FC;r</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1604"/>
+    </children>
+  </item>
+  <item nodeId="node-1604">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Raumf&#x00E4;hre&#x000A;You can see hallo, hello, hollo, Palette, Percy and Antigravitationsgreifer here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1605"/>
+    </children>
+  </item>
+  <item nodeId="node-1605">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">hallo: Taken.&#x000A;hello: Taken.&#x000A;hollo: Taken.&#x000A;Palette: Wo willst du den die Palette hinpacken? Die ist doch viel zu gro&#x00DF;.&#x000A;Antigravitationsgreifer: Taken.&#x000A;Messenger: That seems to belong to Percy.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1606"/>
+    </children>
+  </item>
+  <item nodeId="node-1606">
+    <command xml:space="preserve">teleport to com_base</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1607"/>
+    </children>
+  </item>
+  <item nodeId="node-1607">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Du tr&#x00E4;gst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1608"/>
+    </children>
+  </item>
+  <item nodeId="node-1608">
+    <command xml:space="preserve">drop all</command>
+    <result xml:space="preserve">Antigravitationsgreifer: Dropped.&#x000A;hollo: Dropped.&#x000A;hello: Dropped.&#x000A;hallo: Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1609"/>
+    </children>
+  </item>
+  <item nodeId="node-1609">
+    <command xml:space="preserve">teleport to hangar</command>
+    <result xml:space="preserve">Hangar&#x000A;You can see Luke_Hangar, Umkleidet&#x00FC;r, Spind (in which are Mobitab and Sicherheitsausweis), Drucklufthammer and LuPanel U Hangar here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1610"/>
+    </children>
+  </item>
+  <item nodeId="node-1610">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">Drucklufthammer: Taken.&#x000A;Mobitab: Taken.&#x000A;Sicherheitsausweis: Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1611"/>
+    </children>
+  </item>
+  <item nodeId="node-1611">
+    <command xml:space="preserve">teleport to com_base</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see hallo, hello, hollo, Antigravitationsgreifer and Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1612"/>
+    </children>
+  </item>
+  <item nodeId="node-1612">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Du tr&#x00E4;gst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1613"/>
+    </children>
+  </item>
+  <item nodeId="node-1613">
+    <command xml:space="preserve">drop drucklufthammer</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1614"/>
+    </children>
+  </item>
+  <item nodeId="node-1614">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1615"/>
+    </children>
+  </item>
+  <item nodeId="node-1615">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Drucklufthammer, hallo, hello, hollo, Antigravitationsgreifer and Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1616"/>
+    </children>
+  </item>
+  <item nodeId="node-1616">
+    <command xml:space="preserve">drop mobitab</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1617"/>
+    </children>
+  </item>
+  <item nodeId="node-1617">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1618"/>
+    </children>
+  </item>
+  <item nodeId="node-1618">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see Mobitab, Drucklufthammer, hallo, hello, hollo, Antigravitationsgreifer and Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1619"/>
+    </children>
+  </item>
+  <item nodeId="node-1619">
+    <command xml:space="preserve">take hallo</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1620"/>
+    </children>
+  </item>
+  <item nodeId="node-1620">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Du tr&#x00E4;gst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1621"/>
+    </children>
+  </item>
+  <item nodeId="node-1621">
+    <command xml:space="preserve">drop hallo</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1622"/>
+    </children>
+  </item>
+  <item nodeId="node-1622">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1623"/>
+    </children>
+  </item>
+  <item nodeId="node-1623">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">Com Base&#x000A;You can see hallo, Mobitab, Drucklufthammer, hello, hollo, Antigravitationsgreifer and Weltraumt&#x00FC;r here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1624"/>
+    </children>
+  </item>
+  <item nodeId="node-1624">
+    <command xml:space="preserve">drop sicherheitsausweis</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1625"/>
+    </children>
+  </item>
+  <item nodeId="node-1625">
+    <command xml:space="preserve">take mobitab</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1626"/>
+    </children>
+  </item>
+  <item nodeId="node-1626">
     <command xml:space="preserve">up</command>
     <result xml:space="preserve">Wartungsschacht&#x000A;You can see Wartungsluke and LuPanel U Wartung here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>

@@ -3,9 +3,6 @@ Use MAX_STATIC_DATA of 100000000.
 
 
 [*****Testmethode*****]
-hallo is a thing. it is in raumfähre.
-hello is a thing. it is in raumfähre.
-hollo is a thing. it is in raumfähre.
 [Teleport]
 Raumteleport is a room variable.
 Understand "Teleport to [any room]" as Teleporting.
@@ -145,7 +142,7 @@ Every turn:
 				Else:
 					Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
 			Else:
-				Say "Durch das Deckenfenster sieht man den grün glühenden 	Maschinenkern.";
+				Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
 		If the player is in Xeno_Lab:
 			If Pfeifen is true:
 				Say "Ein ohrenbetäubendes Pfeifen ist zu hören.";
@@ -156,16 +153,21 @@ Every turn:
 
 
 [zum Wartungsschacht gehen]
-Instead of going up to Wartungsschacht:
-	If the player carries 0 things:
+Instead of going to Wartungsschacht:
+	If the player carries less than 3 things and the player carries the Mobitab and the player carries the Sicherheitsausweis:
 		Continue the action;
 	Otherwise:
-		If the player carries 2 things and the player carries the Mobitab and the player carries the Sicherheitsausweis:
-			Continue the action;
-		Otherwise:
-			If the player carries 1 thing:
-				If the player carries the Mobitab or the player carries the Sicherheitsausweis:
+		If the player carries less than 2 things:
+			If the player carries the Mobitab or the player carries the Sicherheitsausweis:
+				Continue the action;
+			Otherwise:
+				If the player carries less than 1 thing:
 					Continue the action;
+				Otherwise:
+					Say "Du trägst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!";
+		Otherwise:
+			If the player carries less than 1 thing:
+				Continue the action;
 			Otherwise:
 				Say "Du trägst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!".
 
