@@ -812,7 +812,7 @@ Every turn:
 	If Hilfsgenerator_Aktiviert is true:
 		Decrease Strom by 1;
 		If the player carries the Mobitab:
-			Say "Das Mobitab zeigt an, dass nur noch [Strom] Züge Strom da ist!";
+			Say "[bold type]Mobitab: [roman type]Züge an Energie: [Strom][line break]";
 	If Strom is 0:
 		Now Hilfsgenerator_Aktiviert is false.
 
@@ -1089,10 +1089,14 @@ After going up from Wartungsschacht:
 	Continue the action.
 
 Every turn:
-	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
-		Decrease Sauerstoff by 1;
+	If Sauerstoff_Abfall is true:
+		If Sauerstoff is greater than 0:
+			Decrease Sauerstoff by 1;
 		If the player carries the Mobitab:
-			Say "[bold type]Mobitab: [roman type]Züge an Sauerstoff: [Sauerstoff][line break]";
+			If Sauerstoff is greater than 0:
+				Say "[bold type]Mobitab: [roman type]Züge an Sauerstoff: [Sauerstoff] (im äußeren Ring)[line break]";
+			Otherwise:
+				Say "[bold type]Mobitab: [roman type]Im äußeren Ring gibt es keine Sauerstoff mehr!";
 	If Sauerstoff is 0 and the player is in a room in aeußererRing: 
 		Say "[bold type]Es ist kein Sauerstoff mehr vorhanden! Du erstickst![roman type]";
 		End the story finally.
