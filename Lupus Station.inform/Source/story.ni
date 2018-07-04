@@ -173,7 +173,7 @@ To dekontaminiere_Percy:
 Instead of going down from the Briefing_Room:
 	If Bridge Luke is locked:
 		If Hauptenergieabfall is true:
-			Now Bridge_Luke is unlocked;
+			Now Bridge Luke is unlocked;
 			Continue the action;			
 		Otherwise:
 			Say "Die Kommandosperre hat die Luke blockiert... nur ein Stromausfall könnte diese Sperre aufheben.";
@@ -249,7 +249,8 @@ Instead of closing Dekon Tür:
 					Continue the action;
 				Else:
 					If dekonKontcount is 1:
-						Say "Du willst doch Percy als Erstes dekontaminieren.";
+						Say "[bold type]Du hast die falsche Person dekontaminiert![roman type]";
+						End the story finally;
 					Else:
 						Say "Niemand ist in der Kabine.";
 			Else:
@@ -632,7 +633,7 @@ Every turn:
 			Increase Aktionen_mit_geraeusch by 1;
 		Now Kontaminierten_going is false;
 		If Aktionen_ohne_geraeusch is greater than 2:
-			Say "Du wurdest kontaminiert!";
+			Say "[bold type]Du wurdest kontaminiert![roman type]";
 			End the Story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -901,12 +902,15 @@ Umkleidetuer is a door. The printed name is "Umkleidetür".
 	
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
-Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
-Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
+Duty_Room is a room. The printed name is "Duty Room".
+	Luke_Duty_Room is a Luke. It is above Duty_Room and down of Alpha_Junction.
+	LuPanel D Alp Junc is a LuPanel. The Given_Luke is Luke_Duty_Room. LuPanel D Alp Junc is in Alpha_Junction. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
+Crew_Quarter is a room. The printed name is "Crew Quarter".
+	Luke_Crew_Quarter is a Luke. It is above Crew_Quarter and down of Duty_Room.
+	LuPanel D Duty Rm is a LuPanel. The Given_Luke is Luke_Crew_Quarter. LuPanel D Duty Rm is in Duty Room. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 
-Wartungsluke is a door. 
-	It is down of Gamma_Delta_Corridor.
-	It is locked.
+Wartungsluke is a Luke. It is down of Gamma_Delta_Corridor and above Wartungsschacht.
+LuPanel U Wartung is a LuPanel. The Given_Luke is Wartungsluke. LuPanel U Wartung is in Wartungsschacht. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 	
 Wartungsschacht is down of Wartungsluke. The printed name is "Wartungsschacht".
 Com_Base is down of Wartungsschacht. The printed name is "Com Base".
@@ -921,19 +925,24 @@ Weltraumtuer_2 is a door. The printed name is "Weltraumtür".
 
 Storage_Area is east of Gamma_Junction. It is in aeußererRing. The printed name is "Storage Area".
 Beta_Greenhouse is north of Storage_Area. It is in aeußererRing. The printed name is "Beta Greenhouse".
-Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
-LuPanel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. LuPanel U Stor Ar is in Storage_Area. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
-
 Delta_AI is a room. It is in innererRing. The printed name is "Delta AI".
+	Luke_Delta_AI is a Luke. It is down of Delta_AI and above Storage_Area.
+	LuPanel U Stor Ar is a LuPanel. The Given_Luke is Luke_Delta_AI. LuPanel U Stor Ar is in Storage_Area. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
+
 Main_Generator is south of Delta_AI. It is in innererRing. The printed name is "Main Generator".
 Delta_Greenhouse is a room. It is in aeußererRing. The printed name is "Delta Greenhouse".
 Storage_Room is south of Delta_Greenhouse. It is in aeußererRing. The printed name is "Storage Room".
-Alpha_AI is up of Storage_Room. It is in innererRing. The printed name is "Alpha AI".
+Alpha_AI is a room. It is in innererRing. The printed name is "Alpha AI".
+	Luke_Alpha_AI is a Luke. It is down of Alpha_AI and above Storage_Room.
+	LuPanel U Stor Rm is a LuPanel. The Given_Luke is Luke_Alpha_AI. LuPanel U Stor Rm is in Storage_Room. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
+
 Transporter_Raum is south of Alpha_AI. It is in innererRing. The printed name is "Transporter Raum".
 
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
 Fitness is east of Crew_Quarter. The printed name is "Fitness".
-Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Cafeteria".
+Cafeteria is east of Duty_Room. The printed name is "Cafeteria".
+	Luke_Storage_Room is a Luke. It is above Cafeteria and down of Storage_Room.
+	LuPanel U Cafeteria is a LuPanel. The Given_Luke is Luke_Storage_Room. LuPanel U Cafeteria is in Cafeteria. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
@@ -941,7 +950,7 @@ Bridge Luke is a door.
 	It is down of Briefing_Room.
 	Bridge Luke is above Bridge. 
 	Bridge Luke is locked.
-Bridge is down of Bridge_Luke. The printed name is "Bridge".
+Bridge is down of Bridge Luke. The printed name is "Bridge".
 
 
 
@@ -1018,10 +1027,13 @@ Scene4 ends when Sauerstoff_Abfall is true.
 
 [Bodenfenster geht kaputt + Sauerstoffabfall]
 Instead of going to Wartungsschacht:
-	If the player carries 1 thing and the player carries the Mobitab or the player carries 0 things:
-		Continue the action;
+	If the player carries 0 things or the player carries 1 thing or the player carries 2 things:
+		If the player carries the Mobitab or the player carries the Sicherheitsausweis:
+			Continue the action;
+		If the player carries the Mobitab and the player carries the Sicherheitsausweis:
+			Continue the action;
 	Otherwise:
-		Say "Du trägst zu viel! Du kannst nur das Mobitab mitnehmen!".
+		Say "Du trägst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!".
 		
 After going up from Wartungsschacht:
 	If Sauerstoff_Abfall is false:
