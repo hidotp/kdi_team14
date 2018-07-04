@@ -3,6 +3,9 @@ Use MAX_STATIC_DATA of 100000000.
 
 
 [*****Testmethode*****]
+hallo is a thing. it is in raumfähre.
+hello is a thing. it is in raumfähre.
+hollo is a thing. it is in raumfähre.
 [Teleport]
 Raumteleport is a room variable.
 Understand "Teleport to [any room]" as Teleporting.
@@ -20,12 +23,13 @@ Stationsalarm is a truth state variable. Stationsalarm is true.
 Pfeifen is a truth state variable. Pfeifen is true.
 Hauptenergieabfall is a truth state variable. Hauptenergieabfall is false.
 Kontcount is a number variable. Kontcount is 0.
+Percy_is_bei_k is a truth state variable. Percy_is_bei_k is false.
 dekonKontcount is a number variable. dekonKontcount is 0.
 DekonDone is a truth state variable. DekonDone is false.
 druckluftLadezustand is a truth state variable. druckluftLadezustand is false.
 Hangar_luke_close is a truth state variable. Hangar_luke_close is true.
 Sauerstoff is a number variable. Sauerstoff is 12. [Sauerstoffzähler]
-Strom is a number variable. Strom is 7. [Stromzähler]
+Strom is a number variable. Strom is 8. [Stromzähler]
 
 
 
@@ -117,8 +121,11 @@ Every turn:
 	If the player has MobiTab:	
 		count_Kontaminiert;
 		If Kontcount > 0:
-			Say "[bold type]Mobitab: [roman type] Anzahl der Kontaminierten: [Kontcount][line break]";
-			Continue the action;
+			Say "[bold type]Mobitab: [roman type]Anzahl der Kontaminierten: [Kontcount]";
+			If Percy_is_bei_k is true:
+				Say " (Das ist Percy)";
+			Say "[line break]";
+			Continue the action.
 
 [Bewegen Methodik (Beschreibungstext durch den Sationsalarm und den Hauptenergieaabfall(Dieser nur im Innerem Ring))]
 Richtung_StAla is a direction variable.
@@ -146,6 +153,21 @@ Every turn:
 			If Pfeifen is true and Luke_XenoLab is open and XenoLuke_Blockiert is true:
 				Say "Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.";
 	Now Raum_Test_2 is Raum_Test_1.
+
+
+[zum Wartungsschacht gehen]
+Instead of going up to Wartungsschacht:
+	If the player carries 0 things:
+		Continue the action;
+	Otherwise:
+		If the player carries 2 things and the player carries the Mobitab and the player carries the Sicherheitsausweis:
+			Continue the action;
+		Otherwise:
+			If the player carries 1 thing:
+				If the player carries the Mobitab or the player carries the Sicherheitsausweis:
+					Continue the action;
+			Otherwise:
+				Say "Du trägst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!".
 
 
 [Spieler wechseln]
@@ -180,11 +202,14 @@ Instead of going down from the Briefing_Room:
 			Say "Die Kommandosperre hat die Luke blockiert... nur ein Stromausfall könnte diese Sperre aufheben.";
 			Continue the action;	
 	Otherwise:
-		Continue the action;
+		Continue the action.
 
 [Beende Spiel, wenn Percy und Kontaminierter in einem Raum]
+one_time_say is a truth state variable. one_time_say is true.
 To Percy_und_Kontaminierter:
-	Say "[bold type]Es ist nicht mehr möglich Percy zu dekontaminieren! (Percy und ein anderer Kontaminierter befinden sich in einem Raum)[roman type]";
+	If one_time_say is true:
+		Say "[bold type]Es ist nicht mehr möglich Percy zu dekontaminieren! (Percy und ein anderer Kontaminierter befinden sich in einem Raum)[roman type]";
+		Now one_time_say is false;
 	End the story finally.
 
 [Entriegel alle Barrien und öffne sie]
@@ -234,6 +259,7 @@ To count_KontDekon:
 
 [Kontaminiertencounter -- MobiTab]
 To count_Kontaminiert:
+	Now Percy_is_bei_k is false;
 	Now Kontcount is 0;
 	If Kontaminierter_1 is in the location of the player:
 		Increase Kontcount by 1;
@@ -253,7 +279,8 @@ To count_Kontaminiert:
 		Increase Kontcount by 1;
 	If Is_Kontaminiert of Percy is true:
 		If Percy is in the location of the player:
-			Increase Kontcount by 1.
+			Increase Kontcount by 1;
+			Now Percy_is_bei_k is true.
 			
 [Dekontaminiation]
 DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatminiert! Durch die Dekontamination wurde der Maschinenkern so überlastet das Barry nun einen Hauptenenergieabfall feststellt. [line break] Die Kommandosperre der Brücke ist dadurch aufgehoben.".
@@ -268,6 +295,7 @@ Instead of closing Dekon Tür:
 					Now Hauptenergieabfall is true;
 					Say DekonText;
 					Now Bridge Luke is unlocked;
+					Now DekonDone is true;
 					Continue the action;
 				Else:
 					If dekonKontcount is 1:
@@ -280,25 +308,25 @@ Instead of closing Dekon Tür:
 		Else:
 			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren. Maximal eine kann aufeinmal dekontaminiert werden.";
 	Else:
-		Say "Die Energie des Maschinenkerns hat nur für eine Dekontamination gereicht.";
+		Say "Die Energie des Maschinenkerns hat nur für eine Dekontamination gereicht.".
 	
 [Mobitab nehmen]
 Instead of taking the Mobitab:
 	If the player is Barry:
 		Continue the action;
 	Else:
-		Say "Du traust dir das nicht zu, das zu nehmen."	
+		Say "Du traust dir das nicht zu, das zu nehmen.".
 
 [Drucklufthammer nehmen]
 Instead of taking the Drucklufthammer:
 	If the player is Barry:
 		Continue the action;
 	Else:
-		Say "Du brauchst das noch nicht."	
+		Say "Du brauchst das noch nicht.".
 
 [Palette nehmen]
 Instead of taking the Palette:
-	Say "Wo willst du den die Palette hinpacken? Die ist doch viel zu groß."
+	Say "Wo willst du den die Palette hinpacken? Die ist doch viel zu groß.".
 
 
 [RäumeListe erstellen]
@@ -332,7 +360,7 @@ To createRaumliste:
 [Info zum Hebel]
 Before going from Gamma_Delta_Corridor to Wartungsschacht:
 	If Wartungsluke is locked:
-		Say "Du kannst die Luke nicht öffnen. Der Hebel ist abbgebrochen.";
+		Say "Du kannst die Luke nicht öffnen. Der Hebel ist abbgebrochen.".
 
 
 
@@ -352,7 +380,7 @@ Report Clapping:
 		If Kontaminierter is in the location of the player:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
 		Else: 
-			Say "Du hast in die Hände geklatscht!";
+			Say "Du hast in die Hände geklatscht!".
 
 [Sprechen]
 Understand "talk with [any Kontaminierter]" as Talking.
@@ -364,7 +392,7 @@ Report Talking:
 	If Stationsalarm is true:
 		Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und er konnte dich nicht hören.";
 	Else:
-		Say "Du hast den Kontaminierten angesprochen und seine Aufmerksamkeit erlangt."
+		Say "Du hast den Kontaminierten angesprochen und seine Aufmerksamkeit erlangt.".
 
 [Drucklufthammer aufladen]
 Understand "charge [Drucklufthammer] with [any Panel]" as Charging.
@@ -378,7 +406,7 @@ Carry out Charging:
 	If druckluftLadezustand is false:
 		Now druckluftLadezustand is true;
 Report Charging:
-	Say "Du hast den Drucklufthammer aufgeladen."
+	Say "Du hast den Drucklufthammer aufgeladen.".
 	
 [Drucklufthammer benutzen]
 Understand "use [Drucklufthammer]" as Druckluften.
@@ -387,7 +415,7 @@ Check Druckluften:
 	If the player is not carrying the Drucklufthammer:
 		Say "Du hast den Drucklufthammer nicht bei dir." instead;
 	If druckluftLadezustand is false:
-		Say "Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen" instead;
+		Say "Der Drucklufthammer hat keine Energie. Du musst ihn an einem Panel (N oder S) aufladen." instead;
 Carry out Druckluften:
 	If druckluftLadezustand is true:
 		Increase Laute_Aktionen by 1;
@@ -396,7 +424,7 @@ Report Druckluften:
 	If Kontaminierter is in the location of the player:
 		Say "Du hast mit dem Drucklufthammer ein lautes Geräusch gemacht und der Kontaminierte hat dich bemerkt! Dein Akku ist nun leer.";
 	Else: 
-		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht. Dein Akku ist nun leer.";
+		Say "Du hast den Drucklufthammer benutzt und ein lautes Geräusch gemacht. Dein Akku ist nun leer.".
 
 [Sicherheitsbarrieren]
 Understand "use [Sicherheitsausweis] with [any Panel]" as Using.
@@ -415,7 +443,7 @@ Report Using:
 	If the the Given_SiBa of the second Noun is closed:
 		Say "Du hast die zugehörige Tür des Panels verriegelt.";
 	Else:
-		Say "Du hast die zugehörige Tür des Panels entriegelt.";
+		Say "Du hast die zugehörige Tür des Panels entriegelt.".
 
 [Luke - Sicherheitsausweis]
 hLukeTurn is a number variable. hLukeTurn is 0.
@@ -442,7 +470,7 @@ Carry out d_entriegeln:
 	Now Luke_Hangar is open;
 	Now hLukeTurn is 2.
 Report d_entriegeln:
-	Say "Du hast die Hangarluke für einen Zug geöffnet."
+	Say "Du hast die Hangarluke für einen Zug geöffnet.".
 	
 Every turn:
 	If Hangar_luke_close is true:
@@ -457,7 +485,7 @@ Every turn:
 			If xLukeTurn is 0 and XenoLuke_Blockiert is false:
 				Now Luke_XenoLab is locked;
 				Now Luke_XenoLab is closed;
-				Say "Die XenoLab Luke hat sich geschlossen".
+				Say "Die XenoLab Luke hat sich geschlossen.".
 		
 [Luke - Laborkittel]
 XenoLuke_Blockiert is a truth state variable.
@@ -469,13 +497,13 @@ Check xenoEntriegeln:
 	If XenoLuke_Blockiert is true:
 		Say "Die Luke ist schon blockiert, du musst sie nicht nochmal aufmachen." instead;
 	If the Player is not wearing the Laborkittel:
-		Say "Du hast den Laborkittel nicht an, du musst in anziehen damit du die Luke öffnen kannst!" instead;
+		Say "Du hast den Laborkittel nicht an, du musst in anziehen damit du die Luke öffnen kannst!" instead.
 Carry out xenoEntriegeln:
 	Now Luke_XenoLab is unlocked;
 	Now Luke_XenoLab is open;
-	Now xLukeTurn is 2;
+	Now xLukeTurn is 2.
 Report xenoEntriegeln:
-	Say "Du hast die XenoLab Luke für einen Zug geöffnet."
+	Say "Du hast die XenoLab Luke für einen Zug geöffnet.".
 
 Instead of going up from Gamma_Junction:
 	If XenoLuke_Blockiert is true:
@@ -490,18 +518,18 @@ Instead of closing the Luke_XenoLab:
 	If XenoLuke_Blockiert is true:
 		Say "Du kannst die Luke nicht schließen, die Palette blockiert sie.";
 	Else:
-		Continue the action;
+		Continue the action.
 
 [LuPanel kaputtmachen]
 Understand "hit [any LuPanel] with [Mobitab]" as Kaputtmachen.
 	Kaputtmachen is an action applying to two things.
 Check Kaputtmachen:
 	If the Player is not carrying the MobiTab:
-		Say "Du trägst nicht das Mobitab!" instead;
+		Say "Du trägst nicht das Mobitab!" instead.
 Carry out Kaputtmachen:
-	Now the Given_Luke of the noun is unlocked;
+	Now the Given_Luke of the noun is unlocked.
 Report Kaputtmachen:
-	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen."
+	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen.".
 	
 [Med-Lab Pult Benutzung]
 MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich der Videoblog an zu spielen: [line break] [bold type] Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzer Zeit alle Mitarbeiter der Station befallen. Ich habe es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt. [line break] Der Stationsalarm geht nach dem Anschauen des Videoblogs wieder los.".
@@ -511,12 +539,12 @@ Understand "interact with [Med-Lab Pult]" as medInteracting.
 	medInteracting is an action applying to one thing.
 Check medInteracting:
 	If MedLabUsable is false:
-		Say "Das interressiert dich noch nicht. Da müsste erst ein Freund kontaminiert sein." instead;
+		Say "Das interressiert dich noch nicht. Da müsste erst ein Freund kontaminiert sein." instead.
 Carry out medInteracting:
 	Increase Laute_Aktionen by 1;
-	Now Stationsalarm is true;
+	Now Stationsalarm is true.
 Report medInteracting:
-	Say MedLabText;
+	Say MedLabText.
 	
 
 [XenoKnopf druecken]
@@ -533,9 +561,9 @@ Carry out druecken:
 	Now gedrueckt is true;
 	Now Klappe is open;
 	Now Klappe is unlocked;
-	Now the description of XenoKnopf is "Der Knopf blinkt nicht mehr und er bleibt in seiner gedrückten Position."
+	Now the description of XenoKnopf is "Der Knopf blinkt nicht mehr und er bleibt in seiner gedrückten Position.".
 Report druecken:
-	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei. Das Blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion." 
+	Say "Tatsächlich tut es das, das Pfeifen und der Alarm verstummen. Eine Klappe in der Wand öffnet sich und gibt den Blick auf eine Phiole mit rosafarbenen Nebel frei. Das Blinken des Knopfes erlischt und der Knopf ist nun ohne Funktion.".
 
 [Phiole]
 Phiole is a Thing. Phiole is in Klappe. 
@@ -544,12 +572,12 @@ Understand "take [Phiole]" as nehmen.
 nehmen is an action applying to one thing.
 Check nehmen:
 	If Klappe is locked:
-		Say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead;
+		Say "Du musst vorher die Klappe öffnen um die Phiole zu nehmen." instead.
 Carry out nehmen:
 	kontaminiere_Percy;
- 	Now Szene1Laeuft is 2;
+ 	Now Szene1Laeuft is 2.
 Report nehmen:
-	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend."
+	Say "Als Percy versucht, sie an sich zu nehmen, entgleitet sie ihm und faällt auf den Boden und zerbricht. Sofort wird der Nebel freigesetzt, die ihm den Atem abschnüren. Er wird Kontaminiert und blickt fortan mit starren Blick in die Gegend.".
 
 	
 [Greifer anbringen]
@@ -563,9 +591,9 @@ Check usePalette:
 Carry out usePalette:
 	Now paletteVerschieben is true;
 	Now the Antigravitationsgreifer is nowhere;
-	Now the description of Palette is "Eine durch den Antigravitationsgreifer schwebende Palette.";
+	Now the description of Palette is "Eine durch den Antigravitationsgreifer schwebende Palette.".
 Report usePalette:
-	say "Du hast den Greifer an die Palette angebracht."
+	say "Du hast den Greifer an die Palette angebracht.".
 	
 Rand is a number variable. Rand is 0. 
 	
@@ -576,8 +604,8 @@ Check MovePalette:
 	If paletteVerschieben is false:
 		If the Palette is in Xeno_Lab:
 			Say "Die Palette blockiert die Luke und ist nicht bewegbar." instead;
-		Else:
-			Say "Du kannst die Palette noch nicht bewegen! Versuche den Antigravitationsgreifer anzubringen." instead;
+		Otherwise:
+			Say "Du kannst die Palette noch nicht bewegen! Versuche den Antigravitationsgreifer anzubringen." instead.
 Carry out MovePalette:
 	createRaumliste; 
 	If the number of entries of Raumliste is not 0:
@@ -590,7 +618,7 @@ Carry out MovePalette:
 			Now the Palette is in entry Rand of Raumliste;
 		Else:
 			Now the Palette is in entry Rand of Raumliste;
-			Say "Jetzt ist die Palette in [entry Rand of Raumliste]."; 
+			Say "Jetzt ist die Palette in [entry Rand of Raumliste].".
 
 
 
@@ -715,7 +743,7 @@ Instead of dropping Messenger:
 
 [Raumanzug ausziehen]
 Instead of taking off Raumanzug:
-	If the player is in Second_Generator and Scene4 is happening and Raumanzug_Kaputt is false:
+	If Scene4 is happening and Raumanzug_Kaputt is false:
 		Say "Du kannst den Raumanzug hier nicht ausziehen!";
 	Otherwise:
 		If the player is in Weltraum:
@@ -819,7 +847,10 @@ Carry out Sending_Message:
 		Say "Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.";
 		Change_to_Percy;
 	Otherwise:
-		Say "Du sendest eine Nachricht an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
+		If Is_Kontaminiert of Percy is true:
+			Say "Percy antwortet nicht.";
+		Otherwise:
+			Say "Du sendest eine Nachricht an Percy. Percy antwortet, dass du dich erst einmal auf deine Aufgabe konzentrieren sollst.".
 	
 
 
@@ -925,7 +956,7 @@ Umkleidetuer is a door. The printed name is "Umkleidetür".
 	
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
-Duty_Room is down of Alpha Junction. The printed name is "Duty Room".
+Duty_Room is down of Alpha_Junction. The printed name is "Duty Room".
 Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
 
 Wartungsluke is a Luke. It is down of Gamma_Delta_Corridor and above Wartungsschacht.
@@ -983,7 +1014,7 @@ Szene 1 begins when play begins.
 When Szene 1 begins:
 	Say "[bold type]Szene 1:[line break]";
 	Say "[italic type]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Geräusch beim Einflug in die DockingBay la¨sst aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock- und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Du spielst Percy und machst dich auf, um nach dem Stationspersonal suchen und um dich auf der Brücke beim wachhabenden Offizier meldet. Besuche zunächst einmal das Xeno-Lab.[line break]";
-	Say "Ein Tipp: Finde den Laborkittel![roman type]".
+	Say "Ein Tipp: Finde den Laborkittel![roman type][line break]".
 
 After going to Gamma_Delta_Corridor: 
 	If First_say_gdc is false:
@@ -1010,7 +1041,7 @@ When Scene2 begins:
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
-	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen.[roman type]".
+	Say "[italic type]Du bist Barry. Nachdem du herausgefunden hast dass das Raumschiff einer aufwendigen Reparatur bedarf, wunderst du dich warum noch niemand gekommen ist und wo Percy seit dem Abholen der Palette abgeblieben ist. Du fängst an nach ihm zu suchen.[roman type][line break]".
 Scene2 ends when DekonDone is true.
 
 After going to Xeno_Lab: 
@@ -1024,7 +1055,7 @@ After entering Gamma_Junction:
 		Now Stationsalarm is false;
 		Now GammaListened is true;
 		Say "Du hörst noch kurz den Stationsalarm und ein lautes Pfeifen aus dem Xeno Lab. Doch es verstummt kurz darauf und es ist ein Klirren aus dem Xeno Lab zu hören.";
-	Continue the action;
+	Continue the action.
 	
 
 
@@ -1036,21 +1067,12 @@ Scene4 begins when Scene2 ends.
 When Scene4 begins:
 	Say "[bold type]Scene 4:[line break]";
 	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Gehe dazu in die Com Base.[line break]";
-	Say "Ein Tipp: Finde den Raumanzug und gehe durch den Weltraum![roman type]";
+	Say "Ein Tipp: Finde den Raumanzug und gehe durch den Weltraum![roman type][line break]";
 	Now Umkleidetuer is unlocked.
 Scene4 ends when Sauerstoff_Abfall is true.
 
 
-[Bodenfenster geht kaputt + Sauerstoffabfall]
-Instead of going to Wartungsschacht:
-	If the player carries 0 things or the player carries 1 thing or the player carries 2 things:
-		If the player carries the Mobitab or the player carries the Sicherheitsausweis:
-			Continue the action;
-		If the player carries the Mobitab and the player carries the Sicherheitsausweis:
-			Continue the action;
-	Otherwise:
-		Say "Du trägst zu viel! Du kannst nur das Mobitab und den Sicherheitsausweis mitnehmen!".
-		
+[Bodenfenster geht kaputt + Sauerstoffabfall]		
 After going up from Wartungsschacht:
 	If Sauerstoff_Abfall is false:
 		Say "Die eingeklemmte Palette löst sich. Sie hat sich durch die zugehende Luke so sehr beschleunigt dass das Bodenfenster kaputt geht! Der Sauerstoff wird nun weniger im äußeren Ring!";
@@ -1062,7 +1084,7 @@ After going up from Wartungsschacht:
 		Now the description of Palette is "Die Palette wurde leicht durch die Xeno Luke beschädigt. Sie hat das Bodenfenster schwer beschädigt.";
 		Now the description of Gamma_Junction is "Das Bodenfenster wurde durch die Palette schwer beschädigt und es entweicht Luft.";
 		Increase Sauerstoff by 1;
-	Continue the action;
+	Continue the action.
 
 Every turn:
 	If Sauerstoff_Abfall is true and Sauerstoff is greater than 0:
@@ -1097,4 +1119,4 @@ Every turn:
 		If Barry_ist_da is false:
 			Change_to_Percy;
 			Say "[italic type]Gehe in die Docking Bay. Barry und ein Rettungsteam warten dort! Beeil dich, der Sauerstoff im äußeren Ring wird langsam knapp![roman type]";
-			Now Barry_ist_da is true;
+			Now Barry_ist_da is true.
