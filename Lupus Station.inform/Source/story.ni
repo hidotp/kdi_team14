@@ -23,8 +23,9 @@ Kontcount is a number variable. Kontcount is 0.
 dekonKontcount is a number variable. dekonKontcount is 0.
 DekonDone is a truth state variable. DekonDone is false.
 druckluftLadezustand is a truth state variable. druckluftLadezustand is false.
-Sauerstoff is a number variable. Sauerstoff is 5. [Sauerstoffzähler]
-Strom is a number variable. Strom is 5. [Stromzähler]
+Hangar_luke_close is a truth state variable. Hangar_luke_close is true.
+Sauerstoff is a number variable. Sauerstoff is 12. [Sauerstoffzähler]
+Strom is a number variable. Strom is 7. [Stromzähler]
 
 
 
@@ -186,6 +187,27 @@ To Percy_und_Kontaminierter:
 	Say "[bold type]Es ist nicht mehr möglich Percy zu dekontaminieren! (Percy und ein anderer Kontaminierter befinden sich in einem Raum)[roman type]";
 	End the story finally.
 
+[Entriegel alle Barrien und öffne sie]
+To oeffne_Barrieren:
+	Now SiBa_1 is unlocked;
+		Now SiBa_1 is open;
+	Now SiBa_2 is unlocked;
+		Now SiBa_2 is open;
+	Now SiBa_3 is unlocked;
+		Now SiBa_3 is open;
+	Now SiBa_4 is unlocked;
+		Now SiBa_4 is open;
+	Now SiBa_5 is unlocked;
+		Now SiBa_5 is open;
+	Now SiBa_6 is unlocked;
+		Now SiBa_6 is open;
+	Now SiBa_7 is unlocked;
+		Now SiBa_7 is open;
+	Now SiBa_8 is unlocked;
+		Now SiBa_8 is open;
+	Now Luke_Hangar is unlocked;
+		Now Luke_Hangar is open;
+		Now Hangar_luke_close is false.
 
 [Kontaminiertencounter -- Dekontaminationskabine]
 To count_KontDekon:
@@ -423,18 +445,19 @@ Report d_entriegeln:
 	Say "Du hast die Hangarluke für einen Zug geöffnet."
 	
 Every turn:
-	If hLukeTurn is not 0:
-		Decrease hLukeTurn by 1;
-		If hLukeTurn is 0:
-			Now Luke_Hangar is locked;
-			Now Luke_Hangar is closed;
-			Say "Die Hangarluke hat sich geschlossen![line break]";
-	If xLukeTurn is not 0:
-		Decrease xLukeTurn by 1;
-		If xLukeTurn is 0 and XenoLuke_Blockiert is false:
-			Now Luke_XenoLab is locked;
-			Now Luke_XenoLab is closed;
-			Say "Die XenoLab Luke hat sich geschlossen".
+	If Hangar_luke_close is true:
+		If hLukeTurn is not 0:
+			Decrease hLukeTurn by 1;
+			If hLukeTurn is 0:
+				Now Luke_Hangar is locked;
+				Now Luke_Hangar is closed;
+				Say "Die Hangarluke hat sich geschlossen![line break]";
+		If xLukeTurn is not 0:
+			Decrease xLukeTurn by 1;
+			If xLukeTurn is 0 and XenoLuke_Blockiert is false:
+				Now Luke_XenoLab is locked;
+				Now Luke_XenoLab is closed;
+				Say "Die XenoLab Luke hat sich geschlossen".
 		
 [Luke - Laborkittel]
 XenoLuke_Blockiert is a truth state variable.
@@ -874,12 +897,12 @@ LuPanel U Gam Junc is a LuPanel. The Given_Luke is Luke_XenoLab. LuPanel U Gam J
 Engeneering_Lab is a room. It is in innererRing. The printed name is "Engeneering Lab".
 Luke_Engineering is a Luke. The printed name is "Luke_Engineering".
 	It is up of Beta_Junction and down of Engeneering_Lab.
-LuPanel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. LuPanel U Bet Junc is in Beta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Bet Junc is a LuPanel. The Given_Luke is Luke_Engineering. LuPanel U Bet Junc is in Beta_Junction. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert."
 
 Med_Lab is a room. It is in innererRing. The printed name is "Med Lab".
 Luke_MedLab is a Luke. The printed name is "Luke_MedLab".
 	It is up of Alpha_Junction and down of Med_Lab.
-LuPanel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. LuPanel U Alp Junc is in Alpha_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Alp Junc is a LuPanel. The Given_Luke is Luke_MedLab. LuPanel U Alp Junc is in Alpha_Junction. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 Dekon Tür is a door. It is inside of Med_Lab. It is outside of Dekontaminationskabine. It is open.
 Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 	Dekontaminationskabine is in innererRing.
@@ -887,12 +910,12 @@ Dekontaminationskabine is a room.  The printed name is "Dekontaminationskabine".
 Solar_Lab is a room. It is in innererRing. The printed name is "Solar Lab".
 Luke_SolarLab is a Luke. The printed name is "Luke_SolarLab".
 	It is up of Delta_Junction and down of Solar_Lab.
-LuPanel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. LuPanel U Del Junc is in Delta_Junction. The description is "Türpanel, welches mit dem dazugehörigen Transponder aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus." 
+LuPanel U Del Junc is a LuPanel. The Given_Luke is Luke_SolarLab. LuPanel U Del Junc is in Delta_Junction.The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert."
 
+Hangar is a room. The printed name is "Hangar".
 Luke_Hangar is a Luke. It is down of Gamma_Junction and above Hangar.
 LuPanel U Hangar is a LuPanel. The Given_Luke is Luke_Hangar. LuPanel U Hangar is in Hangar. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
 LuPanel D Gam Junc is a LuPanel. The Given_Luke is Luke_Hangar. LuPanel D Gam Junc is in Gamma_Junction. The description is "Türpanel, welches mit dem Sicherheitsausweis aktiviert werden kann, aber es sieht nicht gegen Stöße gesichert aus."
-Hangar is a room. The printed name is "Hangar".
 Spind is a container. It is in Hangar. Spind is fixed in place. The description is "Der Spind eines Deckoffiziers, wahrscheinlich in Eile offengelassen."
 
 Umkleidekabine is a room. The printed name is "Umkleidekabine".
@@ -902,12 +925,8 @@ Umkleidetuer is a door. The printed name is "Umkleidetür".
 	
 Docking_Bay is down of Hangar. The printed name is "Docking Bay".
 Raumfähre is inside of Docking_Bay. The printed name is "Raumfähre".
-Duty_Room is a room. The printed name is "Duty Room".
-	Luke_Duty_Room is a Luke. It is above Duty_Room and down of Alpha_Junction.
-	LuPanel D Alp Junc is a LuPanel. The Given_Luke is Luke_Duty_Room. LuPanel D Alp Junc is in Alpha_Junction. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
-Crew_Quarter is a room. The printed name is "Crew Quarter".
-	Luke_Crew_Quarter is a Luke. It is above Crew_Quarter and down of Duty_Room.
-	LuPanel D Duty Rm is a LuPanel. The Given_Luke is Luke_Crew_Quarter. LuPanel D Duty Rm is in Duty Room. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
+Duty_Room is down of Alpha Junction. The printed name is "Duty Room".
+Crew_Quarter is down of Duty_Room. The printed name is "Crew Quarter".
 
 Wartungsluke is a Luke. It is down of Gamma_Delta_Corridor and above Wartungsschacht.
 LuPanel U Wartung is a LuPanel. The Given_Luke is Wartungsluke. LuPanel U Wartung is in Wartungsschacht. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
@@ -937,12 +956,9 @@ Alpha_AI is a room. It is in innererRing. The printed name is "Alpha AI".
 	LuPanel U Stor Rm is a LuPanel. The Given_Luke is Luke_Alpha_AI. LuPanel U Stor Rm is in Storage_Room. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 
 Transporter_Raum is south of Alpha_AI. It is in innererRing. The printed name is "Transporter Raum".
-
 Second_Generator is east of Com_Base. The printed name is "Second Generator".
 Fitness is east of Crew_Quarter. The printed name is "Fitness".
-Cafeteria is east of Duty_Room. The printed name is "Cafeteria".
-	Luke_Storage_Room is a Luke. It is above Cafeteria and down of Storage_Room.
-	LuPanel U Cafeteria is a LuPanel. The Given_Luke is Luke_Storage_Room. LuPanel U Cafeteria is in Cafeteria. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
+Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Cafeteria".
 
 Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
@@ -1060,14 +1076,24 @@ Every turn:
 
 
 [*****Endscene*****]
+Barry_ist_da is a truth state variable. Barry_ist_da is false.
+
 Endscene is a scene.
 Endscene begins when Scene4 ends.
 When Endscene begins:
 	Change_to_Barry;
-	Now Percy is in Docking_Bay;
 	Say "[italic type]Endscene:[line break]";
-	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet. Percy wartet dort auch schon auf dich![line break][roman type]".
-Endscene ends when the player is in Docking_Bay.
+	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet.[line break]";
+	Say "Aus Sicherheitsgründen (wegen des Sauerstoffabfalls haben sich alle Barrieren und die Hangarluke geöffnet![roman type]".
+Endscene ends when Barry is in Docking_Bay and Percy is in Docking_Bay.
 When Endscene ends:
 	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
 	End the story finally.
+
+[Wechsel den Spieler, wenn Barry in der Docking Bay ist]
+Every turn:
+	If Endscene is happening and Barry is in Docking_Bay:
+		If Barry_ist_da is false:
+			Change_to_Percy;
+			Say "[italic type]Gehe in die Docking Bay. Barry und ein Rettungsteam warten dort! Beeil dich, der Sauerstoff im äußeren Ring wird langsam knapp![roman type]";
+			Now Barry_ist_da is true;
