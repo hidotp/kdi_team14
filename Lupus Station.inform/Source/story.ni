@@ -26,6 +26,7 @@ Strom is a number variable. Strom is 10. [Stromzähler]
 [*****Regionen*****]
 innererRing is a region.
 aeußererRing is a region.
+raumanzugpf is a region.
 
 
 
@@ -789,7 +790,7 @@ Instead of dropping Messenger:
 
 [Raumanzug ausziehen]
 Instead of taking off Raumanzug:
-	If Scene4 is happening and Raumanzug_Kaputt is false:
+	If the player is in a room in raumanzugpf and Raumanzug_Kaputt is false:
 		Say "Du kannst den Raumanzug hier nicht ausziehen!";
 	Otherwise:
 		If the player is in Weltraum:
@@ -1016,9 +1017,9 @@ Wartungsluke is a Luke. It is down of Gamma_Delta_Corridor and above Wartungssch
 LuPanel U Wartung is a LuPanel. The Given_Luke is Wartungsluke. LuPanel U Wartung is in Wartungsschacht. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 	
 Wartungsschacht is down of Wartungsluke. The printed name is "Wartungsschacht".
-Com_Base is down of Wartungsschacht. The printed name is "Com Base".
+Com_Base is down of Wartungsschacht. It is in raumanzugpf. The printed name is "Com Base".
 
-Weltraum is a room. The printed name is "Weltraum".
+Weltraum is a room. It is in raumanzugpf. The printed name is "Weltraum".
 Weltraumtuer is a door. The printed name is "Weltraumtür".
 	It is north of Weltraum and south of Docking_Bay.
 	It is locked.
@@ -1040,11 +1041,11 @@ Alpha_AI is a room. It is in innererRing. The printed name is "Alpha AI".
 	LuPanel U Stor Rm is a LuPanel. The Given_Luke is Luke_Alpha_AI. LuPanel U Stor Rm is in Storage_Room. The description is "Türpanel. Es sieht nicht so aus, als sie es gegen Stöße gesichert." 
 
 Transporter_Raum is south of Alpha_AI. It is in innererRing. The printed name is "Transporter Raum".
-Second_Generator is east of Com_Base. The printed name is "Second Generator".
+Second_Generator is east of Com_Base. It is in raumanzugpf. The printed name is "Second Generator".
 Fitness is east of Crew_Quarter. The printed name is "Fitness".
 Cafeteria is east of Duty_Room and down of Storage_Room. The printed name is "Cafeteria".
 
-Antenna_Array is west of Com_Base. The printed name is "Antenna Array".
+Antenna_Array is west of Com_Base. It is in raumanzugpf. The printed name is "Antenna Array".
 Briefing_Room is west of Duty_Room. The printed name is "Briefing Room".
 Bridge Luke is a door.
 	It is down of Briefing_Room.
@@ -1164,8 +1165,8 @@ Endscene begins when Scene4 ends.
 When Endscene begins:
 	Change_to_Barry;
 	oeffne_Barrieren;
-	Say "[line break][italic type]Endscene:[line break]";
-	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet.[line break]";
+	Say "[line break][bold type]Endscene:[line break]";
+	Say "[italic type]Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet.[line break]";
 	Say "Aus Sicherheitsgründen (wegen des Sauerstoffabfalls) haben sich alle Barrieren und die Hangarluke geöffnet![roman type]".
 Endscene ends when Barry is in Docking_Bay and Percy is in Docking_Bay.
 When Endscene ends:
@@ -1177,7 +1178,7 @@ Every turn:
 	If Endscene is happening and Barry is in Docking_Bay:
 		If Barry_ist_da is false:
 			Change_to_Percy;
-			Say "[italic type]Gehe in die Docking Bay. Barry und ein Rettungsteam warten dort! Beeil dich, der Sauerstoff im äußeren Ring wird langsam knapp![roman type]";
+			Say "[italic type]Gehe in die Docking Bay. Barry und ein Rettungsteam warten dort! Beeil dich, der Sauerstoff im äußeren Ring wird langsam knapp![roman type][line break]";
 			Now Barry_ist_da is true;
 			Now Percy_Konter is Aktionen_ohne_Geraeusch;
 			Increase Percy_Konter by 1.
