@@ -740,6 +740,17 @@ Every turn:
 			Now Percy_Konter is 0;
 		If Kontcount is greater than 0 and Percy_Konter is greater than 3:
 			Say "[bold type]Percy wurde kontaminiert![roman type]";
+			End the story finally;
+	If Barry_ist_da is true:
+		Now the player is Barry;
+		count_Kontaminiert;
+		Now the player is Percy;
+		If Kontcount is greater than 0:
+			Increase Percy_Konter by 1;
+		Otherwise:
+			Now Percy_Konter is 0;
+		If Kontcount is greater than 0 and Percy_Konter is greater than 3:
+			Say "[bold type]Barry wurde kontaminiert![roman type]";
 			End the story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -1187,4 +1198,6 @@ Every turn:
 		If Barry_ist_da is false:
 			Change_to_Percy;
 			Say "[italic type]Gehe in die Docking Bay. Barry und ein Rettungsteam warten dort! Beeil dich, der Sauerstoff im äußeren Ring wird langsam knapp![roman type]";
-			Now Barry_ist_da is true.
+			Now Barry_ist_da is true;
+			Now Percy_Konter is Aktionen_ohne_Geraeusch;
+			Increase Percy_Konter by 1.
