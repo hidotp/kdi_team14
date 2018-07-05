@@ -1,7 +1,7 @@
 "Lupus Station" by Team14
 Use MAX_STATIC_DATA of 100000000.
 
-
+[Fertig]
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
