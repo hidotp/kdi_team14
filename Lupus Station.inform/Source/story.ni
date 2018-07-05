@@ -11,6 +11,10 @@ Carry out Teleporting:
 	Now Raumteleport is the noun;
 	If Raumteleport is not nothing:
 		Now the player is in Raumteleport.
+Understand "Barry" as cbarry.
+	cbarry is an action applying to nothing.
+Carry out cbarry:
+	Change_to_Barry.
 
 
 
@@ -26,7 +30,7 @@ DekonDone is a truth state variable. DekonDone is false.
 druckluftLadezustand is a truth state variable. druckluftLadezustand is false.
 Hangar_luke_close is a truth state variable. Hangar_luke_close is true.
 Sauerstoff is a number variable. Sauerstoff is 12. [Sauerstoffzähler]
-Strom is a number variable. Strom is 8. [Stromzähler]
+Strom is a number variable. Strom is 7. [Stromzähler]
 
 
 
@@ -115,7 +119,7 @@ Player is Percy.
 
 [MobiTab - Kontaminiertenzähler]
 Every turn:
-	If the player has MobiTab:	
+	If the player carries the Mobitab:	
 		count_Kontaminiert;
 		If Kontcount > 0:
 			Say "[bold type]Mobitab: [roman type]Anzahl der Kontaminierten: [Kontcount]";
@@ -812,7 +816,10 @@ Every turn:
 	If Hilfsgenerator_Aktiviert is true:
 		Decrease Strom by 1;
 		If the player carries the Mobitab:
-			Say "[bold type]Mobitab: [roman type]Züge an Energie: [Strom][line break]";
+			If Strom is greater than 0:
+				Say "[bold type]Mobitab: [roman type]Züge an Energie: [Strom][line break]";
+			Otherwise:
+				Say "[bold type]Mobitab: [roman type]Der Hilfsgenerator hat keine Energie mehr!";
 	If Strom is 0:
 		Now Hilfsgenerator_Aktiviert is false.
 
@@ -826,7 +833,6 @@ Carry out Pressing_Knopf_2:
 	If Notruf_Aktivierbar is true:
 		Now Notruf_Aktivierbar is false;
 		Now Notruf is true;
-		Now Wartungsluke is unlocked;
 		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
 		Change_to_Barry;
 		Say "Gehe jetzt wieder zu Percy!";
@@ -1067,7 +1073,8 @@ Sauerstoff_Abfall is a truth state variable. Sauerstoff_Abfall is false.
 Scene4 is a scene.
 Scene4 begins when Scene2 ends.
 When Scene4 begins:
-	Say "[bold type]Scene 4:[line break]";
+	Now Percy is in Med_Lab;
+	Say "[line break][bold type]Scene 4:[line break]";
 	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Gehe dazu in die Com Base.[line break]";
 	Say "Ein Tipp: Finde den Raumanzug und gehe durch den Weltraum![roman type][line break]";
 	Now Umkleidetuer is unlocked.
@@ -1111,12 +1118,12 @@ Endscene begins when Scene4 ends.
 When Endscene begins:
 	Change_to_Barry;
 	oeffne_Barrieren;
-	Say "[italic type]Endscene:[line break]";
+	Say "[line break][italic type]Endscene:[line break]";
 	Say "Ein Rettungsteam ist angekommen. Gehe in das Docking Bay, wo das Rettungsteam wartet.[line break]";
 	Say "Aus Sicherheitsgründen (wegen des Sauerstoffabfalls) haben sich alle Barrieren und die Hangarluke geöffnet![roman type]".
 Endscene ends when Barry is in Docking_Bay and Percy is in Docking_Bay.
 When Endscene ends:
-	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Percy kehren nun wieder zurück nach Hause![roman type]";
+	Say "[bold type]Glückwunsch, du hast es geschafft! Du und Barry kehren nun wieder zurück nach Hause![roman type]";
 	End the story finally.
 
 [Wechsel den Spieler, wenn Barry in der Docking Bay ist]
