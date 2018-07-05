@@ -15,6 +15,11 @@ Understand "Barry" as cbarry.
 	cbarry is an action applying to nothing.
 Carry out cbarry:
 	Change_to_Barry.
+Understand "Testk" as testek.
+	testek is an action applying to nothing.
+Carry out testek:
+	Now Percy is in Hangar;
+	Now Percy_Medlab_alleine is true;
 
 
 
@@ -29,8 +34,12 @@ dekonKontcount is a number variable. dekonKontcount is 0.
 DekonDone is a truth state variable. DekonDone is false.
 druckluftLadezustand is a truth state variable. druckluftLadezustand is false.
 Hangar_luke_close is a truth state variable. Hangar_luke_close is true.
+Scene4_sp_wechsel is a truth state variable. Scene4_sp_wechsel is false.
+Percy_Medlab_alleine is a truth state variable. Percy_Medlab_alleine is false.
+Wieder_Percy is a truth state variable. Wieder_percy is false.
+Percy_Konter is a number variable. Percy_Konter is 0.
 Sauerstoff is a number variable. Sauerstoff is 12. [Sauerstoffzähler]
-Strom is a number variable. Strom is 7. [Stromzähler]
+Strom is a number variable. Strom is 10. [Stromzähler]
 
 
 
@@ -134,26 +143,26 @@ Raum_Test_1 is a room variable.
 Raum_Test_2 is a room variable. 
 
 Every turn:
-	Now Raum_Test_1 is the location of the player;
-	If Raum_Test_1 is not Raum_Test_2:
-		If Stationsalarm is true:
-			If the player is in a room in innererRing or the player is in a room in aeußererRing:
-				Say "Der Stationsalarm gibt einen ohrenbetäubenden Sirenenton von sich.";	
-		If the player is in a room in innererRing:
-			If Hauptenergieabfall is true:
-				If Hilfsgenerator_Aktivierbar is false:
-					Say "Durch das Deckenfenster sieht man den rot glühenden Maschinenkern.";
-				Else:
-					Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
+	[Now Raum_Test_1 is the location of the player;]
+	[If Raum_Test_1 is not Raum_Test_2:]
+	If Stationsalarm is true:
+		If the player is in a room in innererRing or the player is in a room in aeußererRing:
+			Say "Der Stationsalarm gibt einen ohrenbetäubenden Sirenenton von sich.";	
+	If the player is in a room in innererRing:
+		If Hauptenergieabfall is true:
+			If Hilfsgenerator_Aktivierbar is false:
+				Say "Durch das Deckenfenster sieht man den rot glühenden Maschinenkern.";
 			Else:
-				Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
-		If the player is in Xeno_Lab:
-			If Pfeifen is true:
-				Say "Ein ohrenbetäubendes Pfeifen ist zu hören.";
-		If the player is in Gamma_Junction:
-			If Pfeifen is true and Luke_XenoLab is open and XenoLuke_Blockiert is true:
-				Say "Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.";
-	Now Raum_Test_2 is Raum_Test_1.
+				Say "Durch das Deckenfenster sieht man den orange glühenden Maschinenkern.";
+		Else:
+			Say "Durch das Deckenfenster sieht man den grün glühenden Maschinenkern.";
+	If the player is in Xeno_Lab:
+		If Pfeifen is true:
+			Say "Ein ohrenbetäubendes Pfeifen ist zu hören.";
+	If the player is in Gamma_Junction:
+		If Pfeifen is true and Luke_XenoLab is open and XenoLuke_Blockiert is true:
+			Say "Ein ohrenbetäubendes Pfeifen ist aus dem Xeno Lab zu hören.".
+	[Now Raum_Test_2 is Raum_Test_1.]
 
 
 [zum Wartungsschacht gehen]
@@ -293,26 +302,29 @@ DekonText is a text variable. DekonText is "Du hast Percy erfolgreich dekonatmin
 
 Instead of closing Dekon Tür:
 	If Hauptenergieabfall is false:
-		count_KontDekon;
-		If dekonKontcount <= 1:
-			If the Player is not in Dekontaminationskabine:
-				If Percy is in Dekontaminationskabine:
-					dekontaminiere_Percy;
-					Now Hauptenergieabfall is true;
-					Say DekonText;
-					Now Bridge Luke is unlocked;
-					Now DekonDone is true;
-					Continue the action;
-				Else:
-					If dekonKontcount is 1:
-						Say "[bold type]Du hast die falsche Person dekontaminiert![roman type]";
-						End the story finally;
+		If Stationsalarm is true:
+			count_KontDekon;
+			If dekonKontcount <= 1:
+				If the Player is not in Dekontaminationskabine:
+					If Percy is in Dekontaminationskabine:
+						dekontaminiere_Percy;
+						Now Hauptenergieabfall is true;
+						Say DekonText;
+						Now Bridge Luke is unlocked;
+						Now DekonDone is true;
+						Continue the action;
 					Else:
-						Say "Niemand ist in der Kabine.";
+						If dekonKontcount is 1:
+							Say "[bold type]Du hast die falsche Person dekontaminiert![roman type]";
+							End the story finally;
+						Else:
+							Say "Niemand ist in der Kabine.";
+				Else:
+					Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein!";			
 			Else:
-				Say "Es kann nur eine Person in der Kabine während der Dekonatmination sein";			
+				Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren. Maximal eine kann aufeinmal dekontaminiert werden.";
 		Else:
-			Say "Es sind zu viele Kontaminierte in der Kabine zum dekontaminieren. Maximal eine kann aufeinmal dekontaminiert werden.";
+			Say "Du weist doch garnicht was hier los ist. Vielleicht schaust du dir zuerst den Vidoblock an!";
 	Else:
 		Say "Die Energie des Maschinenkerns hat nur für eine Dekontamination gereicht.".
 	
@@ -378,10 +390,19 @@ Understand "clap in Hands" as Clapping.
 	Clapping is an action applying to nothing.
 Carry out clapping:
 	If Stationsalarm is false:
-		Increase Laute_Aktionen by 1.
+		Increase Laute_Aktionen by 1;
+	Otherwise:
+		If the player is not in a room in innererRing and the player is not in a room in aeußererRing:
+			Increase Laute_Aktionen by 1.
 Report Clapping:
 	If Stationsalarm is true:
-		Say "Du hast in die Hände geklatscht, doch der Stationsalarm ist zu laut!";
+		If the player is in a room in innererRing or the player is in a room in aeußererRing:
+			Say "Du hast in die Hände geklatscht, doch der Stationsalarm ist zu laut!";
+		Else:
+			If Kontaminierter is in the location of the player:
+				Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
+			Else: 
+				Say "Du hast in die Hände geklatscht!";
 	Else:
 		If Kontaminierter is in the location of the player:
 			Say "Du hast in die Hände geklatscht und der Kontaminierter hat dich bemerkt!";
@@ -394,9 +415,15 @@ Understand "talk with [any Kontaminierter]" as Talking.
 Carry out Talking:
 	If Stationsalarm is false:
 		Increase Laute_Aktionen by 1;
+	Otherwise:
+		If the player is not in a room in innererRing and the player is not in a room in aeußererRing:
+			Increase Laute_Aktionen by 1.
 Report Talking:
 	If Stationsalarm is true:
-		Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und er konnte dich nicht hören.";
+		If the player is in a room in innererRing or the player is in a room in aeußererRing:
+			Say "Du hast den Kontaminierten angesprochen, doch der Stationsalarm ist zu laut und er konnte dich nicht hören.";
+		Else:
+			Say "Du hast den Kontaminierten angesprochen und seine Aufmerksamkeit erlangt.";
 	Else:
 		Say "Du hast den Kontaminierten angesprochen und seine Aufmerksamkeit erlangt.".
 
@@ -538,7 +565,7 @@ Report Kaputtmachen:
 	Say "Du hast das Panel kaputtgemacht. Jetzt kannst du über die Luke manuell öffnen oder schließen.".
 	
 [Med-Lab Pult Benutzung]
-MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich der Videoblog an zu spielen: [line break] [bold type] Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzer Zeit alle Mitarbeiter der Station befallen. Ich habe es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt. [line break] Der Stationsalarm geht nach dem Anschauen des Videoblogs wieder los.".
+MedLabText is a text variable. MedLabText is "Als du mit dem Pult interagierst fängt plötzlich der Videoblog an zu spielen: [line break] [bold type]Stationsarzt: [roman type]... durch eine fehlgeschlagene Dekontamination ist ein Erreger von dem nahegelegenem Planeten auf die Station gekommen. Dieser Erreger hat in kurzer Zeit alle Mitarbeiter der Station befallen. Ich habe es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren die diese Person gesunden lässt, sobald die Tür geschlossen ist... ich mache diesen Videoblog noch mit meiner letzten Kraft... ich denke das mir nicht mehr viel Zeit bleibt. [line break]Der Stationsalarm geht nach dem Anschauen des Videoblogs wieder los.[line break]".
 MedLabUsable is a truth state variable. MedLabUsable is false.
 
 Understand "interact with [Med-Lab Pult]" as medInteracting.
@@ -691,12 +718,34 @@ Every turn:
 		Now Kontaminierten_going is false;
 		If Aktionen_ohne_geraeusch is greater than 2:
 			Say "[bold type]Du wurdest kontaminiert![roman type]";
-			End the Story finally.
+			End the Story finally;
+	If Scene4_sp_wechsel is true and Barry_ist_da is false:
+		Now the player is Percy;
+		count_Kontaminiert;
+		Now the player is Barry;
+		If Kontcount is greater than 0:
+			Increase Percy_Konter by 1;
+		Otherwise:
+			Now Percy_Konter is 0;
+		If Kontcount is greater than 0 and Percy_Konter is greater than 3:
+			Say "[bold type]Percy wurde kontaminiert![roman type]";
+			End the story finally;
+	If Percy_Medlab_alleine is true and Wieder_Percy is false:
+		Now the player is Percy;
+		count_Kontaminiert;
+		Now the player is Barry;
+		If Kontcount is greater than 0:
+			Increase Percy_Konter by 1;
+		Otherwise:
+			Now Percy_Konter is 0;
+		If Kontcount is greater than 0 and Percy_Konter is greater than 3:
+			Say "[bold type]Percy wurde kontaminiert![roman type]";
+			End the story finally.
 
 Kontaminierter_1 is a Kontaminierter. The printed name is "Kontaminierter".
-	It is in Brigde.
+	It is in Bridge.
 Kontaminierter_2 is a Kontaminierter. The printed name is "Kontaminierter".
-	It is in Brigde.
+	It is in Bridge.
 Kontaminierter_3 is a Kontaminierter. The printed name is "Kontaminierter".
 	it is in Alpha_Beta_Corridor.
 Kontaminierter_4 is a Kontaminierter. The printed name is "Kontaminierter".
@@ -836,6 +885,9 @@ Carry out Pressing_Knopf_2:
 		Say "Der Notruf wurde abgesetzt! Warte auf Hilfe!";
 		Change_to_Barry;
 		Say "Gehe jetzt wieder zu Percy!";
+		Now Percy_Konter is Aktionen_ohne_Geraeusch;
+		Increase Percy_Konter by one;
+		Now Scene4_sp_wechsel is true;
 	Otherwise:
 		If Hilfsgenerator_Aktivierbar is true:
 			Say "Du musst den Strom erst anstellen damit du den Notruf absetzen kannst!";
@@ -854,6 +906,8 @@ Carry out Sending_Message:
 	If Scene4 is happening and Hilfsgenerator_Aktiviert is true:
 		Say "Du sendest eine Nachricht an Percy, dass der Hilfsgenerator aktiviert ist.";
 		Change_to_Percy;
+		Now Wieder_Percy is true;
+		Now Percy_Konter is 0;
 	Otherwise:
 		If Is_Kontaminiert of Percy is true:
 			Say "Percy antwortet nicht.";
@@ -1045,7 +1099,6 @@ GammaListened is a truth state variable. GammaListened is false.
 Scene2 is a scene.
 Scene2 begins when Szene 1 ends. 
 When Scene2 begins:
-	Now Stationsalarm is true;
 	Now MedLabUsable is true;
 	change_to_Barry;
 	Say "[bold type]Szene 2:[line break]";
@@ -1058,7 +1111,7 @@ After going to Xeno_Lab:
 		Say "Du findest Percy ... er steht mit in die Gegend starrenden Blick da. Er ist kontaminiert. Dekontaminiere ihn im Med-Lab!";
 	Continue the action.
 
-After entering Gamma_Junction:
+After going to Gamma_Junction:
 	If Scene2 is happening and GammaListened is false:
 		Now Stationsalarm is false;
 		Now GammaListened is true;
@@ -1074,6 +1127,8 @@ Scene4 is a scene.
 Scene4 begins when Scene2 ends.
 When Scene4 begins:
 	Now Percy is in Med_Lab;
+	Now Percy_Medlab_alleine is true;
+	Now Percy_Konter is Aktionen_ohne_Geraeusch;
 	Say "[line break][bold type]Scene 4:[line break]";
 	Say "[italic type]Du bist Barry und besprichst dich mit Percy! ...es soll ein Notruf abgesetzt werden. Dazu musst du den Hilfsgenerator im Kommunikationsmodul starten. Gehe dazu in die Com Base.[line break]";
 	Say "Ein Tipp: Finde den Raumanzug und gehe durch den Weltraum![roman type][line break]";
