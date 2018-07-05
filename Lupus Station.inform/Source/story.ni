@@ -2,26 +2,6 @@
 Use MAX_STATIC_DATA of 100000000.
 
 
-[*****Testmethode*****]
-[Teleport]
-Raumteleport is a room variable.
-Understand "Teleport to [any room]" as Teleporting.
-	Teleporting is an action applying to one thing.
-Carry out Teleporting:
-	Now Raumteleport is the noun;
-	If Raumteleport is not nothing:
-		Now the player is in Raumteleport.
-Understand "Barry" as cbarry.
-	cbarry is an action applying to nothing.
-Carry out cbarry:
-	Change_to_Barry.
-Understand "Testk" as testek.
-	testek is an action applying to nothing.
-Carry out testek:
-	Now Percy is in Hangar;
-	Now Percy_Medlab_alleine is true;
-
-
 
 [*****globale Variablen*****]
 Laute_Aktionen is a number variable. Laute_Aktionen is 0.
@@ -1201,3 +1181,15 @@ Every turn:
 			Now Barry_ist_da is true;
 			Now Percy_Konter is Aktionen_ohne_Geraeusch;
 			Increase Percy_Konter by 1.
+
+
+
+[*****Testmethode*****]
+[Teleport]
+Raumteleport is a room variable.
+Understand "Team-14-Teleport-Test to [any room]" as Teleporting.
+	Teleporting is an action applying to one thing.
+Carry out Teleporting:
+	Now Raumteleport is the noun;
+	If Raumteleport is not nothing:
+		Now the player is in Raumteleport.
